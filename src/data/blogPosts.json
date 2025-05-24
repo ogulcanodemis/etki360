@@ -1,0 +1,165 @@
+{
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "2024'te Web Tasarımında Dikkat Edilmesi Gereken 10 Trend",
+      "slug": "2024-web-tasarim-trendleri",
+      "excerpt": "Modern web tasarımının geleceğini şekillendiren trendler ve bunları projelerinizde nasıl uygulayabileceğiniz hakkında detaylı rehber.",
+      "content": "Web tasarımı sürekli evrim geçiren bir alan...",
+      "category": "web-tasarim",
+      "author": "etki360 Ekibi",
+      "publishDate": "2024-01-15",
+      "readTime": "8 dakika",
+      "image": "/api/placeholder/600/400",
+      "tags": ["Web Tasarım", "UI/UX", "Trendler", "2024"],
+      "featured": true,
+      "metaDescription": "2024 yılında web tasarımında öne çıkan trendler ve modern tasarım yaklaşımları hakkında kapsamlı rehber."
+    },
+    {
+      "id": 2,
+      "title": "SEO Optimizasyonu: Google'da Üst Sıralara Çıkmanın Sırları",
+      "slug": "seo-optimizasyonu-google-ust-siralar",
+      "excerpt": "Arama motorlarında görünürlüğünüzü artırmak için uygulamanız gereken teknik SEO stratejileri ve ipuçları.",
+      "content": "SEO optimizasyonu dijital pazarlamanın temel taşlarından biri...",
+      "category": "seo",
+      "author": "SEO Uzmanı",
+      "publishDate": "2024-01-12",
+      "readTime": "12 dakika",
+      "image": "/api/placeholder/600/400",
+      "tags": ["SEO", "Google", "Arama Motoru", "Optimizasyon"],
+      "featured": false,
+      "metaDescription": "Google'da üst sıralarda yer almak için teknik SEO stratejileri ve arama motoru optimizasyon ipuçları."
+    },
+    {
+      "id": 3,
+      "title": "E-Ticaret Sitesi Kurarken Dikkat Edilmesi Gerekenler",
+      "slug": "e-ticaret-sitesi-kurma-rehberi",
+      "excerpt": "Başarılı bir e-ticaret sitesi için gerekli özellikler, ödeme sistemleri ve kullanıcı deneyimi optimizasyonu.",
+      "content": "E-ticaret dünyası hızla büyüyor ve rekabet artıyor...",
+      "category": "e-ticaret",
+      "author": "E-Ticaret Uzmanı",
+      "publishDate": "2024-01-10",
+      "readTime": "10 dakika",
+      "image": "/api/placeholder/600/400",
+      "tags": ["E-Ticaret", "Online Satış", "Ödeme Sistemleri"],
+      "featured": true,
+      "metaDescription": "E-ticaret sitesi kurma sürecinde dikkat edilmesi gereken önemli noktalar ve başarı faktörleri."
+    },
+    {
+      "id": 4,
+      "title": "Landing Page Dönüşüm Oranını Artırmanın 7 Yolu",
+      "slug": "landing-page-donusum-orani-artirma",
+      "excerpt": "Etkili landing page tasarımı ile potansiyel müşterilerinizi gerçek müşteriye dönüştürmenin kanıtlanmış yöntemleri.",
+      "content": "Landing page'ler dijital pazarlamanın en önemli araçlarından biri...",
+      "category": "dijital-pazarlama",
+      "author": "Pazarlama Uzmanı",
+      "publishDate": "2024-01-08",
+      "readTime": "6 dakika",
+      "image": "/api/placeholder/600/400",
+      "tags": ["Landing Page", "Dönüşüm", "CRO", "Pazarlama"],
+      "featured": false,
+      "metaDescription": "Landing page dönüşüm oranlarını artırmak için etkili stratejiler ve tasarım ipuçları."
+    },
+    {
+      "id": 5,
+      "title": "Mobil Uyumlu Web Sitesi Tasarımının Önemi",
+      "slug": "mobil-uyumlu-web-sitesi-tasarim",
+      "excerpt": "Mobil cihazlarda mükemmel görünüm sağlayan responsive tasarım prensipleri ve kullanıcı deneyimi optimizasyonu.",
+      "content": "Günümüzde internet trafiğinin büyük bir kısmı mobil cihazlardan geliyor...",
+      "category": "web-tasarim",
+      "author": "UI/UX Tasarımcısı",
+      "publishDate": "2024-01-05",
+      "readTime": "9 dakika",
+      "image": "/api/placeholder/600/400",
+      "tags": ["Mobil Tasarım", "Responsive", "UX", "Kullanıcı Deneyimi"],
+      "featured": false,
+      "metaDescription": "Mobil uyumlu web tasarımının önemi ve responsive tasarım prensipleri hakkında kapsamlı rehber."
+    },
+    {
+      "id": 6,
+      "title": "WordPress vs Özel Yazılım: Hangisini Seçmelisiniz?",
+      "slug": "wordpress-vs-ozel-yazilim-karsilastirma",
+      "excerpt": "Web sitesi geliştirme sürecinde WordPress ve özel yazılım seçeneklerinin avantaj ve dezavantajlarının karşılaştırması.",
+      "content": "Web sitesi geliştirme sürecinde en önemli kararlardan biri...",
+      "category": "web-gelistirme",
+      "author": "Yazılım Geliştirici",
+      "publishDate": "2024-01-03",
+      "readTime": "11 dakika",
+      "image": "/api/placeholder/600/400",
+      "tags": ["WordPress", "Özel Yazılım", "CMS", "Web Geliştirme"],
+      "featured": false,
+      "metaDescription": "WordPress ve özel yazılım çözümlerinin karşılaştırması ve doğru seçim rehberi."
+    },
+    {
+      "id": 7,
+      "title": "Google Analytics 4 ile Web Sitenizi Analiz Etme Rehberi",
+      "slug": "google-analytics-4-web-analiz-rehberi",
+      "excerpt": "GA4'ün yeni özellikleri ile web sitenizin performansını ölçme ve veri odaklı kararlar alma stratejileri.",
+      "content": "Google Analytics 4, web analitik dünyasında devrim niteliğinde...",
+      "category": "seo",
+      "author": "Veri Analisti",
+      "publishDate": "2024-01-01",
+      "readTime": "15 dakika",
+      "image": "/api/placeholder/600/400",
+      "tags": ["Google Analytics", "GA4", "Web Analitik", "Veri Analizi"],
+      "featured": false,
+      "metaDescription": "Google Analytics 4 ile web sitesi analizi yapma ve performans ölçümleri hakkında detaylı rehber."
+    },
+    {
+      "id": 8,
+      "title": "Sosyal Medya Entegrasyonu ile Web Sitenizi Güçlendirin",
+      "slug": "sosyal-medya-entegrasyonu-web-sitesi",
+      "excerpt": "Web sitenizde sosyal medya entegrasyonu yaparak organik trafiğinizi artırma ve kullanıcı etkileşimini geliştirme yöntemleri.",
+      "content": "Sosyal medya platformları modern dijital pazarlamanın ayrılmaz parçası...",
+      "category": "dijital-pazarlama",
+      "author": "Sosyal Medya Uzmanı",
+      "publishDate": "2023-12-28",
+      "readTime": "7 dakika",
+      "image": "/api/placeholder/600/400",
+      "tags": ["Sosyal Medya", "Entegrasyon", "Dijital Pazarlama"],
+      "featured": false,
+      "metaDescription": "Web sitesinde sosyal medya entegrasyonu yaparak trafiği artırma stratejileri."
+    },
+    {
+      "id": 9,
+      "title": "Web Sitesi Güvenliği: SSL ve Güvenlik Önlemleri",
+      "slug": "web-sitesi-guvenligi-ssl-onlemler",
+      "excerpt": "Web sitenizin güvenliğini sağlamak için alınması gereken önlemler, SSL sertifikası ve güvenlik protokolleri.",
+      "content": "Web sitesi güvenliği, hem kullanıcılar hem de arama motorları için kritik...",
+      "category": "web-gelistirme",
+      "author": "Güvenlik Uzmanı",
+      "publishDate": "2023-12-25",
+      "readTime": "13 dakika",
+      "image": "/api/placeholder/600/400",
+      "tags": ["Web Güvenliği", "SSL", "Güvenlik", "HTTPS"],
+      "featured": false,
+      "metaDescription": "Web sitesi güvenliği için SSL sertifikası ve güvenlik önlemleri hakkında kapsamlı rehber."
+    }
+  ],
+  "categories": [
+    {
+      "key": "all",
+      "label": "Tüm Yazılar"
+    },
+    {
+      "key": "web-tasarim",
+      "label": "Web Tasarım"
+    },
+    {
+      "key": "seo",
+      "label": "SEO & Analitik"
+    },
+    {
+      "key": "e-ticaret",
+      "label": "E-Ticaret"
+    },
+    {
+      "key": "dijital-pazarlama",
+      "label": "Dijital Pazarlama"
+    },
+    {
+      "key": "web-gelistirme",
+      "label": "Web Geliştirme"
+    }
+  ]
+} 

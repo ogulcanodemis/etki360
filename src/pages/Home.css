@@ -1,0 +1,467 @@
+/* Home Page Styles */
+.home {
+  padding-top: 70px;
+}
+
+/* Home Page Hero Section */
+.home-page-hero {
+  background: linear-gradient(135deg, #F9FAFB 0%, #ffffff 100%) !important;
+  padding: 80px 0 !important;
+  min-height: 80vh !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.home-hero-content {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 60px !important;
+  align-items: center !important;
+}
+
+.home-hero-title {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+  color: #1F2937 !important;
+  line-height: 1.2 !important;
+  margin-bottom: 24px !important;
+}
+
+.home-highlight {
+  color: #F59E0B !important;
+  position: relative;
+}
+
+.home-hero-description {
+  font-size: 18px !important;
+  color: #6B7280 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 32px !important;
+}
+
+.home-hero-buttons {
+  display: flex !important;
+  gap: 16px !important;
+  margin-bottom: 48px !important;
+}
+
+.home-btn-primary {
+  background: linear-gradient(135deg, #1F2937 0%, #374151 100%) !important;
+  color: white !important;
+  padding: 16px 32px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.home-btn-primary:hover {
+  background: linear-gradient(135deg, #374151 0%, #4B5563 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(31, 41, 55, 0.3) !important;
+  color: white !important;
+}
+
+.home-btn-secondary {
+  background: transparent !important;
+  color: #1F2937 !important;
+  padding: 16px 32px !important;
+  border: 2px solid #1F2937 !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.home-btn-secondary:hover {
+  background: #1F2937 !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+}
+
+.home-hero-stats {
+  display: flex !important;
+  gap: 32px !important;
+}
+
+.home-stat {
+  text-align: center !important;
+}
+
+.home-stat-number {
+  display: block !important;
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  color: #1F2937 !important;
+  margin-bottom: 4px !important;
+}
+
+.home-stat-label {
+  font-size: 14px !important;
+  color: #6B7280 !important;
+}
+
+/* Home Hero Visual */
+.home-hero-visual {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.home-hero-card {
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1) !important;
+  padding: 24px !important;
+  width: 300px !important;
+  transform: rotate(5deg) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.home-hero-card:hover {
+  transform: rotate(0deg) !important;
+}
+
+.home-card-header {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 20px !important;
+}
+
+.home-card-dots {
+  display: flex !important;
+  gap: 6px !important;
+}
+
+.home-card-dots span {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background: #E5E7EB !important;
+}
+
+.home-card-dots span:first-child {
+  background: #EF4444 !important;
+}
+
+.home-card-dots span:nth-child(2) {
+  background: #F59E0B !important;
+}
+
+.home-card-dots span:last-child {
+  background: #10B981 !important;
+}
+
+.home-code-line {
+  height: 8px !important;
+  background: #E5E7EB !important;
+  border-radius: 4px !important;
+  margin-bottom: 8px !important;
+}
+
+.home-code-line.home-short {
+  width: 60% !important;
+}
+
+.home-code-line.home-medium {
+  width: 80% !important;
+}
+
+/* Services Section */
+.services {
+  padding: 80px 0;
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 16px;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #6B7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.service-card {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  border-color: #1F2937;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  color: white;
+}
+
+.service-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 16px;
+}
+
+.service-description {
+  color: #6B7280;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.service-link {
+  color: #1F2937;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.service-link:hover {
+  color: #F59E0B;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 80px 0;
+  background: #F9FAFB;
+}
+
+.why-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.feature {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  background: #10B981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.feature-content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 8px;
+}
+
+.feature-content p {
+  color: #6B7280;
+  line-height: 1.5;
+}
+
+/* Visual Card */
+.visual-card {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.progress-item span {
+  display: block;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #E5E7EB;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+  border-radius: 4px;
+  transition: width 2s ease;
+}
+
+/* CTA Section */
+.cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+  color: white;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.cta-description {
+  font-size: 18px;
+  color: #E5E7EB;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  padding: 16px 32px;
+  border: 2px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #1F2937;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .home-hero-content,
+  .why-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .home-hero-title {
+    font-size: 40px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page-hero {
+    padding: 60px 0;
+  }
+  
+  .home-hero-title {
+    font-size: 32px;
+  }
+  
+  .home-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home-hero-stats {
+    justify-content: center;
+  }
+  
+  .services,
+  .why-choose-us,
+  .cta {
+    padding: 60px 0;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero-title {
+    font-size: 28px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .cta-title {
+    font-size: 28px;
+  }
+  
+  .home-hero-stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+} 
