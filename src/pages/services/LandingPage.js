@@ -3,8 +3,279 @@ import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 const LandingPage = () => {
+  // Schema markup for Landing Page Service
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Landing Page Tasarım & Geliştirme",
+    "alternateName": "Landing Page Design & Development",
+    "description": "Dönüşüm odaklı, hızlı yüklenen ve kullanıcı deneyimi optimize edilmiş tek sayfalık tanıtım siteleri ile potansiyel müşterilerinizi gerçek müşteriye dönüştürün.",
+    "provider": {
+      "@type": "Organization",
+      "name": "etki360",
+      "url": "https://etki360.com",
+      "logo": "https://etki360.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+90-542-155-33-15",
+        "contactType": "customer service",
+        "availableLanguage": "Turkish"
+      }
+    },
+    "serviceType": "Landing Page Development",
+    "category": "Landing Page",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Turkey"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Landing Page Paketleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Temel Landing Page",
+          "description": "Küçük işletmeler ve startup'lar için ideal başlangıç paketi",
+          "price": "4999",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "4999",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Temel Landing Page",
+            "description": "Tek sayfa responsive tasarım, 3-5 gün teslimat, 2 revizyon"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Profesyonel Landing Page",
+          "description": "Yüksek dönüşüm oranları için optimize edilmiş çözüm",
+          "price": "8999",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "8999",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Profesyonel Landing Page",
+            "description": "Özel tasarım ve UX/UI optimizasyonu, 5-7 gün teslimat, 5 revizyon"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium Landing Page",
+          "description": "Kurumsal firmalar için gelişmiş özellikler ve entegrasyonlar",
+          "price": "14999",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "14999",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Premium Landing Page",
+            "description": "Çoklu sayfa sistemi, gelişmiş animasyonlar, 7-10 gün teslimat, sınırsız revizyon"
+          }
+        }
+      ]
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "4999",
+      "highPrice": "15000",
+      "priceCurrency": "TRY",
+      "offerCount": "3"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Pazarlama Ajansları, Girişimciler, Kampanya Yöneticileri"
+    }
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Landing Page Tasarım & Geliştirme - etki360",
+    "description": "Dönüşüm odaklı, hızlı yüklenen ve kullanıcı deneyimi optimize edilmiş tek sayfalık tanıtım siteleri ile potansiyel müşterilerinizi gerçek müşteriye dönüştürün.",
+    "url": "https://etki360.com/hizmetler/landing-page",
+    "inLanguage": "tr-TR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360",
+      "url": "https://etki360.com"
+    },
+    "about": {
+      "@type": "Service",
+      "name": "Landing Page Tasarım & Geliştirme"
+    },
+    "mainEntity": {
+      "@type": "Service",
+      "name": "Landing Page Tasarım & Geliştirme"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://etki360.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hizmetler",
+          "item": "https://etki360.com/hizmetler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Landing Page",
+          "item": "https://etki360.com/hizmetler/landing-page"
+        }
+      ]
+    }
+  };
+
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Landing Page Geliştirme Süreci",
+    "description": "Yüksek dönüşümlü landing page'iniz nasıl hazırlanıyor? 4 adımda profesyonel landing page geliştirme süreci.",
+    "image": "https://etki360.com/images/landing-page-process.jpg",
+    "totalTime": "PT10D",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "TRY",
+      "value": "4999-15000"
+    },
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "Hedef Kitle Analizi"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Marka Materyalleri"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "İçerik Metinleri"
+      }
+    ],
+    "tool": [
+      {
+        "@type": "HowToTool",
+        "name": "Figma"
+      },
+      {
+        "@type": "HowToTool",
+        "name": "React"
+      },
+      {
+        "@type": "HowToTool",
+        "name": "Google Analytics"
+      }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Hedef Kitle & Amaç Analizi",
+        "text": "Hedef kitlenizi, amaçlarınızı ve rekabet durumunu analiz ediyoruz. Dönüşüm hedeflerinizi belirliyoruz.",
+        "image": "https://etki360.com/images/target-analysis.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "UX/UI Tasarım & Wireframe",
+        "text": "Kullanıcı deneyimi odaklı tasarım ve dönüşüm optimizasyonu için wireframe ve mockup hazırlıyoruz.",
+        "image": "https://etki360.com/images/ux-ui-design.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Geliştirme & Entegrasyonlar",
+        "text": "Hızlı, responsive ve SEO uyumlu kodlama. Analytics, CRM ve marketing araçları entegrasyonu.",
+        "image": "https://etki360.com/images/development-integration.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Test & Optimizasyon",
+        "text": "A/B testleri, performans testleri ve dönüşüm oranı optimizasyonu ile en iyi sonuçları elde ediyoruz.",
+        "image": "https://etki360.com/images/test-optimization.jpg"
+      }
+    ]
+  };
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Landing Page",
+    "description": "Dönüşüm odaklı landing page tasarım ve geliştirme hizmeti",
+    "brand": {
+      "@type": "Brand",
+      "name": "etki360"
+    },
+    "category": "Web Development Services",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "4999",
+      "highPrice": "15000",
+      "priceCurrency": "TRY",
+      "offerCount": "3",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "32",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Mehmet Kaya"
+        },
+        "reviewBody": "Landing page'imiz sayesinde dönüşüm oranımız %300 arttı. Harika bir çalışma."
+      }
+    ]
+  };
+
   return (
     <div className="landing-page-service">
+      {/* Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify(serviceSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(webPageSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(howToSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(productSchema)}
+      </script>
+
       {/* Hero Section */}
       <section className="landing-service-hero">
         <div className="container">

@@ -3,8 +3,216 @@ import { Link } from 'react-router-dom';
 import './CorporateWeb.css';
 
 const CorporateWeb = () => {
+  // Schema markup for Corporate Web Service
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Kurumsal Web Sitesi Geliştirme",
+    "alternateName": "Corporate Website Development",
+    "description": "İşletmenizin dijitaldeki profesyonel yüzü. Modern, mobil uyumlu ve SEO optimizasyonlu kurumsal web siteleri ile markanızı güçlendirin.",
+    "provider": {
+      "@type": "Organization",
+      "name": "etki360",
+      "url": "https://etki360.com",
+      "logo": "https://etki360.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+90-542-155-33-15",
+        "contactType": "customer service",
+        "availableLanguage": "Turkish"
+      }
+    },
+    "serviceType": "Web Development",
+    "category": "Kurumsal Web Sitesi",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Turkey"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Kurumsal Web Sitesi Paketleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Başlangıç Paketi",
+          "description": "Yeni kurulan küçük işletmeler ve bireysel girişimciler için",
+          "price": "9500",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "9500",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Temel Kurumsal Web Sitesi",
+            "description": "4-5 sayfalık kurumsal web sitesi, mobil uyumlu tasarım, temel SEO ayarları"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Kurumsal Paket",
+          "description": "Gelişmekte olan firmalar ve hizmet sektöründeki işletmeler için",
+          "price": "17500",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "17500",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Gelişmiş Kurumsal Web Sitesi",
+            "description": "8+ sayfalık özel tasarım web sitesi, yönetim paneli, gelişmiş SEO"
+          }
+        }
+      ]
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "9500",
+      "highPrice": "25000",
+      "priceCurrency": "TRY",
+      "offerCount": "3"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Küçük ve Orta Ölçekli İşletmeler"
+    }
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Kurumsal Web Sitesi Geliştirme - etki360",
+    "description": "İşletmenizin dijitaldeki profesyonel yüzü. Modern, mobil uyumlu ve SEO optimizasyonlu kurumsal web siteleri ile markanızı güçlendirin.",
+    "url": "https://etki360.com/hizmetler/kurumsal-web",
+    "inLanguage": "tr-TR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360",
+      "url": "https://etki360.com"
+    },
+    "about": {
+      "@type": "Service",
+      "name": "Kurumsal Web Sitesi Geliştirme"
+    },
+    "mainEntity": {
+      "@type": "Service",
+      "name": "Kurumsal Web Sitesi Geliştirme"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://etki360.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hizmetler",
+          "item": "https://etki360.com/hizmetler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kurumsal Web Sitesi",
+          "item": "https://etki360.com/hizmetler/kurumsal-web"
+        }
+      ]
+    }
+  };
+
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Kurumsal Web Sitesi Geliştirme Süreci",
+    "description": "Kurumsal web siteniz nasıl hayata geçiyor? 4 adımda profesyonel web sitesi geliştirme süreci.",
+    "image": "https://etki360.com/images/corporate-web-process.jpg",
+    "totalTime": "PT4W",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "TRY",
+      "value": "9500-25000"
+    },
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "İhtiyaç Analizi Formu"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Marka Kimlik Dosyaları"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "İçerik Materyalleri"
+      }
+    ],
+    "tool": [
+      {
+        "@type": "HowToTool",
+        "name": "React"
+      },
+      {
+        "@type": "HowToTool",
+        "name": "Laravel"
+      },
+      {
+        "@type": "HowToTool",
+        "name": "WordPress"
+      }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Analiz & Planlama",
+        "text": "İhtiyaçlarınızı analiz ediyor, hedef kitlenizi belirliyoruz. Site haritası ve teknik gereksinimler çıkarılıyor.",
+        "image": "https://etki360.com/images/analysis-planning.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Tasarım & Prototyping",
+        "text": "Markanıza özel tasarım konsepti oluşturuyor, kullanıcı deneyimi odaklı arayüz tasarlıyoruz.",
+        "image": "https://etki360.com/images/design-prototyping.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Geliştirme & Kodlama",
+        "text": "Modern teknolojilerle responsive, hızlı ve güvenli web sitesi geliştirme süreci başlıyor.",
+        "image": "https://etki360.com/images/development-coding.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Test & Yayınlama",
+        "text": "Kapsamlı testler sonrası sitenizi yayına alıyor, eğitim ve destek hizmeti sunuyoruz.",
+        "image": "https://etki360.com/images/test-launch.jpg"
+      }
+    ]
+  };
+
   return (
     <div className="corporate-web-page">
+      {/* Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify(serviceSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(webPageSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(howToSchema)}
+      </script>
+
       {/* Hero Section */}
       <section className="corporate-service-hero">
         <div className="container">

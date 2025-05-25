@@ -3,8 +3,153 @@ import { Link } from 'react-router-dom';
 import './About.css';
 
 const About = () => {
+  // Organization Schema for SEO
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "etki360",
+    "alternateName": "etki360 Web Tasarım & Dijital Çözümler",
+    "url": "https://etki360.com",
+    "logo": "https://etki360.com/logo.png",
+    "description": "Dijitalde güçlü bir varlık oluşturmak isteyen işletmelere modern, hızlı ve kullanıcı odaklı web çözümleri sunuyoruz.",
+    "foundingDate": "2023",
+    "founders": [
+      {
+        "@type": "Person",
+        "name": "etki360 Kurucu Ekibi"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "İstanbul",
+      "addressCountry": "TR",
+      "addressRegion": "İstanbul"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+90-542-155-33-15",
+        "contactType": "customer service",
+        "availableLanguage": ["Turkish", "English"],
+        "areaServed": "TR"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+90-544-488-23-03",
+        "contactType": "technical support",
+        "availableLanguage": ["Turkish", "English"],
+        "areaServed": "TR"
+      }
+    ],
+    "email": "info@etki360.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/etki360/",
+      "https://www.instagram.com/etki360/",
+      "https://www.facebook.com/profile.php?id=61576903310978"
+    ],
+    "serviceArea": {
+      "@type": "Country",
+      "name": "Turkey"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Tasarım ve Dijital Hizmetler",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Kurumsal Web Sitesi",
+            "description": "Modern, mobil uyumlu ve SEO optimizasyonlu kurumsal web siteleri"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "E-Ticaret Çözümleri",
+            "description": "Ödeme entegrasyonları ve yönetim paneli ile eksiksiz e-ticaret siteleri"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Landing Page",
+            "description": "Dönüşüm odaklı, hızlı yüklenen tek sayfalık tanıtım siteleri"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SEO & Performans",
+            "description": "Google'da üst sıralarda yer almanız için teknik SEO optimizasyonu"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Bakım & Destek",
+            "description": "7/24 teknik destek ve sürekli bakım hizmetleri"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "50",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": "5-10"
+    },
+    "knowsAbout": [
+      "Web Tasarım",
+      "E-Ticaret",
+      "SEO",
+      "Dijital Pazarlama",
+      "React",
+      "PHP",
+      "WordPress",
+      "Landing Page",
+      "Mobil Uyumlu Tasarım",
+      "Performans Optimizasyonu"
+    ],
+    "award": [
+      "100+ Başarılı Proje",
+      "%100 Müşteri Memnuniyeti",
+      "7/24 Destek Hizmeti"
+    ],
+    "slogan": "Siz işinize odaklanın, dijital altyapınızı biz kurarız.",
+    "mission": "Dijitalde güçlü bir varlık oluşturmak isteyen işletmelere modern, hızlı ve kullanıcı odaklı web çözümleri sunmak.",
+    "values": [
+      "Hız & Performans",
+      "Güvenilirlik", 
+      "Kalite",
+      "Müşteri Odaklılık"
+    ],
+    "targetAudience": [
+      "KOBİ'ler",
+      "Yeni Girişimler",
+      "Ajanslar",
+      "Freelancer'lar",
+      "E-ticaret İşletmeleri"
+    ]
+  };
+
   return (
     <div className="about-page">
+      {/* Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      
       {/* Hero Section */}
       <section className="about-page-hero">
         <div className="container">

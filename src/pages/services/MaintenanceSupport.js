@@ -1,10 +1,263 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { trackButtonClick } from '../../hooks/useGoogleAnalytics';
 import './MaintenanceSupport.css';
 
 const MaintenanceSupport = () => {
+  // Schema markup for Maintenance Support Service
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Bakım & Destek Hizmetleri",
+    "alternateName": "Website Maintenance & Support Services",
+    "description": "Web sitenizin sürekli güncel, güvenli ve performanslı kalması için profesyonel bakım ve 7/24 teknik destek hizmetleri sunuyoruz.",
+    "provider": {
+      "@type": "Organization",
+      "name": "etki360",
+      "url": "https://etki360.com",
+      "logo": "https://etki360.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+90-542-155-33-15",
+        "contactType": "customer service",
+        "availableLanguage": "Turkish",
+        "hoursAvailable": "Mo-Su 00:00-23:59"
+      }
+    },
+    "serviceType": "Website Maintenance",
+    "category": "Bakım & Destek",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Turkey"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Bakım & Destek Paketleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Temel Bakım",
+          "description": "Küçük işletmeler için ideal",
+          "price": "899",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "899",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false,
+            "billingIncrement": "P1M"
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Temel Bakım Hizmeti",
+            "description": "Aylık güvenlik güncellemeleri, haftalık yedekleme, 48 saat yanıt süresi"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Profesyonel Bakım",
+          "description": "Büyüyen işletmeler için",
+          "price": "1799",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "1799",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false,
+            "billingIncrement": "P1M"
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Profesyonel Bakım Hizmeti",
+            "description": "Haftalık güvenlik güncellemeleri, günlük yedekleme, 24 saat yanıt süresi"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Kurumsal Bakım",
+          "description": "Büyük şirketler için",
+          "price": "3499",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "3499",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false,
+            "billingIncrement": "P1M"
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Kurumsal Bakım Hizmeti",
+            "description": "7/24 güvenlik izleme, saatlik yedekleme, 30 dakika yanıt süresi"
+          }
+        }
+      ]
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "899",
+      "highPrice": "5000",
+      "priceCurrency": "TRY",
+      "offerCount": "3"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Web Site Sahipleri, E-Ticaret İşletmeleri, Kurumsal Şirketler"
+    }
+  };
+
+  const supportServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "SupportService",
+    "name": "7/24 Teknik Destek",
+    "description": "Acil durumlar için 7/24 erişilebilir teknik destek ekibi, hızlı problem çözme ve uzaktan müdahale hizmetleri.",
+    "provider": {
+      "@type": "Organization",
+      "name": "etki360"
+    },
+    "serviceType": "Technical Support",
+    "hoursAvailable": "Mo-Su 00:00-23:59",
+    "availableChannel": [
+      {
+        "@type": "ServiceChannel",
+        "serviceType": "WhatsApp Support",
+        "servicePhone": "+90-542-155-33-15"
+      },
+      {
+        "@type": "ServiceChannel",
+        "serviceType": "Email Support",
+        "email": "destek@etki360.com"
+      },
+      {
+        "@type": "ServiceChannel",
+        "serviceType": "Phone Support",
+        "servicePhone": "+90-542-155-33-15"
+      }
+    ],
+    "serviceOutput": [
+      "Problem Çözümü",
+      "Uzaktan Müdahale",
+      "Acil Müdahale",
+      "Teknik Danışmanlık"
+    ]
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Bakım & Destek Hizmetleri - etki360",
+    "description": "Web sitenizin sürekli güncel, güvenli ve performanslı kalması için profesyonel bakım ve 7/24 teknik destek hizmetleri sunuyoruz.",
+    "url": "https://etki360.com/hizmetler/bakim",
+    "inLanguage": "tr-TR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360",
+      "url": "https://etki360.com"
+    },
+    "about": {
+      "@type": "Service",
+      "name": "Bakım & Destek Hizmetleri"
+    },
+    "mainEntity": {
+      "@type": "Service",
+      "name": "Bakım & Destek Hizmetleri"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://etki360.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hizmetler",
+          "item": "https://etki360.com/hizmetler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bakım & Destek",
+          "item": "https://etki360.com/hizmetler/bakim"
+        }
+      ]
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Bakım paketleri neleri kapsar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bakım paketlerimiz güvenlik güncellemeleri, performans optimizasyonu, yedekleme, teknik destek ve içerik güncellemelerini kapsar. Paket türüne göre hizmet kapsamı değişmektedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Acil durumlarda ne kadar sürede müdahale edilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kurumsal paket için 30 dakika, Profesyonel paket için 24 saat, Temel paket için 48 saat içinde ilk müdahale gerçekleştirilir. Kritik sorunlarda tüm paketler için öncelik verilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Yedekleme ne sıklıkla yapılır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Temel pakette haftalık, Profesyonel pakette günlük, Kurumsal pakette saatlik yedekleme yapılır. Tüm yedekler çoklu lokasyonda güvenli şekilde saklanır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "İçerik güncellemeleri nasıl yapılır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "İçerik güncellemelerinizi WhatsApp veya e-posta ile iletebilirsiniz. Profesyonel pakette ayda 5 saat, Kurumsal pakette sınırsız içerik güncelleme hakkınız bulunur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Paket değişikliği yapabilir miyim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, ihtiyaçlarınız doğrultusunda paketinizi yükseltebilir veya düşürebilirsiniz. Paket değişiklikleri bir sonraki fatura döneminde geçerli olur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sözleşme süresi ne kadar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bakım paketlerimiz aylık olarak faturalandırılır ve minimum 3 aylık taahhüt gerektirir. İstediğiniz zaman paketinizi iptal edebilirsiniz."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="maintenance-support-page">
+      {/* Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify(serviceSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(supportServiceSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(webPageSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </script>
+
       {/* Hero Section */}
       <header className="maintenance-service-hero">
         <div className="container">
@@ -498,7 +751,13 @@ const MaintenanceSupport = () => {
               <Link to="/iletisim" className="maintenance-cta-btn-primary">
                 Destek Paketi Seç
               </Link>
-              <a href="https://wa.me/905421553315" className="maintenance-cta-btn-secondary" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://wa.me/905421553315" 
+                className="maintenance-cta-btn-secondary" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => trackButtonClick('WhatsApp ile İletişim', 'maintenance-support')}
+              >
                 WhatsApp ile İletişim
               </a>
             </div>

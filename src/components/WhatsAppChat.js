@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { trackButtonClick } from '../hooks/useGoogleAnalytics';
 import './WhatsAppChat.css';
 
 const WhatsAppChat = () => {
@@ -41,6 +42,9 @@ const WhatsAppChat = () => {
   }, [showBubble, messages.length]);
 
   const handleWhatsAppClick = () => {
+    // Google Analytics tracking
+    trackButtonClick('WhatsApp Chat Widget', 'whatsapp-widget');
+    
     // Ana WhatsApp numarasına yönlendir
     window.open('https://wa.me/905421553315?text=Merhaba! Web sitenizden geliyorum, projelerim hakkında bilgi almak istiyorum.', '_blank');
     setShowBubble(false);

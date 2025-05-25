@@ -3,8 +3,295 @@ import { Link } from 'react-router-dom';
 import './SEOPerformance.css';
 
 const SEOPerformance = () => {
+  // Schema markup for SEO Performance Service
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "SEO & Performans Optimizasyonu",
+    "alternateName": "SEO & Performance Optimization",
+    "description": "Google'da üst sıralarda yer almanız için teknik SEO, içerik optimizasyonu ve performans iyileştirmeleri ile organik trafiğinizi artırın.",
+    "provider": {
+      "@type": "Organization",
+      "name": "etki360",
+      "url": "https://etki360.com",
+      "logo": "https://etki360.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+90-542-155-33-15",
+        "contactType": "customer service",
+        "availableLanguage": "Turkish"
+      }
+    },
+    "serviceType": "SEO Optimization",
+    "category": "SEO & Performans",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Turkey"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "SEO & Performans Paketleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Temel SEO Paketi",
+          "description": "Küçük işletmeler için temel SEO optimizasyonu",
+          "price": "2999",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "2999",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false,
+            "billingIncrement": "P1M"
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Temel SEO Hizmeti",
+            "description": "5 anahtar kelime optimizasyonu, aylık rapor, email destek"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Profesyonel SEO",
+          "description": "Orta ölçekli işletmeler için kapsamlı SEO çözümü",
+          "price": "4999",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "4999",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false,
+            "billingIncrement": "P1M"
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Profesyonel SEO Hizmeti",
+            "description": "15 anahtar kelime optimizasyonu, haftalık rapor, telefon + email destek"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Kurumsal SEO",
+          "description": "Büyük ölçekli işletmeler için gelişmiş SEO stratejileri",
+          "price": "9999",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "9999",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false,
+            "billingIncrement": "P1M"
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Kurumsal SEO Hizmeti",
+            "description": "50+ anahtar kelime optimizasyonu, günlük rapor, dedicated uzman"
+          }
+        }
+      ]
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "2999",
+      "highPrice": "15000",
+      "priceCurrency": "TRY",
+      "offerCount": "3"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Web Site Sahipleri, E-Ticaret İşletmeleri, Dijital Ajanslar"
+    }
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SEO & Performans Optimizasyonu - etki360",
+    "description": "Google'da üst sıralarda yer almanız için teknik SEO, içerik optimizasyonu ve performans iyileştirmeleri ile organik trafiğinizi artırın.",
+    "url": "https://etki360.com/hizmetler/seo",
+    "inLanguage": "tr-TR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360",
+      "url": "https://etki360.com"
+    },
+    "about": {
+      "@type": "Service",
+      "name": "SEO & Performans Optimizasyonu"
+    },
+    "mainEntity": {
+      "@type": "Service",
+      "name": "SEO & Performans Optimizasyonu"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://etki360.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hizmetler",
+          "item": "https://etki360.com/hizmetler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SEO & Performans",
+          "item": "https://etki360.com/hizmetler/seo"
+        }
+      ]
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "SEO çalışması ne kadar sürer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEO sonuçları genellikle 3-6 ay içinde görülmeye başlar. İlk iyileştirmeler 1-2 ay içinde gözlemlenebilir, ancak kalıcı ve güçlü sonuçlar için 6-12 aylık süreç gerekir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hangi anahtar kelimeler için çalışıyorsunuz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sektörünüze ve hedef kitlenize uygun anahtar kelimeleri araştırıp belirliyoruz. Temel pakette 5, profesyonel pakette 15, kurumsal pakette 50+ anahtar kelime ile çalışıyoruz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "SEO garantisi veriyor musunuz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEO'da kesin sıralama garantisi vermek mümkün değildir çünkü Google algoritması sürekli değişir. Ancak organik trafik artışı ve teknik iyileştirmeler konusunda 30 gün garanti sunuyoruz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Raporlama nasıl yapılır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Temel pakette aylık, profesyonel pakette haftalık, kurumsal pakette günlük raporlama yapıyoruz. Raporlarda anahtar kelime sıralamaları, trafik artışı ve yapılan çalışmalar detaylandırılır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Teknik SEO nedir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Teknik SEO, web sitenizin Google tarafından daha iyi anlaşılması için yapılan altyapı iyileştirmeleridir. Site hızı, mobil uyumluluk, URL yapısı, schema markup gibi teknik faktörleri kapsar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Yerel SEO hizmeti veriyor musunuz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, Google My Business optimizasyonu, yerel anahtar kelime çalışmaları ve yerel dizin kayıtları ile yerel SEO hizmeti sunuyoruz. Özellikle fiziksel mağazası olan işletmeler için önemlidir."
+        }
+      }
+    ]
+  };
+
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "SEO Çalışma Süreci",
+    "description": "Organik trafiğinizi artırmak için izlediğimiz 4 adımlık SEO süreci",
+    "image": "https://etki360.com/images/seo-process.jpg",
+    "totalTime": "P6M",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "TRY",
+      "value": "2999-15000"
+    },
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "Web Site Erişimi"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Google Analytics Hesabı"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Hedef Anahtar Kelimeler"
+      }
+    ],
+    "tool": [
+      {
+        "@type": "HowToTool",
+        "name": "Google Analytics"
+      },
+      {
+        "@type": "HowToTool",
+        "name": "Google Search Console"
+      },
+      {
+        "@type": "HowToTool",
+        "name": "SEMrush"
+      }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "SEO Audit & Analiz",
+        "text": "Mevcut sitenizin teknik durumu, içerik kalitesi ve rekabet analizi ile SEO potansiyelinizi belirliyoruz.",
+        "image": "https://etki360.com/images/seo-audit.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Strateji Geliştirme",
+        "text": "Analiz sonuçlarına göre size özel SEO stratejisi oluşturuyor, hedefler ve zaman çizelgesi belirliyoruz.",
+        "image": "https://etki360.com/images/seo-strategy.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Optimizasyon & Uygulama",
+        "text": "Teknik SEO iyileştirmeleri, içerik optimizasyonu ve performans artırıcı değişiklikleri uyguluyoruz.",
+        "image": "https://etki360.com/images/seo-optimization.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "İzleme & Raporlama",
+        "text": "Sürekli performans takibi, düzenli raporlama ve stratejik iyileştirmelerle sonuçları optimize ediyoruz.",
+        "image": "https://etki360.com/images/seo-monitoring.jpg"
+      }
+    ]
+  };
+
   return (
     <div className="seo-performance-page">
+      {/* Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify(serviceSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(webPageSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(howToSchema)}
+      </script>
+
       {/* Hero Section */}
       <section className="seo-service-hero">
         <div className="container">

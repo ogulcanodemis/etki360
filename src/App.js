@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
+// Google Analytics Hook
+import { useGoogleAnalytics } from './hooks/useGoogleAnalytics';
+
 // Components
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -27,9 +30,13 @@ import LandingPage from './pages/services/LandingPage';
 import SEOPerformance from './pages/services/SEOPerformance';
 import MaintenanceSupport from './pages/services/MaintenanceSupport';
 
-function App() {
+// App Content Component (Router içinde olması gerekiyor)
+const AppContent = () => {
+  // Google Analytics tracking
+  useGoogleAnalytics();
+
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <div className="App">
         <Header />
@@ -55,6 +62,14 @@ function App() {
         <WhatsAppChat />
         <CookieConsent />
       </div>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }

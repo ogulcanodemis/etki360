@@ -89,7 +89,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="footer-bottom">
           <div className="footer-bottom-content">
-            <p>&copy; 2024 etki360. Tüm hakları saklıdır.</p>
+            <p>&copy; 2025 etki360. Tüm hakları saklıdır.</p>
             <div className="footer-bottom-links">
               <Link to="/gizlilik">Gizlilik Politikası</Link>
               <Link to="/kullanim-sartlari">Kullanım Şartları</Link>

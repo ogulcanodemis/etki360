@@ -3,8 +3,363 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
+  // WebSite Schema for SEO
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://etki360.com/#website",
+    "name": "etki360 - Web Tasarım & Dijital Çözümler",
+    "alternateName": "etki360",
+    "url": "https://etki360.com",
+    "description": "İstanbul merkezli web tasarım ve dijital çözümler şirketi. Kurumsal web siteleri, e-ticaret, SEO ve dijital pazarlama hizmetleri.",
+    "inLanguage": "tr-TR",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://etki360.com/#organization"
+    },
+    "potentialAction": [
+      {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://etki360.com/blog?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    ],
+    "mainEntity": {
+      "@type": "Organization",
+      "@id": "https://etki360.com/#organization"
+    }
+  };
+
+  // Organization Schema for SEO
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://etki360.com/#organization",
+    "name": "etki360",
+    "alternateName": "etki360 Web Tasarım & Dijital Çözümler",
+    "url": "https://etki360.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://etki360.com/logo.png",
+      "width": 300,
+      "height": 100
+    },
+    "image": "https://etki360.com/images/etki360-hero.jpg",
+    "description": "Dijitalde güçlü bir varlık oluşturmak isteyen işletmelere modern, hızlı ve kullanıcı odaklı web çözümleri sunuyoruz.",
+    "foundingDate": "2023",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "İstanbul",
+      "addressRegion": "İstanbul",
+      "addressCountry": "TR",
+      "postalCode": "34000"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+90-542-155-33-15",
+        "contactType": "customer service",
+        "availableLanguage": ["Turkish", "English"],
+        "areaServed": "TR",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+90-544-488-23-03",
+        "contactType": "technical support",
+        "availableLanguage": ["Turkish", "English"],
+        "areaServed": "TR"
+      }
+    ],
+    "email": "info@etki360.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/etki360/",
+      "https://www.instagram.com/etki360/",
+      "https://www.facebook.com/profile.php?id=61576903310978"
+    ],
+    "serviceArea": {
+      "@type": "Country",
+      "name": "Turkey"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Tasarım ve Dijital Hizmetler",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Kurumsal Web Sitesi Tasarımı",
+            "description": "Modern, responsive ve SEO uyumlu kurumsal web siteleri",
+            "provider": {
+              "@type": "Organization",
+              "name": "etki360"
+            },
+            "areaServed": "TR",
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://etki360.com/hizmetler/kurumsal-web"
+            }
+          },
+          "priceRange": "₺9,500 - ₺25,000",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "E-Ticaret Web Sitesi",
+            "description": "Ödeme entegrasyonlu, stok yönetimli e-ticaret çözümleri",
+            "provider": {
+              "@type": "Organization",
+              "name": "etki360"
+            },
+            "areaServed": "TR",
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://etki360.com/hizmetler/e-ticaret"
+            }
+          },
+          "priceRange": "₺27,999 - ₺75,000",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Landing Page Tasarımı",
+            "description": "Dönüşüm odaklı, hızlı yüklenen tek sayfalık tanıtım siteleri",
+            "provider": {
+              "@type": "Organization",
+              "name": "etki360"
+            },
+            "areaServed": "TR",
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://etki360.com/hizmetler/landing-page"
+            }
+          },
+          "priceRange": "₺4,999 - ₺15,000",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SEO ve Performans Optimizasyonu",
+            "description": "Google sıralaması ve site hızı optimizasyonu",
+            "provider": {
+              "@type": "Organization",
+              "name": "etki360"
+            },
+            "areaServed": "TR",
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://etki360.com/hizmetler/seo"
+            }
+          },
+          "priceRange": "₺2,999/ay",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "50",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": "5-10"
+    },
+    "knowsAbout": [
+      "Web Tasarım",
+      "E-Ticaret",
+      "SEO",
+      "Dijital Pazarlama",
+      "React",
+      "PHP",
+      "WordPress",
+      "Landing Page",
+      "Mobil Uyumlu Tasarım",
+      "Performans Optimizasyonu"
+    ],
+    "slogan": "Dijitalde Gücünüzü Gösterin!",
+    "mission": "İşletmenizin dijitaldeki vitrinini profesyonelce tasarlayan, sürdürülebilir ve performans odaklı çözümler sunan web geliştirme hizmetidir."
+  };
+
+  // WebPage Schema for Home Page
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://etki360.com/#webpage",
+    "url": "https://etki360.com",
+    "name": "etki360 - Web Tasarım & Dijital Çözümler | Ana Sayfa",
+    "description": "İşletmenizin dijitaldeki vitrinini profesyonelce tasarlayan, sürdürülebilir ve performans odaklı çözümler sunan web geliştirme hizmetidir.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://etki360.com/#website"
+    },
+    "about": {
+      "@type": "Organization",
+      "@id": "https://etki360.com/#organization"
+    },
+    "mainEntity": {
+      "@type": "Organization",
+      "@id": "https://etki360.com/#organization"
+    },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://etki360.com/images/etki360-hero.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://etki360.com"
+        }
+      ]
+    }
+  };
+
+  // Service Schema for Main Services
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "etki360 Hizmetleri",
+    "description": "Dijital dünyada başarılı olmak için ihtiyacınız olan tüm hizmetler",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "Service",
+        "position": 1,
+        "name": "Kurumsal Web Sitesi",
+        "description": "Modern, mobil uyumlu ve SEO optimizasyonlu kurumsal web siteleri",
+        "provider": {
+          "@type": "Organization",
+          "name": "etki360"
+        },
+        "serviceType": "Web Tasarım",
+        "areaServed": "TR",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Kurumsal Web Paketleri",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "priceRange": "₺9,500 - ₺25,000",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        },
+        "url": "https://etki360.com/hizmetler/kurumsal-web"
+      },
+      {
+        "@type": "Service",
+        "position": 2,
+        "name": "E-Ticaret Çözümleri",
+        "description": "Ödeme entegrasyonları ve yönetim paneli ile eksiksiz e-ticaret siteleri",
+        "provider": {
+          "@type": "Organization",
+          "name": "etki360"
+        },
+        "serviceType": "E-Ticaret",
+        "areaServed": "TR",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "E-Ticaret Paketleri",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "priceRange": "₺27,999 - ₺75,000",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        },
+        "url": "https://etki360.com/hizmetler/e-ticaret"
+      },
+      {
+        "@type": "Service",
+        "position": 3,
+        "name": "Landing Page",
+        "description": "Dönüşüm odaklı, hızlı yüklenen tek sayfalık tanıtım siteleri",
+        "provider": {
+          "@type": "Organization",
+          "name": "etki360"
+        },
+        "serviceType": "Landing Page",
+        "areaServed": "TR",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Landing Page Paketleri",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "priceRange": "₺4,999 - ₺15,000",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        },
+        "url": "https://etki360.com/hizmetler/landing-page"
+      },
+      {
+        "@type": "Service",
+        "position": 4,
+        "name": "SEO & Performans",
+        "description": "Google'da üst sıralarda yer almanız için teknik SEO optimizasyonu",
+        "provider": {
+          "@type": "Organization",
+          "name": "etki360"
+        },
+        "serviceType": "SEO",
+        "areaServed": "TR",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "SEO Paketleri",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "priceRange": "₺2,999/ay",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        },
+        "url": "https://etki360.com/hizmetler/seo"
+      }
+    ]
+  };
+
   return (
     <div className="home">
+      {/* Schema Markup for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify(websiteSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(organizationSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(webPageSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(servicesSchema)}
+      </script>
+
       {/* Hero Section */}
       <section className="home-page-hero">
         <div className="container">

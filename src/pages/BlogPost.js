@@ -1,26 +1,66 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import './BlogPost.css';
-import blogData from '../data/blogPosts.json';
 
 const BlogPost = () => {
   const { slug } = useParams();
-  
-  // JSON dosyasından blog yazıları ve kategorileri al
-  const { blogPosts, categories } = blogData;
+  const [post, setPost] = useState(null);
+  const [relatedPosts, setRelatedPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Slug'a göre blog yazısını bul
-  const post = blogPosts.find(p => p.slug === slug);
+  // Backend API'sinden blog yazısını çek
+  useEffect(() => {
+    const fetchBlogPost = async () => {
+      try {
+        setLoading(true);
+        setError(null);
 
-  // Eğer yazı bulunamazsa 404'e yönlendir
-  if (!post) {
-    return <Navigate to="/404" replace />;
+        const response = await fetch(`http://localhost/etki360/backend/api/blog.php?action=post&slug=${slug}`);
+        
+        if (!response.ok) {
+          throw new Error('Blog yazısı bulunamadı');
+        }
+
+        const data = await response.json();
+        
+        if (data.success && data.data) {
+          setPost(data.data.post);
+          setRelatedPosts(data.data.related_posts || []);
+        } else {
+          throw new Error('Blog yazısı bulunamadı');
+        }
+      } catch (error) {
+        console.error('Blog yazısı yüklenirken hata:', error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (slug) {
+      fetchBlogPost();
+    }
+  }, [slug]);
+
+  // Loading state
+  if (loading) {
+    return (
+      <div className="blog-post-loading">
+        <div className="container">
+          <div className="loading-content">
+            <div className="loading-spinner"></div>
+            <p>Blog yazısı yükleniyor...</p>
+          </div>
+        </div>
+      </div>
+    );
   }
 
-  // Aynı kategorideki diğer yazıları bul (ilgili yazılar)
-  const relatedPosts = blogPosts
-    .filter(p => p.category === post.category && p.id !== post.id)
-    .slice(0, 3);
+  // Error state - 404 redirect
+  if (error || !post) {
+    return <Navigate to="/404" replace />;
+  }
 
   // Tarih formatlama
   const formatDate = (dateString) => {
@@ -34,6 +74,19 @@ const BlogPost = () => {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`
   };
+
+  // İçeriği paragraflar halinde böl
+  const formatContent = (content) => {
+    if (!content) return [];
+    
+    // HTML etiketlerini temizle ve paragrafları ayır
+    const cleanContent = content.replace(/<[^>]*>/g, '');
+    const paragraphs = cleanContent.split('\n\n').filter(p => p.trim().length > 0);
+    
+    return paragraphs.length > 0 ? paragraphs : [cleanContent];
+  };
+
+  const contentParagraphs = formatContent(post.content);
 
   return (
     <div className="blog-post-page">
@@ -51,12 +104,12 @@ const BlogPost = () => {
             
             <div className="blog-post-meta">
               <span className="blog-post-category">
-                {categories.find(cat => cat.key === post.category)?.label}
+                {post.category_name}
               </span>
-              <time className="blog-post-date" dateTime={post.publishDate}>
-                {formatDate(post.publishDate)}
+              <time className="blog-post-date" dateTime={post.published_at}>
+                {formatDate(post.published_at)}
               </time>
-              <span className="blog-post-read-time">{post.readTime} okuma</span>
+              <span className="blog-post-read-time">{post.read_time} dk okuma</span>
             </div>
 
             <h1 className="blog-post-title">{post.title}</h1>
@@ -65,6 +118,11 @@ const BlogPost = () => {
             <div className="blog-post-author-info">
               <div className="author-details">
                 <span className="author-name">{post.author}</span>
+                {post.source_url && (
+                  <span className="source-info">
+                    Kaynak: <a href={post.source_url} target="_blank" rel="noopener noreferrer">Medium</a>
+                  </span>
+                )}
               </div>
               <div className="blog-post-share">
                 <span className="share-label">Paylaş:</span>
@@ -114,7 +172,7 @@ const BlogPost = () => {
         <div className="container">
           <div className="blog-post-featured-image">
             <img 
-              src={post.image} 
+              src={post.image_url || '/api/placeholder/800/400'} 
               alt={post.title}
               loading="lazy"
             />
@@ -134,39 +192,25 @@ const BlogPost = () => {
               >
                 <meta itemProp="headline" content={post.title} />
                 <meta itemProp="description" content={post.excerpt} />
-                <meta itemProp="image" content={post.image} />
-                <meta itemProp="datePublished" content={post.publishDate} />
+                <meta itemProp="image" content={post.image_url} />
+                <meta itemProp="datePublished" content={post.published_at} />
                 <meta itemProp="author" content={post.author} />
-                <meta itemProp="articleSection" content={categories.find(cat => cat.key === post.category)?.label} />
+                <meta itemProp="articleSection" content={post.category_name} />
                 
                 <div itemProp="articleBody">
-                  <p>{post.content}</p>
+                  {contentParagraphs.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
                   
-                  <h2>Web Tasarımında Yenilikçi Yaklaşımlar</h2>
-                  <p>
-                    Modern web tasarımı, kullanıcı deneyimini ön planda tutan, 
-                    performans odaklı ve erişilebilir çözümler sunmaktadır. 
-                    Bu yazıda ele aldığımız konular, dijital dünyada başarılı 
-                    olmak isteyen işletmeler için kritik öneme sahiptir.
-                  </p>
-
-                  <h3>Temel Prensipler</h3>
-                  <ul>
-                    <li>Kullanıcı odaklı tasarım yaklaşımı</li>
-                    <li>Mobil öncelikli geliştirme</li>
-                    <li>Performans optimizasyonu</li>
-                    <li>SEO uyumlu yapı</li>
-                  </ul>
-
-                  <blockquote>
-                    "Başarılı bir web sitesi, teknik mükemmellik ve yaratıcı 
-                    tasarımın mükemmel birleşimidir."
-                  </blockquote>
-
-                  <p>
-                    Sonuç olarak, bu konularda doğru stratejiler uygulamak 
-                    işletmenizin dijital başarısını doğrudan etkileyecektir.
-                  </p>
+                  {post.source_url && (
+                    <div className="source-attribution">
+                      <h3>Kaynak Hakkında</h3>
+                      <p>
+                        Bu yazı <a href={post.source_url} target="_blank" rel="noopener noreferrer">Medium</a> 
+                        platformundan alınmıştır. Orijinal yazıya ulaşmak için yukarıdaki bağlantıyı kullanabilirsiniz.
+                      </p>
+                    </div>
+                  )}
                 </div>
               </article>
 
@@ -174,7 +218,7 @@ const BlogPost = () => {
                 <div className="blog-post-tags">
                   <h3>Etiketler</h3>
                   <div className="tags-list">
-                    {post.tags.map((tag, index) => (
+                    {post.tags && post.tags.map((tag, index) => (
                       <span key={index} className="tag" itemProp="keywords">
                         {tag}
                       </span>
@@ -216,14 +260,25 @@ const BlogPost = () => {
 
             <aside className="blog-post-sidebar">
               <div className="sidebar-widget">
-                <h3>İçindekiler</h3>
-                <nav className="table-of-contents">
-                  <ul>
-                    <li><a href="#introduction">Giriş</a></li>
-                    <li><a href="#main-points">Ana Noktalar</a></li>
-                    <li><a href="#conclusion">Sonuç</a></li>
-                  </ul>
-                </nav>
+                <h3>Yazı Bilgileri</h3>
+                <div className="post-info">
+                  <div className="info-item">
+                    <strong>Kategori:</strong>
+                    <span>{post.category_name}</span>
+                  </div>
+                  <div className="info-item">
+                    <strong>Yayın Tarihi:</strong>
+                    <span>{formatDate(post.published_at)}</span>
+                  </div>
+                  <div className="info-item">
+                    <strong>Okuma Süresi:</strong>
+                    <span>{post.read_time} dakika</span>
+                  </div>
+                  <div className="info-item">
+                    <strong>Görüntülenme:</strong>
+                    <span>{post.view_count || 0} kez</span>
+                  </div>
+                </div>
               </div>
 
               <div className="sidebar-widget">
@@ -256,7 +311,7 @@ const BlogPost = () => {
                 <article key={relatedPost.id} className="related-post-card">
                   <div className="related-post-image">
                     <img 
-                      src={relatedPost.image} 
+                      src={relatedPost.image_url || '/api/placeholder/300/200'} 
                       alt={relatedPost.title}
                       loading="lazy"
                     />
@@ -264,10 +319,10 @@ const BlogPost = () => {
                   <div className="related-post-content">
                     <div className="related-post-meta">
                       <span className="related-post-category">
-                        {categories.find(cat => cat.key === relatedPost.category)?.label}
+                        {relatedPost.category_name}
                       </span>
-                      <time className="related-post-date" dateTime={relatedPost.publishDate}>
-                        {formatDate(relatedPost.publishDate)}
+                      <time className="related-post-date" dateTime={relatedPost.published_at}>
+                        {formatDate(relatedPost.published_at)}
                       </time>
                     </div>
                     <h3 className="related-post-title">

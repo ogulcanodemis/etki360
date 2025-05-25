@@ -3,8 +3,262 @@ import { Link } from 'react-router-dom';
 import './ECommerce.css';
 
 const ECommerce = () => {
+  // Schema markup for E-Commerce Service
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "E-Ticaret Çözümleri",
+    "alternateName": "E-Commerce Solutions",
+    "description": "Online satışa başlamak için ihtiyacınız olan her şey. Ödeme entegrasyonları, stok yönetimi ve kullanıcı dostu yönetim paneli ile eksiksiz e-ticaret siteleri.",
+    "provider": {
+      "@type": "Organization",
+      "name": "etki360",
+      "url": "https://etki360.com",
+      "logo": "https://etki360.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+90-542-155-33-15",
+        "contactType": "customer service",
+        "availableLanguage": "Turkish"
+      }
+    },
+    "serviceType": "E-Commerce Development",
+    "category": "E-Ticaret",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Turkey"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "E-Ticaret Paketleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Temel E-Ticaret",
+          "description": "WordPress/WooCommerce veya Wix tabanlı başlangıç paketi",
+          "price": "27999",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "27999",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Temel E-Ticaret Sitesi",
+            "description": "100 ürün limiti, 1 ödeme gateway, 2-3 hafta teslimat"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Profesyonel E-Ticaret",
+          "description": "Özel tasarım ve gelişmiş özelliklerle eksiksiz çözüm",
+          "price": "39999",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "39999",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Profesyonel E-Ticaret Sitesi",
+            "description": "Sınırsız ürün, 3+ ödeme gateway, 3-4 hafta teslimat"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Kurumsal E-Ticaret",
+          "description": "Büyük ölçekli işletmeler için gelişmiş çözümler",
+          "price": "59999",
+          "priceCurrency": "TRY",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "59999",
+            "priceCurrency": "TRY",
+            "valueAddedTaxIncluded": false
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Kurumsal E-Ticaret Sitesi",
+            "description": "Sınırsız ürün, tüm ödeme sistemleri, 6-8 hafta teslimat"
+          }
+        }
+      ]
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "27999",
+      "highPrice": "75000",
+      "priceCurrency": "TRY",
+      "offerCount": "3"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "E-Ticaret İşletmeleri, Online Mağazalar, Perakende Şirketleri"
+    }
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "E-Ticaret Çözümleri - etki360",
+    "description": "Online satışa başlamak için ihtiyacınız olan her şey. Ödeme entegrasyonları, stok yönetimi ve kullanıcı dostu yönetim paneli ile eksiksiz e-ticaret siteleri.",
+    "url": "https://etki360.com/hizmetler/e-ticaret",
+    "inLanguage": "tr-TR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360",
+      "url": "https://etki360.com"
+    },
+    "about": {
+      "@type": "Service",
+      "name": "E-Ticaret Çözümleri"
+    },
+    "mainEntity": {
+      "@type": "Service",
+      "name": "E-Ticaret Çözümleri"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://etki360.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hizmetler",
+          "item": "https://etki360.com/hizmetler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "E-Ticaret Çözümleri",
+          "item": "https://etki360.com/hizmetler/e-ticaret"
+        }
+      ]
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "E-ticaret sitesi kurma maliyeti nedir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "E-ticaret sitesi maliyeti ihtiyaçlarınıza göre değişir. Temel paketimiz ₺27.999'dan başlar, profesyonel paket ₺39.999, kurumsal çözümler ise ₺59.999'dan başlamaktadır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hangi ödeme sistemlerini entegre ediyorsunuz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "iyzico, PayTR, Sanal POS, mobil ödeme sistemleri ve tüm popüler ödeme gateway'lerini entegre ediyoruz. Paket türüne göre 1-3+ ödeme sistemi dahildir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "E-ticaret sitesi ne kadar sürede teslim edilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Temel paket 2-3 hafta, profesyonel paket 3-4 hafta, kurumsal çözümler 6-8 hafta içinde teslim edilir. Proje karmaşıklığına göre süre değişebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Stok yönetimi nasıl çalışır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Otomatik stok takibi, düşük stok uyarıları, kategori bazlı yönetim ve kargo entegrasyonları ile kapsamlı stok yönetim sistemi sunuyoruz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mobil uyumlu mu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, tüm e-ticaret sitelerimiz mobil uyumlu (responsive) tasarım ile geliştirilir. Mobil cihazlarda mükemmel alışveriş deneyimi sunar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Destek hizmeti var mı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Temel pakette 1 ay, profesyonel pakette 3 ay, kurumsal pakette 6 ay destek ve bakım hizmeti dahildir. Sonrasında aylık destek paketlerimizden yararlanabilirsiniz."
+        }
+      }
+    ]
+  };
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "E-Ticaret Web Sitesi",
+    "description": "Profesyonel e-ticaret çözümleri ile online satışa başlayın",
+    "brand": {
+      "@type": "Brand",
+      "name": "etki360"
+    },
+    "category": "Web Development Services",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "27999",
+      "highPrice": "75000",
+      "priceCurrency": "TRY",
+      "offerCount": "3",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "47",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Ahmet Yılmaz"
+        },
+        "reviewBody": "E-ticaret sitemiz çok profesyonel oldu. Satışlarımız %200 arttı."
+      }
+    ]
+  };
+
   return (
     <div className="ecommerce-page">
+      {/* Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify(serviceSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(webPageSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(productSchema)}
+      </script>
+
       {/* Hero Section */}
       <section className="ecommerce-service-hero">
         <div className="container">

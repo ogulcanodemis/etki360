@@ -1,13 +1,54 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Sayfa değiştiğinde menüyü kapat
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
+
+  // Mobil menü açıkken body scroll'unu kontrol et
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('mobile-menu-open');
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
+  // ESC tuşu ile menüyü kapat
+  useEffect(() => {
+    const handleEscapeKey = (event) => {
+      if (event.key === 'Escape' && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscapeKey);
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="header">
@@ -15,7 +56,7 @@ const Header = () => {
         <div className="header-content">
           {/* Logo */}
           <div className="logo">
-            <Link to="/">
+            <Link to="/" onClick={closeMenu}>
               <span className="logo-text">etki360</span>
             </Link>
           </div>
@@ -52,6 +93,8 @@ const Header = () => {
           <button 
             className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}
             onClick={toggleMenu}
+            aria-label={isMenuOpen ? 'Menüyü kapat' : 'Menüyü aç'}
+            aria-expanded={isMenuOpen}
           >
             <span></span>
             <span></span>
@@ -62,15 +105,29 @@ const Header = () => {
         {/* Mobile Navigation */}
         <nav className={`mobile-nav ${isMenuOpen ? 'active' : ''}`}>
           <ul className="mobile-nav-list">
-            <li><Link to="/" onClick={toggleMenu}>Ana Sayfa</Link></li>
-            <li><Link to="/hakkimizda" onClick={toggleMenu}>Hakkımızda</Link></li>
-            <li><Link to="/hizmetler" onClick={toggleMenu}>Hizmetler</Link></li>
-            <li><Link to="/portfoy" onClick={toggleMenu}>Portföy</Link></li>
-            <li><Link to="/blog" onClick={toggleMenu}>Blog</Link></li>
-            <li><Link to="/iletisim" onClick={toggleMenu}>İletişim</Link></li>
+            <li><Link to="/" onClick={closeMenu}>Ana Sayfa</Link></li>
+            <li><Link to="/hakkimizda" onClick={closeMenu}>Hakkımızda</Link></li>
+            <li><Link to="/hizmetler" onClick={closeMenu}>Hizmetler</Link></li>
+            <li><Link to="/hizmetler/kurumsal-web" onClick={closeMenu}>Kurumsal Web</Link></li>
+            <li><Link to="/hizmetler/e-ticaret" onClick={closeMenu}>E-Ticaret</Link></li>
+            <li><Link to="/hizmetler/landing-page" onClick={closeMenu}>Landing Page</Link></li>
+            <li><Link to="/hizmetler/seo" onClick={closeMenu}>SEO & Performans</Link></li>
+            <li><Link to="/hizmetler/bakim" onClick={closeMenu}>Bakım & Destek</Link></li>
+            <li><Link to="/portfoy" onClick={closeMenu}>Portföy</Link></li>
+            <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
+            <li><Link to="/iletisim" onClick={closeMenu}>İletişim</Link></li>
           </ul>
         </nav>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div 
+          className="mobile-menu-overlay" 
+          onClick={closeMenu}
+          aria-hidden="true"
+        />
+      )}
     </header>
   );
 };

@@ -6,10 +6,11 @@
 /* Home Page Hero Section */
 .home-page-hero {
   background: linear-gradient(135deg, #F9FAFB 0%, #ffffff 100%) !important;
-  padding: 80px 0 !important;
-  min-height: 80vh !important;
+  padding: 60px 0 !important;
+  min-height: 70vh !important;
   display: flex !important;
   align-items: center !important;
+  overflow: hidden;
 }
 
 .home-hero-content {
@@ -17,6 +18,7 @@
   grid-template-columns: 1fr 1fr !important;
   gap: 60px !important;
   align-items: center !important;
+  width: 100%;
 }
 
 .home-hero-title {
@@ -43,6 +45,7 @@
   display: flex !important;
   gap: 16px !important;
   margin-bottom: 48px !important;
+  flex-wrap: wrap;
 }
 
 .home-btn-primary {
@@ -56,6 +59,9 @@
   transition: all 0.3s ease !important;
   border: none !important;
   cursor: pointer !important;
+  display: inline-block;
+  text-align: center;
+  min-width: 180px;
 }
 
 .home-btn-primary:hover {
@@ -75,6 +81,9 @@
   font-weight: 600 !important;
   font-size: 16px !important;
   transition: all 0.3s ease !important;
+  display: inline-block;
+  text-align: center;
+  min-width: 180px;
 }
 
 .home-btn-secondary:hover {
@@ -86,10 +95,13 @@
 .home-hero-stats {
   display: flex !important;
   gap: 32px !important;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .home-stat {
   text-align: center !important;
+  min-width: 120px;
 }
 
 .home-stat-number {
@@ -118,6 +130,7 @@
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1) !important;
   padding: 24px !important;
   width: 300px !important;
+  max-width: 100%;
   transform: rotate(5deg) !important;
   transition: transform 0.3s ease !important;
 }
@@ -397,10 +410,21 @@
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
+    justify-items: center;
   }
   
   .home-hero-title {
     font-size: 40px;
+    text-align: center;
+  }
+
+  .home-hero-description {
+    text-align: center;
+    max-width: 80%;
+  }
+
+  .home-hero-buttons {
+    justify-content: center;
   }
   
   .section-title {
@@ -411,24 +435,91 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
+
+  .home-hero-stats {
+    justify-content: center;
+  }
+
+  /* Tablet'te visual'ı küçült */
+  .home-hero-visual {
+    margin-top: 20px;
+  }
+
+  .home-hero-card {
+    width: 250px;
+    padding: 20px;
+  }
 }
 
 @media (max-width: 768px) {
+  .home {
+    padding-top: 60px;
+  }
+
   .home-page-hero {
-    padding: 60px 0;
+    padding: 40px 0;
+    min-height: 60vh;
+  }
+  
+  .home-hero-content {
+    gap: 30px;
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    justify-items: center !important;
+  }
+  
+  /* Mobilde visual'ı gizle */
+  .home-hero-visual {
+    display: none !important;
   }
   
   .home-hero-title {
     font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center !important;
+  }
+
+  .home-hero-description {
+    font-size: 16px;
+    margin-bottom: 24px;
+    text-align: center !important;
+    max-width: 90% !important;
   }
   
   .home-hero-buttons {
     flex-direction: column;
-    align-items: center;
+    align-items: center !important;
+    gap: 12px;
+    margin-bottom: 32px;
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+
+  .home-btn-primary,
+  .home-btn-secondary {
+    width: 100%;
+    min-width: auto;
+    padding: 14px 24px;
+    font-size: 15px;
   }
   
   .home-hero-stats {
-    justify-content: center;
+    justify-content: center !important;
+    gap: 24px;
+    width: 100% !important;
+  }
+
+  .home-stat {
+    min-width: 100px;
+  }
+
+  .home-stat-number {
+    font-size: 28px;
+  }
+
+  .home-hero-card {
+    width: 280px;
+    padding: 20px;
   }
   
   .services,
@@ -448,8 +539,52 @@
 }
 
 @media (max-width: 480px) {
+  .home {
+    padding-top: 60px;
+  }
+
+  .home-page-hero {
+    padding: 30px 0;
+    min-height: 50vh;
+  }
+
+  .home-hero-content {
+    gap: 24px !important;
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    justify-items: center !important;
+  }
+  
+  /* Küçük mobilde de visual gizli */
+  .home-hero-visual {
+    display: none !important;
+  }
+  
   .home-hero-title {
     font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    text-align: center !important;
+  }
+
+  .home-hero-description {
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: center !important;
+    max-width: 95% !important;
+  }
+
+  .home-hero-buttons {
+    margin-bottom: 24px;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 280px !important;
+  }
+
+  .home-btn-primary,
+  .home-btn-secondary {
+    padding: 12px 20px;
+    font-size: 14px;
   }
   
   .section-title {
@@ -463,5 +598,30 @@
   .home-hero-stats {
     flex-direction: column;
     gap: 16px;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .home-stat {
+    min-width: auto;
+  }
+
+  .home-stat-number {
+    font-size: 24px;
+  }
+
+  .home-stat-label {
+    font-size: 13px;
+  }
+
+  .home-hero-card {
+    width: 250px;
+    padding: 16px;
+    transform: rotate(0deg) !important;
+  }
+
+  .container {
+    padding: 0 16px;
   }
 } 
