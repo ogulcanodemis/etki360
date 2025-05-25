@@ -4,6 +4,7 @@ import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -12,11 +13,17 @@ const Header = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setIsServicesDropdownOpen(false);
+  };
+
+  const toggleServicesDropdown = () => {
+    setIsServicesDropdownOpen(!isServicesDropdownOpen);
   };
 
   // Sayfa değiştiğinde menüyü kapat
   useEffect(() => {
     setIsMenuOpen(false);
+    setIsServicesDropdownOpen(false);
   }, [location]);
 
   // Mobil menü açıkken body scroll'unu kontrol et
@@ -41,6 +48,7 @@ const Header = () => {
     const handleEscapeKey = (event) => {
       if (event.key === 'Escape' && isMenuOpen) {
         setIsMenuOpen(false);
+        setIsServicesDropdownOpen(false);
       }
     };
 
@@ -107,12 +115,35 @@ const Header = () => {
           <ul className="mobile-nav-list">
             <li><Link to="/" onClick={closeMenu}>Ana Sayfa</Link></li>
             <li><Link to="/hakkimizda" onClick={closeMenu}>Hakkımızda</Link></li>
-            <li><Link to="/hizmetler" onClick={closeMenu}>Hizmetler</Link></li>
-            <li><Link to="/hizmetler/kurumsal-web" onClick={closeMenu}>Kurumsal Web</Link></li>
-            <li><Link to="/hizmetler/e-ticaret" onClick={closeMenu}>E-Ticaret</Link></li>
-            <li><Link to="/hizmetler/landing-page" onClick={closeMenu}>Landing Page</Link></li>
-            <li><Link to="/hizmetler/seo" onClick={closeMenu}>SEO & Performans</Link></li>
-            <li><Link to="/hizmetler/bakim" onClick={closeMenu}>Bakım & Destek</Link></li>
+            
+            {/* Mobile Services Dropdown */}
+            <li className="mobile-dropdown">
+              <button 
+                className={`mobile-dropdown-btn ${isServicesDropdownOpen ? 'active' : ''}`}
+                onClick={toggleServicesDropdown}
+                aria-expanded={isServicesDropdownOpen}
+              >
+                <span>Hizmetler</span>
+                <svg 
+                  className="mobile-dropdown-icon" 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor"
+                >
+                  <polyline points="6,9 12,15 18,9"/>
+                </svg>
+              </button>
+              <ul className={`mobile-dropdown-menu ${isServicesDropdownOpen ? 'active' : ''}`}>
+                <li><Link to="/hizmetler/kurumsal-web" onClick={closeMenu}>Kurumsal Web</Link></li>
+                <li><Link to="/hizmetler/e-ticaret" onClick={closeMenu}>E-Ticaret</Link></li>
+                <li><Link to="/hizmetler/landing-page" onClick={closeMenu}>Landing Page</Link></li>
+                <li><Link to="/hizmetler/seo" onClick={closeMenu}>SEO & Performans</Link></li>
+                <li><Link to="/hizmetler/bakim" onClick={closeMenu}>Bakım & Destek</Link></li>
+              </ul>
+            </li>
+            
             <li><Link to="/portfoy" onClick={closeMenu}>Portföy</Link></li>
             <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
             <li><Link to="/iletisim" onClick={closeMenu}>İletişim</Link></li>
