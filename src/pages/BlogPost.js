@@ -16,7 +16,7 @@ const BlogPost = () => {
         setLoading(true);
         setError(null);
 
-        const response = await fetch(`http://localhost/etki360/backend/api/blog.php?action=post&slug=${slug}`);
+        const response = await fetch(`http://etki360/backend/api/blog.php?action=post&slug=${slug}`);
         
         if (!response.ok) {
           throw new Error('Blog yazısı bulunamadı');

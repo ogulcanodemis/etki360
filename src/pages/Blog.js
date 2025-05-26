@@ -241,9 +241,9 @@ const Blog = () => {
 
         // Paralel olarak posts, categories ve stats çek
         const [postsResponse, categoriesResponse, statsResponse] = await Promise.all([
-          fetch(`http://localhost/etki360/backend/api/blog.php?action=posts&page=${currentPage}&limit=${postsPerPage}&category=${activeCategory !== 'all' ? activeCategory : ''}`),
-          fetch('http://localhost/etki360/backend/api/blog.php?action=categories'),
-          fetch('http://localhost/etki360/backend/api/blog.php?action=stats')
+          fetch(`http://etki360/backend/api/blog.php?action=posts&page=${currentPage}&limit=${postsPerPage}&category=${activeCategory !== 'all' ? activeCategory : ''}`),
+          fetch('http://etki360/backend/api/blog.php?action=categories'),
+          fetch('http://etki360/backend/api/blog.php?action=stats')
         ]);
 
         if (!postsResponse.ok || !categoriesResponse.ok || !statsResponse.ok) {
