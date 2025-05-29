@@ -1,9 +1,9 @@
 <?php
 class Database {
     private $host = 'localhost';
-    private $db_name = 'etki360_blog';
-    private $username = 'root';
-    private $password = '';
+    private $db_name = 'u590342429_etki360_blog';
+    private $username = 'u590342429_etki360';
+    private $password = 'E;db2pA@5[F7';
     private $conn;
 
     public function getConnection() {

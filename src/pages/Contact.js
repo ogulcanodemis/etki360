@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { trackFormSubmit, trackButtonClick, trackContactAction } from '../hooks/useGoogleAnalytics';
 import './Contact.css';
@@ -30,27 +30,47 @@ const Contact = () => {
   // Form gönderimi
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     setIsSubmitting(true);
+    setSubmitStatus(null);
     
-    // Google Analytics tracking
-    trackFormSubmit('contact-form');
-    trackContactAction('form_submit');
-    
-    // Simüle edilmiş form gönderimi
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      trackContactAction('form_success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        budget: '',
-        message: '',
-        agreement: false
+      const response = await fetch('/backend/api/contact.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+        })
       });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          service: '',
+          budget: '',
+          message: '',
+          agreement: false
+        });
+        // reCAPTCHA'yı sıfırla
+        if (window.grecaptcha) {
+          window.grecaptcha.reset();
+        }
+      } else {
+        setSubmitStatus('error');
+      }
+      
+      // Google Analytics tracking
+      trackFormSubmit('contact-form');
+      trackContactAction(result.success ? 'form_success' : 'form_error');
+      
     } catch (error) {
       setSubmitStatus('error');
       trackContactAction('form_error');

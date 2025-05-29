@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 
 // Google Analytics Hook
@@ -11,6 +11,8 @@ import Footer from './components/Footer';
 import WhatsAppChat from './components/WhatsAppChat';
 import CookieConsent from './components/CookieConsent';
 import ScrollToTop from './components/ScrollToTop';
+import PrivateRoute from './components/PrivateRoute';
+import AdminLayout from './components/AdminLayout';
 
 // Pages
 import Home from './pages/Home';
@@ -22,6 +24,12 @@ import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import SiteMap from './pages/SiteMap';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
+import AdminContactForms from './pages/AdminContactForms';
+import AdminBlogPosts from './pages/AdminBlogPosts';
+import AdminBlogEditor from './pages/AdminBlogEditor';
 
 // Service Pages
 import CorporateWeb from './pages/services/CorporateWeb';
@@ -34,12 +42,18 @@ import MaintenanceSupport from './pages/services/MaintenanceSupport';
 const AppContent = () => {
   // Google Analytics tracking
   useGoogleAnalytics();
+  const location = useLocation(); // Mevcut rota bilgisini al
+
+  // Admin rotasında mıyız kontrolü
+  const isAdminRoute = location.pathname.startsWith('/admin');
 
   return (
     <>
       <ScrollToTop />
       <div className="App">
-        <Header />
+        {/* Admin rotasında değilsek Header'ı göster */}
+        {!isAdminRoute && <Header />}
+
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -56,9 +70,28 @@ const AppContent = () => {
             <Route path="/iletisim" element={<Contact />} />
             <Route path="/gizlilik" element={<PrivacyPolicy />} />
             <Route path="/kullanim-sartlari" element={<TermsOfService />} />
+            <Route path="/site-haritasi" element={<SiteMap />} />
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route 
+              path="/admin"
+              element={
+                <PrivateRoute>
+                  <AdminLayout />
+                </PrivateRoute>
+              }
+            >
+              <Route path="dashboard" element={<AdminDashboard />} />
+              <Route path="contact-forms" element={<AdminContactForms />} />
+              <Route path="blog-posts" element={<AdminBlogPosts />} />
+              <Route path="blog-posts/create" element={<AdminBlogEditor />} />
+              <Route path="blog-posts/edit/:id" element={<AdminBlogEditor />} />
+            </Route>
           </Routes>
         </main>
-        <Footer />
+
+        {/* Admin rotasında değilsek Footer'ı göster */}
+        {!isAdminRoute && <Footer />}
+
         <WhatsAppChat />
         <CookieConsent />
       </div>

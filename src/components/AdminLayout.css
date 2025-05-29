@@ -1,0 +1,16 @@
+/* Admin Layout Styles */
+
+.admin-layout-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+}
+
+.admin-content-area {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 250px; /* Sidebar genişliği kadar boşluk */
+    transition: margin-left 0.3s ease;
+}
+
+/* Responsive için sidebar gizleme/açma durumunda margin ayarlaması gerekebilir */ 

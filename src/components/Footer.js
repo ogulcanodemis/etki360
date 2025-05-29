@@ -39,11 +39,13 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Hızlı Linkler</h3>
             <ul className="footer-links">
+              <li><Link to="/">Ana Sayfa</Link></li>
               <li><Link to="/hakkimizda">Hakkımızda</Link></li>
-              <li><Link to="/hizmetler">Hizmetlerimiz</Link></li>
+              <li><Link to="/hizmetler">Hizmetler</Link></li>
               <li><Link to="/portfoy">Portföy</Link></li>
               <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/iletisim">İletişim</Link></li>
+              <li><Link to="/site-haritasi">Site Haritası</Link></li>
             </ul>
           </div>
 
