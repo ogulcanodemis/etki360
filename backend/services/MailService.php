@@ -31,6 +31,17 @@ class MailService {
     }
 
     /**
+     * PHPMailer nesnesini döndür
+     * Bu metot, PHPMailer nesnesine doğrudan erişim sağlar
+     * Admin panelinden e-posta gönderme gibi özel durumlarda kullanılabilir
+     * 
+     * @return PHPMailer PHPMailer nesnesi
+     */
+    public function getMailer() {
+        return $this->mailer;
+    }
+
+    /**
      * İletişim formu e-postasını gönder
      */
     public function sendContactForm($formData) {

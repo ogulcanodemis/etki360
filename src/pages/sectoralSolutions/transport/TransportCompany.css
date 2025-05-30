@@ -1,0 +1,894 @@
+/* Nakliyat Firması Sayfası için Özel Stiller */
+
+/* Genel Sayfa Stilleri */
+.transport-company-page {
+  padding-top: 70px;
+}
+
+/* Vurgu Stilleri */
+.transport-company-page .sectoral-highlight {
+  background: linear-gradient(45deg, #FF7A00, #FF9E2D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Hero Bölümü */
+.transport-hero {
+  background: linear-gradient(135deg, #1A3C6D 0%, #3A6EB5 100%);
+  padding: 70px 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.transport-breadcrumb {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.transport-breadcrumb a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.transport-breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.transport-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.transport-hero-text {
+  padding-right: 20px;
+}
+
+.transport-hero .sectoral-hero-title {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.transport-hero .sectoral-hero-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.transport-hero .sectoral-hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Mockup Stilleri */
+.transport-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transport-mockup {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.mockup-content {
+  padding: 20px;
+}
+
+.mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-hero-img {
+  height: 120px;
+  background: linear-gradient(135deg, #1A3C6D 0%, #3A6EB5 100%);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mockup-hero-img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.mockup-services {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mockup-service-item {
+  height: 80px;
+  flex: 1;
+  background: #F0F9FF;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mockup-service-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #FF7A00;
+  border-radius: 3px 3px 0 0;
+}
+
+.mockup-cta {
+  height: 60px;
+  background: #FF7A00;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+
+/* Genel Bakış Bölümü */
+.transport-overview {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.transport-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.transport-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 16px;
+}
+
+.transport-section-subtitle {
+  font-size: 18px;
+  color: #6B7280;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.transport-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.transport-overview-card {
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 3px solid #FF7A00;
+}
+
+.transport-overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.transport-card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 122, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.transport-card-icon i {
+  color: #FF7A00;
+  font-size: 24px;
+}
+
+.transport-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 12px;
+}
+
+.transport-card-text {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+/* Özellikler Bölümü */
+.transport-features {
+  padding: 80px 0;
+  background-color: #F0F9FF;
+}
+
+.transport-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.transport-feature-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+}
+
+.transport-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.transport-feature-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 122, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.transport-feature-icon i {
+  color: #FF7A00;
+  font-size: 20px;
+}
+
+.transport-feature-content {
+  flex-grow: 1;
+}
+
+.transport-feature-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 10px;
+}
+
+.transport-feature-text {
+  font-size: 15px;
+  color: #6B7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Faydalar Bölümü */
+.transport-benefits {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.transport-benefits-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Faydalar Mockup Bölümü */
+.transport-benefits-mockup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-mockup-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  border: 1px solid #E5E7EB;
+}
+
+.benefits-mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.benefits-mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.benefits-mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.benefits-mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.benefits-mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.benefits-mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.benefits-mockup-content {
+  padding: 20px;
+}
+
+.benefits-mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-title {
+  height: 25px;
+  width: 80%;
+  background: #F0F9FF;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.benefits-mockup-form {
+  background: #F9FAFB;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-form-row {
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #E5E7EB;
+}
+
+.benefits-mockup-button {
+  height: 40px;
+  background: #FF7A00;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.benefits-mockup-testimonial {
+  display: flex;
+  align-items: center;
+  background: #F9FAFB;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.benefits-mockup-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1A3C6D 0%, #3A6EB5 100%);
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.benefits-mockup-text {
+  height: 40px;
+  flex-grow: 1;
+  background: #FFFFFF;
+  border-radius: 6px;
+}
+
+.transport-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.transport-benefit-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.transport-benefit-icon {
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.transport-benefit-icon i {
+  color: #FF7A00;
+  font-size: 20px;
+}
+
+.transport-benefit-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0 0 8px 0;
+}
+
+.transport-benefit-text p {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Fiyatlandırma Bölümü */
+.transport-pricing {
+  padding: 80px 0;
+  background-color: #F9FAFB;
+}
+
+.transport-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.transport-pricing-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border-top: 5px solid #E5E7EB;
+}
+
+.transport-pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.transport-pricing-card.featured {
+  border-top: 5px solid #FF7A00;
+  z-index: 1;
+}
+
+.transport-pricing-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: linear-gradient(45deg, #FF7A00, #FF9E2D);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.transport-pricing-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.transport-pricing-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 10px;
+}
+
+.transport-pricing-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.transport-price-amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #FF7A00;
+}
+
+.transport-price-period {
+  font-size: 14px;
+  color: #6B7280;
+}
+
+.transport-pricing-features {
+  margin-bottom: 25px;
+}
+
+.transport-pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transport-pricing-features li {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #1F2937;
+}
+
+.transport-pricing-features li i {
+  color: #FF7A00;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.transport-pricing-disabled {
+  color: #9CA3AF !important;
+  text-decoration: line-through;
+}
+
+.transport-pricing-disabled i {
+  color: #EF4444 !important;
+}
+
+.transport-pricing-footer {
+  text-align: center;
+}
+
+.transport-pricing-button {
+  background: linear-gradient(45deg, #FF7A00, #FF9E2D);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+  width: 100%;
+}
+
+.transport-pricing-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 122, 0, 0.3);
+}
+
+/* SSS Bölümü */
+.transport-faq {
+  padding: 80px 0;
+  background-color: #F9FAFB;
+}
+
+.transport-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.transport-faq-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.transport-faq-item:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.transport-faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.transport-faq-question::before {
+  content: "Q";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FF7A00;
+  font-weight: 700;
+}
+
+.transport-faq-answer {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+/* CTA Bölümü */
+.transport-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1A3C6D 0%, #3A6EB5 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.transport-cta::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 122, 0, 0.2);
+  border-radius: 50%;
+}
+
+.transport-cta::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 122, 0, 0.1);
+  border-radius: 50%;
+}
+
+.transport-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.transport-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.transport-cta-title .sectoral-highlight {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+  color: white;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.transport-cta-text {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+}
+
+.transport-cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.transport-cta .primary-button {
+  background: #FF7A00;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+}
+
+.transport-cta .primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: #FF9E2D;
+}
+
+.transport-cta .secondary-button {
+  background: transparent;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.transport-cta .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Hero Buton Stilleri */
+.transport-hero .primary-button {
+  background: linear-gradient(45deg, #FF7A00, #FF9E2D);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+}
+
+.transport-hero .primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 122, 0, 0.3);
+}
+
+.transport-hero .secondary-button {
+  background: transparent;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.transport-hero .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 1024px) {
+  .transport-hero-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .transport-hero-visual {
+    order: -1;
+  }
+  
+  .transport-hero-text {
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .transport-hero .sectoral-hero-actions {
+    justify-content: center;
+  }
+  
+  .transport-benefits-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .transport-benefits-mockup {
+    order: -1;
+  }
+  
+  .transport-pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .transport-hero {
+    padding: 50px 0;
+  }
+  
+  .transport-hero .sectoral-hero-title {
+    font-size: 32px;
+  }
+  
+  .transport-hero .sectoral-hero-actions {
+    flex-direction: column;
+  }
+  
+  .benefits-mockup-container {
+    max-width: 400px;
+  }
+  
+  .transport-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .transport-section-title {
+    font-size: 32px;
+  }
+  
+  .transport-faq-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .transport-cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transport-hero .sectoral-hero-title {
+    font-size: 28px;
+  }
+  
+  .transport-section-title {
+    font-size: 28px;
+  }
+  
+  .transport-feature-card {
+    flex-direction: column;
+  }
+  
+  .transport-feature-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .transport-pricing-card {
+    padding: 20px;
+  }
+  
+  .transport-price-amount {
+    font-size: 32px;
+  }
+  
+  .benefits-mockup-container {
+    max-width: 320px;
+  }
+} 

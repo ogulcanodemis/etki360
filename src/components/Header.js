@@ -1,30 +1,55 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
+import logo from '../assets/images/logo.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [sectoralDropdownOpen, setSectoralDropdownOpen] = useState(false);
   const location = useLocation();
+
+  // Sayfa yüklendiğinde ve rota değiştiğinde menüyü kapat
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setServicesDropdownOpen(false);
+    setSectoralDropdownOpen(false);
+  }, [location]);
+
+  // Scroll olayını dinle
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    setIsServicesDropdownOpen(false);
+  const toggleServicesDropdown = (e) => {
+    e.preventDefault();
+    setServicesDropdownOpen(!servicesDropdownOpen);
+    // Diğer dropdown'ları kapat
+    setSectoralDropdownOpen(false);
   };
 
-  const toggleServicesDropdown = () => {
-    setIsServicesDropdownOpen(!isServicesDropdownOpen);
+  const toggleSectoralDropdown = (e) => {
+    e.preventDefault();
+    setSectoralDropdownOpen(!sectoralDropdownOpen);
+    // Diğer dropdown'ları kapat
+    setServicesDropdownOpen(false);
   };
-
-  // Sayfa değiştiğinde menüyü kapat
-  useEffect(() => {
-    setIsMenuOpen(false);
-    setIsServicesDropdownOpen(false);
-  }, [location]);
 
   // Mobil menü açıkken body scroll'unu kontrol et
   useEffect(() => {
@@ -48,7 +73,8 @@ const Header = () => {
     const handleEscapeKey = (event) => {
       if (event.key === 'Escape' && isMenuOpen) {
         setIsMenuOpen(false);
-        setIsServicesDropdownOpen(false);
+        setServicesDropdownOpen(false);
+        setSectoralDropdownOpen(false);
       }
     };
 
@@ -59,103 +85,127 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="header-content">
-          {/* Logo */}
           <div className="logo">
-            <Link to="/" onClick={closeMenu}>
-              <span className="logo-text">etki360</span>
+            <Link to="/">
+              <img src={logo} alt="etki360 Logo" />
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="desktop-nav">
-            <ul className="nav-list">
-              <li><Link to="/" className="nav-link">Ana Sayfa</Link></li>
-              <li><Link to="/hakkimizda" className="nav-link">Hakkımızda</Link></li>
-              <li className="dropdown">
-                <span className="nav-link">Hizmetler</span>
-                <ul className="dropdown-menu">
-                  <li><Link to="/hizmetler/kurumsal-web">Kurumsal Web</Link></li>
-                  <li><Link to="/hizmetler/e-ticaret">E-Ticaret</Link></li>
-                  <li><Link to="/hizmetler/landing-page">Landing Page</Link></li>
-                  <li><Link to="/hizmetler/seo">SEO & Performans</Link></li>
-                  <li><Link to="/hizmetler/bakim">Bakım & Destek</Link></li>
-                </ul>
-              </li>
-              <li><Link to="/portfoy" className="nav-link">Portföy</Link></li>
-              <li><Link to="/blog" className="nav-link">Blog</Link></li>
-              <li><Link to="/iletisim" className="nav-link">İletişim</Link></li>
-            </ul>
-          </nav>
-
-          {/* CTA Button */}
-          <div className="header-cta">
-            <Link to="/iletisim" className="cta-button">
-              Teklif Al
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}
-            onClick={toggleMenu}
-            aria-label={isMenuOpen ? 'Menüyü kapat' : 'Menüyü aç'}
-            aria-expanded={isMenuOpen}
-          >
+          <button className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
             <span></span>
             <span></span>
             <span></span>
           </button>
-        </div>
 
-        {/* Mobile Navigation */}
-        <nav className={`mobile-nav ${isMenuOpen ? 'active' : ''}`}>
-          <ul className="mobile-nav-list">
-            <li><Link to="/" onClick={closeMenu}>Ana Sayfa</Link></li>
-            <li><Link to="/hakkimizda" onClick={closeMenu}>Hakkımızda</Link></li>
-            
-            {/* Mobile Services Dropdown */}
-            <li className="mobile-dropdown">
-              <button 
-                className={`mobile-dropdown-btn ${isServicesDropdownOpen ? 'active' : ''}`}
-                onClick={toggleServicesDropdown}
-                aria-expanded={isServicesDropdownOpen}
-              >
-                <span>Hizmetler</span>
-                <svg 
-                  className="mobile-dropdown-icon" 
-                  width="16" 
-                  height="16" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor"
+          <nav className={`main-nav ${isMenuOpen ? 'open' : ''}`}>
+            <ul className="nav-list">
+              <li className="nav-item">
+                <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
+                  Ana Sayfa
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/hakkimizda" className={location.pathname === '/hakkimizda' ? 'active' : ''}>
+                  Hakkımızda
+                </Link>
+              </li>
+              <li className="nav-item has-dropdown">
+                <a 
+                  href="/hizmetlerimiz" 
+                  className={location.pathname.includes('/hizmetlerimiz') ? 'active' : ''}
+                  onClick={toggleServicesDropdown}
                 >
-                  <polyline points="6,9 12,15 18,9"/>
-                </svg>
-              </button>
-              <ul className={`mobile-dropdown-menu ${isServicesDropdownOpen ? 'active' : ''}`}>
-                <li><Link to="/hizmetler/kurumsal-web" onClick={closeMenu}>Kurumsal Web</Link></li>
-                <li><Link to="/hizmetler/e-ticaret" onClick={closeMenu}>E-Ticaret</Link></li>
-                <li><Link to="/hizmetler/landing-page" onClick={closeMenu}>Landing Page</Link></li>
-                <li><Link to="/hizmetler/seo" onClick={closeMenu}>SEO & Performans</Link></li>
-                <li><Link to="/hizmetler/bakim" onClick={closeMenu}>Bakım & Destek</Link></li>
-              </ul>
-            </li>
-            
-            <li><Link to="/portfoy" onClick={closeMenu}>Portföy</Link></li>
-            <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
-            <li><Link to="/iletisim" onClick={closeMenu}>İletişim</Link></li>
-          </ul>
-        </nav>
+                  Hizmetlerimiz <i className="dropdown-icon"></i>
+                </a>
+                <ul className={`dropdown-menu ${servicesDropdownOpen ? 'open' : ''}`}>
+                  <li>
+                    <Link to="/hizmetlerimiz/web-tasarim">Web Tasarım</Link>
+                  </li>
+                  <li>
+                    <Link to="/hizmetlerimiz/e-ticaret">E-Ticaret</Link>
+                  </li>
+                  <li>
+                    <Link to="/hizmetlerimiz/seo">SEO</Link>
+                  </li>
+                  <li>
+                    <Link to="/hizmetlerimiz/sosyal-medya">Sosyal Medya</Link>
+                  </li>
+                  <li>
+                    <Link to="/hizmetlerimiz/icerik-uretimi">İçerik Üretimi</Link>
+                  </li>
+                  <li>
+                    <Link to="/hizmetlerimiz/grafik-tasarim">Grafik Tasarım</Link>
+                  </li>
+                  <li>
+                    <Link to="/hizmetlerimiz/mobil-uygulama">Mobil Uygulama</Link>
+                  </li>
+                  <li>
+                    <Link to="/hizmetlerimiz/bakim-destek">Bakım ve Destek</Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item has-dropdown">
+                <a 
+                  href="/sektorel-cozumler" 
+                  className={location.pathname.includes('/sektorel-cozumler') ? 'active' : ''}
+                  onClick={toggleSectoralDropdown}
+                >
+                  Sektörel Çözümler <i className="dropdown-icon"></i>
+                </a>
+                <ul className={`dropdown-menu ${sectoralDropdownOpen ? 'open' : ''}`}>
+                  <li>
+                    <Link to="/sektorel-cozumler/saglik/klinik-web-sitesi">Klinik Web Sitesi</Link>
+                  </li>
+                  <li>
+                    <Link to="/sektorel-cozumler/saglik/sac-ekim-klinigi">Saç Ekim Kliniği</Link>
+                  </li>
+                  <li>
+                    <Link to="/sektorel-cozumler/nakliyat/nakliye-firmasi">Nakliyat Firması</Link>
+                  </li>
+                  <li>
+                    <Link to="/sektorel-cozumler/hizmet/cilingir">Çilingir</Link>
+                  </li>
+                  <li>
+                    <Link to="/sektorel-cozumler/insaat-dekorasyon/mimar">Mimar</Link>
+                  </li>
+                  <li className="dropdown-divider"></li>
+                  <li>
+                    <Link to="/sektorel-cozumler">Tüm Sektörel Çözümler</Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item">
+                <Link to="/portfoy" className={location.pathname === '/portfoy' ? 'active' : ''}>
+                  Portföy
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/blog" className={location.pathname.includes('/blog') ? 'active' : ''}>
+                  Blog
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/iletisim" className={location.pathname === '/iletisim' ? 'active' : ''}>
+                  İletişim
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div 
           className="mobile-menu-overlay" 
-          onClick={closeMenu}
+          onClick={() => {
+            setIsMenuOpen(false);
+            setServicesDropdownOpen(false);
+            setSectoralDropdownOpen(false);
+          }}
           aria-hidden="true"
         />
       )}

@@ -1,0 +1,952 @@
+/* Saç Ekim Kliniği Sayfası için Özel Stiller */
+
+/* Genel Sayfa Stilleri */
+.hair-transplant-page {
+  padding-top: 70px;
+}
+
+/* Vurgu Stilleri */
+.hair-transplant-page .sectoral-highlight {
+  background: linear-gradient(45deg, #0d474b, #5B86E5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Hero Bölümü */
+.hair-transplant-hero {
+  background: linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%);
+  padding: 70px 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.hair-transplant-breadcrumb {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.hair-transplant-breadcrumb a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.hair-transplant-breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.hair-transplant-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hair-transplant-hero-text {
+  padding-right: 20px;
+}
+
+.hair-transplant-hero .sectoral-hero-title {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.hair-transplant-hero .sectoral-hero-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.hair-transplant-hero .sectoral-hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Mockup Stilleri */
+.hair-transplant-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hair-transplant-mockup {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.mockup-content {
+  padding: 20px;
+}
+
+.mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-hero-img {
+  height: 120px;
+  background: linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-before-after {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mockup-before,
+.mockup-after {
+  height: 80px;
+  width: 50%;
+  background: #F0F9FF;
+  border-radius: 6px;
+}
+
+.mockup-doctors {
+  height: 60px;
+  background: #F0F9FF;
+  border-radius: 6px;
+}
+
+/* Genel Bakış Bölümü */
+.hair-transplant-page .sectoral-overview {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.hair-transplant-page .sectoral-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hair-transplant-page .sectoral-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 16px;
+}
+
+.hair-transplant-page .sectoral-section-subtitle {
+  font-size: 18px;
+  color: #6B7280;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hair-transplant-page .sectoral-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.hair-transplant-page .sectoral-overview-card {
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 3px solid #36D1DC;
+}
+
+.hair-transplant-page .sectoral-overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hair-transplant-page .sectoral-card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(54, 209, 220, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hair-transplant-page .sectoral-card-icon i {
+  color: #36D1DC;
+  font-size: 24px;
+}
+
+.hair-transplant-page .sectoral-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 12px;
+}
+
+.hair-transplant-page .sectoral-card-text {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+/* Özellikler Bölümü */
+.hair-transplant-page .sectoral-features {
+  padding: 80px 0;
+  background-color: #F0F9FF;
+}
+
+.hair-transplant-page .sectoral-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.hair-transplant-page .sectoral-feature-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+}
+
+.hair-transplant-page .sectoral-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hair-transplant-page .sectoral-feature-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(54, 209, 220, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.hair-transplant-page .sectoral-feature-icon i {
+  color: #36D1DC;
+  font-size: 20px;
+}
+
+.hair-transplant-page .sectoral-feature-content {
+  flex-grow: 1;
+}
+
+.hair-transplant-page .sectoral-feature-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 10px;
+}
+
+.hair-transplant-page .sectoral-feature-text {
+  font-size: 15px;
+  color: #6B7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Faydalar Bölümü */
+.hair-transplant-page .sectoral-benefits {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.hair-transplant-page .sectoral-benefits-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Faydalar Görsel Bölümü */
+.hair-transplant-benefits-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.benefits-visual-box {
+  background: #F0F9FF;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 3px solid #36D1DC;
+}
+
+.benefits-visual-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-visual-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(54, 209, 220, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.benefits-visual-icon i {
+  color: #36D1DC;
+  font-size: 30px;
+}
+
+.benefits-visual-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 12px;
+}
+
+.benefits-visual-text {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.5;
+}
+
+.hair-transplant-page .sectoral-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hair-transplant-page .sectoral-benefit-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.hair-transplant-page .sectoral-benefit-icon {
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.hair-transplant-page .sectoral-benefit-icon i {
+  color: #36D1DC;
+  font-size: 20px;
+}
+
+.hair-transplant-page .sectoral-benefit-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0 0 8px 0;
+}
+
+.hair-transplant-page .sectoral-benefit-text p {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Faydalar Mockup Bölümü */
+.hair-transplant-benefits-mockup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-mockup-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  border: 1px solid #E5E7EB;
+}
+
+.benefits-mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.benefits-mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.benefits-mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.benefits-mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.benefits-mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.benefits-mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.benefits-mockup-content {
+  padding: 20px;
+}
+
+.benefits-mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-title {
+  height: 25px;
+  width: 80%;
+  background: #F0F9FF;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.benefits-mockup-gallery {
+  margin-bottom: 25px;
+}
+
+.benefits-mockup-before-after {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-item {
+  flex: 1;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(54, 209, 220, 0.1) 0%, rgba(91, 134, 229, 0.1) 100%);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(54, 209, 220, 0.2);
+}
+
+.benefits-mockup-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background: rgba(54, 209, 220, 0.8);
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.benefits-mockup-testimonial {
+  display: flex;
+  align-items: center;
+  background: #F9FAFB;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.benefits-mockup-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%);
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.benefits-mockup-text {
+  height: 40px;
+  flex-grow: 1;
+  background: #FFFFFF;
+  border-radius: 6px;
+}
+
+/* Fiyatlandırma Bölümü */
+.hair-transplant-pricing {
+  padding: 80px 0;
+  background-color: #F9FAFB;
+}
+
+.hair-transplant-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hair-transplant-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 16px;
+}
+
+.hair-transplant-section-subtitle {
+  font-size: 18px;
+  color: #6B7280;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hair-transplant-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.hair-transplant-pricing-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border-top: 5px solid #E5E7EB;
+}
+
+.hair-transplant-pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hair-transplant-pricing-card.featured {
+  border-top: 5px solid #36D1DC;
+  z-index: 1;
+}
+
+.hair-transplant-pricing-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: linear-gradient(45deg, #36D1DC, #5B86E5);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hair-transplant-pricing-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.hair-transplant-pricing-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 10px;
+}
+
+.hair-transplant-pricing-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hair-transplant-price-amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #36D1DC;
+}
+
+.hair-transplant-price-period {
+  font-size: 14px;
+  color: #6B7280;
+}
+
+.hair-transplant-pricing-features {
+  margin-bottom: 25px;
+}
+
+.hair-transplant-pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hair-transplant-pricing-features li {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #1F2937;
+}
+
+.hair-transplant-pricing-features li i {
+  color: #36D1DC;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.hair-transplant-pricing-disabled {
+  color: #9CA3AF !important;
+  text-decoration: line-through;
+}
+
+.hair-transplant-pricing-disabled i {
+  color: #EF4444 !important;
+}
+
+.hair-transplant-pricing-footer {
+  text-align: center;
+}
+
+.hair-transplant-pricing-button {
+  background: linear-gradient(45deg, #36D1DC, #5B86E5);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+  width: 100%;
+}
+
+.hair-transplant-pricing-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(54, 209, 220, 0.3);
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 1024px) {
+  .hair-transplant-hero-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .hair-transplant-hero-visual {
+    order: -1;
+  }
+  
+  .hair-transplant-hero-text {
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .hair-transplant-hero .sectoral-hero-actions {
+    justify-content: center;
+  }
+  
+  .hair-transplant-page .sectoral-benefits-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hair-transplant-benefits-mockup {
+    order: -1;
+  }
+  
+  .hair-transplant-pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .hair-transplant-hero {
+    padding: 50px 0;
+  }
+  
+  .hair-transplant-hero .sectoral-hero-title {
+    font-size: 32px;
+  }
+  
+  .hair-transplant-hero .sectoral-hero-actions {
+    flex-direction: column;
+  }
+  
+  .benefits-mockup-container {
+    max-width: 400px;
+  }
+  
+  .benefits-mockup-item {
+    height: 100px;
+  }
+  
+  .hair-transplant-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hair-transplant-section-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hair-transplant-hero .sectoral-hero-title {
+    font-size: 28px;
+  }
+  
+  .hair-transplant-page .sectoral-section-title,
+  .hair-transplant-section-title {
+    font-size: 28px;
+  }
+  
+  .hair-transplant-page .sectoral-feature-card {
+    flex-direction: column;
+  }
+  
+  .hair-transplant-page .sectoral-feature-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .hair-transplant-page .sectoral-faq-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hair-transplant-page .sectoral-faq-item {
+    padding: 20px;
+  }
+  
+  .hair-transplant-pricing-card {
+    padding: 20px;
+  }
+  
+  .hair-transplant-price-amount {
+    font-size: 32px;
+  }
+  
+  .benefits-mockup-container {
+    max-width: 320px;
+  }
+  
+  .benefits-mockup-item {
+    height: 80px;
+  }
+}
+
+/* Buton Stilleri */
+.hair-transplant-hero .primary-button {
+  background: linear-gradient(45deg, #36D1DC, #5B86E5);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+}
+
+.hair-transplant-hero .primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(54, 209, 220, 0.3);
+}
+
+.hair-transplant-hero .secondary-button {
+  background: transparent;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.hair-transplant-hero .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* SSS Bölümü */
+.hair-transplant-page .sectoral-faq {
+  padding: 80px 0;
+  background-color: #F9FAFB;
+}
+
+.hair-transplant-page .sectoral-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.hair-transplant-page .sectoral-faq-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.hair-transplant-page .sectoral-faq-item:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hair-transplant-page .sectoral-faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.hair-transplant-page .sectoral-faq-question::before {
+  content: "Q";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #36D1DC;
+  font-weight: 700;
+}
+
+.hair-transplant-page .sectoral-faq-answer {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .hair-transplant-page .sectoral-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CTA Bölümü */
+.hair-transplant-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #5B86E5 0%, #36D1DC 100%);
+  color: white;
+}
+
+.hair-transplant-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hair-transplant-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.hair-transplant-cta-title .sectoral-highlight {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+  color: white;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.hair-transplant-cta-text {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+}
+
+.hair-transplant-cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hair-transplant-cta .primary-button {
+  background: white;
+  color: #36D1DC;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.hair-transplant-cta .primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background: #f8f9fa;
+}
+
+.hair-transplant-cta .secondary-button {
+  background: transparent;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.hair-transplant-cta .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .hair-transplant-cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .hair-transplant-cta-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hair-transplant-cta-title {
+    font-size: 28px;
+  }
+} 

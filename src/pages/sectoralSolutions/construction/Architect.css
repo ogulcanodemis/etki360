@@ -1,0 +1,905 @@
+/* Mimarlık Firması Sayfası için Özel Stiller */
+
+/* Genel Sayfa Stilleri */
+.architect-page {
+  padding-top: 70px;
+}
+
+/* Vurgu Stilleri */
+.architect-page .sectoral-highlight {
+  background: linear-gradient(45deg, #2C3E50, #4D6883);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Hero Bölümü */
+.architect-hero {
+  background: linear-gradient(135deg, #F0F2F5 0%, #E5E9F0 100%);
+  padding: 70px 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  color: #2C3E50;
+}
+
+.architect-breadcrumb {
+  color: #4D6883;
+  margin-bottom: 20px;
+}
+
+.architect-breadcrumb a {
+  color: #4D6883;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.architect-breadcrumb a:hover {
+  color: #2C3E50;
+}
+
+.architect-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.architect-hero-text {
+  padding-right: 20px;
+}
+
+.architect-hero .sectoral-hero-title {
+  color: #2C3E50;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.architect-hero .sectoral-hero-description {
+  color: #4D6883;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.architect-hero .sectoral-hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Mockup Stilleri */
+.architect-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.architect-mockup {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.mockup-content {
+  padding: 20px;
+}
+
+.mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-hero-img {
+  height: 120px;
+  background: linear-gradient(135deg, #2C3E50 0%, #4D6883 100%);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mockup-project {
+  height: 80px;
+  background: #F0F2F5;
+  border-radius: 6px;
+}
+
+.mockup-about {
+  height: 60px;
+  background: #F0F2F5;
+  border-radius: 6px;
+}
+
+/* Genel Bakış Bölümü */
+.architect-page .sectoral-overview {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.architect-page .sectoral-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.architect-page .sectoral-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2C3E50;
+  margin-bottom: 16px;
+}
+
+.architect-page .sectoral-section-subtitle {
+  font-size: 18px;
+  color: #4D6883;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.architect-page .sectoral-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.architect-page .sectoral-overview-card {
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 3px solid #2C3E50;
+}
+
+.architect-page .sectoral-overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.architect-page .sectoral-card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(44, 62, 80, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.architect-page .sectoral-card-icon i {
+  color: #2C3E50;
+  font-size: 24px;
+}
+
+.architect-page .sectoral-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 12px;
+}
+
+.architect-page .sectoral-card-text {
+  font-size: 16px;
+  color: #4D6883;
+  line-height: 1.6;
+}
+
+/* Özellikler Bölümü */
+.architect-page .sectoral-features {
+  padding: 80px 0;
+  background-color: #F0F2F5;
+}
+
+.architect-page .sectoral-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.architect-page .sectoral-feature-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+}
+
+.architect-page .sectoral-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.architect-page .sectoral-feature-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(44, 62, 80, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.architect-page .sectoral-feature-icon i {
+  color: #2C3E50;
+  font-size: 20px;
+}
+
+.architect-page .sectoral-feature-content {
+  flex: 1;
+}
+
+.architect-page .sectoral-feature-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.architect-page .sectoral-feature-text {
+  font-size: 15px;
+  color: #4D6883;
+  line-height: 1.6;
+}
+
+/* Faydalar Bölümü */
+.architect-page .sectoral-benefits {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.architect-page .sectoral-benefits-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.architect-benefits-mockup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-mockup-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+}
+
+.benefits-mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.benefits-mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.benefits-mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.benefits-mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.benefits-mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.benefits-mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.benefits-mockup-content {
+  padding: 20px;
+}
+
+.benefits-mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-title {
+  height: 20px;
+  width: 70%;
+  background: #F0F2F5;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-gallery {
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.benefits-mockup-item {
+  height: 80px;
+  background: #F0F2F5;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.benefits-mockup-item:hover {
+  background: #E5E9F0;
+  transform: translateY(-3px);
+}
+
+.benefits-mockup-info {
+  padding-top: 15px;
+}
+
+.benefits-mockup-text {
+  height: 60px;
+  background: #F0F2F5;
+  border-radius: 6px;
+}
+
+.architect-page .sectoral-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.architect-page .sectoral-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.architect-page .sectoral-benefit-icon {
+  color: #2C3E50;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.architect-page .sectoral-benefit-icon i {
+  color: #2C3E50;
+}
+
+.architect-page .sectoral-benefit-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.architect-page .sectoral-benefit-text p {
+  font-size: 16px;
+  color: #4D6883;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Fiyatlandırma Bölümü */
+.architect-pricing {
+  padding: 80px 0;
+  background-color: #F0F2F5;
+}
+
+.architect-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.architect-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2C3E50;
+  margin-bottom: 16px;
+}
+
+.architect-section-subtitle {
+  font-size: 18px;
+  color: #4D6883;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.architect-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.architect-pricing-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.architect-pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.architect-pricing-card.featured {
+  border: 2px solid #2C3E50;
+  padding-top: 50px;
+}
+
+.architect-pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2C3E50;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.architect-pricing-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #E5E9F0;
+}
+
+.architect-pricing-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2C3E50;
+  margin-bottom: 15px;
+}
+
+.architect-pricing-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.architect-price-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2C3E50;
+  line-height: 1;
+}
+
+.architect-price-period {
+  font-size: 14px;
+  color: #4D6883;
+  margin-top: 5px;
+}
+
+.architect-pricing-features {
+  margin-bottom: 30px;
+}
+
+.architect-pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.architect-pricing-features li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #4D6883;
+  border-bottom: 1px solid #F0F2F5;
+}
+
+.architect-pricing-features li i {
+  margin-right: 10px;
+  color: #2C3E50;
+  font-size: 14px;
+}
+
+.architect-pricing-disabled {
+  color: #9CA3AF !important;
+}
+
+.architect-pricing-disabled i {
+  color: #9CA3AF !important;
+}
+
+.architect-pricing-footer {
+  text-align: center;
+}
+
+.architect-pricing-button {
+  display: inline-block;
+  background: #2C3E50;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid #2C3E50;
+}
+
+.architect-pricing-button:hover {
+  background: white;
+  color: #2C3E50;
+  border-color: #2C3E50;
+}
+
+/* CTA Bölümü */
+.architect-cta {
+  background: linear-gradient(135deg, #2C3E50 0%, #4D6883 100%);
+  padding: 80px 0;
+  color: white;
+}
+
+.architect-cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.architect-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.architect-cta-title .sectoral-highlight {
+  background: linear-gradient(45deg, #ffffff, #E5E9F0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.architect-cta-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.architect-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.architect-cta .primary-button {
+  display: inline-block;
+  background: white;
+  color: #2C3E50;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.architect-cta .primary-button:hover {
+  background: transparent;
+  color: white;
+}
+
+.architect-cta .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.architect-cta .secondary-button i {
+  margin-right: 8px;
+}
+
+.architect-cta .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+/* Medya Sorguları */
+@media (max-width: 1024px) {
+  .architect-hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .architect-hero-visual {
+    order: -1;
+    margin-bottom: 30px;
+  }
+
+  .architect-hero-text {
+    padding-right: 0;
+  }
+
+  .architect-hero .sectoral-hero-actions {
+    justify-content: center;
+  }
+
+  .architect-page .sectoral-benefits-content {
+    grid-template-columns: 1fr;
+  }
+
+  .architect-benefits-mockup {
+    margin-bottom: 40px;
+  }
+
+  .architect-pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .architect-hero {
+    padding: 50px 0;
+  }
+
+  .architect-hero .sectoral-hero-title {
+    font-size: 32px;
+  }
+
+  .architect-hero .sectoral-hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .benefits-mockup-container {
+    max-width: 400px;
+  }
+
+  .benefits-mockup-item {
+    height: 60px;
+  }
+
+  .architect-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .architect-section-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .architect-hero .sectoral-hero-title {
+    font-size: 28px;
+  }
+
+  .architect-page .sectoral-section-title,
+  .architect-section-title {
+    font-size: 26px;
+  }
+
+  .architect-page .sectoral-feature-card {
+    flex-direction: column;
+  }
+
+  .architect-page .sectoral-feature-icon {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .architect-page .sectoral-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .architect-page .sectoral-faq-item {
+    padding: 20px;
+  }
+
+  .architect-pricing-card {
+    padding: 20px;
+  }
+
+  .architect-price-amount {
+    font-size: 28px;
+  }
+
+  .benefits-mockup-container {
+    max-width: 100%;
+  }
+
+  .benefits-mockup-item {
+    height: 50px;
+  }
+
+  .architect-cta-buttons {
+    flex-direction: column;
+  }
+}
+
+/* Hero Butonları */
+.architect-hero .primary-button {
+  display: inline-block;
+  background: #2C3E50;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid #2C3E50;
+}
+
+.architect-hero .primary-button:hover {
+  background: #4D6883;
+  border-color: #4D6883;
+}
+
+.architect-hero .secondary-button {
+  display: inline-block;
+  background: transparent;
+  color: #2C3E50;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid #2C3E50;
+}
+
+.architect-hero .secondary-button:hover {
+  background: rgba(44, 62, 80, 0.1);
+}
+
+/* Sık Sorulan Sorular Bölümü */
+.architect-page .architect-faq {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.architect-page .architect-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.architect-page .architect-faq-item {
+  background: #F9FAFB;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.architect-page .architect-faq-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.architect-page .architect-faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 15px;
+  position: relative;
+  padding-right: 30px;
+  line-height: 1.4;
+}
+
+.architect-page .architect-faq-question::before {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22px;
+  color: #4D6883;
+  transition: all 0.3s ease;
+}
+
+.architect-page .architect-faq-item:hover .architect-faq-question::before {
+  transform: rotate(45deg);
+  color: #2C3E50;
+}
+
+.architect-page .architect-faq-answer {
+  font-size: 15px;
+  color: #4D6883;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .architect-page .architect-faq-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .architect-page .architect-faq-item {
+    padding: 20px 25px;
+  }
+  
+  .architect-page .architect-faq-question {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .architect-page .architect-faq-question {
+    font-size: 16px;
+    padding-right: 25px;
+  }
+  
+  .architect-page .architect-faq-answer {
+    font-size: 14px;
+  }
+} 

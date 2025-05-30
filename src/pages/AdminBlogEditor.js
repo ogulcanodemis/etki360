@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './AdminPage.css';
 
@@ -16,6 +16,9 @@ const AdminBlogEditor = () => {
     publish_date: '',
     slug: ''
   });
+  
+  // Textarea referansı
+  const textareaRef = useRef(null);
 
   // Mevcut blog yazısını çekme (düzenleme modu için)
   useEffect(() => {
@@ -72,6 +75,83 @@ const AdminBlogEditor = () => {
       ...prevState,
       [name]: value
     }));
+  };
+  
+  // HTML düğmelerinin işlevleri
+  const insertHTML = (tag, attributes = {}) => {
+    if (!textareaRef.current) return;
+    
+    const textarea = textareaRef.current;
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const selectedText = formData.content.substring(start, end);
+    let attributesText = '';
+    
+    // Attributes'ları string olarak oluştur
+    for (const key in attributes) {
+      attributesText += ` ${key}="${attributes[key]}"`;
+    }
+    
+    let newHTML;
+    if (tag === 'img') {
+      // Resim için içerik gerekmiyor
+      newHTML = `<${tag}${attributesText} />`;
+    } else {
+      // Diğer taglar için seçili metni etiketler arasına koy
+      newHTML = `<${tag}${attributesText}>${selectedText}</${tag}>`;
+    }
+    
+    // Yeni içeriği oluştur
+    const newContent = formData.content.substring(0, start) + newHTML + formData.content.substring(end);
+    
+    // State'i güncelle
+    setFormData(prevState => ({
+      ...prevState,
+      content: newContent
+    }));
+    
+    // Sonraki render'dan sonra fokus ayarla
+    setTimeout(() => {
+      textarea.focus();
+      textarea.setSelectionRange(start + newHTML.length, start + newHTML.length);
+    }, 0);
+  };
+  
+  // Kalın yapmak için
+  const handleBold = () => {
+    insertHTML('strong');
+  };
+  
+  // İtalik yapmak için
+  const handleItalic = () => {
+    insertHTML('em');
+  };
+  
+  // Link eklemek için
+  const handleLink = () => {
+    const url = prompt('Link URL\'si girin:', 'https://');
+    if (url) {
+      insertHTML('a', { href: url, target: '_blank' });
+    }
+  };
+  
+  // Resim eklemek için
+  const handleImage = () => {
+    const url = prompt('Resim URL\'si girin:', 'https://');
+    if (url) {
+      const alt = prompt('Resim açıklaması (alt text):', '');
+      insertHTML('img', { src: url, alt: alt || '', style: 'max-width: 100%' });
+    }
+  };
+  
+  // Başlık eklemek için
+  const handleHeading = () => {
+    insertHTML('h2');
+  };
+  
+  // Paragraf eklemek için
+  const handleParagraph = () => {
+    insertHTML('p');
   };
 
   // Blog yazısı kaydetme (yeni oluşturma veya güncelleme) fonksiyonu
@@ -201,6 +281,14 @@ const AdminBlogEditor = () => {
         
         <div className="form-group">
           <label htmlFor="content">İçerik:</label>
+          <div className="editor-toolbar">
+            <button type="button" onClick={handleBold} title="Kalın"><strong>B</strong></button>
+            <button type="button" onClick={handleItalic} title="İtalik"><em>I</em></button>
+            <button type="button" onClick={handleHeading} title="Başlık">H</button>
+            <button type="button" onClick={handleParagraph} title="Paragraf">P</button>
+            <button type="button" onClick={handleLink} title="Link">Link</button>
+            <button type="button" onClick={handleImage} title="Resim">Resim</button>
+          </div>
           <textarea
             id="content"
             name="content"
@@ -208,6 +296,7 @@ const AdminBlogEditor = () => {
             onChange={handleInputChange}
             className="form-control editor-textarea"
             rows="15"
+            ref={textareaRef}
           ></textarea>
         </div>
         

@@ -1,0 +1,908 @@
+/* Tamir Servisi Sayfası için Özel Stiller */
+
+/* Genel Sayfa Stilleri */
+.repair-page {
+  padding-top: 70px;
+}
+
+/* Vurgu Stilleri */
+.repair-page .sectoral-highlight {
+  background: linear-gradient(45deg, #3498DB, #2980B9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Hero Bölümü */
+.repair-hero {
+  background: linear-gradient(135deg, #EBF5FB 0%, #D6EAF8 100%);
+  padding: 70px 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  color: #333333;
+}
+
+.repair-breadcrumb {
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.repair-breadcrumb a {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.repair-breadcrumb a:hover {
+  color: #3498DB;
+}
+
+.repair-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.repair-hero-text {
+  padding-right: 20px;
+}
+
+.repair-hero .sectoral-hero-title {
+  color: #333333;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.repair-hero .sectoral-hero-description {
+  color: #666666;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.repair-hero .sectoral-hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Mockup Stilleri */
+.repair-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.repair-mockup {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.mockup-content {
+  padding: 20px;
+}
+
+.mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-hero-img {
+  height: 120px;
+  background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-tracking {
+  margin-bottom: 20px;
+}
+
+.mockup-search-bar {
+  height: 40px;
+  background: #EBF5FB;
+  border: 2px solid #D6EAF8;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.mockup-progress {
+  height: 40px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  position: relative;
+}
+
+.mockup-progress::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 8px;
+  width: 70%;
+  background: #3498DB;
+  border-radius: 4px;
+}
+
+.mockup-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.mockup-service {
+  height: 80px;
+  background: #F9FAFB;
+  border-radius: 6px;
+}
+
+/* Genel Bakış Bölümü */
+.repair-page .sectoral-overview {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.repair-page .sectoral-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.repair-page .sectoral-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.repair-page .sectoral-section-subtitle {
+  font-size: 18px;
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.repair-page .sectoral-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.repair-page .sectoral-overview-card {
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 3px solid #3498DB;
+}
+
+.repair-page .sectoral-overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.repair-page .sectoral-card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.repair-page .sectoral-card-icon i {
+  color: #3498DB;
+  font-size: 24px;
+}
+
+.repair-page .sectoral-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+.repair-page .sectoral-card-text {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Özellikler Bölümü */
+.repair-page .sectoral-features {
+  padding: 80px 0;
+  background-color: #EBF5FB;
+}
+
+.repair-page .sectoral-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.repair-page .sectoral-feature-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+}
+
+.repair-page .sectoral-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.repair-page .sectoral-feature-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.repair-page .sectoral-feature-icon i {
+  color: #3498DB;
+  font-size: 20px;
+}
+
+.repair-page .sectoral-feature-content {
+  flex: 1;
+}
+
+.repair-page .sectoral-feature-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.repair-page .sectoral-feature-text {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Faydalar Bölümü */
+.repair-benefits {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.repair-benefits-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.repair-benefits-mockup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-mockup-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+}
+
+.benefits-mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.benefits-mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.benefits-mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.benefits-mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.benefits-mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.benefits-mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.benefits-mockup-content {
+  padding: 20px;
+}
+
+.benefits-mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-title {
+  height: 20px;
+  width: 70%;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-tracking {
+  padding: 20px 0;
+}
+
+.benefits-mockup-search {
+  height: 40px;
+  background: #EBF5FB;
+  border: 2px solid #D6EAF8;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-step {
+  width: 60px;
+  height: 6px;
+  background: #D6EAF8;
+  border-radius: 3px;
+}
+
+.benefits-mockup-step.active {
+  background: #3498DB;
+}
+
+.benefits-mockup-details {
+  height: 120px;
+  background: #F9FAFB;
+  border-radius: 6px;
+}
+
+.repair-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.repair-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.repair-benefit-icon {
+  color: #3498DB;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.repair-benefit-icon i {
+  color: #3498DB;
+}
+
+.repair-benefit-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.repair-benefit-text p {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Fiyatlandırma Bölümü */
+.repair-pricing {
+  padding: 80px 0;
+  background-color: #EBF5FB;
+}
+
+.repair-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.repair-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.repair-section-subtitle {
+  font-size: 18px;
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.repair-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.repair-pricing-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.repair-pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.repair-pricing-card.featured {
+  border: 2px solid #3498DB;
+  padding-top: 50px;
+}
+
+.repair-pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3498DB;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.repair-pricing-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.repair-pricing-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.repair-pricing-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.repair-price-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333333;
+  line-height: 1;
+}
+
+.repair-price-period {
+  font-size: 14px;
+  color: #666666;
+  margin-top: 5px;
+}
+
+.repair-pricing-features {
+  margin-bottom: 30px;
+}
+
+.repair-pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.repair-pricing-features li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #666666;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.repair-pricing-features li i {
+  margin-right: 10px;
+  color: #3498DB;
+  font-size: 14px;
+}
+
+.repair-pricing-disabled {
+  color: #AAAAAA !important;
+}
+
+.repair-pricing-disabled i {
+  color: #CCCCCC !important;
+}
+
+.repair-pricing-footer {
+  text-align: center;
+}
+
+.repair-pricing-button {
+  display: inline-block;
+  background: #3498DB;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid #3498DB;
+}
+
+.repair-pricing-button:hover {
+  background: white;
+  color: #3498DB;
+  border-color: #3498DB;
+}
+
+/* Sık Sorulan Sorular Bölümü */
+.repair-faq {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.repair-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.repair-faq-item {
+  background: #F9FAFB;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.repair-faq-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.repair-faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15px;
+  position: relative;
+  padding-right: 30px;
+  line-height: 1.4;
+}
+
+.repair-faq-question::before {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22px;
+  color: #3498DB;
+  transition: all 0.3s ease;
+}
+
+.repair-faq-item:hover .repair-faq-question::before {
+  transform: rotate(45deg);
+  color: #333333;
+}
+
+.repair-faq-answer {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Bölümü */
+.repair-cta {
+  background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+  padding: 80px 0;
+  color: white;
+}
+
+.repair-cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.repair-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.repair-cta-title .sectoral-highlight {
+  background: linear-gradient(45deg, #ffffff, #ECF0F1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.repair-cta-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.repair-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.repair-cta .primary-button {
+  display: inline-block;
+  background: white;
+  color: #3498DB;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.repair-cta .primary-button:hover {
+  background: transparent;
+  color: white;
+}
+
+.repair-cta .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.repair-cta .secondary-button i {
+  margin-right: 8px;
+}
+
+.repair-cta .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+/* Hero Butonları */
+.repair-hero .primary-button {
+  display: inline-block;
+  background: #3498DB;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid #3498DB;
+}
+
+.repair-hero .primary-button:hover {
+  background: #2980B9;
+  border-color: #2980B9;
+}
+
+.repair-hero .secondary-button {
+  display: inline-block;
+  background: transparent;
+  color: #3498DB;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid #3498DB;
+}
+
+.repair-hero .secondary-button:hover {
+  background: rgba(52, 152, 219, 0.1);
+}
+
+/* Medya Sorguları */
+@media (max-width: 1024px) {
+  .repair-hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .repair-hero-visual {
+    order: -1;
+    margin-bottom: 30px;
+  }
+
+  .repair-hero-text {
+    padding-right: 0;
+  }
+
+  .repair-hero .sectoral-hero-actions {
+    justify-content: center;
+  }
+
+  .repair-benefits-content {
+    grid-template-columns: 1fr;
+  }
+
+  .repair-benefits-mockup {
+    margin-bottom: 40px;
+  }
+
+  .repair-pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .repair-hero {
+    padding: 50px 0;
+  }
+
+  .repair-hero .sectoral-hero-title {
+    font-size: 32px;
+  }
+
+  .repair-hero .sectoral-hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .benefits-mockup-container {
+    max-width: 400px;
+  }
+
+  .repair-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .repair-section-title {
+    font-size: 30px;
+  }
+
+  .repair-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .repair-hero .sectoral-hero-title {
+    font-size: 28px;
+  }
+
+  .repair-page .sectoral-section-title,
+  .repair-section-title {
+    font-size: 26px;
+  }
+
+  .repair-page .sectoral-feature-card {
+    flex-direction: column;
+  }
+
+  .repair-page .sectoral-feature-icon {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .repair-pricing-card {
+    padding: 20px;
+  }
+
+  .repair-price-amount {
+    font-size: 28px;
+  }
+
+  .benefits-mockup-container {
+    max-width: 100%;
+  }
+
+  .repair-cta-buttons {
+    flex-direction: column;
+  }
+
+  .repair-faq-item {
+    padding: 20px 25px;
+  }
+
+  .repair-faq-question {
+    font-size: 16px;
+    padding-right: 25px;
+  }
+
+  .repair-faq-answer {
+    font-size: 14px;
+  }
+} 

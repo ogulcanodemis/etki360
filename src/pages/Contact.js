@@ -625,7 +625,7 @@ const Contact = () => {
                     <div className="contact-info-content">
                       <h4 className="contact-info-label">Adres</h4>
                       <address className="contact-info-value">
-                        İstanbul, Türkiye<br />
+                        Zeytinburnu ve Istanbul Sapphire<br />
                         (Uzaktan çalışma modeli)
                       </address>
                     </div>

@@ -55,7 +55,11 @@ switch ($action) {
         $totalMessages = $countStmt->fetch(PDO::FETCH_ASSOC)['total'];
 
         // İletişim mesajlarını sayfalama ile listeleme
-        $sql = "SELECT * FROM contact_forms ORDER BY created_at DESC LIMIT :limit OFFSET :offset";
+        // Tüm alanları açıkça belirtelim
+        $sql = "SELECT id, name, email, phone, company, service, budget, message, ip_address, user_agent, created_at, updated_at 
+                FROM contact_forms 
+                ORDER BY created_at DESC 
+                LIMIT :limit OFFSET :offset";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
         $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
