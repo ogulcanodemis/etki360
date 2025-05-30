@@ -1,0 +1,1005 @@
+/* Mobil Uygulama Sayfası için Özel Stiller */
+
+/* Genel Sayfa Stilleri */
+.mobile-page {
+  padding-top: 70px;
+}
+
+/* Vurgu Stilleri */
+.mobile-page .service-highlight {
+  background: linear-gradient(45deg, #673AB7, #7E57C2, #9575CD, #B39DDB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Hero Bölümü */
+.mobile-hero {
+  background: linear-gradient(135deg, #EDE7F6 0%, #D1C4E9 100%);
+  padding: 70px 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  color: #333333;
+}
+
+.mobile-breadcrumb {
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.mobile-breadcrumb a {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.mobile-breadcrumb a:hover {
+  color: #673AB7;
+}
+
+.mobile-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.mobile-hero-text {
+  padding-right: 20px;
+}
+
+.mobile-hero .service-hero-title {
+  color: #333333;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.mobile-hero .service-hero-description {
+  color: #666666;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.mobile-hero .service-hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Mockup Stilleri */
+.mobile-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-mockup {
+  position: relative;
+  width: 280px;
+  height: 560px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.mobile-device {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1A1A1A;
+  border-radius: 36px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: rotateY(-15deg);
+  transition: all 0.5s ease;
+}
+
+.mobile-mockup:hover .mobile-device {
+  transform: rotateY(0deg);
+}
+
+.mobile-device-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 24px;
+  background: #1A1A1A;
+  border-radius: 0 0 16px 16px;
+  z-index: 2;
+}
+
+.mobile-device-screen {
+  flex: 1;
+  margin: 12px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mobile-app-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #F5F5F5;
+}
+
+.mobile-app-header {
+  height: 60px;
+  background: #673AB7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.mobile-app-title {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.mobile-app-menu {
+  width: 24px;
+  height: 3px;
+  background: white;
+  position: relative;
+}
+
+.mobile-app-menu::before,
+.mobile-app-menu::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background: white;
+  left: 0;
+}
+
+.mobile-app-menu::before {
+  top: -7px;
+}
+
+.mobile-app-menu::after {
+  bottom: -7px;
+}
+
+.mobile-app-content {
+  padding: 15px;
+}
+
+.mobile-app-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-app-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.mobile-app-card-text {
+  height: 8px;
+  background: #E0E0E0;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.mobile-app-card-text.short {
+  width: 70%;
+}
+
+.mobile-app-bottom-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-app-nav-item {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.mobile-app-nav-item:nth-child(1) {
+  background: #673AB7;
+}
+
+.mobile-app-nav-item:nth-child(2),
+.mobile-app-nav-item:nth-child(3),
+.mobile-app-nav-item:nth-child(4) {
+  background: #B39DDB;
+}
+
+.mobile-floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.mobile-floating-element {
+  position: absolute;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+.mobile-floating-element:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  background: #673AB7;
+  top: 15%;
+  left: -20%;
+  animation: floatingElement 6s infinite;
+}
+
+.mobile-floating-element:nth-child(2) {
+  width: 30px;
+  height: 30px;
+  background: #9575CD;
+  top: 35%;
+  right: -15%;
+  animation: floatingElement 7s infinite;
+}
+
+.mobile-floating-element:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  background: #7E57C2;
+  bottom: 20%;
+  left: -25%;
+  animation: floatingElement 8s infinite;
+}
+
+@keyframes floatingElement {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Genel Bakış Bölümü */
+.mobile-overview {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.service-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.service-section-subtitle {
+  font-size: 18px;
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mobile-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.mobile-overview-card {
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #673AB7, #9575CD);
+  border-image-slice: 1;
+}
+
+.mobile-overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(103, 58, 183, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mobile-card-icon i {
+  background: linear-gradient(45deg, #673AB7, #9575CD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 24px;
+}
+
+.mobile-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+.mobile-card-text {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Hizmetler Bölümü */
+.mobile-services {
+  padding: 80px 0;
+  background-color: #EDE7F6;
+}
+
+.mobile-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.mobile-service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+}
+
+.mobile-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-service-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(103, 58, 183, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.mobile-service-icon i {
+  background: linear-gradient(45deg, #673AB7, #9575CD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 20px;
+}
+
+.mobile-service-content {
+  flex: 1;
+}
+
+.mobile-service-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.mobile-service-text {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Teknolojiler Bölümü */
+.mobile-tech {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.mobile-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.mobile-tech-item {
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobile-tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-tech-icon {
+  width: 70px;
+  height: 70px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-tech-icon i {
+  font-size: 30px;
+  color: #673AB7;
+}
+
+.mobile-tech-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Süreç Bölümü */
+.mobile-process {
+  padding: 80px 0;
+  background-color: #F9FAFB;
+}
+
+.mobile-process-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.mobile-process-line {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 40px;
+  width: 3px;
+  background: linear-gradient(to bottom, #673AB7, #9575CD);
+  z-index: 1;
+}
+
+.mobile-process-steps {
+  position: relative;
+  z-index: 2;
+}
+
+.mobile-process-step {
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.mobile-process-step:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-process-number {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #673AB7, #9575CD);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-right: 30px;
+  box-shadow: 0 5px 15px rgba(103, 58, 183, 0.3);
+}
+
+.mobile-process-content {
+  padding-top: 10px;
+}
+
+.mobile-process-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.mobile-process-text {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Fiyatlandırma Bölümü */
+.mobile-pricing {
+  padding: 80px 0;
+  background-color: #EDE7F6;
+}
+
+.mobile-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mobile-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.mobile-section-subtitle {
+  font-size: 18px;
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mobile-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.mobile-pricing-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.mobile-pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-pricing-card.featured {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #673AB7, #9575CD);
+  border-image-slice: 1;
+  padding-top: 50px;
+}
+
+.mobile-pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #673AB7, #9575CD);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mobile-pricing-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.mobile-pricing-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.mobile-pricing-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-price-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333333;
+  line-height: 1;
+}
+
+.mobile-price-period {
+  font-size: 14px;
+  color: #666666;
+  margin-top: 5px;
+}
+
+.mobile-pricing-features {
+  margin-bottom: 30px;
+}
+
+.mobile-pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-pricing-features li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #666666;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.mobile-pricing-features li i {
+  margin-right: 10px;
+  background: linear-gradient(45deg, #673AB7, #9575CD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 14px;
+}
+
+.mobile-pricing-disabled {
+  color: #AAAAAA !important;
+}
+
+.mobile-pricing-disabled i {
+  background: #CCCCCC !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mobile-pricing-footer {
+  text-align: center;
+}
+
+.mobile-pricing-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #673AB7, #9575CD);
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.mobile-pricing-button:hover {
+  background: white;
+  color: #673AB7;
+  border-image: linear-gradient(45deg, #673AB7, #9575CD);
+  border-image-slice: 1;
+}
+
+/* Sık Sorulan Sorular Bölümü */
+.mobile-faq {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.mobile-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.mobile-faq-item {
+  background: #F9FAFB;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.mobile-faq-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.mobile-faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15px;
+  position: relative;
+  padding-right: 30px;
+  line-height: 1.4;
+}
+
+.mobile-faq-question::before {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22px;
+  background: linear-gradient(45deg, #673AB7, #9575CD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.mobile-faq-item:hover .mobile-faq-question::before {
+  transform: rotate(45deg);
+  color: #333333;
+}
+
+.mobile-faq-answer {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Bölümü */
+.mobile-cta {
+  background: linear-gradient(135deg, #673AB7 0%, #9575CD 100%);
+  padding: 80px 0;
+  color: white;
+}
+
+.mobile-cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mobile-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.mobile-cta-title .service-highlight {
+  background: linear-gradient(45deg, #ffffff, #EDE7F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.mobile-cta-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.mobile-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.mobile-cta .primary-button {
+  display: inline-block;
+  background: white;
+  color: #673AB7;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.mobile-cta .primary-button:hover {
+  background: transparent;
+  color: white;
+}
+
+.mobile-cta .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.mobile-cta .secondary-button i {
+  margin-right: 8px;
+}
+
+.mobile-cta .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+/* Hero Butonları */
+.mobile-hero .primary-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #673AB7, #9575CD);
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.mobile-hero .primary-button:hover {
+  background: white;
+  color: #673AB7;
+  border-image: linear-gradient(45deg, #673AB7, #9575CD);
+  border-image-slice: 1;
+}
+
+.mobile-hero .secondary-button {
+  display: inline-block;
+  background: transparent;
+  color: #673AB7;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #673AB7, #9575CD);
+  border-image-slice: 1;
+}
+
+.mobile-hero .secondary-button:hover {
+  background: rgba(103, 58, 183, 0.1);
+}
+
+/* Medya Sorguları */
+@media (max-width: 1024px) {
+  .mobile-hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .mobile-hero-visual {
+    order: -1;
+    margin-bottom: 30px;
+  }
+
+  .mobile-hero-text {
+    padding-right: 0;
+  }
+
+  .mobile-hero .service-hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-hero {
+    padding: 50px 0;
+  }
+
+  .mobile-hero .service-hero-title {
+    font-size: 32px;
+  }
+
+  .mobile-hero .service-hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobile-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobile-section-title {
+    font-size: 30px;
+  }
+
+  .mobile-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-hero .service-hero-title {
+    font-size: 28px;
+  }
+
+  .service-section-title,
+  .mobile-section-title {
+    font-size: 26px;
+  }
+
+  .mobile-service-card {
+    flex-direction: column;
+  }
+
+  .mobile-service-icon {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .mobile-pricing-card {
+    padding: 20px;
+  }
+
+  .mobile-price-amount {
+    font-size: 28px;
+  }
+
+  .mobile-cta-buttons {
+    flex-direction: column;
+  }
+
+  .mobile-faq-item {
+    padding: 20px 25px;
+  }
+
+  .mobile-faq-question {
+    font-size: 16px;
+    padding-right: 25px;
+  }
+
+  .mobile-faq-answer {
+    font-size: 14px;
+  }
+
+  .mobile-process-number {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  .mobile-process-line {
+    left: 30px;
+  }
+} 

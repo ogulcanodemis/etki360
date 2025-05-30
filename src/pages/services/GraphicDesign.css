@@ -1,0 +1,968 @@
+/* Grafik Tasarım Sayfası için Özel Stiller */
+
+/* Genel Sayfa Stilleri */
+.design-page {
+  padding-top: 70px;
+}
+
+/* Vurgu Stilleri */
+.design-page .service-highlight {
+  background: linear-gradient(45deg, #00BCD4, #26C6DA, #4DD0E1, #80DEEA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Hero Bölümü */
+.design-hero {
+  background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%);
+  padding: 70px 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  color: #333333;
+}
+
+.design-breadcrumb {
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.design-breadcrumb a {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.design-breadcrumb a:hover {
+  color: #00BCD4;
+}
+
+.design-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.design-hero-text {
+  padding-right: 20px;
+}
+
+.design-hero .service-hero-title {
+  color: #333333;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.design-hero .service-hero-description {
+  color: #666666;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.design-hero .service-hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Mockup Stilleri */
+.design-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.design-mockup {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.mockup-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mockup-design {
+  background: #F9FAFB;
+  border-radius: 10px;
+  padding: 15px;
+  overflow: hidden;
+  border-top: 4px solid #00BCD4;
+  position: relative;
+}
+
+.design-artboard {
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #E5E7EB;
+  height: 150px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.design-shape {
+  position: absolute;
+}
+
+.design-shape.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #00BCD4;
+  opacity: 0.8;
+  top: 20px;
+  left: 30px;
+}
+
+.design-shape.square {
+  width: 60px;
+  height: 60px;
+  background: #26C6DA;
+  opacity: 0.7;
+  top: 40px;
+  left: 100px;
+  transform: rotate(15deg);
+}
+
+.design-shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid #4DD0E1;
+  opacity: 0.6;
+  top: 30px;
+  right: 40px;
+}
+
+.design-tools {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.design-tool {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: #E0F7FA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00BCD4;
+  font-size: 20px;
+}
+
+.mockup-colors {
+  background: #F9FAFB;
+  border-radius: 10px;
+  padding: 15px;
+  border-top: 4px solid #00BCD4;
+}
+
+.colors-title {
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.colors-palette {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.color-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.color-swatch:nth-child(1) {
+  background: #00BCD4;
+}
+
+.color-swatch:nth-child(2) {
+  background: #26C6DA;
+}
+
+.color-swatch:nth-child(3) {
+  background: #4DD0E1;
+}
+
+.color-swatch:nth-child(4) {
+  background: #80DEEA;
+}
+
+.color-swatch:nth-child(5) {
+  background: #B2EBF2;
+}
+
+.colors-typography {
+  border-top: 1px solid #E5E7EB;
+  padding-top: 15px;
+}
+
+.font-sample {
+  margin-bottom: 10px;
+}
+
+.font-sample.heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.font-sample.body {
+  font-size: 14px;
+  color: #666666;
+}
+
+/* Genel Bakış Bölümü */
+.design-overview {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.service-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.service-section-subtitle {
+  font-size: 18px;
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.design-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.design-overview-card {
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #00BCD4, #4DD0E1);
+  border-image-slice: 1;
+}
+
+.design-overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.design-card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 188, 212, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.design-card-icon i {
+  background: linear-gradient(45deg, #00BCD4, #4DD0E1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 24px;
+}
+
+.design-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+.design-card-text {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Hizmetler Bölümü */
+.design-services {
+  padding: 80px 0;
+  background-color: #E0F7FA;
+}
+
+.design-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.design-service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+}
+
+.design-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.design-service-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 188, 212, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.design-service-icon i {
+  background: linear-gradient(45deg, #00BCD4, #4DD0E1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 20px;
+}
+
+.design-service-content {
+  flex: 1;
+}
+
+.design-service-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.design-service-text {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Süreç Bölümü */
+.design-process {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.design-process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.design-process-step {
+  display: flex;
+  align-items: flex-start;
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.design-process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.process-step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #00BCD4, #4DD0E1);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.process-step-content {
+  flex: 1;
+}
+
+.process-step-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.process-step-text {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Fiyatlandırma Bölümü */
+.design-pricing {
+  padding: 80px 0;
+  background-color: #E0F7FA;
+}
+
+.design-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.design-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.design-section-subtitle {
+  font-size: 18px;
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.design-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.design-pricing-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.design-pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.design-pricing-card.featured {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #00BCD4, #4DD0E1);
+  border-image-slice: 1;
+  padding-top: 50px;
+}
+
+.design-pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #00BCD4, #4DD0E1);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.design-pricing-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.design-pricing-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.design-pricing-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.design-price-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333333;
+  line-height: 1;
+}
+
+.design-price-period {
+  font-size: 14px;
+  color: #666666;
+  margin-top: 5px;
+}
+
+.design-pricing-features {
+  margin-bottom: 30px;
+}
+
+.design-pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.design-pricing-features li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #666666;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.design-pricing-features li i {
+  margin-right: 10px;
+  background: linear-gradient(45deg, #00BCD4, #4DD0E1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 14px;
+}
+
+.design-pricing-disabled {
+  color: #AAAAAA !important;
+}
+
+.design-pricing-disabled i {
+  background: #CCCCCC !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.design-pricing-footer {
+  text-align: center;
+}
+
+.design-pricing-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #00BCD4, #4DD0E1);
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.design-pricing-button:hover {
+  background: white;
+  color: #00BCD4;
+  border-image: linear-gradient(45deg, #00BCD4, #4DD0E1);
+  border-image-slice: 1;
+}
+
+/* Portföy Bölümü */
+.design-portfolio {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.design-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.design-portfolio-item {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+  transition: transform 0.3s ease;
+}
+
+.design-portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.design-portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.design-portfolio-item:hover .design-portfolio-image {
+  transform: scale(1.05);
+}
+
+.design-portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 20px;
+  color: white;
+}
+
+.design-portfolio-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.design-portfolio-category {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Sık Sorulan Sorular Bölümü */
+.design-faq {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.design-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.design-faq-item {
+  background: #F9FAFB;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.design-faq-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.design-faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15px;
+  position: relative;
+  padding-right: 30px;
+  line-height: 1.4;
+}
+
+.design-faq-question::before {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22px;
+  background: linear-gradient(45deg, #00BCD4, #4DD0E1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.design-faq-item:hover .design-faq-question::before {
+  transform: rotate(45deg);
+  color: #333333;
+}
+
+.design-faq-answer {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Bölümü */
+.design-cta {
+  background: linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%);
+  padding: 80px 0;
+  color: white;
+}
+
+.design-cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.design-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.design-cta-title .service-highlight {
+  background: linear-gradient(45deg, #ffffff, #E0F7FA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.design-cta-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.design-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.design-cta .primary-button {
+  display: inline-block;
+  background: white;
+  color: #00BCD4;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.design-cta .primary-button:hover {
+  background: transparent;
+  color: white;
+}
+
+.design-cta .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.design-cta .secondary-button i {
+  margin-right: 8px;
+}
+
+.design-cta .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+/* Hero Butonları */
+.design-hero .primary-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #00BCD4, #4DD0E1);
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.design-hero .primary-button:hover {
+  background: white;
+  color: #00BCD4;
+  border-image: linear-gradient(45deg, #00BCD4, #4DD0E1);
+  border-image-slice: 1;
+}
+
+.design-hero .secondary-button {
+  display: inline-block;
+  background: transparent;
+  color: #00BCD4;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #00BCD4, #4DD0E1);
+  border-image-slice: 1;
+}
+
+.design-hero .secondary-button:hover {
+  background: rgba(0, 188, 212, 0.1);
+}
+
+/* Medya Sorguları */
+@media (max-width: 1024px) {
+  .design-hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .design-hero-visual {
+    order: -1;
+    margin-bottom: 30px;
+  }
+
+  .design-hero-text {
+    padding-right: 0;
+  }
+
+  .design-hero .service-hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .design-hero {
+    padding: 50px 0;
+  }
+
+  .design-hero .service-hero-title {
+    font-size: 32px;
+  }
+
+  .design-hero .service-hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .design-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .design-section-title {
+    font-size: 30px;
+  }
+
+  .design-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .design-portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .design-hero .service-hero-title {
+    font-size: 28px;
+  }
+
+  .service-section-title,
+  .design-section-title {
+    font-size: 26px;
+  }
+
+  .design-service-card {
+    flex-direction: column;
+  }
+
+  .design-service-icon {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .design-pricing-card {
+    padding: 20px;
+  }
+
+  .design-price-amount {
+    font-size: 28px;
+  }
+
+  .design-cta-buttons {
+    flex-direction: column;
+  }
+
+  .design-faq-item {
+    padding: 20px 25px;
+  }
+
+  .design-faq-question {
+    font-size: 16px;
+    padding-right: 25px;
+  }
+
+  .design-faq-answer {
+    font-size: 14px;
+  }
+} 

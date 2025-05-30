@@ -1,0 +1,868 @@
+/* İçerik Üretimi Sayfası için Özel Stiller */
+
+/* Genel Sayfa Stilleri */
+.content-page {
+  padding-top: 70px;
+}
+
+/* Vurgu Stilleri */
+.content-page .service-highlight {
+  background: linear-gradient(45deg, #FF9800, #FFA726, #FFB74D, #FFCC80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Hero Bölümü */
+.content-hero {
+  background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+  padding: 70px 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  color: #333333;
+}
+
+.content-breadcrumb {
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.content-breadcrumb a {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.content-breadcrumb a:hover {
+  color: #FF9800;
+}
+
+.content-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.content-hero-text {
+  padding-right: 20px;
+}
+
+.content-hero .service-hero-title {
+  color: #333333;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.content-hero .service-hero-description {
+  color: #666666;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.content-hero .service-hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Mockup Stilleri */
+.content-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-mockup {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.mockup-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mockup-document {
+  background: #F9FAFB;
+  border-radius: 10px;
+  padding: 15px;
+  overflow: hidden;
+  border-top: 4px solid #FF9800;
+}
+
+.document-title {
+  margin-bottom: 15px;
+}
+
+.title-line {
+  height: 12px;
+  background: #E5E7EB;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.title-line.short {
+  width: 60%;
+}
+
+.document-content {
+  margin-bottom: 15px;
+}
+
+.content-line {
+  height: 8px;
+  background: #E5E7EB;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.content-line.short {
+  width: 70%;
+}
+
+.content-line.medium {
+  width: 85%;
+}
+
+.document-image {
+  height: 120px;
+  background: linear-gradient(45deg, #FFB74D, #FFA726);
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.mockup-analytics {
+  background: #F9FAFB;
+  border-radius: 10px;
+  padding: 15px;
+  border-top: 4px solid #FF9800;
+}
+
+.analytics-title {
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.analytics-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.chart-bar {
+  width: 18%;
+  background: linear-gradient(180deg, #FF9800, #FFB74D);
+  border-radius: 4px 4px 0 0;
+}
+
+.analytics-metrics {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric-value {
+  font-weight: 700;
+  font-size: 20px;
+  color: #333333;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #666666;
+}
+
+/* Genel Bakış Bölümü */
+.content-overview {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.service-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.service-section-subtitle {
+  font-size: 18px;
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.content-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.content-overview-card {
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #FF9800, #FFB74D);
+  border-image-slice: 1;
+}
+
+.content-overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.content-card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 152, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.content-card-icon i {
+  background: linear-gradient(45deg, #FF9800, #FFB74D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 24px;
+}
+
+.content-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+.content-card-text {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Hizmetler Bölümü */
+.content-services {
+  padding: 80px 0;
+  background-color: #FFF8E1;
+}
+
+.content-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.content-service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+}
+
+.content-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.content-service-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 152, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.content-service-icon i {
+  background: linear-gradient(45deg, #FF9800, #FFB74D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 20px;
+}
+
+.content-service-content {
+  flex: 1;
+}
+
+.content-service-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.content-service-text {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Süreç Bölümü */
+.content-process {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.content-process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-process-step {
+  display: flex;
+  align-items: flex-start;
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.content-process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.process-step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #FF9800, #FFB74D);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.process-step-content {
+  flex: 1;
+}
+
+.process-step-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.process-step-text {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Fiyatlandırma Bölümü */
+.content-pricing {
+  padding: 80px 0;
+  background-color: #FFF8E1;
+}
+
+.content-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.content-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.content-section-subtitle {
+  font-size: 18px;
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.content-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.content-pricing-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.content-pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.content-pricing-card.featured {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #FF9800, #FFB74D);
+  border-image-slice: 1;
+  padding-top: 50px;
+}
+
+.content-pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #FF9800, #FFB74D);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.content-pricing-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.content-pricing-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.content-pricing-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-price-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333333;
+  line-height: 1;
+}
+
+.content-price-period {
+  font-size: 14px;
+  color: #666666;
+  margin-top: 5px;
+}
+
+.content-pricing-features {
+  margin-bottom: 30px;
+}
+
+.content-pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-pricing-features li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #666666;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.content-pricing-features li i {
+  margin-right: 10px;
+  background: linear-gradient(45deg, #FF9800, #FFB74D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 14px;
+}
+
+.content-pricing-disabled {
+  color: #AAAAAA !important;
+}
+
+.content-pricing-disabled i {
+  background: #CCCCCC !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content-pricing-footer {
+  text-align: center;
+}
+
+.content-pricing-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #FF9800, #FFB74D);
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.content-pricing-button:hover {
+  background: white;
+  color: #FF9800;
+  border-image: linear-gradient(45deg, #FF9800, #FFB74D);
+  border-image-slice: 1;
+}
+
+/* Sık Sorulan Sorular Bölümü */
+.content-faq {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.content-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.content-faq-item {
+  background: #F9FAFB;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.content-faq-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.content-faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15px;
+  position: relative;
+  padding-right: 30px;
+  line-height: 1.4;
+}
+
+.content-faq-question::before {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22px;
+  background: linear-gradient(45deg, #FF9800, #FFB74D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.content-faq-item:hover .content-faq-question::before {
+  transform: rotate(45deg);
+  color: #333333;
+}
+
+.content-faq-answer {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Bölümü */
+.content-cta {
+  background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%);
+  padding: 80px 0;
+  color: white;
+}
+
+.content-cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.content-cta-title .service-highlight {
+  background: linear-gradient(45deg, #ffffff, #FFF8E1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.content-cta-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.content-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.content-cta .primary-button {
+  display: inline-block;
+  background: white;
+  color: #FF9800;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.content-cta .primary-button:hover {
+  background: transparent;
+  color: white;
+}
+
+.content-cta .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.content-cta .secondary-button i {
+  margin-right: 8px;
+}
+
+.content-cta .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+/* Hero Butonları */
+.content-hero .primary-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #FF9800, #FFB74D);
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.content-hero .primary-button:hover {
+  background: white;
+  color: #FF9800;
+  border-image: linear-gradient(45deg, #FF9800, #FFB74D);
+  border-image-slice: 1;
+}
+
+.content-hero .secondary-button {
+  display: inline-block;
+  background: transparent;
+  color: #FF9800;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #FF9800, #FFB74D);
+  border-image-slice: 1;
+}
+
+.content-hero .secondary-button:hover {
+  background: rgba(255, 152, 0, 0.1);
+}
+
+/* Medya Sorguları */
+@media (max-width: 1024px) {
+  .content-hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .content-hero-visual {
+    order: -1;
+    margin-bottom: 30px;
+  }
+
+  .content-hero-text {
+    padding-right: 0;
+  }
+
+  .content-hero .service-hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-hero {
+    padding: 50px 0;
+  }
+
+  .content-hero .service-hero-title {
+    font-size: 32px;
+  }
+
+  .content-hero .service-hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content-section-title {
+    font-size: 30px;
+  }
+
+  .content-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-hero .service-hero-title {
+    font-size: 28px;
+  }
+
+  .service-section-title,
+  .content-section-title {
+    font-size: 26px;
+  }
+
+  .content-service-card {
+    flex-direction: column;
+  }
+
+  .content-service-icon {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .content-pricing-card {
+    padding: 20px;
+  }
+
+  .content-price-amount {
+    font-size: 28px;
+  }
+
+  .content-cta-buttons {
+    flex-direction: column;
+  }
+
+  .content-faq-item {
+    padding: 20px 25px;
+  }
+
+  .content-faq-question {
+    font-size: 16px;
+    padding-right: 25px;
+  }
+
+  .content-faq-answer {
+    font-size: 14px;
+  }
+} 
