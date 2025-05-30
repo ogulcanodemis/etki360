@@ -75,6 +75,47 @@
   transform: translateX(4px);
 }
 
+/* Sektörel Çözümler Alt Listeleri */
+.sitemap-page__subsection-title {
+  display: block;
+  color: #1F2937;
+  font-size: 15px;
+  margin: 16px 0 10px;
+  font-weight: 600;
+}
+
+.sitemap-page__sublist {
+  list-style: none;
+  margin: 0 0 0 16px;
+  padding: 0;
+}
+
+.sitemap-page__sublist-item {
+  margin-bottom: 8px;
+}
+
+.sitemap-page__sublist-item:last-child {
+  margin-bottom: 0;
+}
+
+.sitemap-page__sublist .sitemap-page__link {
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+/* Sosyal Medya Linkleri */
+.sitemap-page__social-link {
+  color: #1F2937;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sitemap-page__social-link:hover {
+  color: #F59E0B;
+  text-decoration: underline;
+}
+
 /* İletişim Bilgileri Stilleri */
 .sitemap-page__contact-list {
   list-style: none;

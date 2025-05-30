@@ -10,55 +10,147 @@
   <!-- Ana Sayfa -->
   <url>
     <loc>https://etki360.com/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://etki360.com/assets/images/etki360-logo-tek-satir.svg</image:loc>
+      <image:title>etki360 Logo</image:title>
+    </image:image>
   </url>
 
   <!-- Hakkımızda -->
   <url>
     <loc>https://etki360.com/hakkimizda</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Hizmetler Ana Sayfa -->
   <url>
-    <loc>https://etki360.com/hizmetler</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>https://etki360.com/hizmetlerimiz</loc>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Hizmet Alt Sayfaları -->
   <url>
-    <loc>https://etki360.com/hizmetler/kurumsal-web</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>https://etki360.com/hizmetlerimiz/web-tasarim</loc>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://etki360.com/hizmetler/e-ticaret</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>https://etki360.com/hizmetlerimiz/e-ticaret</loc>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://etki360.com/hizmetler/landing-page</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>https://etki360.com/hizmetlerimiz/seo</loc>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://etki360.com/hizmetler/seo</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>https://etki360.com/hizmetlerimiz/sosyal-medya</loc>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://etki360.com/hizmetler/bakim</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>https://etki360.com/hizmetlerimiz/icerik-uretimi</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/hizmetlerimiz/grafik-tasarim</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/hizmetlerimiz/mobil-uygulama</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/hizmetlerimiz/bakim-destek</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sektörel Çözümler -->
+  <url>
+    <loc>https://etki360.com/sektorel-cozumler</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Sektörel Çözümler Alt Sayfalar -->
+  <url>
+    <loc>https://etki360.com/sektorel-cozumler/saglik/klinik-web-sitesi</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/sektorel-cozumler/saglik/sac-ekim-klinigi</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/sektorel-cozumler/nakliyat/nakliye-firmasi</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/sektorel-cozumler/nakliyat/kargo-firmasi</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/sektorel-cozumler/insaat-dekorasyon/mimar</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/sektorel-cozumler/insaat-dekorasyon/boya-badana</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/sektorel-cozumler/insaat-dekorasyon/dekorasyon</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/sektorel-cozumler/hizmet/cilingir</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/sektorel-cozumler/hizmet/cekici-hizmeti</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/sektorel-cozumler/hizmet/tamir-servisi</loc>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -66,7 +158,7 @@
   <!-- Portföy -->
   <url>
     <loc>https://etki360.com/portfoy</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -74,7 +166,7 @@
   <!-- Blog -->
   <url>
     <loc>https://etki360.com/blog</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -82,21 +174,27 @@
   <!-- İletişim -->
   <url>
     <loc>https://etki360.com/iletisim</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Yasal Sayfalar -->
   <url>
-    <loc>https://etki360.com/gizlilik</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>https://etki360.com/gizlilik-politikasi</loc>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://etki360.com/kullanim-sartlari</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://etki360.com/site-haritasi</loc>
+    <lastmod>2024-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

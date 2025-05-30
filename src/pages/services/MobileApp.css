@@ -81,6 +81,7 @@
   height: 560px;
   margin: 0 auto;
   perspective: 1000px;
+  z-index: 1;
 }
 
 .mobile-device {
@@ -897,20 +898,30 @@
 @media (max-width: 1024px) {
   .mobile-hero-content {
     grid-template-columns: 1fr;
+    gap: 30px;
     text-align: center;
   }
-
+  
   .mobile-hero-visual {
-    order: -1;
-    margin-bottom: 30px;
+    order: 2;
+    margin-top: 20px;
   }
-
+  
   .mobile-hero-text {
     padding-right: 0;
+    order: 1;
   }
-
+  
   .mobile-hero .service-hero-actions {
     justify-content: center;
+  }
+  
+  .mobile-device {
+    transform: rotateY(0);
+  }
+  
+  .mobile-mockup:hover .mobile-device {
+    transform: rotateY(0);
   }
 }
 
@@ -918,33 +929,68 @@
   .mobile-hero {
     padding: 50px 0;
   }
-
+  
   .mobile-hero .service-hero-title {
     font-size: 32px;
   }
-
+  
   .mobile-hero .service-hero-actions {
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
   }
-
+  
+  .mobile-hero .service-hero-actions .primary-button,
+  .mobile-hero .service-hero-actions .secondary-button {
+    width: 100%;
+  }
+  
+  .mobile-mockup {
+    width: 220px;
+    height: 440px;
+  }
+  
+  .mobile-device {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .mobile-device-notch {
+    width: 100px;
+    height: 20px;
+  }
+  
+  .mobile-app-header {
+    height: 50px;
+  }
+  
+  .mobile-app-title {
+    font-size: 16px;
+  }
+  
+  .mobile-app-content {
+    padding: 10px;
+  }
+  
+  .mobile-app-card {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+  
   .mobile-pricing-grid {
     grid-template-columns: 1fr;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 20px;
   }
-
+  
   .mobile-section-title {
-    font-size: 30px;
+    font-size: 28px;
   }
-
+  
   .mobile-faq-grid {
     grid-template-columns: 1fr;
   }
-
+  
   .mobile-tech-grid {
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 }
 
@@ -952,53 +998,68 @@
   .mobile-hero .service-hero-title {
     font-size: 28px;
   }
-
+  
   .service-section-title,
   .mobile-section-title {
-    font-size: 26px;
+    font-size: 24px;
   }
-
-  .mobile-service-card {
-    flex-direction: column;
+  
+  .mobile-mockup {
+    width: 180px;
+    height: 360px;
   }
-
-  .mobile-service-icon {
-    margin-bottom: 15px;
-    margin-right: 0;
+  
+  .mobile-device {
+    border-radius: 28px;
   }
-
-  .mobile-pricing-card {
-    padding: 20px;
+  
+  .mobile-device-notch {
+    width: 80px;
+    height: 16px;
+    border-radius: 0 0 12px 12px;
   }
-
-  .mobile-price-amount {
-    font-size: 28px;
+  
+  .mobile-device-screen {
+    margin: 8px;
+    border-radius: 20px;
   }
-
-  .mobile-cta-buttons {
-    flex-direction: column;
+  
+  .mobile-app-header {
+    height: 40px;
+    padding: 0 10px;
   }
-
-  .mobile-faq-item {
-    padding: 20px 25px;
-  }
-
-  .mobile-faq-question {
-    font-size: 16px;
-    padding-right: 25px;
-  }
-
-  .mobile-faq-answer {
+  
+  .mobile-app-title {
     font-size: 14px;
   }
-
+  
+  .mobile-app-menu,
+  .mobile-app-menu::before,
+  .mobile-app-menu::after {
+    width: 20px;
+    height: 2px;
+  }
+  
+  .mobile-app-content {
+    padding: 8px;
+  }
+  
+  .mobile-app-card {
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .mobile-app-bottom-nav {
+    height: 40px;
+  }
+  
   .mobile-process-number {
     width: 60px;
     height: 60px;
     font-size: 20px;
     margin-right: 20px;
   }
-
+  
   .mobile-process-line {
     left: 30px;
   }

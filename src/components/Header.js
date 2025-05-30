@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
-import logo from '../assets/images/logo.svg';
+import logo from '../assets/images/etki360-logo-tek-satir.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

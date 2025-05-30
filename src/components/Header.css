@@ -31,6 +31,11 @@
 .logo img {
   height: 40px;
   width: auto;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled .logo img {
+  height: 35px;
 }
 
 /* Main Navigation */

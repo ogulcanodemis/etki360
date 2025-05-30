@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import logo from '../assets/images/logo-white.svg';
+import logo from '../assets/images/etki360-logo-iki-satir.svg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

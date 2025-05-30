@@ -83,6 +83,7 @@
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  position: relative;
 }
 
 .mockup-header {
@@ -871,20 +872,26 @@
 @media (max-width: 1024px) {
   .design-hero-content {
     grid-template-columns: 1fr;
+    gap: 30px;
     text-align: center;
   }
-
+  
   .design-hero-visual {
-    order: -1;
-    margin-bottom: 30px;
+    order: 2;
+    margin-top: 20px;
   }
-
+  
   .design-hero-text {
     padding-right: 0;
+    order: 1;
   }
-
+  
   .design-hero .service-hero-actions {
     justify-content: center;
+  }
+
+  .design-mockup {
+    max-width: 400px;
   }
 }
 
@@ -892,16 +899,57 @@
   .design-hero {
     padding: 50px 0;
   }
-
+  
   .design-hero .service-hero-title {
     font-size: 32px;
   }
-
+  
   .design-hero .service-hero-actions {
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
   }
-
+  
+  .design-hero .service-hero-actions .primary-button,
+  .design-hero .service-hero-actions .secondary-button {
+    width: 100%;
+  }
+  
+  .design-mockup {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .mockup-content {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .design-artboard {
+    height: 120px;
+  }
+  
+  .design-shape.circle {
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    left: 20px;
+  }
+  
+  .design-shape.square {
+    width: 45px;
+    height: 45px;
+    top: 30px;
+    left: 80px;
+  }
+  
+  .design-shape.triangle {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid #4DD0E1;
+    top: 20px;
+    right: 30px;
+  }
+  
   .design-pricing-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
@@ -926,12 +974,46 @@
   .design-hero .service-hero-title {
     font-size: 28px;
   }
-
+  
   .service-section-title,
   .design-section-title {
-    font-size: 26px;
+    font-size: 24px;
   }
-
+  
+  .design-mockup {
+    max-width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mockup-content {
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .mockup-design,
+  .mockup-colors {
+    padding: 10px;
+  }
+  
+  .design-tools {
+    gap: 5px;
+  }
+  
+  .design-tool {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .colors-palette {
+    gap: 8px;
+  }
+  
+  .color-swatch {
+    width: 35px;
+    height: 35px;
+  }
+  
   .design-service-card {
     flex-direction: column;
   }
