@@ -28,6 +28,8 @@ import AdminDashboard from './pages/AdminDashboard';
 import AdminContactForms from './pages/AdminContactForms';
 import AdminBlogPosts from './pages/AdminBlogPosts';
 import AdminBlogEditor from './pages/AdminBlogEditor';
+import AdminBulkEmail from './pages/AdminBulkEmail';
+import AdminEmailList from './pages/AdminEmailList';
 
 // Service Pages
 import Services from './pages/Services';
@@ -106,6 +108,8 @@ const AppContent = () => {
               <Route path="blog-posts" element={<AdminBlogPosts />} />
               <Route path="blog-posts/create" element={<AdminBlogEditor />} />
               <Route path="blog-posts/edit/:id" element={<AdminBlogEditor />} />
+              <Route path="bulk-email" element={<AdminBulkEmail />} />
+              <Route path="email-list" element={<AdminEmailList />} />
             </Route>
             
             {/* Sektörel Çözümler Rotaları */}

@@ -1,0 +1,157 @@
+/* E-posta Listesi Yönetimi CSS */
+
+.email-list-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.email-list-filters {
+  flex: 1;
+  min-width: 250px;
+}
+
+.email-list-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-form {
+  display: flex;
+  max-width: 400px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+
+.search-form button {
+  border-radius: 0 4px 4px 0;
+  padding: 8px 15px;
+}
+
+/* Kaynak ve Durum Rozetleri */
+.source-badge,
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.source-contact_form {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}
+
+.source-newsletter {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.source-manuel {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.status-active {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.status-inactive {
+  background-color: #ffebee;
+  color: #b71c1c;
+}
+
+/* Toplu İşlemler Bölümü */
+.bulk-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #dee2e6;
+}
+
+.selected-count {
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Checkbox Sütunu */
+.checkbox-column {
+  width: 40px;
+  text-align: center;
+}
+
+/* Form Yardımcı Metni */
+.form-help {
+  font-size: 13px;
+  color: #6c757d;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.form-help code {
+  background-color: #f8f9fa;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+/* E-posta Listesi Tablosu */
+.email-list-container {
+  overflow-x: auto;
+}
+
+.email-list-container table {
+  min-width: 800px;
+}
+
+.email-list-container th,
+.email-list-container td {
+  vertical-align: middle;
+}
+
+.no-data {
+  text-align: center;
+  padding: 30px !important;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* İçe Aktarma Buton Stili */
+.import-button {
+  background-color: #6f42c1;
+  color: white;
+}
+
+.import-button:hover {
+  background-color: #5e35b1;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .email-list-actions {
+    flex-direction: column;
+  }
+  
+  .email-list-buttons {
+    justify-content: flex-start;
+  }
+  
+  .search-form {
+    max-width: 100%;
+  }
+} 

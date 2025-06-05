@@ -18,6 +18,14 @@ const AdminSidebar = () => {
         <li>
           <Link to="/admin/blog-posts">Blog Yazıları</Link>
         </li>
+        {/* Toplu E-posta menü öğesi */}
+        <li>
+          <Link to="/admin/bulk-email">Toplu E-posta</Link>
+        </li>
+        {/* E-posta Listesi menü öğesi */}
+        <li>
+          <Link to="/admin/email-list">E-posta Listesi</Link>
+        </li>
       </ul>
     </div>
   );
