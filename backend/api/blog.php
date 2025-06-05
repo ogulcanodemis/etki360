@@ -6,7 +6,7 @@ mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 
 header('Content-Type: application/json; charset=utf-8');
-header('Access-Control-Allow-Origin: http://localhost:3000');
+header('Access-Control-Allow-Origin: *'); // Tüm domainlerden gelen isteklere izin ver
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 

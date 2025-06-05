@@ -126,7 +126,7 @@
 }
 
 .dropdown-menu li a:hover {
-  background-color: #F9FAFB;
+  background-color: rgba(245, 158, 11, 0.1);
   color: #F59E0B;
   padding-left: 25px;
 }
@@ -178,49 +178,108 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   z-index: 99;
-  display: none;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .mobile-menu-overlay.active {
-  display: block;
   opacity: 1;
+  visibility: visible;
 }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
   .menu-toggle {
     display: block;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    z-index: 110;
+  }
+
+  .menu-toggle:hover {
+    background-color: rgba(249, 250, 251, 0.7);
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: linear-gradient(90deg, #1F2937, #374151);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .menu-toggle span:nth-child(1) {
+    width: 20px;
+    margin-left: 6px;
+  }
+
+  .menu-toggle span:nth-child(3) {
+    width: 20px;
+    margin-left: 6px;
+  }
+
+  .menu-toggle.active span {
+    background: linear-gradient(90deg, #F59E0B, #FBBF24);
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    width: 26px;
+    margin-left: 0;
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    width: 26px;
+    margin-left: 0;
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 
   .main-nav {
     position: fixed;
     top: 0;
     right: -300px;
-    width: 280px;
+    width: 300px;
     height: 100vh;
-    background-color: white;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    padding: 80px 20px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+    padding: 80px 0 20px;
     overflow-y: auto;
-    transition: right 0.3s ease;
+    transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
     z-index: 100;
+    border-left: 1px solid rgba(229, 231, 235, 0.5);
   }
 
   .main-nav.open {
     right: 0;
+    box-shadow: -15px 0 35px rgba(0, 0, 0, 0.2);
+  }
+
+  .main-nav.open .nav-item {
+    animation: slideInRight 0.4s forwards;
+    animation-delay: calc(var(--item-index, 0) * 0.05s + 0.1s);
+    opacity: 0;
   }
 
   .nav-list {
     flex-direction: column;
+    padding: 0 25px;
   }
 
   .nav-item {
     margin: 0;
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.7);
   }
 
   .nav-item:last-child {
@@ -228,27 +287,62 @@
   }
 
   .nav-item a {
-    padding: 15px 0;
+    padding: 16px 0;
+    font-weight: 600;
+    font-size: 17px;
+    color: #1F2937;
+    transition: all 0.3s ease;
+  }
+
+  .nav-item a:hover,
+  .nav-item a.active {
+    color: #F59E0B;
+    padding-left: 5px;
   }
 
   .dropdown-menu {
     position: static;
     box-shadow: none;
-    opacity: 1;
+    opacity: 0;
     visibility: visible;
     transform: none;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
     padding-left: 15px;
-    background-color: #F9FAFB;
-    border-radius: 0;
+    margin-left: 10px;
+    background-color: rgba(249, 250, 251, 0.7);
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-left-color 0.3s ease;
+    margin-top: 0;
+    border-left: 3px solid transparent;
   }
 
   .dropdown-menu.open {
     display: block;
+    opacity: 1;
+    max-height: 500px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-left-color: #F59E0B;
   }
 
   .dropdown-menu li a {
     padding: 12px 15px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, padding 0.3s ease, color 0.3s ease;
+    transition-delay: calc(var(--item-index, 0) * 0.05s);
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+
+  .dropdown-menu.open li a {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInDown 0.3s forwards;
+    animation-delay: calc(var(--item-index, 0) * 0.05s);
   }
 
   .has-dropdown > a {
@@ -260,10 +354,26 @@
   .dropdown-icon {
     border-width: 5px 5px 0 5px;
     border-color: #6B7280 transparent transparent transparent;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .dropdown-menu.open + a .dropdown-icon {
+  .dropdown-menu.open + a .dropdown-icon,
+  .has-dropdown > a:hover .dropdown-icon {
+    border-color: #F59E0B transparent transparent transparent;
     transform: rotate(180deg);
+  }
+  
+  /* Dropdown Divider */
+  .dropdown-divider {
+    height: 1px;
+    margin: 8px 15px;
+    background: linear-gradient(to right, rgba(229, 231, 235, 0.1), rgba(229, 231, 235, 0.7), rgba(229, 231, 235, 0.1));
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+    padding-left: 20px;
   }
 }
 
@@ -509,11 +619,16 @@
   }
   
   .header-content {
-    height: 60px;
+    height: 70px;
+    padding: 10px 0;
   }
   
-  .logo-text {
-    font-size: 24px;
+  .logo img {
+    height: 35px;
+  }
+  
+  .header.scrolled .logo img {
+    height: 30px;
   }
 
   .header {
@@ -549,5 +664,52 @@
   .mobile-nav-list a {
     font-size: 15px;
     padding: 10px 0;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .menu-toggle {
+    padding: 10px;
+  }
+  
+  .menu-toggle span {
+    width: 22px;
+  }
+  
+  .menu-toggle span:nth-child(1),
+  .menu-toggle span:nth-child(3) {
+    width: 18px;
+    margin-left: 4px;
+  }
+  
+  .menu-toggle.active span:nth-child(1),
+  .menu-toggle.active span:nth-child(3) {
+    width: 22px;
+    margin-left: 0;
+  }
+}
+
+/* Animasyon Keyframes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 } 

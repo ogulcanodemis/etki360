@@ -102,17 +102,17 @@ const Header = () => {
 
           <nav className={`main-nav ${isMenuOpen ? 'open' : ''}`}>
             <ul className="nav-list">
-              <li className="nav-item">
+              <li className="nav-item" style={{"--item-index": 0}}>
                 <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
                   Ana Sayfa
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" style={{"--item-index": 1}}>
                 <Link to="/hakkimizda" className={location.pathname === '/hakkimizda' ? 'active' : ''}>
                   Hakkımızda
                 </Link>
               </li>
-              <li className="nav-item has-dropdown">
+              <li className="nav-item has-dropdown" style={{"--item-index": 2}}>
                 <a 
                   href="/hizmetlerimiz" 
                   className={location.pathname.includes('/hizmetlerimiz') ? 'active' : ''}
@@ -122,32 +122,32 @@ const Header = () => {
                 </a>
                 <ul className={`dropdown-menu ${servicesDropdownOpen ? 'open' : ''}`}>
                   <li>
-                    <Link to="/hizmetlerimiz/web-tasarim">Web Tasarım</Link>
+                    <Link to="/hizmetlerimiz/web-tasarim" style={{"--item-index": 0}}>Web Tasarım</Link>
                   </li>
                   <li>
-                    <Link to="/hizmetlerimiz/e-ticaret">E-Ticaret</Link>
+                    <Link to="/hizmetlerimiz/e-ticaret" style={{"--item-index": 1}}>E-Ticaret</Link>
                   </li>
                   <li>
-                    <Link to="/hizmetlerimiz/seo">SEO</Link>
+                    <Link to="/hizmetlerimiz/seo" style={{"--item-index": 2}}>SEO</Link>
                   </li>
                   <li>
-                    <Link to="/hizmetlerimiz/sosyal-medya">Sosyal Medya</Link>
+                    <Link to="/hizmetlerimiz/sosyal-medya" style={{"--item-index": 3}}>Sosyal Medya</Link>
                   </li>
                   <li>
-                    <Link to="/hizmetlerimiz/icerik-uretimi">İçerik Üretimi</Link>
+                    <Link to="/hizmetlerimiz/icerik-uretimi" style={{"--item-index": 4}}>İçerik Üretimi</Link>
                   </li>
                   <li>
-                    <Link to="/hizmetlerimiz/grafik-tasarim">Grafik Tasarım</Link>
+                    <Link to="/hizmetlerimiz/grafik-tasarim" style={{"--item-index": 5}}>Grafik Tasarım</Link>
                   </li>
                   <li>
-                    <Link to="/hizmetlerimiz/mobil-uygulama">Mobil Uygulama</Link>
+                    <Link to="/hizmetlerimiz/mobil-uygulama" style={{"--item-index": 6}}>Mobil Uygulama</Link>
                   </li>
                   <li>
-                    <Link to="/hizmetlerimiz/bakim-destek">Bakım ve Destek</Link>
+                    <Link to="/hizmetlerimiz/bakim-destek" style={{"--item-index": 7}}>Bakım ve Destek</Link>
                   </li>
                 </ul>
               </li>
-              <li className="nav-item has-dropdown">
+              <li className="nav-item has-dropdown" style={{"--item-index": 3}}>
                 <a 
                   href="/sektorel-cozumler" 
                   className={location.pathname.includes('/sektorel-cozumler') ? 'active' : ''}
@@ -157,37 +157,37 @@ const Header = () => {
                 </a>
                 <ul className={`dropdown-menu ${sectoralDropdownOpen ? 'open' : ''}`}>
                   <li>
-                    <Link to="/sektorel-cozumler/saglik/klinik-web-sitesi">Klinik Web Sitesi</Link>
+                    <Link to="/sektorel-cozumler/saglik/klinik-web-sitesi" style={{"--item-index": 0}}>Klinik Web Sitesi</Link>
                   </li>
                   <li>
-                    <Link to="/sektorel-cozumler/saglik/sac-ekim-klinigi">Saç Ekim Kliniği</Link>
+                    <Link to="/sektorel-cozumler/saglik/sac-ekim-klinigi" style={{"--item-index": 1}}>Saç Ekim Kliniği</Link>
                   </li>
                   <li>
-                    <Link to="/sektorel-cozumler/nakliyat/nakliye-firmasi">Nakliyat Firması</Link>
+                    <Link to="/sektorel-cozumler/nakliyat/nakliye-firmasi" style={{"--item-index": 2}}>Nakliyat Firması</Link>
                   </li>
                   <li>
-                    <Link to="/sektorel-cozumler/hizmet/cilingir">Çilingir</Link>
+                    <Link to="/sektorel-cozumler/hizmet/cilingir" style={{"--item-index": 3}}>Çilingir</Link>
                   </li>
                   <li>
-                    <Link to="/sektorel-cozumler/insaat-dekorasyon/mimar">Mimar</Link>
+                    <Link to="/sektorel-cozumler/insaat-dekorasyon/mimar" style={{"--item-index": 4}}>Mimar</Link>
                   </li>
                   <li className="dropdown-divider"></li>
                   <li>
-                    <Link to="/sektorel-cozumler">Tüm Sektörel Çözümler</Link>
+                    <Link to="/sektorel-cozumler" style={{"--item-index": 5}}>Tüm Sektörel Çözümler</Link>
                   </li>
                 </ul>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" style={{"--item-index": 4}}>
                 <Link to="/portfoy" className={location.pathname === '/portfoy' ? 'active' : ''}>
                   Portföy
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" style={{"--item-index": 5}}>
                 <Link to="/blog" className={location.pathname.includes('/blog') ? 'active' : ''}>
                   Blog
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" style={{"--item-index": 6}}>
                 <Link to="/iletisim" className={location.pathname === '/iletisim' ? 'active' : ''}>
                   İletişim
                 </Link>
@@ -198,17 +198,15 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <div 
-          className="mobile-menu-overlay" 
-          onClick={() => {
-            setIsMenuOpen(false);
-            setServicesDropdownOpen(false);
-            setSectoralDropdownOpen(false);
-          }}
-          aria-hidden="true"
-        />
-      )}
+      <div 
+        className={`mobile-menu-overlay ${isMenuOpen ? 'active' : ''}`}
+        onClick={() => {
+          setIsMenuOpen(false);
+          setServicesDropdownOpen(false);
+          setSectoralDropdownOpen(false);
+        }}
+        aria-hidden="true"
+      />
     </header>
   );
 };

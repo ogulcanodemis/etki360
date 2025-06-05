@@ -11,9 +11,8 @@ const HomeBlogPosts = () => {
     const fetchBlogPosts = async () => {
       try {
         setLoading(true);
-        // Blog yazılarını çekmek için backend API'sine istek at
-        // limit=3 parametresi ile sadece 3 yazı getir ve featured=true ile öne çıkan yazıları tercih et
-        const response = await fetch('/backend/api/blog.php?action=posts&limit=3&featured=true');
+        // Blog.js'deki gibi API isteği yapıyoruz, aynı URL yapısını kullanarak
+        const response = await fetch('http://etki360.com/backend/api/blog.php?action=posts&limit=3&page=1');
         
         if (!response.ok) {
           throw new Error('Blog yazıları yüklenirken bir hata oluştu');
