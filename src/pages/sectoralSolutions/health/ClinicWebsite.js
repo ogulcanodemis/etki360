@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import './ClinicWebsite.css';
 
 const ClinicWebsite = () => {
@@ -67,6 +68,19 @@ const ClinicWebsite = () => {
     ]
   };
 
+  // WebPage Schema for SEO
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Klinik Web Sitesi Tasarımı | Online Randevu Sistemli Web Sitesi",
+    "description": "Klinikler için online randevu sistemli, doktor profilleri ve hizmet sayfaları içeren profesyonel web sitesi tasarımı. 9.500₺'den başlayan fiyatlarla 3 günde teslim.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360 - Dijital Pazarlama ve Web Tasarım Ajansı",
+      "url": "https://www.etki360.com"
+    }
+  };
+
   // Clinic Website Features
   const features = [
     {
@@ -131,13 +145,34 @@ const ClinicWebsite = () => {
 
   return (
     <div className="clinic-website-page">
-      {/* Schema.org markup */}
-      <script type="application/ld+json">
-        {JSON.stringify(serviceSchema)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </script>
+      {/* SEO Meta Tags ve Schema */}
+      <Helmet>
+        {/* Title Tag */}
+        <title>Klinik Web Sitesi Tasarımı | Online Randevu Sistemli Sağlık Web Sitesi | etki360</title>
+        
+        {/* Meta Description */}
+        <meta 
+          name="description" 
+          content="Klinik web sitesi tasarımı ve geliştirme hizmetleri. Online randevu sistemi, doktor profilleri, hizmet sayfaları. Klinik web sitesi fiyatları 9.500₺'den başlar. 3 günde teslim ve %100 memnuniyet garantisi." 
+        />
+        
+        {/* Keywords */}
+        <meta 
+          name="keywords" 
+          content="klinik web sitesi, hastane web sitesi, doktor web sitesi, sağlık web sitesi, online randevu sistemi, klinik web sitesi tasarımı, tıbbi web sitesi, sağlık web sitesi tasarımı, klinik web sitesi fiyatları" 
+        />
+        
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(webPageSchema)}
+        </script>
+      </Helmet>
 
       {/* Hero Section */}
       <section className="clinic-hero">
@@ -145,12 +180,12 @@ const ClinicWebsite = () => {
           <div className="clinic-hero-content">
             <div className="clinic-hero-text">
               <h1 className="clinic-hero-title">
-                Klinikler İçin <span className="highlight">Profesyonel</span> Web Sitesi Çözümleri
+                <strong>Klinik Web Sitesi</strong> - <span className="highlight">Online Randevu Sistemli</span> Profesyonel Çözümler
               </h1>
               <p className="clinic-hero-description">
-                Hastalarınıza online randevu imkanı sunan, doktorlarınızı ve hizmetlerinizi profesyonelce tanıtan, 
-                Google'da üst sıralarda yer almanızı sağlayan klinik web sitesi çözümleri. 
-                3 gün içinde teslim ve %100 müşteri memnuniyeti garantisi.
+                <strong>Hastalarınıza online randevu imkanı</strong> sunan, <em>doktorlarınızı ve hizmetlerinizi</em> profesyonelce tanıtan, 
+                <strong>Google'da üst sıralarda</strong> yer almanızı sağlayan <strong>klinik web sitesi çözümleri</strong>. 
+                <strong>3 gün</strong> içinde teslim ve <strong>%100 müşteri memnuniyeti</strong> garantisi ile <strong>sağlık web sitesi</strong> tasarımı.
               </p>
               <div className="clinic-hero-buttons">
                 <Link to="/iletisim" className="btn-primary">
@@ -188,7 +223,7 @@ const ClinicWebsite = () => {
           <div className="section-header">
             <h2 className="section-title">Klinikler Neden Web Sitesi Sahibi Olmalı?</h2>
             <p className="section-description">
-              Günümüz dijital dünyasında, klinikler için profesyonel bir web sitesi artık bir seçenek değil, bir zorunluluktur
+              Günümüz dijital dünyasında, <strong>klinikler için profesyonel bir web sitesi</strong> artık bir seçenek değil, <em>bir zorunluluktur</em>. <strong>Hastaların %70'i</strong> klinik seçiminde <strong>online araştırma yapmaktadır</strong>.
             </p>
           </div>
 
@@ -209,7 +244,7 @@ const ClinicWebsite = () => {
           <div className="section-header">
             <h2 className="section-title">Klinik Web Sitesi Nasıl Olmalı?</h2>
             <p className="section-description">
-              Etkili bir klinik web sitesi için gerekli olan temel özellikler
+              <strong>Etkili bir klinik web sitesi</strong> için gerekli olan <em>temel özellikler</em> ve <strong>hasta odaklı</strong> çözümler. <strong>Sağlık sektörüne özel</strong> web tasarımı.
             </p>
           </div>
 
@@ -235,7 +270,7 @@ const ClinicWebsite = () => {
           <div className="section-header">
             <h2 className="section-title">3 Günde Klinik Web Sitesi Nasıl Yapıyoruz?</h2>
             <p className="section-description">
-              Özel süreç yönetimimiz ve sektöre özel şablonlarımız sayesinde hızlı teslimat sağlıyoruz
+              <strong>Özel süreç yönetimimiz</strong> ve <strong>sağlık sektörüne özel şablonlarımız</strong> sayesinde <em>hızlı teslimat</em> sağlıyoruz. <strong>Klinik web siteniz</strong> sadece <strong>3 günde</strong> hazır!
             </p>
           </div>
 
@@ -285,7 +320,7 @@ const ClinicWebsite = () => {
           <div className="section-header">
             <h2 className="section-title">Klinik Web Sitesi Paketlerimiz</h2>
             <p className="section-description">
-              İhtiyaçlarınıza ve bütçenize uygun çözümler sunuyoruz
+              <strong>İhtiyaçlarınıza ve bütçenize</strong> uygun <em>çözümler</em> sunuyoruz. <strong>Uygun klinik web sitesi fiyatları</strong> ile <strong>sağlık sektörüne özel</strong> web tasarımı.
             </p>
           </div>
 
@@ -371,7 +406,7 @@ const ClinicWebsite = () => {
           <div className="section-header">
             <h2 className="section-title">Sıkça Sorulan Sorular</h2>
             <p className="section-description">
-              Klinik web sitesi hakkında merak edilenler
+              <strong>Klinik web sitesi</strong> hakkında merak edilenler ve <em>önemli bilgiler</em>. <strong>Sağlık web sitesi</strong> konusunda tüm sorularınızın cevapları.
             </p>
           </div>
 
@@ -430,9 +465,9 @@ const ClinicWebsite = () => {
       <section className="clinic-cta">
         <div className="container">
           <div className="cta-content">
-            <h2 className="cta-title">Kliniğiniz İçin Profesyonel Web Sitesi Oluşturalım</h2>
+            <h2 className="cta-title"><strong>Kliniğiniz İçin</strong> Profesyonel <strong>Web Sitesi</strong> Oluşturalım</h2>
             <p className="cta-description">
-              3 gün içinde teslim ve %100 müşteri memnuniyeti garantisi ile kliniğinize özel web sitesi çözümleri
+              <strong>3 gün</strong> içinde teslim ve <strong>%100 müşteri memnuniyeti garantisi</strong> ile <em>kliniğinize özel</em> <strong>sağlık web sitesi çözümleri</strong>. <strong>Klinik web sitenizi</strong> hemen oluşturalım!
             </p>
             <div className="cta-buttons">
               <Link to="/iletisim" className="btn-primary">

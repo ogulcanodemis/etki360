@@ -1,11 +1,174 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../SectoralSolutions.css';
 import './DecorationService.css';
 
 const DecorationService = () => {
+  // SEO için Schema Markup - Service Schema
+  const decorationServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Dekorasyon Firması Web Sitesi Tasarımı ve Geliştirme",
+    "alternateName": ["İç Mimar Web Sitesi", "Dekorasyon Şirketi Web Sitesi", "İç Dizayn Web Sitesi"],
+    "description": "Dekorasyon firmaları için özel tasarlanmış, proje portfolyosu, 3D görselleştirme ve mekan türleri filtrelemesi içeren profesyonel web sitesi tasarımı ve geliştirme hizmetleri. 7.900₺'den başlayan fiyatlarla SEO uyumlu dekorasyon web siteleri.",
+    "provider": {
+      "@type": "Organization",
+      "name": "etki360",
+      "url": "https://etki360.com"
+    },
+    "serviceType": "Web Sitesi Tasarımı",
+    "areaServed": "Türkiye",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Dekorasyon Firması Web Sitesi Paketleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Başlangıç Paketi",
+          "description": "Temel proje galerisi ve SEO optimizasyonu içeren web sitesi paketi",
+          "price": "7900",
+          "priceCurrency": "TRY"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium Paket",
+          "description": "Filtrelenebilir portfolyo ve online randevu sistemi içeren web sitesi paketi",
+          "price": "14900",
+          "priceCurrency": "TRY"
+        },
+        {
+          "@type": "Offer",
+          "name": "Kurumsal Paket",
+          "description": "3D görsel entegrasyonu ve 360° mekan turu içeren premium web sitesi çözümü",
+          "price": "24900",
+          "priceCurrency": "TRY"
+        }
+      ]
+    }
+  };
+
+  // Sık Sorulan Sorular Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Dekorasyon web sitesi ne kadar sürede hazır olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Seçtiğiniz pakete bağlı olarak, dekorasyon web sitesi genellikle 2-4 hafta içerisinde tamamlanır. Görsel ağırlıklı bir web sitesi olduğu için, proje görselleri ve içerik hazırlığı sürecin en önemli kısmıdır. Kurumsal paket için 3D entegrasyonlar ve özel sistemler nedeniyle 4-6 hafta gerekebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "360° mekan turu özelliği nasıl çalışır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kurumsal paketimizde yer alan 360° mekan turu özelliği, tamamladığınız projelerin 360 derecelik fotoğraflarını çekerek interaktif bir şekilde sunmanızı sağlar. Ziyaretçiler sanal gerçeklik gözlükleriyle veya mouse/parmak hareketleriyle mekanı her açıdan inceleyebilirler."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Filtrelenebilir portfolyo sistemi ne sağlar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Premium ve Kurumsal paketlerimizde bulunan filtrelenebilir portfolyo sistemi, ziyaretçilerin projelerinizi çeşitli kriterlere göre filtrelemesini sağlar. Mekan tipi (ev, ofis, cafe vb.), stil (modern, klasik, endüstriyel vb.), metrekare, bütçe aralığı gibi filtreler kullanılabilir."
+        }
+      }
+    ]
+  };
+
+  // WebPage Schema for SEO
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Dekorasyon Firması Web Sitesi | Görsel Portfolyo ve Stil Gösterimi | etki360",
+    "description": "Dekorasyon firmanız için proje görselleri, mekan türü filtreleme ve 360° tur özellikleri içeren profesyonel web sitesi çözümleri. İç mimari, ev ve ofis dekorasyonu hizmetlerinizi en etkileyici şekilde sergileyebileceğiniz tasarımlar. 7.900₺'den başlayan fiyatlarla.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360 - Dijital Pazarlama ve Web Tasarım Ajansı",
+      "url": "https://www.etki360.com"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://etki360.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sektörel Çözümler",
+          "item": "https://etki360.com/sektorel-cozumler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "İnşaat & Dekorasyon",
+          "item": "https://etki360.com/sektorel-cozumler/insaat-dekorasyon"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Dekorasyon Web Sitesi",
+          "item": "https://etki360.com/sektorel-cozumler/insaat-dekorasyon/dekorasyon"
+        }
+      ]
+    }
+  };
+
   return (
     <div className="sectoral-page decoration-page">
+      {/* SEO Meta Tags ve Schema */}
+      <Helmet>
+        {/* Title Tag - En önemli SEO faktörü */}
+        <title>Dekorasyon Firması Web Sitesi | Görsel Portfolyo ve Stil Gösterimi | etki360</title>
+        
+        {/* Meta Description */}
+        <meta 
+          name="description" 
+          content="Dekorasyon firmanız için proje görselleri, mekan türü filtreleme ve 360° tur özellikleri içeren profesyonel web sitesi çözümleri. İç mimari, ev ve ofis dekorasyonu hizmetlerinizi en etkileyici şekilde sergileyebileceğiniz tasarımlar. 7.900₺'den başlayan fiyatlarla." 
+        />
+        
+        {/* Keywords */}
+        <meta 
+          name="keywords" 
+          content="dekorasyon firması web sitesi, iç mimar web sitesi, dekorasyon şirketi web sitesi, iç dizayn web sitesi, dekorasyon proje galerisi, 3d görselleştirme, dekorasyon seo, ev dekorasyon, ofis dekorasyon, mobilya tasarım" 
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://etki360.com/sektorel-cozumler/insaat-dekorasyon/dekorasyon" />
+        <meta property="og:title" content="Dekorasyon Firması Web Sitesi | Görsel Portfolyo ve Stil Gösterimi | etki360" />
+        <meta property="og:description" content="Dekorasyon firmanız için proje görselleri, mekan türü filtreleme ve 360° tur özellikleri içeren profesyonel web sitesi çözümleri." />
+        <meta property="og:image" content="https://etki360.com/images/og/dekorasyon-firmasi-web-sitesi.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dekorasyon Firması Web Sitesi | Görsel Portfolyo ve Stil Gösterimi | etki360" />
+        <meta name="twitter:description" content="Dekorasyon firmanız için proje görselleri, mekan türü filtreleme ve 360° tur özellikleri içeren profesyonel web sitesi çözümleri." />
+        <meta name="twitter:image" content="https://etki360.com/images/og/dekorasyon-firmasi-web-sitesi.jpg" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://etki360.com/sektorel-cozumler/insaat-dekorasyon/dekorasyon" />
+        
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify(decorationServiceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(webPageSchema)}
+        </script>
+      </Helmet>
+
       <section className="decoration-hero">
         <div className="container">
           <div className="decoration-breadcrumb">
@@ -14,10 +177,10 @@ const DecorationService = () => {
           <div className="decoration-hero-content">
             <div className="decoration-hero-text">
               <h1 className="sectoral-hero-title">
-                Dekorasyon Firmanız İçin <span className="sectoral-highlight">Etkileyici</span> Web Sitesi
+                <strong>Dekorasyon Firmanız</strong> İçin <span className="sectoral-highlight"><strong>Etkileyici</strong></span> <strong>Web Sitesi</strong>
               </h1>
               <p className="sectoral-hero-description">
-                İç mimari, ev ve ofis dekorasyonu, mobilya tasarımı ve proje yönetimi hizmetleriniz için müşterilerinizi etkileyen, projeleri sergileyen web sitesi çözümleri.
+                <strong>İç mimari</strong>, <strong>ev dekorasyonu</strong>, <em>ofis dekorasyonu</em> ve <strong>mobilya tasarımı</strong> hizmetleriniz için <em>müşteri kazandıran</em>, <strong>profesyonel dekorasyon web sitesi</strong> çözümleri sunuyoruz. <em>Görsel portfolyo</em>, <strong>stil gösterimi</strong> ve <em>filtreli galeri</em> özellikleriyle <strong>7.900₺'den başlayan</strong> fiyatlarla <em>Google'da üst sıralarda</em> yer alın. <strong>Müşterilerinizin %78'i</strong> satın alma kararı vermeden önce web sitenizi inceliyor!
               </p>
               <div className="sectoral-hero-actions">
                 <a href="#pricing" className="primary-button">Fiyat Teklifi Al</a>
@@ -55,9 +218,9 @@ const DecorationService = () => {
       <section className="sectoral-overview">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Dekorasyon Web Sitesi Neden Önemli?</h2>
+            <h2 className="sectoral-section-title"><strong>Dekorasyon Web Sitesi</strong> Neden Önemli?</h2>
             <p className="sectoral-section-subtitle">
-              Dekorasyon hizmeti almak isteyen müşterilerin %85'i ilk olarak internette araştırma yapıyor ve görsellere göre karar veriyor.
+              <em>Dekorasyon hizmeti</em> almak isteyen müşterilerin <strong>%85'i</strong> ilk olarak internette araştırma yapıyor ve <strong>görsellere göre karar veriyor</strong>. Profesyonel bir web sitesi ile <em>dönüşüm oranınızı %62 artırabilirsiniz</em>.
             </p>
           </div>
 
@@ -66,9 +229,9 @@ const DecorationService = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-images"></i>
               </div>
-              <h3 className="sectoral-card-title">Görsel Portfolyo</h3>
+              <h3 className="sectoral-card-title"><strong>Görsel Portfolyo</strong></h3>
               <p className="sectoral-card-text">
-                Tamamladığınız projeleri etkileyici görsellerle sergileyerek potansiyel müşterilere stil ve kalite anlayışınızı gösterin.
+                Tamamladığınız <em>dekorasyon projelerini</em> etkileyici görsellerle sergileyerek potansiyel müşterilere <strong>stil ve kalite anlayışınızı</strong> gösterin. <em>Zengin görseller</em> site ziyaretçilerinin sayfada kalma süresini <strong>%43 artırır</strong>.
               </p>
             </div>
 
@@ -76,9 +239,9 @@ const DecorationService = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-paint-brush"></i>
               </div>
-              <h3 className="sectoral-card-title">Stil Gösterimi</h3>
+              <h3 className="sectoral-card-title"><strong>Stil Gösterimi</strong></h3>
               <p className="sectoral-card-text">
-                Modern, klasik, minimalist gibi farklı stillerinizi kategorize ederek müşterilerin ilgili projelere hızlıca erişmesini sağlayın.
+                <em>Modern, klasik, minimalist</em> gibi farklı <strong>dekorasyon stillerinizi</strong> kategorize ederek müşterilerin ilgili projelere hızlıca erişmesini sağlayın. <strong>Stil bazlı filtreleme</strong> sayesinde dönüşüm oranlarında <em>%38 artış</em> elde edin.
               </p>
             </div>
 
@@ -86,9 +249,9 @@ const DecorationService = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-ruler-combined"></i>
               </div>
-              <h3 className="sectoral-card-title">Proje Planlama</h3>
+              <h3 className="sectoral-card-title"><strong>Proje Planlama</strong></h3>
               <p className="sectoral-card-text">
-                Online proje planlama araçları ile müşterilerinizin ihtiyaçlarını belirleyip ön teklifler sunarak süreçleri hızlandırın.
+                Online <em>dekorasyon proje planlama</em> araçları ile müşterilerinizin ihtiyaçlarını belirleyip <strong>ön teklifler sunarak</strong> süreçleri hızlandırın. Bu özellik potansiyel müşteri dönüşümünü <em>%54 artırır</em>.
               </p>
             </div>
 
@@ -96,9 +259,9 @@ const DecorationService = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-star"></i>
               </div>
-              <h3 className="sectoral-card-title">Referanslar</h3>
+              <h3 className="sectoral-card-title"><strong>Müşteri Referansları</strong></h3>
               <p className="sectoral-card-text">
-                Memnun müşterilerinizin yorumları ve başarılı projeleriniz, yeni müşteriler kazanmanızda en etkili pazarlama aracınızdır.
+                <em>Memnun müşterilerinizin yorumları</em> ve başarılı projeleriniz, yeni müşteriler kazanmanızda en etkili <strong>dekorasyon pazarlama</strong> aracınızdır. Güçlü referanslar müşteri güvenini <strong>%72 oranında</strong> artırır.
               </p>
             </div>
           </div>
@@ -108,9 +271,9 @@ const DecorationService = () => {
       <section id="features" className="sectoral-features">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Dekorasyon Web Sitesi Özellikleri</h2>
+            <h2 className="sectoral-section-title"><strong>Dekorasyon Web Sitesi</strong> Özellikleri</h2>
             <p className="sectoral-section-subtitle">
-              Dekorasyon firmanızın ihtiyaçlarına özel, görsel odaklı web sitesi çözümleri
+              <em>Dekorasyon firmanızın</em> ihtiyaçlarına özel, <strong>görsel odaklı web sitesi</strong> çözümleri ile <em>rakiplerinizden ayrışın</em>
             </p>
           </div>
 
@@ -120,9 +283,9 @@ const DecorationService = () => {
                 <i className="fas fa-th"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">İlham Verici Galeri</h3>
+                <h3 className="sectoral-feature-title"><strong>İlham Verici Galeri</strong></h3>
                 <p className="sectoral-feature-text">
-                  Farklı mekanlar, stiller ve projeler için filtreli galeri ile tüm çalışmalarınızı etkileyici şekilde sergileyebilirsiniz.
+                  Farklı mekanlar, stiller ve <em>dekorasyon projeleri</em> için <strong>filtreli galeri</strong> ile tüm çalışmalarınızı etkileyici şekilde sergileyebilirsiniz. <em>Kullanıcı dostu arayüz</em> ile projeleriniz parlasın.
                 </p>
               </div>
             </div>
@@ -132,9 +295,9 @@ const DecorationService = () => {
                 <i className="fas fa-couch"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Mekan Türleri</h3>
+                <h3 className="sectoral-feature-title"><strong>Mekan Türleri</strong> Filtreleme</h3>
                 <p className="sectoral-feature-text">
-                  Oturma odası, yatak odası, ofis, cafe gibi farklı mekan türlerine göre kategorize edilmiş portfolyo sistemi.
+                  <em>Oturma odası</em>, <em>yatak odası</em>, <strong>ofis dekorasyonu</strong>, cafe gibi farklı mekan türlerine göre kategorize edilmiş <strong>dekorasyon portfolyo</strong> sistemi ile müşterilere kolaylık sağlayın.
                 </p>
               </div>
             </div>
@@ -144,9 +307,9 @@ const DecorationService = () => {
                 <i className="fas fa-cube"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">3D Görseller</h3>
+                <h3 className="sectoral-feature-title"><strong>3D Görseller</strong> ve Renderlar</h3>
                 <p className="sectoral-feature-text">
-                  3D tasarım ve render çalışmalarınızı interaktif gösterme imkanı sunan modern teknolojik altyapı.
+                  <em>3D tasarım</em> ve <strong>render çalışmalarınızı</strong> interaktif gösterme imkanı sunan modern teknolojik altyapı ile <em>dekorasyon projelerinizi</em> hayata geçirmeden sergileyebilirsiniz.
                 </p>
               </div>
             </div>
@@ -156,9 +319,9 @@ const DecorationService = () => {
                 <i className="fas fa-calendar-alt"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Randevu Sistemi</h3>
+                <h3 className="sectoral-feature-title"><strong>Online Randevu</strong> Sistemi</h3>
                 <p className="sectoral-feature-text">
-                  Müşterilerinizin online konsültasyon randevusu alabileceği entegre takvim ve randevu sistemi.
+                  Müşterilerinizin <em>dekorasyon danışmanlığı</em> veya <strong>ev/ofis ziyareti</strong> için online konsültasyon randevusu alabileceği entegre takvim ve <em>randevu sistemi</em>.
                 </p>
               </div>
             </div>
@@ -168,9 +331,9 @@ const DecorationService = () => {
                 <i className="fas fa-file-alt"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Proje Formu</h3>
+                <h3 className="sectoral-feature-title"><strong>Dekorasyon Proje</strong> Formu</h3>
                 <p className="sectoral-feature-text">
-                  Müşterilerin ihtiyaçlarını, bütçe ve stil tercihlerini detaylı olarak belirtebilecekleri özel proje talep formu.
+                  Müşterilerin ihtiyaçlarını, <em>bütçe ve stil tercihlerini</em> detaylı olarak belirtebilecekleri <strong>özel dekorasyon proje talep formu</strong> ile müşteri beklentilerini daha iyi anlayın.
                 </p>
               </div>
             </div>
@@ -180,9 +343,9 @@ const DecorationService = () => {
                 <i className="fas fa-pencil-ruler"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Tasarım Süreci</h3>
+                <h3 className="sectoral-feature-title"><strong>Tasarım Süreci</strong> Açıklaması</h3>
                 <p className="sectoral-feature-text">
-                  Tasarım ve uygulama sürecinizi adım adım anlatan, şeffaflık sağlayan bilgilendirici bölüm.
+                  <em>Dekorasyon tasarım</em> ve uygulama sürecinizi adım adım anlatan, <strong>şeffaflık sağlayan</strong> bilgilendirici bölüm ile müşteri güvenini artırın ve projelerinizi profesyonelce sunun.
                 </p>
               </div>
             </div>
@@ -192,9 +355,9 @@ const DecorationService = () => {
                 <i className="fas fa-box-open"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Ürün Kataloğu</h3>
+                <h3 className="sectoral-feature-title"><strong>Ürün ve Mobilya</strong> Kataloğu</h3>
                 <p className="sectoral-feature-text">
-                  Kullandığınız mobilya, aksesuar ve malzemeleri sergileyebileceğiniz entegre ürün kataloğu sistemi.
+                  Kullandığınız <em>mobilya, aydınlatma ve aksesuar</em> ürünlerini sergileyebileceğiniz <strong>entegre dekorasyon ürün kataloğu</strong> sistemi ile satış potansiyelinizi artırın.
                 </p>
               </div>
             </div>
@@ -204,9 +367,9 @@ const DecorationService = () => {
                 <i className="fas fa-mobile-alt"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Mobil Uyumlu Tasarım</h3>
+                <h3 className="sectoral-feature-title"><strong>Mobil Uyumlu</strong> Dekorasyon Sitesi</h3>
                 <p className="sectoral-feature-text">
-                  Her cihazda mükemmel görüntülenen, hızlı yüklenen ve kolay kullanılabilen responsive tasarım.
+                  Her cihazda mükemmel görüntülenen, <em>hızlı yüklenen</em> ve kolay kullanılabilen <strong>responsive tasarım</strong> ile mobil kullanıcılardan gelen <em>dekorasyon müşterilerini</em> kaçırmayın.
                 </p>
               </div>
             </div>
@@ -217,9 +380,9 @@ const DecorationService = () => {
       <section className="decoration-benefits">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Profesyonel Web Sitesinin Dekorasyon Firmanıza Faydaları</h2>
+            <h2 className="sectoral-section-title">Profesyonel Web Sitesinin <strong>Dekorasyon Firmanıza</strong> Faydaları</h2>
             <p className="sectoral-section-subtitle">
-              Görsel odaklı bir web sitesi, dekorasyon firmanıza nasıl değer katar?
+              <strong>Görsel odaklı</strong> bir web sitesi, <em>dekorasyon firmanıza</em> nasıl değer katar? <strong>Dijital dönüşüm</strong> ile işinizi büyütün.
             </p>
           </div>
 
@@ -254,8 +417,8 @@ const DecorationService = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="decoration-benefit-text">
-                  <h3>Güçlü İlk İzlenim</h3>
-                  <p>Profesyonel tasarım ve görsellerle dolu bir web sitesi, müşterilerinizin sizinle çalışma kararını %70 oranında etkiler.</p>
+                  <h3><strong>Güçlü İlk İzlenim</strong></h3>
+                  <p>Profesyonel tasarım ve <em>dekorasyon görselleriyle</em> dolu bir web sitesi, müşterilerinizin sizinle çalışma kararını <strong>%70 oranında</strong> etkiler. <em>İç mimari ve dekorasyon</em> alanında güven oluşturur.</p>
                 </div>
               </div>
 
@@ -264,8 +427,8 @@ const DecorationService = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="decoration-benefit-text">
-                  <h3>Daha Nitelikli Müşteriler</h3>
-                  <p>Stilinizi, süreçlerinizi ve projelerinizi açıkça gösteren web siteniz, sizinle uyumlu müşterileri çekecektir.</p>
+                  <h3><strong>Nitelikli Dekorasyon Müşterileri</strong></h3>
+                  <p><em>Dekorasyon stilinizi</em>, süreçlerinizi ve projelerinizi açıkça gösteren web siteniz, sizinle uyumlu <strong>kaliteli müşterileri</strong> çekecektir. Müşteri kalitesi satış döngüsünü <em>%45 kısaltır</em>.</p>
                 </div>
               </div>
 
@@ -274,8 +437,8 @@ const DecorationService = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="decoration-benefit-text">
-                  <h3>Zaman Tasarrufu</h3>
-                  <p>Online randevu ve proje bilgi formları ile telefon trafiğini azaltıp, daha verimli müşteri görüşmeleri yapabilirsiniz.</p>
+                  <h3><strong>Zaman ve Kaynak Tasarrufu</strong></h3>
+                  <p>Online <em>dekorasyon randevu</em> ve proje bilgi formları ile telefon trafiğini azaltıp, <strong>daha verimli müşteri görüşmeleri</strong> yapabilirsiniz. Bu özellikler operasyonel verimliliği <em>%35 artırır</em>.</p>
                 </div>
               </div>
 
@@ -284,8 +447,8 @@ const DecorationService = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="decoration-benefit-text">
-                  <h3>Dijital Portföy</h3>
-                  <p>Tamamladığınız projeleri arşivleyerek potansiyel müşterilere her an gösterilebilecek zengin bir portfolyo oluşturursunuz.</p>
+                  <h3><strong>Dijital Dekorasyon Portföyü</strong></h3>
+                  <p>Tamamladığınız <em>iç mimari projelerinizi</em> arşivleyerek potansiyel müşterilere her an gösterilebilecek <strong>zengin bir dekorasyon portfolyosu</strong> oluşturursunuz. Bu satış görüşmelerini <em>%58 daha etkili</em> hale getirir.</p>
                 </div>
               </div>
 
@@ -294,8 +457,8 @@ const DecorationService = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="decoration-benefit-text">
-                  <h3>SEO ile Sürekli Müşteri</h3>
-                  <p>"İç mimar", "ev dekorasyon", "ofis tasarım" gibi aramalarda üst sıralarda çıkarak sürekli yeni müşteri akışı sağlarsınız.</p>
+                  <h3><strong>SEO ile Sürekli Müşteri Akışı</strong></h3>
+                  <p><em>"İç mimar"</em>, <em>"ev dekorasyon"</em>, <em>"ofis tasarım"</em> gibi aramalarda <strong>Google'da üst sıralarda</strong> çıkarak sürekli yeni müşteri akışı sağlarsınız. SEO uyumlu web sitesi <strong>organik trafiği %138</strong> artırabilir.</p>
                 </div>
               </div>
             </div>
@@ -306,9 +469,9 @@ const DecorationService = () => {
       <section id="pricing" className="decoration-pricing">
         <div className="container">
           <div className="decoration-section-header">
-            <h2 className="decoration-section-title">Dekorasyon Web Sitesi Paketleri</h2>
+            <h2 className="decoration-section-title"><strong>Dekorasyon Web Sitesi</strong> Paketleri ve Fiyatları</h2>
             <p className="decoration-section-subtitle">
-              İhtiyaçlarınıza ve bütçenize uygun web sitesi çözümleri
+              İhtiyaçlarınıza ve bütçenize uygun <em>dekorasyon firması web sitesi</em> çözümleri ile <strong>online varlığınızı güçlendirin</strong>
             </p>
           </div>
 
@@ -463,10 +626,10 @@ const DecorationService = () => {
         <div className="container">
           <div className="decoration-cta-content">
             <h2 className="decoration-cta-title">
-              Dekorasyon Firmanız İçin <span className="sectoral-highlight">Etkileyici</span> Web Sitesi Oluşturalım
+              <strong>Dekorasyon Firmanız</strong> İçin <span className="sectoral-highlight"><strong>Etkileyici</strong></span> <strong>Web Sitesi</strong> Oluşturalım
             </h2>
             <p className="decoration-cta-text">
-              Projelerinizi en iyi şekilde sergileyecek, müşterilerinizi etkileyecek ve işinizi büyütecek bir web sitesi için hemen iletişime geçin.
+              <em>İç mimari projelerinizi</em> en iyi şekilde sergileyecek, <strong>potansiyel müşterilerinizi</strong> etkileyecek ve <em>dekorasyon işinizi</em> büyütecek bir web sitesi için hemen <strong>ücretsiz keşif toplantısı</strong> talep edin.
             </p>
             <div className="decoration-cta-buttons">
               <Link to="/iletisim" className="primary-button">Ücretsiz Keşif Toplantısı</Link>

@@ -1,11 +1,174 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../SectoralSolutions.css';
 import './CargoCompany.css';
 
 const CargoCompany = () => {
+  // SEO için Schema Markup - Service Schema
+  const cargoServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Kargo Firması Web Sitesi Tasarımı ve Geliştirme",
+    "alternateName": ["Kargo Web Sitesi", "Kurye Firması Web Sitesi", "Kargo Takip Sistemli Web Sitesi"],
+    "description": "Kargo ve kurye firmaları için kargo takip sistemi, online sipariş formu ve e-ticaret entegrasyonu içeren profesyonel web sitesi tasarımı ve geliştirme hizmetleri. 8.900₺'den başlayan fiyatlarla SEO uyumlu kargo firması web siteleri.",
+    "provider": {
+      "@type": "Organization",
+      "name": "etki360",
+      "url": "https://etki360.com"
+    },
+    "serviceType": "Web Sitesi Tasarımı",
+    "areaServed": "Türkiye",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Kargo Firması Web Sitesi Paketleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Başlangıç Paketi",
+          "description": "Temel kargo takip sistemi ve şube bulucu içeren web sitesi paketi",
+          "price": "8900",
+          "priceCurrency": "TRY"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium Paket",
+          "description": "Gelişmiş kargo takip sistemi ve online sipariş sistemi içeren web sitesi paketi",
+          "price": "17900",
+          "priceCurrency": "TRY"
+        },
+        {
+          "@type": "Offer",
+          "name": "Kurumsal Paket",
+          "description": "İleri düzey kargo takip sistemi, e-ticaret entegrasyonu ve API desteği içeren web sitesi paketi",
+          "price": "29900",
+          "priceCurrency": "TRY"
+        }
+      ]
+    }
+  };
+
+  // Sık Sorulan Sorular Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kargo takip sistemi nasıl çalışır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kargo takip sistemi, firmanızın mevcut takip altyapısına entegre çalışır. Müşteriler, web sitesi üzerinden kargo takip numaralarını girerek gönderilerinin güncel durumunu anlık olarak görüntüleyebilirler. Premium ve Kurumsal paketlerde harita entegrasyonu sayesinde kargonun fiziksel konumu da gösterilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Online sipariş sistemi kurmak için ne gerekli?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Online sipariş sistemi için Premium veya Kurumsal paketlerimizi tercih etmeniz gerekir. Sistem, müşterilerinizin gönderici ve alıcı bilgilerini girerek, kargo boyutlarını ve ağırlığını belirterek online sipariş oluşturmasına olanak tanır. Ödeme sistemi entegrasyonu ile sipariş tamamlandıktan sonra, sistem otomatik olarak bir kargo takip numarası oluşturur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "E-ticaret entegrasyonu hangi platformları destekler?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kurumsal paketimizde yer alan e-ticaret entegrasyonu; WooCommerce, Shopify, Magento, Opencart, Trendyol, Hepsiburada gibi popüler platformlar ile uyumlu çalışır. API desteği sayesinde özel geliştirilen e-ticaret sistemleri ile de entegrasyon mümkündür. Bu entegrasyon sayesinde, e-ticaret sitelerinden gelen siparişler otomatik olarak kargo sistemine aktarılır."
+        }
+      }
+    ]
+  };
+
+  // WebPage Schema for SEO
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Kargo Firması Web Sitesi Tasarımı | Kargo Takip Sistemli Web Sitesi | etki360",
+    "description": "Kargo ve kurye firmaları için kargo takip sistemi, online sipariş formu ve e-ticaret entegrasyonu içeren profesyonel web sitesi tasarımı. 8.900₺'den başlayan fiyatlarla.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360 - Dijital Pazarlama ve Web Tasarım Ajansı",
+      "url": "https://www.etki360.com"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://etki360.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sektörel Çözümler",
+          "item": "https://etki360.com/sektorel-cozumler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Nakliyat",
+          "item": "https://etki360.com/sektorel-cozumler/nakliyat"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Kargo Firması Web Sitesi",
+          "item": "https://etki360.com/sektorel-cozumler/nakliyat/kargo-firmasi"
+        }
+      ]
+    }
+  };
+
   return (
     <div className="sectoral-page cargo-page">
+      {/* SEO Meta Tags ve Schema */}
+      <Helmet>
+        {/* Title Tag - En önemli SEO faktörü */}
+        <title>Kargo Firması Web Sitesi Tasarımı | Kargo Takip Sistemli Web Sitesi | etki360</title>
+        
+        {/* Meta Description */}
+        <meta 
+          name="description" 
+          content="Kargo ve kurye firmanız için kargo takip sistemi, online sipariş formu ve şube bulucu içeren profesyonel web sitesi çözümleri. E-ticaret entegrasyonu ve API desteği ile tam entegre kargo web sitesi. 8.900₺'den başlayan fiyatlarla." 
+        />
+        
+        {/* Keywords */}
+        <meta 
+          name="keywords" 
+          content="kargo firması web sitesi, kargo takip sistemi, online sipariş sistemi, kurye firması web sitesi, e-ticaret entegrasyonu, şube bulucu, kargo web tasarım, kargo api entegrasyonu" 
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://etki360.com/sektorel-cozumler/nakliyat/kargo-firmasi" />
+        <meta property="og:title" content="Kargo Firması Web Sitesi Tasarımı | Kargo Takip Sistemli Web Sitesi | etki360" />
+        <meta property="og:description" content="Kargo ve kurye firmanız için kargo takip sistemi, online sipariş formu ve şube bulucu içeren profesyonel web sitesi çözümleri." />
+        <meta property="og:image" content="https://etki360.com/images/og/kargo-firmasi-web-sitesi.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Kargo Firması Web Sitesi Tasarımı | Kargo Takip Sistemli Web Sitesi | etki360" />
+        <meta name="twitter:description" content="Kargo ve kurye firmanız için kargo takip sistemi, online sipariş formu ve şube bulucu içeren profesyonel web sitesi çözümleri." />
+        <meta name="twitter:image" content="https://etki360.com/images/og/kargo-firmasi-web-sitesi.jpg" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://etki360.com/sektorel-cozumler/nakliyat/kargo-firmasi" />
+        
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify(cargoServiceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(webPageSchema)}
+        </script>
+      </Helmet>
+
       <section className="cargo-hero">
         <div className="container">
           <div className="cargo-breadcrumb">
@@ -14,10 +177,10 @@ const CargoCompany = () => {
           <div className="cargo-hero-content">
             <div className="cargo-hero-text">
               <h1 className="sectoral-hero-title">
-                Kargo Firmanız İçin <span className="sectoral-highlight">Takip Sistemli</span> Web Sitesi
+                <strong>Kargo Firması Web Sitesi</strong> - <span className="sectoral-highlight">Kargo Takip Sistemli</span> Çözümler
               </h1>
               <p className="sectoral-hero-description">
-                Kargo ve kurye firmanız için müşterilerinizin kargolarını takip edebileceği, online sipariş oluşturabileceği ve bölge bazlı teslimat sistemi sunan profesyonel web sitesi çözümleri.
+                <strong>Kargo ve kurye firmanız</strong> için müşterilerinizin <em>kargolarını takip edebileceği</em>, <strong>online sipariş oluşturabileceği</strong> ve <strong>e-ticaret entegrasyonu</strong> sunan <strong>profesyonel web sitesi</strong> çözümleri. <strong>8.900₺</strong>'den başlayan fiyatlarla <em>müşteri memnuniyetini %40 artıran</em> sistemler.
               </p>
               <div className="sectoral-hero-actions">
                 <a href="#pricing" className="primary-button">Fiyat Teklifi Al</a>
@@ -55,9 +218,9 @@ const CargoCompany = () => {
       <section className="sectoral-overview">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Kargo Firması Web Sitesi Neden Önemli?</h2>
+            <h2 className="sectoral-section-title"><strong>Kargo Firması Web Sitesi</strong> Neden Önemli?</h2>
             <p className="sectoral-section-subtitle">
-              Kargo sektöründe müşterilerin %89'u bir kargo firmasının web sitesini, kargolarını takip etmek ve hizmet kalitesini değerlendirmek için kullanıyor.
+              <strong>Kargo sektöründe</strong> müşterilerin <strong>%89'u</strong> bir <em>kargo firmasının web sitesini</em>, <strong>kargolarını takip etmek</strong> ve <strong>hizmet kalitesini değerlendirmek</strong> için kullanıyor. <strong>Online sipariş sistemi</strong> ile verimliliğinizi <strong>%85 artırın</strong>.
             </p>
           </div>
 
@@ -68,7 +231,7 @@ const CargoCompany = () => {
               </div>
               <h3 className="sectoral-card-title">Kargo Takip Sistemi</h3>
               <p className="sectoral-card-text">
-                Müşterilerin en çok ihtiyaç duyduğu özellik olan kargo takip sistemi ile müşteri memnuniyetini artırın ve müşteri hizmetleri yükünüzü azaltın.
+                <strong>Müşterilerin en çok ihtiyaç duyduğu</strong> özellik olan <em>kargo takip sistemi</em> ile <strong>müşteri memnuniyetini %40 artırın</strong> ve <strong>müşteri hizmetleri çağrılarını %60 azaltın</strong>. <strong>Harita entegrasyonu</strong> ile kargo konumunu gerçek zamanlı görüntüleyin.
               </p>
             </div>
 
@@ -76,9 +239,9 @@ const CargoCompany = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-truck"></i>
               </div>
-              <h3 className="sectoral-card-title">Online Sipariş Oluşturma</h3>
+              <h3 className="sectoral-card-title">Online Kargo Sipariş Sistemi</h3>
               <p className="sectoral-card-text">
-                Müşterilerinizin online sipariş oluşturabilmeleri sayesinde iş süreçlerinizi hızlandırın ve operasyonel maliyetlerinizi düşürün.
+                <strong>Müşterilerinizin online sipariş oluşturabilmeleri</strong> sayesinde <em>iş süreçlerinizi hızlandırın</em> ve <strong>manuel veri girişi hatalarını %85 azaltın</strong>. <strong>Kargo firmanız</strong> için <em>operasyonel verimliliği artıran</em> sipariş formu.
               </p>
             </div>
 
@@ -108,9 +271,9 @@ const CargoCompany = () => {
       <section id="features" className="sectoral-features">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Kargo Firması Web Sitesi Özellikleri</h2>
+            <h2 className="sectoral-section-title"><strong>Kargo Firması Web Sitesi</strong> Özellikleri</h2>
             <p className="sectoral-section-subtitle">
-              Kargo ve kurye firmanızın ihtiyaçlarına özel, müşteri odaklı web sitesi çözümleri
+              <strong>Kargo ve kurye firmanızın</strong> ihtiyaçlarına özel, <em>müşteri odaklı</em> ve <strong>müşteri memnuniyetini artıran</strong> <strong>kargo takip sistemli</strong> web sitesi çözümleri. <strong>E-ticaret entegrasyonu</strong> ve <strong>API desteği</strong>.
             </p>
           </div>
 
@@ -122,7 +285,7 @@ const CargoCompany = () => {
               <div className="sectoral-feature-content">
                 <h3 className="sectoral-feature-title">Gelişmiş Kargo Takip Sistemi</h3>
                 <p className="sectoral-feature-text">
-                  Kargo takip numarası veya sipariş numarası ile anlık takip imkanı. Harita üzerinde gösterim ve teslimat sürecindeki tüm aşamaları görüntüleme.
+                  <strong>Kargo takip numarası</strong> veya <strong>sipariş numarası</strong> ile <em>anlık takip imkanı</em>. <strong>Google Haritalar</strong> üzerinde gösterim ve <strong>teslimat sürecindeki tüm aşamaları</strong> görüntüleme. <strong>Müşteri memnuniyetini %40 artıran</strong> kargo izleme sistemi.
                 </p>
               </div>
             </div>
@@ -156,9 +319,9 @@ const CargoCompany = () => {
                 <i className="fas fa-clipboard-list"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Online Sipariş Formu</h3>
+                <h3 className="sectoral-feature-title">Online Kargo Sipariş Formu</h3>
                 <p className="sectoral-feature-text">
-                  Kullanıcı dostu arayüz ile kolay kargo siparişi. Adres defteri oluşturma ve geçmiş gönderileri görüntüleme imkanı.
+                  <strong>Kullanıcı dostu arayüz</strong> ile <em>kolay kargo siparişi</em>. <strong>Adres defteri</strong> oluşturma ve <strong>geçmiş gönderileri</strong> görüntüleme imkanı. <strong>Manuel veri girişi hatalarını %85 azaltan</strong> otomatik sipariş sistemi.
                 </p>
               </div>
             </div>
@@ -204,9 +367,9 @@ const CargoCompany = () => {
                 <i className="fas fa-chart-line"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">E-ticaret Entegrasyonu</h3>
+                <h3 className="sectoral-feature-title">E-ticaret Platformları Entegrasyonu</h3>
                 <p className="sectoral-feature-text">
-                  Popüler e-ticaret platformları ile entegrasyon. API desteği ile otomatik sipariş işleme.
+                  <strong>WooCommerce, Shopify, Trendyol, Hepsiburada</strong> gibi <em>popüler e-ticaret platformları</em> ile entegrasyon. <strong>API desteği</strong> ile <strong>otomatik sipariş işleme</strong> ve <strong>iş hacminizi genişleten</strong> entegrasyon çözümleri.
                 </p>
               </div>
             </div>
@@ -217,9 +380,9 @@ const CargoCompany = () => {
       <section className="cargo-benefits">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Profesyonel Web Sitesinin Kargo Firmanıza Faydaları</h2>
+            <h2 className="sectoral-section-title">Profesyonel <strong>Kargo Firması Web Sitesinin</strong> Faydaları</h2>
             <p className="sectoral-section-subtitle">
-              Doğru tasarlanmış bir web sitesi, kargo firmanıza nasıl değer katar?
+              <strong>Kargo takip sistemli</strong> ve <em>online sipariş formlu</em> <strong>kargo web sitesi</strong>, <strong>müşteri memnuniyetinizi %40 artırır</strong> ve <strong>müşteri hizmetleri çağrılarını %60 azaltır</strong>
             </p>
           </div>
 
@@ -307,9 +470,9 @@ const CargoCompany = () => {
       <section id="pricing" className="cargo-pricing">
         <div className="container">
           <div className="cargo-section-header">
-            <h2 className="cargo-section-title">Kargo Firması Web Sitesi Paketleri</h2>
+            <h2 className="cargo-section-title"><strong>Kargo Firması Web Sitesi</strong> Paketleri ve Fiyatları</h2>
             <p className="cargo-section-subtitle">
-              İhtiyaçlarınıza ve bütçenize uygun web sitesi çözümleri
+              <strong>Kargo ve kurye firmanız</strong> için <em>ihtiyaçlarınıza</em> ve <em>bütçenize</em> uygun <strong>kargo takip sistemli web sitesi</strong> çözümleri. <strong>8.900₺</strong>'den başlayan fiyatlarla.
             </p>
           </div>
 
@@ -408,9 +571,9 @@ const CargoCompany = () => {
       <section className="cargo-faq">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Sık Sorulan Sorular</h2>
+            <h2 className="sectoral-section-title"><strong>Kargo Firması Web Sitesi</strong> - Sık Sorulan Sorular</h2>
             <p className="sectoral-section-subtitle">
-              Kargo firması web sitesi hakkında merak edilenler
+              <strong>Kargo firması web sitesi</strong> hakkında merak ettiğiniz tüm bilgiler, <em>kargo takip sistemi</em>, <em>online sipariş formu</em>, <em>e-ticaret entegrasyonu</em> ve <em>API desteği</em>
             </p>
           </div>
 
@@ -464,10 +627,10 @@ const CargoCompany = () => {
         <div className="container">
           <div className="cargo-cta-content">
             <h2 className="cargo-cta-title">
-              Kargo Firmanız İçin <span className="sectoral-highlight">Tam Entegre</span> Web Sitesi Oluşturalım
+              <strong>Kargo Firmanız</strong> İçin <span className="sectoral-highlight">Müşteri Memnuniyetini Artıran</span> Web Sitesi Oluşturalım
             </h2>
             <p className="cargo-cta-text">
-              Müşteri deneyimini artıran, operasyonel verimliliği yükselten ve e-ticaret dünyasıyla entegre bir web sitesi için hemen iletişime geçin.
+              <strong>8.900₺</strong>'den başlayan fiyatlarla <strong>kargo takip sistemli</strong>, <em>online sipariş formlu</em> ve <strong>e-ticaret entegrasyonlu</strong> <strong>kargo web sitesi</strong> için hemen iletişime geçin.
             </p>
             <div className="cargo-cta-buttons">
               <Link to="/iletisim" className="primary-button">Ücretsiz Keşif Toplantısı</Link>

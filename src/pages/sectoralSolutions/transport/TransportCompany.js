@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../SectoralSolutions.css';
 import './TransportCompany.css';
 
@@ -8,7 +9,7 @@ const TransportCompany = () => {
   const transportWebsiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Nakliyat Firması Web Sitesi Tasarımı - etki360",
+    "name": "Nakliyat Firması Web Sitesi Tasarımı - Google'da Üst Sıralarda | etki360",
     "description": "Nakliyat firmanız için Google'da üst sıralarda yer alan, müşteri güveni oluşturan ve online teklif sistemi barındıran profesyonel web sitesi çözümleri.",
     "url": "https://etki360.com/sektorel-cozumler/nakliyat/nakliye-firmasi",
     "inLanguage": "tr-TR",
@@ -90,81 +91,85 @@ const TransportCompany = () => {
     }
   };
   
-  // SEO meta etiketlerini document.head'e eklemek için useEffect kullanabiliriz
-  React.useEffect(() => {
-    // Sayfa başlığını değiştir
-    document.title = "Nakliyat Firması Web Sitesi Tasarımı | SEO Odaklı Web Çözümleri";
-    
-    // Meta etiketleri
-    const metaTags = [
-      { name: "description", content: "Nakliyat firmanız için Google'da üst sıralarda yer alan, müşteri güveni oluşturan ve online teklif sistemi barındıran profesyonel web sitesi çözümleri." },
-      { name: "keywords", content: "nakliyat firması web sitesi, evden eve nakliyat web sitesi, nakliyat web tasarım, nakliye firma sitesi, şehirlerarası nakliyat web sitesi, taşıma firması sitesi, lojistik web tasarım" },
-      { property: "og:title", content: "Nakliyat Firması Web Sitesi Tasarımı | SEO Odaklı Web Çözümleri" },
-      { property: "og:description", content: "Nakliyat firmanız için müşteri güveni oluşturan, online teklif sistemi barındıran ve Google'da üst sıralarda yer alan modern web sitesi çözümleri." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://etki360.com/sektorel-cozumler/nakliyat/nakliye-firmasi" },
-      { property: "og:image", content: "https://etki360.com/images/og/nakliyat-firmasi-web-sitesi.jpg" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Nakliyat Firması Web Sitesi Tasarımı | SEO Odaklı Web Çözümleri" },
-      { name: "twitter:description", content: "Nakliyat firmanız için müşteri güveni oluşturan, online teklif sistemi barındıran ve Google'da üst sıralarda yer alan modern web sitesi çözümleri." },
-      { name: "twitter:image", content: "https://etki360.com/images/og/nakliyat-firmasi-web-sitesi.jpg" },
-    ];
-    
-    // Önceki meta etiketlerini temizle
-    const oldMetaTags = document.querySelectorAll('meta[data-transport-meta="true"]');
-    oldMetaTags.forEach(tag => tag.remove());
-    
-    // Yeni meta etiketleri ekle
-    metaTags.forEach(tagInfo => {
-      const metaTag = document.createElement('meta');
-      
-      // Name veya property ekleme
-      if (tagInfo.name) {
-        metaTag.setAttribute('name', tagInfo.name);
-      } else if (tagInfo.property) {
-        metaTag.setAttribute('property', tagInfo.property);
+  // Sık Sorulan Sorular Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Nakliyat firmam için web sitesi neden önemli?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Günümüzde insanlar bir nakliyat firması aramadan önce çoğunlukla internette araştırma yaparlar. Profesyonel bir web sitesi, firmanızın güvenilirliğini artırır, hizmetlerinizi detaylı olarak tanıtmanızı sağlar ve yeni müşteriler kazanmanıza yardımcı olur. Ayrıca, Google'da 'nakliyat firması' gibi aramalarda üst sıralarda çıkmanız için bir web sitesi olmazsa olmazdır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Online teklif formu nasıl çalışır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Online teklif formu, müşterilerinizin taşınacak eşyalarını, çıkış ve varış adreslerini, tarih tercihlerini girebilecekleri bir form sunar. Bu bilgiler size e-posta olarak iletilir veya admin panelinizde görüntülenir. İsterseniz, form üzerinden alınan bilgilere göre otomatik fiyat hesaplama özelliği de ekleyebiliriz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Şehir bazlı SEO çalışması ne demek?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Şehir bazlı SEO çalışması, hizmet verdiğiniz her şehir için özel içerik ve optimizasyon yapılması anlamına gelir. Örneğin, 'İstanbul evden eve nakliyat', 'Ankara evden eve nakliyat' gibi aramalar için web sitenizin üst sıralarda çıkmasını sağlayacak özel sayfalar ve içerikler oluşturulur. Bu, yerel aramalarda firmanızın bulunabilirliğini büyük ölçüde artırır."
+        }
       }
-      
-      metaTag.setAttribute('content', tagInfo.content);
-      metaTag.setAttribute('data-transport-meta', 'true');
-      document.head.appendChild(metaTag);
-    });
-    
-    // Canonical link
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink);
-    }
-    canonicalLink.setAttribute('href', 'https://etki360.com/sektorel-cozumler/nakliyat/nakliye-firmasi');
-    
-    // Schema.org data
-    const existingScripts = document.querySelectorAll('script[data-transport-schema="true"]');
-    existingScripts.forEach(script => script.remove());
-    
-    const websiteSchemaScript = document.createElement('script');
-    websiteSchemaScript.setAttribute('type', 'application/ld+json');
-    websiteSchemaScript.setAttribute('data-transport-schema', 'true');
-    websiteSchemaScript.textContent = JSON.stringify(transportWebsiteSchema);
-    document.head.appendChild(websiteSchemaScript);
-    
-    const serviceSchemaScript = document.createElement('script');
-    serviceSchemaScript.setAttribute('type', 'application/ld+json');
-    serviceSchemaScript.setAttribute('data-transport-schema', 'true');
-    serviceSchemaScript.textContent = JSON.stringify(transportServiceSchema);
-    document.head.appendChild(serviceSchemaScript);
-    
-    // Component unmount olduğunda temizlik
-    return () => {
-      oldMetaTags.forEach(tag => tag.remove());
-      existingScripts.forEach(script => script.remove());
-      document.title = "etki360"; // Varsayılan başlığa geri dön
-    };
-  }, []);
+    ]
+  };
 
   return (
     <div className="sectoral-page transport-company-page">
+      {/* SEO Meta Tags ve Schema */}
+      <Helmet>
+        {/* Title Tag - En önemli SEO faktörü */}
+        <title>Nakliyat Firması Web Sitesi Tasarımı | Evden Eve Nakliyat Sitesi | etki360</title>
+        
+        {/* Meta Description */}
+        <meta 
+          name="description" 
+          content="Nakliyat firmanız için Google'da üst sıralarda yer alan, müşteri güveni oluşturan ve online teklif sistemi barındıran profesyonel web sitesi çözümleri. Evden eve nakliyat ve şehirlerarası nakliyat için 12.000₺'den başlayan fiyatlarla SEO uyumlu web sitesi." 
+        />
+        
+        {/* Keywords */}
+        <meta 
+          name="keywords" 
+          content="nakliyat firması web sitesi, evden eve nakliyat web sitesi, nakliyat web tasarım, nakliye firma sitesi, şehirlerarası nakliyat web sitesi, taşıma firması sitesi, lojistik web tasarım, nakliyat teklif formu" 
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://etki360.com/sektorel-cozumler/nakliyat/nakliye-firmasi" />
+        <meta property="og:title" content="Nakliyat Firması Web Sitesi Tasarımı | Evden Eve Nakliyat Sitesi | etki360" />
+        <meta property="og:description" content="Nakliyat firmanız için müşteri güveni oluşturan, online teklif sistemi barındıran ve Google'da üst sıralarda yer alan modern web sitesi çözümleri." />
+        <meta property="og:image" content="https://etki360.com/images/og/nakliyat-firmasi-web-sitesi.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Nakliyat Firması Web Sitesi Tasarımı | Evden Eve Nakliyat Sitesi | etki360" />
+        <meta name="twitter:description" content="Nakliyat firmanız için müşteri güveni oluşturan, online teklif sistemi barındıran ve Google'da üst sıralarda yer alan modern web sitesi çözümleri." />
+        <meta name="twitter:image" content="https://etki360.com/images/og/nakliyat-firmasi-web-sitesi.jpg" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://etki360.com/sektorel-cozumler/nakliyat/nakliye-firmasi" />
+        
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify(transportWebsiteSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(transportServiceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
+
       {/* Hero Section */}
       <section className="transport-hero">
         <div className="container">
@@ -174,10 +179,10 @@ const TransportCompany = () => {
           <div className="transport-hero-content">
             <div className="transport-hero-text">
               <h1 className="sectoral-hero-title">
-                Nakliyat Firmanız İçin <span className="sectoral-highlight">Profesyonel Web Sitesi</span> Tasarımı
+                <strong>Nakliyat Firması Web Sitesi</strong> ile <span className="sectoral-highlight">Google'da Üst Sıralarda</span> Yer Alın
               </h1>
               <p className="sectoral-hero-description">
-                Nakliyat firmanız için müşteri güveni oluşturan, online teklif sistemi barındıran ve Google'da üst sıralarda yer alan modern web sitesi çözümleri sunuyoruz.
+                <strong>Evden eve nakliyat</strong> ve <strong>şehirlerarası nakliyat</strong> firmanız için <em>müşteri güveni oluşturan</em>, <strong>online teklif formu</strong> barındıran ve <strong>Google'da üst sıralarda</strong> yer alan <strong>profesyonel web sitesi</strong> çözümleri. <strong>12.000₺</strong>'den başlayan fiyatlarla <em>SEO uyumlu</em> nakliyat web sitesi.
               </p>
               <div className="sectoral-hero-actions">
                 <a href="#pricing" className="primary-button">Fiyat Teklifi Al</a>
@@ -213,9 +218,9 @@ const TransportCompany = () => {
       <section className="transport-overview">
         <div className="container">
           <div className="transport-section-header">
-            <h2 className="transport-section-title">Nakliyat Firması Web Sitesi Neden Önemli?</h2>
+            <h2 className="transport-section-title"><strong>Nakliyat Firması Web Sitesi</strong> Neden Önemli?</h2>
             <p className="transport-section-subtitle">
-              Potansiyel müşterilerinizin %78'i, bir nakliyat firmasını tercih etmeden önce web sitesini inceliyor.
+              Potansiyel müşterilerinizin <strong>%78'i</strong>, bir <em>nakliyat firmasını tercih etmeden</em> önce <strong>web sitesini inceliyor</strong>. <strong>Evden eve nakliyat</strong> hizmeti arayanların <strong>%83'ü Google'da</strong> araştırma yapıyor.
             </p>
           </div>
 
@@ -226,7 +231,7 @@ const TransportCompany = () => {
               </div>
               <h3 className="transport-card-title">Güven Oluşturma</h3>
               <p className="transport-card-text">
-                Nakliyat, müşterilerin eşyalarını emanet ettiği hassas bir hizmettir. Profesyonel bir web sitesi ile güvenilirliğinizi ve kurumsal kimliğinizi vurgulayın.
+                <strong>Nakliyat</strong>, müşterilerin eşyalarını emanet ettiği <em>hassas bir hizmettir</em>. <strong>Profesyonel bir nakliyat web sitesi</strong> ile güvenilirliğinizi ve <strong>kurumsal kimliğinizi</strong> vurgulayarak <strong>dönüşüm oranınızı %67 artırın</strong>.
               </p>
             </div>
 
@@ -236,7 +241,7 @@ const TransportCompany = () => {
               </div>
               <h3 className="transport-card-title">Online Teklif Sistemi</h3>
               <p className="transport-card-text">
-                Müşterilerinizin anında fiyat teklifi alabilecekleri online teklif formu ile satış sürecinizi hızlandırın ve dönüşüm oranınızı artırın.
+                <strong>Evden eve nakliyat</strong> ve <strong>şehirlerarası nakliyat</strong> için <em>online teklif formu</em> ile müşterilerinizin <strong>anında fiyat teklifi</strong> almasını sağlayarak <strong>satış sürecinizi %42 hızlandırın</strong> ve <strong>dönüşüm oranınızı artırın</strong>.
               </p>
             </div>
 
@@ -246,7 +251,7 @@ const TransportCompany = () => {
               </div>
               <h3 className="transport-card-title">Google'da Üst Sıralarda</h3>
               <p className="transport-card-text">
-                SEO odaklı web sitesi ile "nakliyat firması", "evden eve nakliyat" gibi aramalarda üst sıralarda yer alın ve yeni müşteriler kazanın.
+                <strong>SEO odaklı nakliyat web sitesi</strong> ile "<em>nakliyat firması</em>", "<em>evden eve nakliyat</em>", "<em>ofis taşıma</em>", "<em>şehirlerarası nakliyat</em>" gibi <strong>kritik anahtar kelimelerde</strong> Google'da <strong>ilk sayfada yer alın</strong> ve <strong>organik trafiğinizi %128 artırın</strong>.
               </p>
             </div>
 
@@ -267,9 +272,9 @@ const TransportCompany = () => {
       <section id="features" className="transport-features">
         <div className="container">
           <div className="transport-section-header">
-            <h2 className="transport-section-title">Nakliyat Firması Web Sitesi Özellikleri</h2>
+            <h2 className="transport-section-title"><strong>Nakliyat Firması Web Sitesi</strong> Özellikleri</h2>
             <p className="transport-section-subtitle">
-              Nakliyat firmanızın ihtiyaçlarına özel, müşteri odaklı web sitesi çözümleri
+              <strong>Evden eve nakliyat</strong> ve <strong>şehirlerarası nakliyat</strong> firmanızın ihtiyaçlarına özel, <em>müşteri odaklı</em> ve <strong>SEO uyumlu</strong> web sitesi çözümleri ile <strong>rakiplerinizden bir adım öne geçin</strong>
             </p>
           </div>
 
@@ -279,9 +284,9 @@ const TransportCompany = () => {
                 <i className="fas fa-truck"></i>
               </div>
               <div className="transport-feature-content">
-                <h3 className="transport-feature-title">Hizmet Sayfaları</h3>
+                <h3 className="transport-feature-title">SEO Uyumlu Hizmet Sayfaları</h3>
                 <p className="transport-feature-text">
-                  Şehirlerarası nakliyat, evden eve nakliyat, ofis taşıma gibi tüm hizmetleriniz için detaylı ve SEO uyumlu sayfalar.
+                  <strong>Şehirlerarası nakliyat</strong>, <strong>evden eve nakliyat</strong>, <strong>ofis taşıma</strong>, <strong>eşya depolama</strong> gibi tüm hizmetleriniz için <em>detaylı</em> ve <strong>Google'da üst sıralarda yer alan SEO uyumlu sayfalar</strong>.
                 </p>
               </div>
             </div>
@@ -291,9 +296,9 @@ const TransportCompany = () => {
                 <i className="fas fa-calculator"></i>
               </div>
               <div className="transport-feature-content">
-                <h3 className="transport-feature-title">Online Teklif Formu</h3>
+                <h3 className="transport-feature-title">Online Nakliyat Teklif Formu</h3>
                 <p className="transport-feature-text">
-                  Müşterilerinizin eşya bilgilerini ve adres detaylarını girerek anında teklif alabilecekleri akıllı form sistemi.
+                  Müşterilerinizin <strong>eşya bilgilerini</strong> ve <strong>adres detaylarını</strong> girerek <em>anında teklif alabilecekleri</em> <strong>nakliyat teklif formu</strong>. <strong>Dönüşüm oranınızı %65 artıran</strong> akıllı form sistemi.
                 </p>
               </div>
             </div>
@@ -377,9 +382,9 @@ const TransportCompany = () => {
       <section className="transport-benefits">
         <div className="container">
           <div className="transport-section-header">
-            <h2 className="transport-section-title">Profesyonel Web Sitesinin Nakliyat Firmanıza Faydaları</h2>
+            <h2 className="transport-section-title">Profesyonel <strong>Nakliyat Web Sitesinin</strong> Firmanıza Faydaları</h2>
             <p className="transport-section-subtitle">
-              Doğru tasarlanmış bir web sitesi, nakliyat firmanıza nasıl değer katar?
+              <strong>SEO uyumlu</strong> ve <em>online teklif formu</em> içeren <strong>nakliyat firması web sitesi</strong>, <strong>müşteri kazanımınızı %87 artırır</strong> ve <strong>Google'da</strong> üst sıralarda yer almanızı sağlar
             </p>
           </div>
 
@@ -435,8 +440,8 @@ const TransportCompany = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="transport-benefit-text">
-                  <h3>Google'da Daha Fazla Görünürlük</h3>
-                  <p>SEO odaklı içerikler ile nakliyat aramaları yapan potansiyel müşterilere ulaşabilirsiniz.</p>
+                  <h3>Google'da <strong>Nakliyat Aramaları</strong> İçin Üst Sıralarda Yer Alın</h3>
+                  <p><strong>SEO odaklı içerikler</strong> ile "<em>evden eve nakliyat</em>", "<em>şehirlerarası nakliyat</em>", "<em>ofis taşıma</em>", "<em>en iyi nakliyat firması</em>" gibi <strong>önemli anahtar kelimelerde</strong> ilk sayfada yer alarak <strong>organik trafiğinizi %138 artırın</strong>.</p>
                 </div>
               </div>
 
@@ -468,9 +473,9 @@ const TransportCompany = () => {
       <section id="pricing" className="transport-pricing">
         <div className="container">
           <div className="transport-section-header">
-            <h2 className="transport-section-title">Nakliyat Firması Web Sitesi Paketleri</h2>
+            <h2 className="transport-section-title"><strong>Nakliyat Firması Web Sitesi</strong> Paketleri ve Fiyatları</h2>
             <p className="transport-section-subtitle">
-              İhtiyaçlarınıza ve bütçenize uygun web sitesi çözümleri
+              <strong>Evden eve nakliyat</strong> ve <strong>şehirlerarası nakliyat</strong> firmanız için <em>ihtiyaçlarınıza</em> ve <em>bütçenize</em> uygun <strong>SEO odaklı nakliyat web sitesi</strong> çözümleri
             </p>
           </div>
 
@@ -569,9 +574,9 @@ const TransportCompany = () => {
       <section className="transport-faq">
         <div className="container">
           <div className="transport-section-header">
-            <h2 className="transport-section-title">Sık Sorulan Sorular</h2>
+            <h2 className="transport-section-title"><strong>Nakliyat Firması Web Sitesi</strong> - Sık Sorulan Sorular</h2>
             <p className="transport-section-subtitle">
-              Nakliyat firması web sitesi hakkında merak edilenler
+              <strong>Nakliyat firması web sitesi</strong> hakkında merak ettiğiniz tüm bilgiler, <em>fiyatlar</em>, <em>teslim süreleri</em>, <em>şehir bazlı SEO çalışması</em> ve <em>online teklif formu</em>
             </p>
           </div>
 
@@ -626,10 +631,10 @@ const TransportCompany = () => {
         <div className="container">
           <div className="transport-cta-content">
             <h2 className="transport-cta-title">
-              Nakliyat Firmanız İçin <span className="sectoral-highlight">Profesyonel Web Sitesi</span> Oluşturalım
+              <strong>Nakliyat Firmanız</strong> İçin <span className="sectoral-highlight">Google'da Üst Sıralarda</span> Yer Alan Bir Web Sitesi Oluşturalım
             </h2>
             <p className="transport-cta-text">
-              Firmanızın ihtiyaçlarına özel, müşteri odaklı ve dönüşüm oranı yüksek bir web sitesi için hemen iletişime geçin.
+              <strong>12.000₺</strong>'den başlayan fiyatlarla <strong>SEO uyumlu</strong>, <em>online teklif formu</em> ve <strong>şehir bazlı içerikler</strong> içeren <strong>nakliyat firması web sitesi</strong> için hemen iletişime geçin.
             </p>
             <div className="transport-cta-buttons">
               <Link to="/iletisim" className="primary-button">Ücretsiz Keşif Toplantısı</Link>

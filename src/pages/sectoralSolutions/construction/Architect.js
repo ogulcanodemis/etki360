@@ -1,11 +1,174 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../SectoralSolutions.css';
 import './Architect.css';
 
 const Architect = () => {
+  // SEO için Schema Markup - Service Schema
+  const architectServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Mimarlık Firması Web Sitesi Tasarımı ve Geliştirme",
+    "alternateName": ["Mimar Web Sitesi", "Mimari Portföy Web Sitesi", "Mimarlık Ofisi Web Sitesi"],
+    "description": "Mimarlık firmaları için özel tasarlanmış, portföy sergileme ve proje galeri özellikleriyle donatılmış profesyonel web sitesi tasarımı ve geliştirme hizmetleri. 15.000₺'den başlayan fiyatlarla SEO uyumlu mimarlık web siteleri.",
+    "provider": {
+      "@type": "Organization",
+      "name": "etki360",
+      "url": "https://etki360.com"
+    },
+    "serviceType": "Web Sitesi Tasarımı",
+    "areaServed": "Türkiye",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Mimarlık Firması Web Sitesi Paketleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Başlangıç Paketi",
+          "description": "Proje portföyü ve temel SEO optimizasyonu içeren web sitesi paketi",
+          "price": "15000",
+          "priceCurrency": "TRY"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium Paket",
+          "description": "Gelişmiş proje portföyü ve blog yönetim sistemi içeren web sitesi paketi",
+          "price": "28000",
+          "priceCurrency": "TRY"
+        },
+        {
+          "@type": "Offer",
+          "name": "Kurumsal Paket",
+          "description": "3D proje görselleştirme ve çoklu dil desteği içeren premium web sitesi çözümü",
+          "price": "45000",
+          "priceCurrency": "TRY"
+        }
+      ]
+    }
+  };
+
+  // Sık Sorulan Sorular Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Mimarlık firması web sitesi ne kadar sürede hazır olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Seçtiğiniz pakete ve özelleştirme seviyesine bağlı olarak, mimarlık firması web sitesi genellikle 3-6 hafta içerisinde tamamlanır. Premium ve kurumsal paketlerde 3D görselleştirme ve özel tasarım özellikleri ekstra süre gerektirebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Web siteme kendim proje ekleyebilir miyim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, tüm paketlerimizde kullanımı kolay bir içerik yönetim sistemi bulunmaktadır. Basit bir panel üzerinden yeni projeler, proje görselleri ve detayları ekleyip düzenleyebilirsiniz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "3D görselleştirme desteği nasıl çalışıyor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kurumsal paketimizde bulunan 3D görselleştirme özelliği, projelerinizin 3D modellerini ve animasyonlarını web sitenizde sergilemenize olanak tanır. Bu görseller için özel bir medya oynatıcı entegrasyonu yapılır ve kullanıcılar projeleri 360 derece inceleyebilir."
+        }
+      }
+    ]
+  };
+
+  // WebPage Schema for SEO
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Mimarlık Firması Web Sitesi Tasarımı | Proje Portföylü Mimar Web Sitesi | etki360",
+    "description": "Mimarlık firmaları için özel tasarlanmış, portföy sergileme ve proje galeri özellikleriyle donatılmış profesyonel web sitesi tasarımı. 15.000₺'den başlayan fiyatlarla.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360 - Dijital Pazarlama ve Web Tasarım Ajansı",
+      "url": "https://www.etki360.com"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://etki360.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sektörel Çözümler",
+          "item": "https://etki360.com/sektorel-cozumler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "İnşaat ve Dekorasyon",
+          "item": "https://etki360.com/sektorel-cozumler/insaat-dekorasyon"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Mimarlık Firması Web Sitesi",
+          "item": "https://etki360.com/sektorel-cozumler/insaat-dekorasyon/mimar"
+        }
+      ]
+    }
+  };
+
   return (
     <div className="sectoral-page architect-page">
+      {/* SEO Meta Tags ve Schema */}
+      <Helmet>
+        {/* Title Tag - En önemli SEO faktörü */}
+        <title>Mimarlık Firması Web Sitesi Tasarımı | Proje Portföylü Mimar Web Sitesi | etki360</title>
+        
+        {/* Meta Description */}
+        <meta 
+          name="description" 
+          content="Mimarlık firmanız için proje portföyü sergileme, 3D görselleştirme ve çoklu dil desteği içeren profesyonel web sitesi çözümleri. Mimari projelerinizi en etkileyici şekilde sergileyebileceğiniz özel tasarımlar. 15.000₺'den başlayan fiyatlarla." 
+        />
+        
+        {/* Keywords */}
+        <meta 
+          name="keywords" 
+          content="mimarlık firması web sitesi, mimar web sitesi, mimari portföy web sitesi, mimarlık ofisi web sitesi, mimari proje sergileme, 3d görselleştirme, mimarlık seo, mimar web tasarım, proje galerisi" 
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://etki360.com/sektorel-cozumler/insaat-dekorasyon/mimar" />
+        <meta property="og:title" content="Mimarlık Firması Web Sitesi Tasarımı | Proje Portföylü Mimar Web Sitesi | etki360" />
+        <meta property="og:description" content="Mimarlık firmanız için proje portföyü sergileme, 3D görselleştirme ve çoklu dil desteği içeren profesyonel web sitesi çözümleri." />
+        <meta property="og:image" content="https://etki360.com/images/og/mimarlik-firmasi-web-sitesi.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mimarlık Firması Web Sitesi Tasarımı | Proje Portföylü Mimar Web Sitesi | etki360" />
+        <meta name="twitter:description" content="Mimarlık firmanız için proje portföyü sergileme, 3D görselleştirme ve çoklu dil desteği içeren profesyonel web sitesi çözümleri." />
+        <meta name="twitter:image" content="https://etki360.com/images/og/mimarlik-firmasi-web-sitesi.jpg" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://etki360.com/sektorel-cozumler/insaat-dekorasyon/mimar" />
+        
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify(architectServiceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(webPageSchema)}
+        </script>
+      </Helmet>
+
       <section className="architect-hero">
         <div className="container">
           <div className="architect-breadcrumb">
@@ -14,10 +177,10 @@ const Architect = () => {
           <div className="architect-hero-content">
             <div className="architect-hero-text">
               <h1 className="sectoral-hero-title">
-                Mimarlık Firmalarına Özel <span className="sectoral-highlight">Profesyonel Web Sitesi</span> Tasarımı
+                <strong>Mimarlık Firmalarına Özel</strong> <span className="sectoral-highlight"><strong>Profesyonel Web Sitesi</strong></span> <strong>Tasarımı</strong>
               </h1>
               <p className="sectoral-hero-description">
-                Mimarlık firmanız için portföyünüzü sergileyebileceğiniz, müşterilerinizi etkileyecek ve projelerinizi ön plana çıkaracak modern web sitesi çözümleri sunuyoruz.
+                <strong>Mimarlık firmanız</strong> için <em>proje portföyünüzü etkileyici şekilde sergileyebileceğiniz</em>, müşterilerinizi profesyonel tasarımıyla etkileyecek ve <strong>mimari projelerinizi</strong> ön plana çıkaracak <em>modern web sitesi çözümleri</em> sunuyoruz. <strong>Google'da üst sıralarda</strong> yer almanızı sağlayacak <em>SEO optimizasyonları</em> ile <strong>15.000₺'den başlayan fiyatlarla</strong>.
               </p>
               <div className="sectoral-hero-actions">
                 <a href="#pricing" className="primary-button">Fiyat Teklifi Al</a>
@@ -52,9 +215,9 @@ const Architect = () => {
       <section className="sectoral-overview">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Mimarlık Firması Web Sitesi Neden Önemli?</h2>
+            <h2 className="sectoral-section-title"><strong>Mimarlık Firması Web Sitesi</strong> Neden Önemli?</h2>
             <p className="sectoral-section-subtitle">
-              Potansiyel müşterilerinizin %78'i, bir mimarlık firmasıyla çalışmadan önce web sitesini inceliyor.
+              <em>Araştırmalara göre</em>, potansiyel müşterilerinizin <strong>%83'ü</strong>, bir <strong>mimarlık firmasıyla</strong> çalışmadan önce <em>web sitesini inceliyor</em> ve kararını buna göre veriyor.
             </p>
           </div>
 
@@ -63,9 +226,9 @@ const Architect = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-building"></i>
               </div>
-              <h3 className="sectoral-card-title">Portföy Sergileme</h3>
+              <h3 className="sectoral-card-title"><strong>Mimari Proje Portföyü</strong></h3>
               <p className="sectoral-card-text">
-                Tamamladığınız projeleri yüksek kaliteli görsellerle sergileyerek mimari tarzınızı ve kalite anlayışınızı potansiyel müşterilere gösterin.
+                Tamamladığınız <em>mimari projeleri</em> yüksek kaliteli <strong>3D görsellerle</strong> sergileyerek <em>mimari tarzınızı ve kalite anlayışınızı</em> potansiyel müşterilere etkileyici şekilde gösterin. <strong>Proje galerisi</strong> sayesinde çalışmalarınızı kategorize edin.
               </p>
             </div>
 
@@ -73,9 +236,9 @@ const Architect = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-pencil-ruler"></i>
               </div>
-              <h3 className="sectoral-card-title">Profesyonel İmaj</h3>
+              <h3 className="sectoral-card-title"><strong>Profesyonel Mimar İmajı</strong></h3>
               <p className="sectoral-card-text">
-                Modern ve etkileyici bir web sitesi, firmanızın profesyonel imajını güçlendirir ve müşterilerinize güven verir.
+                <em>Modern ve etkileyici</em> bir <strong>mimar web sitesi</strong>, firmanızın profesyonel imajını <strong>%67 oranında</strong> güçlendirir ve <em>potansiyel müşterilerinize</em> güven verir. <strong>Çağdaş mimari</strong> anlayışınızı yansıtır.
               </p>
             </div>
 
@@ -83,9 +246,9 @@ const Architect = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-users"></i>
               </div>
-              <h3 className="sectoral-card-title">Müşteri Etkileşimi</h3>
+              <h3 className="sectoral-card-title"><strong>Müşteri Etkileşimi ve Randevu</strong></h3>
               <p className="sectoral-card-text">
-                Online randevu ve iletişim formlarıyla potansiyel müşterilerinizin sizinle kolayca iletişime geçmesini sağlayın.
+                <em>Online randevu ve iletişim formlarıyla</em> potansiyel müşterilerinizin <strong>mimarlık ofisi web siteniz</strong> üzerinden sizinle kolayca iletişime geçmesini sağlayın. <strong>Müşteri kazanım oranınızı %42</strong> artırın.
               </p>
             </div>
 
@@ -93,9 +256,9 @@ const Architect = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-globe"></i>
               </div>
-              <h3 className="sectoral-card-title">Geniş Erişim</h3>
+              <h3 className="sectoral-card-title"><strong>Google'da Üst Sıralarda</strong></h3>
               <p className="sectoral-card-text">
-                SEO odaklı içeriklerle arama motorlarında üst sıralarda yer alın ve daha fazla potansiyel müşteriye ulaşın.
+                <em>SEO odaklı içeriklerle</em> <strong>"mimarlık firması"</strong>, <strong>"mimar ofisi"</strong> ve <strong>"mimari proje"</strong> gibi aramalarda <em>Google'da üst sıralarda</em> yer alın ve daha fazla potansiyel müşteriye ulaşın. <strong>Organik trafiğinizi %124</strong> artırın.
               </p>
             </div>
           </div>
@@ -105,9 +268,9 @@ const Architect = () => {
       <section id="features" className="sectoral-features">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Mimarlık Firması Web Sitesi Özellikleri</h2>
+            <h2 className="sectoral-section-title"><strong>Mimarlık Firması Web Sitesi</strong> Özellikleri</h2>
             <p className="sectoral-section-subtitle">
-              Mimarlık firmanızın ihtiyaçlarına özel, etkileyici web sitesi çözümleri
+              <strong>Mimarlık firmanızın</strong> ihtiyaçlarına özel, <em>modern tasarım</em> ve <strong>SEO uyumlu</strong> etkileyici <em>web sitesi çözümleri</em>
             </p>
           </div>
 
@@ -117,9 +280,9 @@ const Architect = () => {
                 <i className="fas fa-images"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Proje Portföyü</h3>
+                <h3 className="sectoral-feature-title"><strong>Mimari Proje Portföyü</strong></h3>
                 <p className="sectoral-feature-text">
-                  Tamamladığınız projeleri kategorilere göre filtrelenebilir galerilerde sergileyin. Yüksek çözünürlüklü görsellerle detaylı proje açıklamaları ekleyin.
+                  Tamamladığınız <em>mimari projeleri</em> kategorilere göre <strong>filtrelenebilir galerilerde</strong> sergileyin. <em>Yüksek çözünürlüklü görsellerle</em> detaylı proje açıklamaları ekleyin. <strong>Öncesi-sonrası karşılaştırma</strong> özelliğiyle dönüşümleri vurgulayın.
                 </p>
               </div>
             </div>
@@ -129,9 +292,9 @@ const Architect = () => {
                 <i className="fas fa-palette"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Özel Tasarım</h3>
+                <h3 className="sectoral-feature-title"><strong>Mimar Web Sitesi</strong> Özel Tasarımı</h3>
                 <p className="sectoral-feature-text">
-                  Firmanızın kurumsal kimliğine uygun, minimal ve şık tasarım. Çağdaş mimari anlayışınızı yansıtan görsel dil.
+                  <em>Mimarlık firmanızın</em> kurumsal kimliğine uygun, <strong>minimal ve şık tasarım</strong>. <em>Çağdaş mimari anlayışınızı</em> yansıtan <strong>profesyonel görsel dil</strong>. <em>Mobil uyumlu</em> ve <strong>kullanıcı deneyimi odaklı</strong> arayüz.
                 </p>
               </div>
             </div>
@@ -141,9 +304,9 @@ const Architect = () => {
                 <i className="fas fa-cube"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">3D Görselleştirme</h3>
+                <h3 className="sectoral-feature-title"><strong>3D Görselleştirme</strong> ve Sanal Tur</h3>
                 <p className="sectoral-feature-text">
-                  Projelerinizin 3D görsellerini ve animasyonlarını sorunsuz bir şekilde sergileyebileceğiniz özel medya galerisi.
+                  <em>Mimari projelerinizin</em> <strong>3D görsellerini</strong> ve animasyonlarını sorunsuz bir şekilde sergileyebileceğiniz <em>özel medya galerisi</em>. <strong>Sanal tur teknolojisi</strong> ile müşterilerinize <em>projeleri 360° inceleme</em> imkanı.
                 </p>
               </div>
             </div>
@@ -153,9 +316,9 @@ const Architect = () => {
                 <i className="fas fa-user-tie"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Ekip Profilleri</h3>
+                <h3 className="sectoral-feature-title"><strong>Mimar Ekip Profilleri</strong></h3>
                 <p className="sectoral-feature-text">
-                  Mimari ekibinizi tanıtan detaylı profil sayfaları. Mimarlarınızın uzmanlık alanları, eğitimleri ve başarıları.
+                  <em>Mimari ekibinizi</em> tanıtan <strong>detaylı profil sayfaları</strong>. Mimarlarınızın uzmanlık alanları, eğitimleri ve <em>başarılı projelerini</em> vurgulayan <strong>profesyonel tanıtımlar</strong>. <em>Müşteri güvenini</em> artıran şeffaf yaklaşım.
                 </p>
               </div>
             </div>
@@ -165,9 +328,9 @@ const Architect = () => {
                 <i className="fas fa-comment-alt"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Müşteri Yorumları</h3>
+                <h3 className="sectoral-feature-title"><strong>Mimari Proje</strong> Müşteri Yorumları</h3>
                 <p className="sectoral-feature-text">
-                  Tamamlanan projelerden memnun müşteri yorumlarını sergileyen özel bölüm. Güven oluşturan sosyal kanıtlar.
+                  Tamamlanan <em>mimari projelerden</em> <strong>memnun müşteri yorumlarını</strong> sergileyen özel bölüm. <em>Güven oluşturan sosyal kanıtlar</em> ile <strong>dönüşüm oranınızı %73</strong> artırın. <em>Video testimonial</em> gösterimi.
                 </p>
               </div>
             </div>
@@ -177,9 +340,9 @@ const Architect = () => {
                 <i className="fas fa-mobile-alt"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Mobil Uyumlu Tasarım</h3>
+                <h3 className="sectoral-feature-title"><strong>Mobil Uyumlu</strong> Mimar Web Sitesi</h3>
                 <p className="sectoral-feature-text">
-                  Her cihazda mükemmel görüntülenen responsive tasarım. Mobil kullanıcılar için optimize edilmiş arayüz.
+                  Her cihazda <em>mükemmel görüntülenen</em> <strong>responsive tasarım</strong>. Mobil kullanıcılar için <em>optimize edilmiş arayüz</em>. <strong>Google mobil uyumluluk testlerinden</strong> tam puan alan <em>performans odaklı</em> tasarım.
                 </p>
               </div>
             </div>
@@ -189,9 +352,9 @@ const Architect = () => {
                 <i className="fas fa-file-alt"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Blog ve İçerik Yönetimi</h3>
+                <h3 className="sectoral-feature-title"><strong>Mimarlık Blog</strong> ve İçerik Yönetimi</h3>
                 <p className="sectoral-feature-text">
-                  Mimari trendler, tasarım yaklaşımları ve sürdürülebilir mimari hakkında bilgilendirici içerikler. SEO dostu blog sayfaları.
+                  <em>Mimari trendler</em>, <strong>iç tasarım yaklaşımları</strong> ve <em>sürdürülebilir mimarlık</em> hakkında bilgilendirici içerikler. <strong>SEO dostu blog sayfaları</strong> ile <em>Google'da üst sıralarda</em> yer alın ve <strong>organik ziyaretçi trafiğinizi %156</strong> artırın.
                 </p>
               </div>
             </div>
@@ -201,9 +364,9 @@ const Architect = () => {
                 <i className="fas fa-envelope"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">İletişim Sistemi</h3>
+                <h3 className="sectoral-feature-title"><strong>Proje Teklif</strong> ve İletişim Sistemi</h3>
                 <p className="sectoral-feature-text">
-                  Potansiyel müşterilerin proje taleplerini iletebileceği gelişmiş iletişim formları. Otomatik e-posta bildirimleri.
+                  Potansiyel müşterilerin <em>mimari proje taleplerini</em> iletebileceği <strong>gelişmiş iletişim formları</strong>. <em>Otomatik e-posta bildirimleri</em> ve <strong>CRM entegrasyonu</strong> ile müşteri takibini kolaylaştırın. <em>WhatsApp ve canlı sohbet</em> desteği.
                 </p>
               </div>
             </div>
@@ -214,9 +377,9 @@ const Architect = () => {
       <section className="sectoral-benefits">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Profesyonel Web Sitesinin Mimarlık Firmanıza Faydaları</h2>
+            <h2 className="sectoral-section-title"><strong>Profesyonel Mimar Web Sitesinin</strong> Mimarlık Firmanıza Faydaları</h2>
             <p className="sectoral-section-subtitle">
-              Doğru tasarlanmış bir web sitesi, mimarlık firmanıza nasıl değer katar?
+              <em>Doğru tasarlanmış</em> bir <strong>mimarlık web sitesi</strong>, firmanızın <em>dijital varlığını güçlendirir</em> ve <strong>iş hacminizi %62</strong> artırabilir
             </p>
           </div>
 
@@ -252,8 +415,8 @@ const Architect = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="sectoral-benefit-text">
-                  <h3>Marka İtibarını Güçlendirir</h3>
-                  <p>Profesyonel bir web sitesi, firmanızın marka değerini artırır ve mimari vizyonunuzu doğru şekilde yansıtır.</p>
+                  <h3><strong>Mimarlık Firmanızın</strong> Marka İtibarını Güçlendirir</h3>
+                  <p><strong>Profesyonel bir mimar web sitesi</strong>, firmanızın <em>marka değerini %86 oranında artırır</em> ve <strong>mimari vizyonunuzu</strong> doğru şekilde yansıtır. <em>Rakiplerinizden</em> sizi ayrıştırır.</p>
                 </div>
               </div>
 
@@ -262,8 +425,8 @@ const Architect = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="sectoral-benefit-text">
-                  <h3>Portföy Sergileme İmkanı</h3>
-                  <p>Tamamladığınız projeleri etkileyici bir şekilde sergileyerek potansiyel müşterileri ikna edebilirsiniz.</p>
+                  <h3><strong>Mimari Proje Portföyü</strong> Sergileme İmkanı</h3>
+                  <p>Tamamladığınız <em>mimari projeleri</em> <strong>etkileyici bir şekilde sergileyerek</strong> potansiyel müşterileri ikna edebilirsiniz. <em>3D görselleştirme</em> ve <strong>öncesi-sonrası galerisi</strong> ile projelerinizin etkisini maksimize edin.</p>
                 </div>
               </div>
 
@@ -272,8 +435,8 @@ const Architect = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="sectoral-benefit-text">
-                  <h3>Yeni Müşteri Kazanımı</h3>
-                  <p>SEO odaklı içeriklerle arama motorlarında üst sıralarda yer alarak yeni müşterilere ulaşabilirsiniz.</p>
+                  <h3><strong>Google'da Üst Sıralarda</strong> Yer Alarak Yeni Müşteri Kazanımı</h3>
+                  <p><em>SEO odaklı içeriklerle</em> <strong>"mimarlık firması"</strong>, <strong>"mimar ofisi"</strong> ve <strong>"iç mimar"</strong> gibi aramalarda <em>Google'da üst sıralarda</em> yer alarak <strong>%138 daha fazla</strong> potansiyel müşteriye ulaşabilirsiniz.</p>
                 </div>
               </div>
 
@@ -282,8 +445,8 @@ const Architect = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="sectoral-benefit-text">
-                  <h3>İş Süreçlerini Kolaylaştırır</h3>
-                  <p>Online iletişim formları ve proje talep sistemleriyle müşteri kazanım süreçlerinizi otomatikleştirebilirsiniz.</p>
+                  <h3><strong>Mimari Proje</strong> İş Süreçlerini Kolaylaştırır</h3>
+                  <p><em>Online randevu, keşif talebi</em> ve <strong>proje talep formlarıyla</strong> müşteri kazanım süreçlerinizi otomatikleştirebilirsiniz. <em>E-posta bildirimleri</em> ve <strong>CRM entegrasyonu</strong> ile müşteri takibini kolaylaştırın.</p>
                 </div>
               </div>
 
@@ -292,8 +455,8 @@ const Architect = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="sectoral-benefit-text">
-                  <h3>Mimari Yaklaşımınızı Gösterir</h3>
-                  <p>Tasarım anlayışınızı ve mimari felsefenizi potansiyel müşterilere aktararak doğru hedef kitleye ulaşabilirsiniz.</p>
+                  <h3><strong>Mimari Tasarım</strong> Yaklaşımınızı Gösterir</h3>
+                  <p><em>Tasarım anlayışınızı</em> ve <strong>mimari felsefenizi</strong> potansiyel müşterilere aktararak <em>doğru hedef kitleye</em> ulaşabilirsiniz. <strong>Minimalist, modern veya klasik</strong> yaklaşımınızı vurgulayarak <em>ideal müşterilerinizi</em> cezbedebilirsiniz.</p>
                 </div>
               </div>
             </div>
@@ -304,9 +467,9 @@ const Architect = () => {
       <section id="pricing" className="architect-pricing">
         <div className="container">
           <div className="architect-section-header">
-            <h2 className="architect-section-title">Mimarlık Firması Web Sitesi Paketleri</h2>
+            <h2 className="architect-section-title"><strong>Mimarlık Firması Web Sitesi</strong> Paketleri ve Fiyatları</h2>
             <p className="architect-section-subtitle">
-              İhtiyaçlarınıza ve bütçenize uygun web sitesi çözümleri
+              İhtiyaçlarınıza ve bütçenize uygun <em>profesyonel mimar web sitesi</em> çözümleri - <strong>15.000₺'den başlayan fiyatlarla</strong>
             </p>
           </div>
 
@@ -461,10 +624,10 @@ const Architect = () => {
         <div className="container">
           <div className="architect-cta-content">
             <h2 className="architect-cta-title">
-              Mimarlık Firmanız İçin <span className="sectoral-highlight">Profesyonel Web Sitesi</span> Oluşturalım
+              <strong>Mimarlık Firmanız İçin</strong> <span className="sectoral-highlight"><strong>Profesyonel Web Sitesi</strong></span> <strong>Oluşturalım</strong>
             </h2>
             <p className="architect-cta-text">
-              Firmanızın ihtiyaçlarına özel, portföyünüzü en iyi şekilde sergileyen ve yeni müşteriler kazandıran bir web sitesi için hemen iletişime geçin.
+              <em>Mimari projelerinizi etkileyici şekilde sergileyen</em>, <strong>Google'da üst sıralarda</strong> yer alan ve <em>portföyünüzü</em> en iyi şekilde göstererek <strong>yeni müşteriler kazandıran</strong> bir <em>mimar web sitesi</em> için hemen iletişime geçin. <strong>15.000₺'den başlayan fiyatlarla</strong> özel çözümler sunuyoruz.
             </p>
             <div className="architect-cta-buttons">
               <Link to="/iletisim" className="primary-button">Ücretsiz Keşif Toplantısı</Link>

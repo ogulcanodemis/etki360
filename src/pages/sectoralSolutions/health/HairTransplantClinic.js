@@ -1,12 +1,94 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../SectoralSolutions.css';
 import './HairTransplantClinic.css';
 
 const HairTransplantClinic = () => {
+  // SEO için Schema.org Markup - Service Schema
+  const hairTransplantServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Saç Ekim Kliniği Web Sitesi Tasarımı ve Geliştirme",
+    "alternateName": ["Saç Ekim Web Sitesi", "Saç Ekimi Web Sitesi", "Saç Ekimi Kliniği Web Sitesi"],
+    "description": "Saç ekim klinikleri için özel tasarlanmış, güven veren, öncesi-sonrası galeri ve online randevu sistemi içeren profesyonel web sitesi tasarımı ve geliştirme hizmetleri. Google'da üst sıralarda yer almanızı sağlayan SEO uyumlu saç ekim kliniği web siteleri."
+  };
+
+  // FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Saç ekim kliniği web sitesi ne kadar sürede hazır olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Seçtiğiniz pakete ve özelleştirme seviyesine bağlı olarak, saç ekim kliniği web sitesi genellikle 3-6 hafta içerisinde tamamlanır. Premium ve kurumsal paketlerde online randevu sistemi entegrasyonu gibi özellikler ekstra süre gerektirebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Online randevu sistemi nasıl çalışıyor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Online randevu sistemi, kliniğinizin çalışma saatlerine ve doktor müsaitlik durumuna göre ayarlanır. Hastalar, uygun tarih ve saati seçerek formlarını doldurur. Sistem otomatik olarak hastaları SMS ve e-posta ile bilgilendirir, ayrıca randevu öncesi hatırlatma mesajları gönderir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Saç ekim kliniği web sitesi fiyatları ne kadar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Saç ekim kliniği web sitesi fiyatları 15.000₺'den başlamaktadır. Başlangıç paketi 15.000₺, Premium paket 28.000₺, Kurumsal paket 45.000₺'dir. Tüm paketlerde responsive tasarım, öncesi-sonrası galeri ve temel SEO optimizasyonu bulunmaktadır."
+        }
+      }
+    ]
+  };
+
+  // WebPage Schema for SEO
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Saç Ekim Kliniği Web Sitesi Tasarımı | Öncesi-Sonrası Galerili Web Sitesi | etki360",
+    "description": "Saç ekim klinikleri için özel web sitesi tasarımı. Öncesi-sonrası galeri, online randevu sistemi, çok dilli yapı. 15.000₺'den başlayan fiyatlarla profesyonel saç ekim kliniği web sitesi.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360 - Dijital Pazarlama ve Web Tasarım Ajansı",
+      "url": "https://www.etki360.com"
+    }
+  };
+
   return (
     <div className="sectoral-page hair-transplant-page">
-
+      {/* SEO Meta Tags ve Schema */}
+      <Helmet>
+        {/* Title Tag - En önemli SEO faktörü */}
+        <title>Saç Ekim Kliniği Web Sitesi Tasarımı | Öncesi-Sonrası Galerili Web Sitesi | etki360</title>
+        
+        {/* Meta Description */}
+        <meta 
+          name="description" 
+          content="Saç ekim kliniği web sitesi tasarımı ve geliştirme hizmetleri. Öncesi-sonrası galeri, online randevu sistemi, çok dilli yapı. Saç ekim kliniği web sitesi fiyatları 15.000₺'den başlar. SEO uyumlu, güven veren web sitesi çözümleri." 
+        />
+        
+        {/* Keywords */}
+        <meta 
+          name="keywords" 
+          content="saç ekim kliniği web sitesi, saç ekimi web sitesi, saç ekim web sitesi tasarımı, online randevu sistemi, öncesi sonrası galeri, saç ekim kliniği web sitesi fiyatları, saç ekimi hasta portföyü, çok dilli web sitesi" 
+        />
+        
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify(hairTransplantServiceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(webPageSchema)}
+        </script>
+      </Helmet>
 
       <section className="hair-transplant-hero">
         <div className="container">
@@ -16,10 +98,12 @@ const HairTransplantClinic = () => {
           <div className="hair-transplant-hero-content">
             <div className="hair-transplant-hero-text">
               <h1 className="sectoral-hero-title">
-                Saç Ekim Kliniği İçin <span className="sectoral-highlight">Profesyonel Web Sitesi</span> Tasarımı
+                <strong>Saç Ekim Kliniği Web Sitesi</strong> - <span className="sectoral-highlight">Öncesi-Sonrası Galerili</span> Profesyonel Çözümler
               </h1>
               <p className="sectoral-hero-description">
-                Saç ekim kliniğiniz için güven veren, hastaları ikna eden ve rezervasyon sistemi barındıran modern web sitesi çözümleri sunuyoruz.
+                <strong>Saç ekim kliniğiniz</strong> için <em>güven veren</em>, <strong>hastaları ikna eden</strong> öncesi-sonrası galeri ve 
+                <strong>online randevu sistemi</strong> barındıran <strong>profesyonel saç ekim web sitesi</strong> çözümleri. 
+                <strong>15.000₺</strong>'den başlayan fiyatlarla <strong>çok dilli</strong> web sitesi tasarımı.
               </p>
               <div className="sectoral-hero-actions">
                 <a href="#pricing" className="primary-button">Fiyat Teklifi Al</a>
@@ -55,7 +139,7 @@ const HairTransplantClinic = () => {
           <div className="sectoral-section-header">
             <h2 className="sectoral-section-title">Saç Ekim Kliniği Web Sitesi Neden Önemli?</h2>
             <p className="sectoral-section-subtitle">
-              Potansiyel hastalarınızın %83'ü, bir saç ekim kliniğini tercih etmeden önce web sitesini inceliyor.
+              Potansiyel hastalarınızın <strong>%83'ü</strong>, bir <strong>saç ekim kliniğini</strong> tercih etmeden önce <em>web sitesini inceliyor</em>. <strong>Profesyonel saç ekim web sitesi</strong> ile hasta sayınızı artırın.
             </p>
           </div>
 
@@ -66,7 +150,7 @@ const HairTransplantClinic = () => {
               </div>
               <h3 className="sectoral-card-title">Güven Oluşturma</h3>
               <p className="sectoral-card-text">
-                Saç ekimi, hastaların ciddi bir güven duygusu gerektiren bir estetik operasyondur. Profesyonel bir web sitesi ile uzmanlığınızı ve güvenilirliğinizi vurgulayın.
+                <strong>Saç ekimi</strong>, hastaların ciddi bir <em>güven duygusu</em> gerektiren bir estetik operasyondur. <strong>Profesyonel bir saç ekim kliniği web sitesi</strong> ile uzmanlığınızı ve güvenilirliğinizi vurgulayın.
               </p>
             </div>
 
@@ -76,7 +160,7 @@ const HairTransplantClinic = () => {
               </div>
               <h3 className="sectoral-card-title">Öncesi-Sonrası Sonuçlar</h3>
               <p className="sectoral-card-text">
-                Önceki hastalarınızın başarılı sonuçlarını sergileyerek potansiyel müşterilerinizi ikna edin. Görsel odaklı içerikle başarılarınızı gösterin.
+                <strong>Öncesi-sonrası galeri</strong> ile başarılı sonuçlarınızı sergileyerek <em>potansiyel hastaları ikna edin</em>. <strong>Saç ekim web sitenizde</strong> görsel odaklı içerikle başarılarınızı gösterin.
               </p>
             </div>
 
@@ -108,7 +192,7 @@ const HairTransplantClinic = () => {
           <div className="sectoral-section-header">
             <h2 className="sectoral-section-title">Saç Ekim Kliniği Web Sitesi Özellikleri</h2>
             <p className="sectoral-section-subtitle">
-              Saç ekim kliniğinizin ihtiyaçlarına özel, hasta odaklı web sitesi çözümleri
+              <strong>Saç ekim kliniğinizin</strong> ihtiyaçlarına özel, <em>hasta odaklı</em> <strong>web sitesi çözümleri</strong> ile <strong>yurt içi ve yurt dışından</strong> daha fazla hasta kazanın
             </p>
           </div>
 
@@ -215,9 +299,9 @@ const HairTransplantClinic = () => {
       <section className="sectoral-benefits">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Profesyonel Web Sitesinin Saç Ekim Kliniğinize Faydaları</h2>
+            <h2 className="sectoral-section-title">Profesyonel <strong>Saç Ekim Kliniği Web Sitesi</strong> Faydaları</h2>
             <p className="sectoral-section-subtitle">
-              Doğru tasarlanmış bir web sitesi, saç ekim kliniğinize nasıl değer katar?
+              <strong>SEO uyumlu</strong> ve <em>öncesi-sonrası galeri</em> içeren <strong>saç ekim kliniği web sitesi</strong>, <strong>hasta kazanımını %78 artırır</strong> ve <strong>Google'da</strong> üst sıralarda yer almanızı sağlar
             </p>
           </div>
 
@@ -297,8 +381,8 @@ const HairTransplantClinic = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="sectoral-benefit-text">
-                  <h3>SEO ile Organik Trafik</h3>
-                  <p>SEO odaklı içerikler ile "saç ekimi", "saç ekim fiyatları" gibi aramalarda üst sıralarda yer alın.</p>
+                  <h3>SEO ile <strong>Google'da</strong> Üst Sıralarda Yer Alın</h3>
+                  <p><strong>SEO odaklı içerikler</strong> ile "<em>saç ekimi</em>", "<em>saç ekim kliniği</em>", "<em>saç ekim fiyatları</em>", "<em>en iyi saç ekim merkezi</em>" gibi <strong>önemli anahtar kelimelerde</strong> üst sıralarda yer alın ve <strong>organik trafiğinizi %124 artırın</strong>.</p>
                 </div>
               </div>
             </div>
@@ -410,9 +494,9 @@ const HairTransplantClinic = () => {
       <section className="sectoral-faq">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Sık Sorulan Sorular</h2>
+            <h2 className="sectoral-section-title">Saç Ekim Kliniği Web Sitesi - Sık Sorulan Sorular</h2>
             <p className="sectoral-section-subtitle">
-              Saç ekim kliniği web sitesi hakkında merak edilenler
+              <strong>Saç ekim kliniği web sitesi</strong> hakkında merak ettiğiniz tüm bilgiler, <em>fiyatlar</em>, <em>teslim süreleri</em> ve <em>özellikler</em>
             </p>
           </div>
 
@@ -466,10 +550,10 @@ const HairTransplantClinic = () => {
         <div className="container">
           <div className="hair-transplant-cta-content">
             <h2 className="hair-transplant-cta-title">
-              Saç Ekim Kliniğiniz İçin <span className="sectoral-highlight">Profesyonel Web Sitesi</span> Oluşturalım
+              <strong>Saç Ekim Kliniğiniz</strong> İçin <span className="sectoral-highlight">Google'da Üst Sıralarda</span> Yer Alan Bir Web Sitesi Oluşturalım
             </h2>
             <p className="hair-transplant-cta-text">
-              Kliniğinizin ihtiyaçlarına özel, hasta odaklı ve dönüşüm oranı yüksek bir web sitesi için hemen iletişime geçin.
+              <strong>15.000₺</strong>'den başlayan fiyatlarla <strong>SEO uyumlu</strong>, <em>öncesi-sonrası galeri</em> ve <strong>online randevu sistemi</strong> içeren <strong>saç ekim kliniği web sitesi</strong> için hemen iletişime geçin.
             </p>
             <div className="hair-transplant-cta-buttons">
               <Link to="/iletisim" className="primary-button">Ücretsiz Keşif Toplantısı</Link>

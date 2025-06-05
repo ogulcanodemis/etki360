@@ -1,11 +1,95 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../SectoralSolutions.css';
 import './RepairService.css';
 
 const RepairService = () => {
+  // SEO için Schema.org Markup - Service Schema
+  const repairServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Tamir Servisi Web Sitesi Tasarımı ve Geliştirme",
+    "alternateName": ["Teknik Servis Web Sitesi", "Beyaz Eşya Tamir Web Sitesi", "Elektronik Tamir Web Sitesi", "Servis Takip Web Sitesi"],
+    "description": "Teknik servis, beyaz eşya ve elektronik tamir firmaları için online randevu sistemi, tamir takip modülü ve müşteri yönetimi özellikli profesyonel web sitesi tasarımı ve geliştirme hizmetleri. Google'da üst sıralarda yer almanızı sağlayan SEO uyumlu tamir servisi web siteleri."
+  };
+
+  // FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Tamir servisi web sitesi ne kadar sürede hazır olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tercih ettiğiniz pakete bağlı olarak, tamir servisi web sitesi genellikle 2-4 hafta içerisinde tamamlanır. Başlangıç paketi için süreç daha kısa olabilirken, Kurumsal paket için özel entegrasyonlar sebebiyle 4-6 hafta gerekebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Online randevu sistemi nasıl çalışır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Online randevu sistemi, müşterilerinizin web siteniz üzerinden mevcut servis saatlerinizi görmesine ve uygun bir zaman dilimi seçmesine olanak tanır. Sistem, teknisyen müsaitliğini ve iş yükünü dikkate alarak en uygun saatleri sunar. Randevu oluşturulduktan sonra, müşteriye ve servis ekibinize otomatik bildirimler gönderilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tamir servisi web sitesi maliyeti ne kadar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tamir servisi web sitesi fiyatları 6.900₺'den başlamaktadır. Başlangıç paketi 6.900₺, Premium paket 12.900₺, Kurumsal paket 22.900₺'dir. Tüm paketlerde responsive tasarım, WhatsApp entegrasyonu ve mobil uyumlu tasarım bulunmaktadır."
+        }
+      }
+    ]
+  };
+
+  // WebPage Schema for SEO
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Tamir Servisi Web Sitesi Tasarımı | Randevu ve Takip Sistemli Web Sitesi",
+    "description": "Teknik servis, beyaz eşya ve elektronik tamir firmaları için online randevu ve tamir takip sistemli web sitesi tasarımı. 6.900₺'den başlayan fiyatlarla profesyonel tamir servisi web sitesi.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360 - Dijital Pazarlama ve Web Tasarım Ajansı",
+      "url": "https://www.etki360.com"
+    }
+  };
+
   return (
     <div className="sectoral-page repair-page">
+      {/* SEO Meta Tags ve Schema */}
+      <Helmet>
+        {/* Title Tag - En önemli SEO faktörü */}
+        <title>Tamir Servisi Web Sitesi Tasarımı | Randevu ve Takip Sistemli Web Sitesi | etki360</title>
+        
+        {/* Meta Description */}
+        <meta 
+          name="description" 
+          content="Tamir servisi web sitesi tasarımı ve kurma hizmetleri. Online randevu sistemi, tamir takip modülü, müşteri yönetimi. Uygun tamir servisi web sitesi fiyatları 6.900₺'den başlar. Google'da üst sıralarda yer alan SEO uyumlu teknik servis web siteleri." 
+        />
+        
+        {/* Keywords */}
+        <meta 
+          name="keywords" 
+          content="tamir servisi web sitesi, teknik servis web sitesi, beyaz eşya tamir web sitesi, elektronik tamir web sitesi, tamir takip sistemi, servis randevu sistemi, servis web sitesi tasarımı, tamir servisi web sitesi fiyatları" 
+        />
+        
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify(repairServiceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(webPageSchema)}
+        </script>
+      </Helmet>
+
       <section className="repair-hero">
         <div className="container">
           <div className="repair-breadcrumb">
@@ -14,10 +98,12 @@ const RepairService = () => {
           <div className="repair-hero-content">
             <div className="repair-hero-text">
               <h1 className="sectoral-hero-title">
-                Tamir Servisiniz İçin <span className="sectoral-highlight">Profesyonel</span> Web Sitesi
+                <strong>Tamir Servisi Web Sitesi</strong> - <span className="sectoral-highlight">Randevu ve Takip Sistemli</span> Profesyonel Web Sitesi
               </h1>
               <p className="sectoral-hero-description">
-                Beyaz eşya, elektronik cihaz veya teknik servis hizmeti veren firmanız için randevu sistemi, müşteri takip modülü ve onarım süreci izleme özellikli profesyonel web sitesi çözümleri.
+                <strong>Beyaz eşya, elektronik cihaz</strong> veya <strong>teknik servis hizmeti</strong> veren firmanız için <em>online randevu sistemi</em>, <strong>tamir takip modülü</strong> ve 
+                <strong>müşteri yönetimi</strong> özellikli <strong>profesyonel tamir servisi web sitesi</strong> çözümleri. 
+                <strong>Uygun tamir servisi web sitesi</strong> fiyatlarıyla <strong>6.900₺</strong>'den başlayan paketler.
               </p>
               <div className="sectoral-hero-actions">
                 <a href="#pricing" className="primary-button">Fiyat Teklifi Al</a>
@@ -57,7 +143,7 @@ const RepairService = () => {
           <div className="sectoral-section-header">
             <h2 className="sectoral-section-title">Tamir Servisi Web Sitesi Neden Önemli?</h2>
             <p className="sectoral-section-subtitle">
-              Araştırmalar gösteriyor ki, teknik servis arayan müşterilerin %82'si önce internette profesyonel bir servis aramaktadır.
+              Araştırmalar gösteriyor ki, <strong>teknik servis arayan müşterilerin %82'si</strong> önce internette <strong>profesyonel bir tamir servisi</strong> aramaktadır. <strong>Randevu sistemli web sitesi</strong> ile <em>müşterilerinize kolay erişim sağlayın</em>.
             </p>
           </div>
 
@@ -68,7 +154,7 @@ const RepairService = () => {
               </div>
               <h3 className="sectoral-card-title">Online Randevu Sistemi</h3>
               <p className="sectoral-card-text">
-                Müşterileriniz 7/24 randevu alabilir, servis iş yükünüzü dengeli şekilde planlayabilirsiniz. Operasyonel verimliliği artırın.
+                Müşterileriniz <strong>7/24 online randevu</strong> alabilir, <em>servis iş yükünüzü</em> dengeli şekilde planlayabilirsiniz. <strong>Tamir servisi web siteniz</strong> ile operasyonel verimliliği artırın.
               </p>
             </div>
 
@@ -78,7 +164,7 @@ const RepairService = () => {
               </div>
               <h3 className="sectoral-card-title">Yerel SEO Avantajı</h3>
               <p className="sectoral-card-text">
-                "Yakınımda tamir servisi" araması yapan potansiyel müşterilerin karşısına çıkarak, bölgenizdeki rakiplerinizden öne geçin.
+                <strong>"Yakınımda tamir servisi"</strong> veya <strong>"beyaz eşya tamiri"</strong> araması yapan potansiyel müşterilerin karşısına çıkarak, <em>bölgenizdeki rakiplerinizden öne geçin</em>. <strong>Tamir servisi web sitesi SEO</strong> ile yeni müşteriler kazanın.
               </p>
             </div>
 
@@ -88,7 +174,7 @@ const RepairService = () => {
               </div>
               <h3 className="sectoral-card-title">Tamir Durumu Takip</h3>
               <p className="sectoral-card-text">
-                Müşterileriniz tamir sürecini online takip ederek zamandan tasarruf edebilir, müşteri memnuniyetini artırabilirsiniz.
+                Müşterileriniz <strong>tamir sürecini online takip</strong> ederek zamandan tasarruf edebilir, <em>müşteri memnuniyetini artırabilirsiniz</em>. <strong>Teknik servis web sitesi</strong> ile servis kalitesini yükseltin.
               </p>
             </div>
 
@@ -110,7 +196,7 @@ const RepairService = () => {
           <div className="sectoral-section-header">
             <h2 className="sectoral-section-title">Tamir Servisi Web Sitesi Özellikleri</h2>
             <p className="sectoral-section-subtitle">
-              Teknik servis firmanızın ihtiyaçlarına özel, müşteri odaklı web sitesi çözümleri
+              <strong>Teknik servis firmanızın</strong> ihtiyaçlarına özel, <em>müşteri odaklı</em> <strong>tamir servisi web sitesi çözümleri</strong> ile hizmet kalitenizi artırın ve <strong>daha fazla müşteriye</strong> ulaşın
             </p>
           </div>
 
@@ -122,7 +208,7 @@ const RepairService = () => {
               <div className="sectoral-feature-content">
                 <h3 className="sectoral-feature-title">Gelişmiş Randevu Sistemi</h3>
                 <p className="sectoral-feature-text">
-                  Takvim entegrasyonlu, servis çalışanlarının iş yüküne göre optimum randevu oluşturan akıllı rezervasyon sistemi.
+                  <strong>Tamir servisi web sitenizde</strong> takvim entegrasyonlu, servis çalışanlarının iş yüküne göre <em>optimum randevu oluşturan</em> <strong>akıllı servis rezervasyon sistemi</strong> ile müşteri memnuniyetini artırın.
                 </p>
               </div>
             </div>
@@ -146,7 +232,7 @@ const RepairService = () => {
               <div className="sectoral-feature-content">
                 <h3 className="sectoral-feature-title">Tamir Takip Sistemi</h3>
                 <p className="sectoral-feature-text">
-                  Müşterilerin tamir sürecini adım adım takip edebilecekleri, servis numarası ile sorgulama yapabilecekleri sistem.
+                  Müşterilerin <strong>tamir sürecini adım adım takip</strong> edebilecekleri, <em>servis numarası ile sorgulama</em> yapabilecekleri <strong>online tamir takip sistemi</strong>. <strong>Beyaz eşya ve elektronik tamir</strong> durumunu anlık kontrol imkanı.
                 </p>
               </div>
             </div>
@@ -464,10 +550,10 @@ const RepairService = () => {
         <div className="container">
           <div className="repair-cta-content">
             <h2 className="repair-cta-title">
-              Tamir Servisiniz İçin <span className="sectoral-highlight">Profesyonel</span> Web Sitesi Oluşturalım
+              <strong>Tamir Servisiniz İçin</strong> <span className="sectoral-highlight">Profesyonel</span> <strong>Web Sitesi</strong> Oluşturalım
             </h2>
             <p className="repair-cta-text">
-              Müşteri memnuniyetini artıran, operasyonel süreçlerinizi iyileştiren ve teknik servis yönetiminizi kolaylaştıran bir web sitesi için hemen iletişime geçin.
+              <strong>Müşteri memnuniyetini artıran</strong>, <em>operasyonel süreçlerinizi iyileştiren</em> ve <strong>teknik servis yönetiminizi</strong> kolaylaştıran bir <strong>tamir servisi web sitesi</strong> için hemen iletişime geçin.
             </p>
             <div className="repair-cta-buttons">
               <Link to="/iletisim" className="primary-button">Ücretsiz Keşif Toplantısı</Link>

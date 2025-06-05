@@ -1,11 +1,95 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../SectoralSolutions.css';
 import './TowService.css';
 
 const TowService = () => {
+  // SEO için Schema.org Markup - Service Schema
+  const towServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Çekici Hizmeti Web Sitesi Tasarımı ve Geliştirme",
+    "alternateName": ["Çekici Firma Web Sitesi", "Çekici Web Sitesi Kurma", "Acil Çekici Web Sitesi", "Oto Çekici Web Sitesi"],
+    "description": "Çekici firmaları için 7/24 acil yardım odaklı, konum paylaşımı özellikli, tek tıkla arama imkanı sunan profesyonel web sitesi tasarımı ve geliştirme hizmetleri. Google'da üst sıralarda yer almanızı sağlayan SEO uyumlu çekici hizmeti web siteleri."
+  };
+
+  // FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Çekici hizmeti web sitesi ne kadar sürede hazır olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Seçtiğiniz pakete bağlı olarak, çekici hizmeti web sitesi genellikle 5-15 iş günü içerisinde tamamlanır. Acil ihtiyaçlar için 48 saat içinde temel bir site kurulumu da mümkündür."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Konum paylaşımı sistemi nasıl çalışır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Konum paylaşımı sistemi, yolda kalan müşterilerin tarayıcıları üzerinden konum bilgilerini sizinle paylaşmalarını sağlar. Bu sayede müşterinin tam konumunu görerek en kısa sürede yardıma ulaşabilirsiniz. Sistem ayrıca tahmini varış süresini de hesaplayarak müşteriye bildirir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Çekici hizmeti web sitesi maliyeti ne kadar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Çekici hizmeti web sitesi fiyatları 5.900₺'den başlamaktadır. Başlangıç paketi 5.900₺, Premium paket 9.900₺, Kurumsal paket 16.900₺'dir. Tüm paketlerde tek tıkla arama, WhatsApp entegrasyonu ve mobil uyumlu tasarım bulunmaktadır."
+        }
+      }
+    ]
+  };
+
+  // WebPage Schema for SEO
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Çekici Hizmeti Web Sitesi Tasarımı | Acil Yardım Odaklı Profesyonel Web Sitesi",
+    "description": "Çekici ve yol yardım firmaları için konum bazlı, tek tıkla arama özellikli, 7/24 acil hizmet odaklı web sitesi tasarımı. 5.900₺'den başlayan fiyatlarla çekici web sitesi kurma hizmeti.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360 - Dijital Pazarlama ve Web Tasarım Ajansı",
+      "url": "https://www.etki360.com"
+    }
+  };
+
   return (
     <div className="sectoral-page tow-page">
+      {/* SEO Meta Tags ve Schema */}
+      <Helmet>
+        {/* Title Tag - En önemli SEO faktörü */}
+        <title>Çekici Hizmeti Web Sitesi Tasarımı | Acil Yardım Odaklı Web Sitesi | etki360</title>
+        
+        {/* Meta Description */}
+        <meta 
+          name="description" 
+          content="Çekici hizmeti web sitesi tasarımı ve kurma hizmetleri. Konum paylaşımı, tek tıkla arama, 7/24 acil yardım sistemi. Uygun çekici web sitesi fiyatları 5.900₺'den başlar. Google'da üst sıralarda yer alan SEO uyumlu oto çekici web siteleri." 
+        />
+        
+        {/* Keywords */}
+        <meta 
+          name="keywords" 
+          content="çekici hizmeti web sitesi, çekici web sitesi tasarımı, oto çekici web sitesi, çekici firma web sitesi, yol yardım web sitesi, acil çekici web sitesi, oto kurtarma web sitesi, çekici web sitesi fiyatları" 
+        />
+        
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify(towServiceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(webPageSchema)}
+        </script>
+      </Helmet>
+
       <section className="tow-hero">
         <div className="container">
           <div className="tow-breadcrumb">
@@ -14,10 +98,13 @@ const TowService = () => {
           <div className="tow-hero-content">
             <div className="tow-hero-text">
               <h1 className="sectoral-hero-title">
-                Çekici Firmanız İçin <span className="sectoral-highlight">Acil Yardım Odaklı</span> Web Sitesi
+                <strong>Çekici Hizmeti Web Sitesi</strong> - <span className="sectoral-highlight">Acil Yardım Odaklı</span> Profesyonel Web Sitesi
               </h1>
               <p className="sectoral-hero-description">
-                7/24 hizmet veren çekici ve yol yardım firmanız için konum bazlı hizmet alanı, anlık ulaşım imkanı ve kesintisiz iletişim sunan profesyonel web sitesi çözümleri.
+                <strong>Çekici firmanız</strong> için <em>acil durumlarda</em> müşterilerinizin size <strong>anında ulaşabileceği</strong>, 
+                <strong>konum paylaşımlı</strong>, <strong>tek tıkla arama özellikli</strong> ve 
+                <strong>Google'da üst sıralarda yer alan</strong> profesyonel <strong>çekici hizmeti web sitesi</strong> çözümleri. 
+                <strong>Uygun çekici web sitesi</strong> fiyatlarıyla <strong>5.900₺</strong>'den başlayan paketler.
               </p>
               <div className="sectoral-hero-actions">
                 <a href="#pricing" className="primary-button">Fiyat Teklifi Al</a>
@@ -57,7 +144,7 @@ const TowService = () => {
           <div className="sectoral-section-header">
             <h2 className="sectoral-section-title">Çekici Hizmeti Web Sitesi Neden Önemli?</h2>
             <p className="sectoral-section-subtitle">
-              Araç sahiplerinin %76'sı acil yol yardımı ihtiyacı olduğunda ilk olarak internetten çekici hizmeti arayışına giriyor.
+              Araç sahiplerinin <strong>%76'sı</strong> acil yol yardımı ihtiyacı olduğunda ilk olarak internetten <strong>çekici hizmeti arayışına</strong> giriyor. <strong>Profesyonel çekici web sitesi</strong> ile müşterilerinize <em>anında ulaşın</em>.
             </p>
           </div>
 
@@ -68,7 +155,7 @@ const TowService = () => {
               </div>
               <h3 className="sectoral-card-title">Anında Erişim</h3>
               <p className="sectoral-card-text">
-                Tek tıkla arama özelliği sayesinde, yolda kalan müşteriler size saniyeler içinde ulaşabilir. Kaçırılan her çağrı, kaybedilen bir müşteridir.
+                <strong>Tek tıkla arama</strong> özelliği sayesinde, <em>yolda kalan müşteriler</em> size <strong>saniyeler içinde ulaşabilir</strong>. Kaçırılan her çağrı, <strong>kaybedilen bir çekici müşterisidir</strong>.
               </p>
             </div>
 
@@ -78,7 +165,7 @@ const TowService = () => {
               </div>
               <h3 className="sectoral-card-title">Konum Bazlı Hizmet</h3>
               <p className="sectoral-card-text">
-                Mobil cihazların konum bilgisini kullanarak, müşterilerin bulunduğu yere en hızlı şekilde ulaşmanızı sağlayan teknolojiler.
+                <strong>Mobil cihazların konum bilgisini</strong> kullanarak, müşterilerin bulunduğu yere <em>en hızlı şekilde ulaşmanızı</em> sağlayan <strong>çekici hizmeti web sitesi</strong> teknolojileri ile <strong>acil yardım</strong> hizmetinizi geliştirin.
               </p>
             </div>
 
@@ -98,7 +185,7 @@ const TowService = () => {
               </div>
               <h3 className="sectoral-card-title">Yerel SEO Avantajı</h3>
               <p className="sectoral-card-text">
-                "Yakınımda çekici" araması yapan potansiyel müşterilerin karşısına çıkarak, rakiplerinizden bir adım öne geçin.
+                <strong>"Yakınımda çekici"</strong> veya <strong>"acil oto çekici"</strong> araması yapan potansiyel müşterilerin karşısına çıkarak, <em>rakiplerinizden bir adım öne geçin</em>. <strong>Çekici web sitesi SEO</strong> ile yeni müşteriler kazanın.
               </p>
             </div>
           </div>
@@ -110,7 +197,7 @@ const TowService = () => {
           <div className="sectoral-section-header">
             <h2 className="sectoral-section-title">Çekici Hizmeti Web Sitesi Özellikleri</h2>
             <p className="sectoral-section-subtitle">
-              7/24 yol yardımı ve çekici hizmeti veren firmanız için özel tasarlanmış web sitesi çözümleri
+              <strong>7/24 yol yardımı</strong> ve <strong>çekici hizmeti</strong> veren firmanız için <em>özel tasarlanmış</em> profesyonel <strong>çekici web sitesi çözümleri</strong> ile müşterilerinize <strong>en hızlı şekilde ulaşın</strong>
             </p>
           </div>
 
@@ -122,7 +209,7 @@ const TowService = () => {
               <div className="sectoral-feature-content">
                 <h3 className="sectoral-feature-title">Acil Arama Butonu</h3>
                 <p className="sectoral-feature-text">
-                  Sitenin her yerinde görünür, büyük ve dikkat çekici arama butonları. Acil durumda olan müşteriler tek tıkla sizi arayabilir.
+                  <strong>Çekici web sitenizin</strong> her yerinde görünür, büyük ve dikkat çekici <strong>acil arama butonları</strong>. <em>Yolda kalan müşteriler</em> tek tıkla <strong>çekici hizmetinizi</strong> arayabilir ve <strong>anında yardım</strong> alabilir.
                 </p>
               </div>
             </div>
@@ -206,7 +293,7 @@ const TowService = () => {
               <div className="sectoral-feature-content">
                 <h3 className="sectoral-feature-title">Yerel SEO Optimizasyonu</h3>
                 <p className="sectoral-feature-text">
-                  "Yakınımda çekici", "acil oto çekici" gibi aramalar için optimize edilmiş içerik ve Google Haritalar entegrasyonu.
+                  <strong>"Yakınımda çekici"</strong>, <strong>"acil oto çekici"</strong>, <strong>"24 saat açık çekici"</strong> gibi aramalar için <em>optimize edilmiş içerik</em> ve <strong>Google Haritalar entegrasyonu</strong> ile <strong>yerel müşterilere ulaşın</strong>.
                 </p>
               </div>
             </div>
@@ -464,10 +551,10 @@ const TowService = () => {
         <div className="container">
           <div className="tow-cta-content">
             <h2 className="tow-cta-title">
-              Çekici Firmanız İçin <span className="sectoral-highlight">Acil Yardım Odaklı</span> Web Sitesi Oluşturalım
+              <strong>Çekici Firmanız İçin</strong> <span className="sectoral-highlight">Acil Yardım Odaklı</span> <strong>Web Sitesi</strong> Oluşturalım
             </h2>
             <p className="tow-cta-text">
-              7/24 hizmet veren çekici firmanız için acil durumlarda müşterilerinizin sizi hemen bulabileceği, konum bazlı ve SEO dostu bir web sitesi için hemen iletişime geçin.
+              <strong>7/24 hizmet veren çekici firmanız</strong> için acil durumlarda müşterilerinizin sizi <em>hemen bulabileceği</em>, <strong>konum paylaşımlı</strong> ve <strong>SEO dostu</strong> bir <strong>çekici hizmeti web sitesi</strong> için hemen iletişime geçin.
             </p>
             <div className="tow-cta-buttons">
               <Link to="/iletisim" className="primary-button">Ücretsiz Keşif Toplantısı</Link>

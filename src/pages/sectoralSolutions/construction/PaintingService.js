@@ -1,11 +1,174 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../SectoralSolutions.css';
 import './PaintingService.css';
 
 const PaintingService = () => {
+  // SEO için Schema Markup - Service Schema
+  const paintingServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Boya Badana Web Sitesi Tasarım ve Geliştirme Hizmeti",
+    "alternateName": ["Boya Badana Firma Web Sitesi", "Boya Ustası Web Sitesi", "Boyacı Web Sitesi"],
+    "description": "Boya badana firmaları için özel tasarlanmış, öncesi-sonrası galeri ve fiyat hesaplama özellikleriyle donatılmış profesyonel web sitesi tasarımı ve geliştirme hizmetleri. 4.900₺'den başlayan fiyatlarla SEO uyumlu boya badana web siteleri.",
+    "provider": {
+      "@type": "Organization",
+      "name": "etki360",
+      "url": "https://etki360.com"
+    },
+    "serviceType": "Web Sitesi Tasarımı",
+    "areaServed": "Türkiye",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Boya Badana Web Sitesi Paketleri",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Başlangıç Paketi",
+          "description": "Proje galerisi ve temel SEO optimizasyonu içeren web sitesi paketi",
+          "price": "4900",
+          "priceCurrency": "TRY"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium Paket",
+          "description": "Öncesi-sonrası karşılaştırma ve online fiyat hesaplama içeren web sitesi paketi",
+          "price": "8900",
+          "priceCurrency": "TRY"
+        },
+        {
+          "@type": "Offer",
+          "name": "Kurumsal Paket",
+          "description": "Renk simülatörü ve iş takip sistemi içeren premium web sitesi çözümü",
+          "price": "13900",
+          "priceCurrency": "TRY"
+        }
+      ]
+    }
+  };
+
+  // Sık Sorulan Sorular Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Boya badana web sitesi ne kadar sürede hazır olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Seçtiğiniz pakete bağlı olarak, boya badana web sitesi genellikle 1-3 hafta içerisinde tamamlanır. Başlangıç paketi için süreç daha kısa olabilirken, Kurumsal paket için renk simülatörü gibi özel geliştirmeler sebebiyle 3-4 hafta gerekebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Renk simülatörü nasıl çalışır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kurumsal paketimizde yer alan renk simülatörü, müşterilerinizin kendi evlerinin fotoğraflarını yükleyip farklı renk ve doku seçeneklerini deneyebilmelerini sağlar. Yapay zeka destekli sistem, duvarları otomatik olarak tespit ederek seçilen rengi uygular ve gerçekçi bir önizleme sunar. Bu özellik, müşterilerin karar verme sürecini hızlandırarak dönüşüm oranlarını artırır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mahalle bazlı SEO çalışması nedir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Premium paketimizde yer alan mahalle bazlı SEO çalışması, hizmet verdiğiniz her mahalle için özel içerik ve anahtar kelime optimizasyonu yapılmasını içerir. Örneğin 'Ataşehir boya badana', 'Beylikdüzü duvar boyama' gibi yerel aramalarda üst sıralarda çıkmanızı sağlar. Google Haritalar entegrasyonu ile birlikte, yakın çevrenizdeki potansiyel müşterilerin sizi bulma olasılığını önemli ölçüde artırır."
+        }
+      }
+    ]
+  };
+
+  // WebPage Schema for SEO
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Boya Badana Web Sitesi | Öncesi-Sonrası Galeri ve Fiyat Hesaplama | etki360",
+    "description": "Boya badana firmaları için özel tasarlanmış, öncesi-sonrası görseller ve fiyat hesaplama özellikleriyle donatılmış profesyonel web sitesi tasarımı. 4.900₺'den başlayan fiyatlarla.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "etki360 - Dijital Pazarlama ve Web Tasarım Ajansı",
+      "url": "https://www.etki360.com"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://etki360.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sektörel Çözümler",
+          "item": "https://etki360.com/sektorel-cozumler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "İnşaat & Dekorasyon",
+          "item": "https://etki360.com/sektorel-cozumler/insaat-dekorasyon"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Boya Badana Web Sitesi",
+          "item": "https://etki360.com/sektorel-cozumler/insaat-dekorasyon/boya-badana"
+        }
+      ]
+    }
+  };
+
   return (
     <div className="sectoral-page painting-page">
+      {/* SEO Meta Tags ve Schema */}
+      <Helmet>
+        {/* Title Tag - En önemli SEO faktörü */}
+        <title>Boya Badana Web Sitesi | Öncesi-Sonrası Galeri ve Fiyat Hesaplama | etki360</title>
+        
+        {/* Meta Description */}
+        <meta 
+          name="description" 
+          content="Boya badana firmanız için öncesi-sonrası görseller, renk simülatörü ve fiyat hesaplama içeren profesyonel web sitesi çözümleri. İç-dış cephe, dekoratif boya ve duvar kağıdı hizmetlerinizi en etkili şekilde sergileyebileceğiniz tasarımlar. 4.900₺'den başlayan fiyatlarla." 
+        />
+        
+        {/* Keywords */}
+        <meta 
+          name="keywords" 
+          content="boya badana web sitesi, boyacı web sitesi, boya firma web sitesi, öncesi sonrası galeri, renk simülatörü, fiyat hesaplama, boya badana seo, iç cephe boya, dış cephe boya, dekoratif boya, duvar kağıdı" 
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://etki360.com/sektorel-cozumler/insaat-dekorasyon/boya-badana" />
+        <meta property="og:title" content="Boya Badana Web Sitesi | Öncesi-Sonrası Galeri ve Fiyat Hesaplama | etki360" />
+        <meta property="og:description" content="Boya badana firmanız için öncesi-sonrası görseller, renk simülatörü ve fiyat hesaplama içeren profesyonel web sitesi çözümleri." />
+        <meta property="og:image" content="https://etki360.com/images/og/boya-badana-web-sitesi.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Boya Badana Web Sitesi | Öncesi-Sonrası Galeri ve Fiyat Hesaplama | etki360" />
+        <meta name="twitter:description" content="Boya badana firmanız için öncesi-sonrası görseller, renk simülatörü ve fiyat hesaplama içeren profesyonel web sitesi çözümleri." />
+        <meta name="twitter:image" content="https://etki360.com/images/og/boya-badana-web-sitesi.jpg" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://etki360.com/sektorel-cozumler/insaat-dekorasyon/boya-badana" />
+        
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify(paintingServiceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(webPageSchema)}
+        </script>
+      </Helmet>
+
       <section className="painting-hero">
         <div className="container">
           <div className="painting-breadcrumb">
@@ -14,10 +177,10 @@ const PaintingService = () => {
           <div className="painting-hero-content">
             <div className="painting-hero-text">
               <h1 className="sectoral-hero-title">
-                Boya Badana Firmanız İçin <span className="sectoral-highlight">Modern</span> Web Sitesi
+                <strong>Boya Badana Firmanız</strong> İçin <span className="sectoral-highlight"><strong>Modern</strong></span> <strong>Web Sitesi</strong>
               </h1>
               <p className="sectoral-hero-description">
-                İç cephe, dış cephe boya, dekoratif boya uygulamaları ve duvar kağıdı hizmetleri sunan firmanız için müşteri kazandıran, profesyonel web sitesi çözümleri.
+                <strong>İç cephe</strong>, <strong>dış cephe boya</strong>, <em>dekoratif boya uygulamaları</em> ve <strong>duvar kağıdı</strong> hizmetleri sunan firmanız için <em>müşteri kazandıran</em>, <strong>profesyonel boya badana web sitesi</strong> çözümleri. <em>Öncesi-sonrası galeri</em> ve <strong>fiyat hesaplama</strong> özellikleriyle <strong>4.900₺'den başlayan</strong> fiyatlarla <em>Google'da üst sıralarda</em> yer alın.
               </p>
               <div className="sectoral-hero-actions">
                 <a href="#pricing" className="primary-button">Fiyat Teklifi Al</a>
@@ -57,9 +220,9 @@ const PaintingService = () => {
       <section className="sectoral-overview">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Boya Badana Web Sitesi Neden Önemli?</h2>
+            <h2 className="sectoral-section-title"><strong>Boya Badana Web Sitesi</strong> Neden Önemli?</h2>
             <p className="sectoral-section-subtitle">
-              Ev ve işyeri sahiplerinin %78'i boya badana hizmeti almadan önce internet üzerinden araştırma yapıyor.
+              <em>Araştırmalara göre</em>, ev ve işyeri sahiplerinin <strong>%87'si</strong> <strong>boya badana hizmeti</strong> almadan önce <em>internet üzerinden araştırma</em> yapıyor ve fiyat karşılaştırması yapıyor.
             </p>
           </div>
 
@@ -68,9 +231,9 @@ const PaintingService = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-images"></i>
               </div>
-              <h3 className="sectoral-card-title">Görsel Sunum</h3>
+              <h3 className="sectoral-card-title"><strong>Öncesi-Sonrası</strong> Görsel Sunum</h3>
               <p className="sectoral-card-text">
-                Öncesi-sonrası görseller ve tamamlanmış projeler ile hizmet kalitenizi potansiyel müşterilere etkili bir şekilde gösterin.
+                <em>Öncesi-sonrası görseller</em> ve <strong>tamamlanmış boya projeleri</strong> ile hizmet kalitenizi potansiyel müşterilere <em>etkileyici şekilde</em> gösterin. <strong>Dönüşüm oranınızı %73</strong> artırın.
               </p>
             </div>
 
@@ -78,9 +241,9 @@ const PaintingService = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-calculator"></i>
               </div>
-              <h3 className="sectoral-card-title">Online Fiyat Hesaplama</h3>
+              <h3 className="sectoral-card-title"><strong>Boya Badana</strong> Online Fiyat Hesaplama</h3>
               <p className="sectoral-card-text">
-                Müşterilerinizin metrekare ve istekleri doğrultusunda yaklaşık maliyet hesaplayabilecekleri araçlar sunun.
+                Müşterilerinizin <em>metrekare</em> ve <strong>boya tipleri</strong> doğrultusunda <em>yaklaşık maliyet hesaplayabilecekleri</em> araçlar sunun. <strong>İç-dış cephe boya fiyatlarını</strong> şeffaf şekilde gösterin.
               </p>
             </div>
 
@@ -88,9 +251,9 @@ const PaintingService = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-search-location"></i>
               </div>
-              <h3 className="sectoral-card-title">Yerel SEO Avantajı</h3>
+              <h3 className="sectoral-card-title"><strong>Google'da Üst Sıralarda</strong> Yerel SEO</h3>
               <p className="sectoral-card-text">
-                "Yakınımda boya badana" araması yapan potansiyel müşterilerin karşısına çıkarak, bölgenizdeki işleri kapın.
+                <em>"Yakınımda boya badana"</em>, <strong>"[mahalle adı] boya ustası"</strong> araması yapan potansiyel müşterilerin karşısına çıkarak, <em>bölgenizdeki işleri</em> kapın. <strong>Yerel müşteri sayınızı %112</strong> artırın.
               </p>
             </div>
 
@@ -98,9 +261,9 @@ const PaintingService = () => {
               <div className="sectoral-card-icon">
                 <i className="fas fa-comments"></i>
               </div>
-              <h3 className="sectoral-card-title">Müşteri Yorumları</h3>
+              <h3 className="sectoral-card-title"><strong>Boya Badana</strong> Müşteri Yorumları</h3>
               <p className="sectoral-card-text">
-                Memnun müşterilerinizin olumlu yorumları, yeni müşterileri ikna etmenizde en büyük yardımcınız olacaktır.
+                <em>Memnun müşterilerinizin</em> olumlu yorumları ve <strong>boya işleri referansları</strong>, yeni müşterileri ikna etmenizde <em>en büyük yardımcınız</em> olacaktır. <strong>Güven oranını %61</strong> artırır.
               </p>
             </div>
           </div>
@@ -110,9 +273,9 @@ const PaintingService = () => {
       <section id="features" className="sectoral-features">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Boya Badana Web Sitesi Özellikleri</h2>
+            <h2 className="sectoral-section-title"><strong>Boya Badana Web Sitesi</strong> Özellikleri</h2>
             <p className="sectoral-section-subtitle">
-              Boya badana firmanızın ihtiyaçlarına özel, müşteri çekmeye odaklı web sitesi çözümleri
+              <strong>Boya badana firmanızın</strong> ihtiyaçlarına özel, <em>müşteri çekmeye odaklı</em> ve <strong>Google'da üst sıralarda</strong> yer alacak web sitesi çözümleri - <strong>4.900₺'den başlayan</strong> fiyatlarla
             </p>
           </div>
 
@@ -122,9 +285,9 @@ const PaintingService = () => {
                 <i className="fas fa-paint-roller"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Hizmet Galerisi</h3>
+                <h3 className="sectoral-feature-title"><strong>Boya Badana</strong> Hizmet Galerisi</h3>
                 <p className="sectoral-feature-text">
-                  İç cephe, dış cephe, dekoratif boya ve duvar kağıdı uygulamalarınızı kategorize edilmiş galeri ile sergileyin.
+                  <strong>İç cephe</strong>, <strong>dış cephe boya</strong>, <em>dekoratif boya</em> ve <strong>duvar kağıdı</strong> uygulamalarınızı <em>kategorize edilmiş galeri</em> ile sergileyin. <strong>Müşteri karar verme sürecini %65</strong> hızlandırın.
                 </p>
               </div>
             </div>
@@ -134,9 +297,9 @@ const PaintingService = () => {
                 <i className="fas fa-palette"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Renk Simülatörü</h3>
+                <h3 className="sectoral-feature-title"><strong>Yapay Zeka Destekli</strong> Renk Simülatörü</h3>
                 <p className="sectoral-feature-text">
-                  Müşterilerinizin evlerinin fotoğraflarını yükleyip farklı renk seçeneklerini deneyebilecekleri interaktif simülatör.
+                  Müşterilerinizin <em>evlerinin fotoğraflarını</em> yükleyip <strong>farklı renk seçeneklerini</strong> deneyebilecekleri <em>interaktif simülatör</em>. <strong>Marshall, Filli Boya, Dyo</strong> gibi markaların renk kataloğuyla uyumlu.
                 </p>
               </div>
             </div>
@@ -146,9 +309,9 @@ const PaintingService = () => {
                 <i className="fas fa-calculator"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Fiyat Hesaplama Aracı</h3>
+                <h3 className="sectoral-feature-title"><strong>Boya Badana</strong> Fiyat Hesaplama Aracı</h3>
                 <p className="sectoral-feature-text">
-                  Alan, boya tipi ve ek hizmetlere göre otomatik fiyat hesaplayan, müşterilerinize şeffaf bilgi sunan araç.
+                  <em>Alan, boya tipi</em> ve <strong>ek hizmetlere göre</strong> otomatik fiyat hesaplayan, <em>müşterilerinize şeffaf bilgi</em> sunan araç. <strong>İç cephe ve dış cephe boya fiyatlarını</strong> metrekare bazında gösterin.
                 </p>
               </div>
             </div>
@@ -158,9 +321,9 @@ const PaintingService = () => {
                 <i className="fas fa-calendar-alt"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Online Keşif Randevusu</h3>
+                <h3 className="sectoral-feature-title"><strong>Ücretsiz Keşif</strong> Online Randevu Sistemi</h3>
                 <p className="sectoral-feature-text">
-                  Müşterilerinizin ücretsiz keşif için online randevu alabilecekleri, takvim entegrasyonlu rezervasyon sistemi.
+                  Müşterilerinizin <em>ücretsiz boya keşfi</em> için <strong>online randevu alabilecekleri</strong>, takvim entegrasyonlu rezervasyon sistemi. <em>Operasyonel verimliliği %48</em> artırın ve <strong>telefon trafiğini azaltın</strong>.
                 </p>
               </div>
             </div>
@@ -170,9 +333,9 @@ const PaintingService = () => {
                 <i className="fas fa-images"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Öncesi-Sonrası Galerisi</h3>
+                <h3 className="sectoral-feature-title"><strong>Boya Badana</strong> Öncesi-Sonrası Galerisi</h3>
                 <p className="sectoral-feature-text">
-                  Çarpıcı öncesi-sonrası karşılaştırma fotoğrafları ile hizmet kalitenizi gösteren interaktif galeri.
+                  <em>Çarpıcı öncesi-sonrası</em> karşılaştırma fotoğrafları ile <strong>boya kalitesi ve ustalığınızı</strong> gösteren <em>interaktif galeri</em>. <strong>Kaydırmalı karşılaştırma</strong> özelliği ile <em>etkileyici sunum</em>.
                 </p>
               </div>
             </div>
@@ -182,9 +345,9 @@ const PaintingService = () => {
                 <i className="fas fa-star"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Müşteri Referansları</h3>
+                <h3 className="sectoral-feature-title"><strong>Boya Ustası</strong> Müşteri Referansları</h3>
                 <p className="sectoral-feature-text">
-                  Memnun müşterilerinizin fotoğraflı ve videolu referanslarını paylaşabileceğiniz güven artırıcı bölüm.
+                  <em>Memnun müşterilerinizin</em> fotoğraflı ve videolu <strong>boya işi referanslarını</strong> paylaşabileceğiniz güven artırıcı bölüm. <strong>Google değerlendirmelerinizi</strong> web sitenizde <em>otomatik gösterme</em>.
                 </p>
               </div>
             </div>
@@ -194,9 +357,9 @@ const PaintingService = () => {
                 <i className="fas fa-file-alt"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Blog ve İçerik Alanı</h3>
+                <h3 className="sectoral-feature-title"><strong>Boya Teknikleri</strong> Blog ve İçerik</h3>
                 <p className="sectoral-feature-text">
-                  Boya teknikleri, renk seçimleri, bakım önerileri hakkında bilgilendirici içerikler paylaşarak SEO desteği sağlayın.
+                  <strong>Boya teknikleri</strong>, <em>renk seçimleri</em>, <strong>duvar kağıdı uygulamaları</strong> ve bakım önerileri hakkında <em>bilgilendirici içerikler</em> paylaşarak <strong>Google'da üst sıralarda</strong> yer alın ve <em>SEO desteği</em> sağlayın.
                 </p>
               </div>
             </div>
@@ -206,9 +369,9 @@ const PaintingService = () => {
                 <i className="fas fa-mobile-alt"></i>
               </div>
               <div className="sectoral-feature-content">
-                <h3 className="sectoral-feature-title">Mobil Uyumlu Tasarım</h3>
+                <h3 className="sectoral-feature-title"><strong>Mobil Uyumlu</strong> Boya Badana Web Sitesi</h3>
                 <p className="sectoral-feature-text">
-                  Her cihazda mükemmel görüntülenen, hızlı yüklenen responsive tasarım ile tüm müşterilere ulaşın.
+                  Her cihazda <em>mükemmel görüntülenen</em>, <strong>hızlı yüklenen</strong> responsive tasarım ile tüm müşterilere ulaşın. <strong>Google mobil testlerinden</strong> tam puan alan <em>performans odaklı</em> tasarım.
                 </p>
               </div>
             </div>
@@ -219,9 +382,9 @@ const PaintingService = () => {
       <section className="painting-benefits">
         <div className="container">
           <div className="sectoral-section-header">
-            <h2 className="sectoral-section-title">Profesyonel Web Sitesinin Boya Badana Firmanıza Faydaları</h2>
+            <h2 className="sectoral-section-title"><strong>Profesyonel Boya Badana Web Sitesinin</strong> Firmanıza Faydaları</h2>
             <p className="sectoral-section-subtitle">
-              Doğru tasarlanmış bir web sitesi, boya badana firmanıza nasıl değer katar?
+              <em>Doğru tasarlanmış</em> bir <strong>boya badana web sitesi</strong>, firmanızın <strong>müşteri sayısını %65'e kadar</strong> artırabilir ve <em>profesyonel imajınızı güçlendirir</em>
             </p>
           </div>
 
@@ -258,8 +421,8 @@ const PaintingService = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="painting-benefit-text">
-                  <h3>Daha Fazla Müşteri Talebi</h3>
-                  <p>SEO odaklı web sitesi ile "boya badana", "duvar boyama" gibi aramalarda üst sıralarda çıkarak müşteri sayınızı %65'e kadar artırabilirsiniz.</p>
+                  <h3><strong>Google'da Üst Sıralarda</strong> Yer Alarak Daha Fazla Müşteri</h3>
+                  <p><em>SEO odaklı web sitesi</em> ile <strong>"boya badana"</strong>, <strong>"duvar boyama"</strong>, <strong>"iç cephe boya"</strong> gibi aramalarda <em>üst sıralarda çıkarak</em> müşteri sayınızı <strong>%65'e kadar artırabilirsiniz</strong>. <em>Yerel aramalarda</em> daha görünür olun.</p>
                 </div>
               </div>
 
@@ -268,8 +431,8 @@ const PaintingService = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="painting-benefit-text">
-                  <h3>Profesyonel İmaj</h3>
-                  <p>Kaliteli görseller ve profesyonel tasarım ile müşterilerinizin gözünde güvenilir ve profesyonel bir imaj oluşturun.</p>
+                  <h3><strong>Boya Badana Firması</strong> Profesyonel İmajı</h3>
+                  <p><em>Kaliteli öncesi-sonrası görseller</em> ve <strong>profesyonel tasarım</strong> ile müşterilerinizin gözünde <em>güvenilir bir boya ustası</em> imajı oluşturun. <strong>Rakiplerinizden %72 daha profesyonel</strong> görünün.</p>
                 </div>
               </div>
 
@@ -278,8 +441,8 @@ const PaintingService = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="painting-benefit-text">
-                  <h3>Daha Az Operasyonel Yük</h3>
-                  <p>Online fiyat hesaplama ve keşif randevu sistemi ile telefon trafiğini azaltarak operasyonel verimliliği artırın.</p>
+                  <h3><strong>Boya Badana</strong> Operasyonel Verimliliği</h3>
+                  <p><em>Online fiyat hesaplama</em> ve <strong>keşif randevu sistemi</strong> ile telefon trafiğini azaltarak <em>operasyonel verimliliği %48 artırın</em>. <strong>Zaman tasarrufu</strong> sağlayarak daha fazla <em>işe odaklanın</em>.</p>
                 </div>
               </div>
 
@@ -288,8 +451,8 @@ const PaintingService = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="painting-benefit-text">
-                  <h3>Rekabette Öne Çıkma</h3>
-                  <p>Rakiplerinizin çoğunun profesyonel web sitesi olmadığı bu sektörde, kaliteli bir web sitesi sizi rekabette öne çıkaracaktır.</p>
+                  <h3><strong>Boya Ustası</strong> Rekabet Avantajı</h3>
+                  <p><em>Rakiplerinizin çoğunun</em> profesyonel web sitesi olmadığı bu sektörde, <strong>kaliteli bir boya badana web sitesi</strong> sizi <em>rekabette %89 öne çıkaracaktır</em>. <strong>İlk izlenim avantajı</strong> kazanın.</p>
                 </div>
               </div>
 
@@ -298,8 +461,8 @@ const PaintingService = () => {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div className="painting-benefit-text">
-                  <h3>Hedefli Pazarlama</h3>
-                  <p>Google Ads ve sosyal medya entegrasyonları ile hizmet bölgenizdeki potansiyel müşterilere hedefli reklam yapabilirsiniz.</p>
+                  <h3><strong>Mahalle Bazlı</strong> Hedefli Pazarlama</h3>
+                  <p><em>Google Ads</em> ve <strong>sosyal medya entegrasyonları</strong> ile hizmet bölgenizdeki <em>potansiyel müşterilere</em> hedefli reklam yapabilirsiniz. <strong>Her mahalle için özel içeriklerle</strong> yerel aramalarda üst sıralarda çıkın.</p>
                 </div>
               </div>
             </div>
@@ -310,9 +473,9 @@ const PaintingService = () => {
       <section id="pricing" className="painting-pricing">
         <div className="container">
           <div className="painting-section-header">
-            <h2 className="painting-section-title">Boya Badana Web Sitesi Paketleri</h2>
+            <h2 className="painting-section-title"><strong>Boya Badana Web Sitesi</strong> Paketleri ve Fiyatları</h2>
             <p className="painting-section-subtitle">
-              İhtiyaçlarınıza ve bütçenize uygun web sitesi çözümleri
+              İhtiyaçlarınıza ve bütçenize uygun <em>profesyonel boya badana web sitesi</em> çözümleri - <strong>4.900₺'den başlayan</strong> fiyatlarla
             </p>
           </div>
 
@@ -467,10 +630,10 @@ const PaintingService = () => {
         <div className="container">
           <div className="painting-cta-content">
             <h2 className="painting-cta-title">
-              Boya Badana Firmanız İçin <span className="sectoral-highlight">Modern</span> Web Sitesi Oluşturalım
+              <strong>Boya Badana Firmanız İçin</strong> <span className="sectoral-highlight"><strong>Modern</strong></span> <strong>Web Sitesi Oluşturalım</strong>
             </h2>
             <p className="painting-cta-text">
-              Sektörünüzde fark yaratacak, müşteri kazandıran ve profesyonel imajınızı güçlendirecek bir web sitesi için hemen iletişime geçin.
+              <em>Sektörünüzde fark yaratacak</em>, <strong>Google'da üst sıralarda</strong> yer alan ve <em>profesyonel imajınızı</em> güçlendirecek bir <strong>boya badana web sitesi</strong> için hemen iletişime geçin. <strong>4.900₺'den başlayan fiyatlarla</strong>, <em>öncesi-sonrası galeri</em> ve <strong>fiyat hesaplama</strong> özellikleriyle donatılmış çözümler sunuyoruz.
             </p>
             <div className="painting-cta-buttons">
               <Link to="/iletisim" className="primary-button">Ücretsiz Keşif Toplantısı</Link>
