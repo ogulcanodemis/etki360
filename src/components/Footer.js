@@ -58,18 +58,23 @@ const Footer = () => {
                 <li><Link to="/hizmetlerimiz/sosyal-medya">Sosyal Medya</Link></li>
                 <li><Link to="/hizmetlerimiz/icerik-uretimi">İçerik Üretimi</Link></li>
                 <li><Link to="/hizmetlerimiz/grafik-tasarim">Grafik Tasarım</Link></li>
+                <li><Link to="/hizmetlerimiz/mobil-uygulama">Mobil Uygulama</Link></li>
+                <li><Link to="/hizmetlerimiz/bakim-destek">Bakım ve Destek</Link></li>
               </ul>
             </div>
 
             <div className="footer-links-column">
               <h3>Sektörel Çözümler</h3>
               <ul>
-                <li><Link to="/sektorel-cozumler/saglik/klinik-web-sitesi">Klinik Web Sitesi</Link></li>
-                <li><Link to="/sektorel-cozumler/saglik/sac-ekim-klinigi">Saç Ekim Kliniği</Link></li>
-                <li><Link to="/sektorel-cozumler/nakliyat/nakliye-firmasi">Nakliyat Firması</Link></li>
-                <li><Link to="/sektorel-cozumler/hizmet/cilingir">Çilingir</Link></li>
-                <li><Link to="/sektorel-cozumler/insaat-dekorasyon/mimar">Mimar</Link></li>
-                <li><Link to="/sektorel-cozumler">Tüm Sektörel Çözümler</Link></li>
+                <li><Link to="/sektorel-cozumler/saglik">Sağlık Sektörü</Link></li>
+                <li><Link to="/sektorel-cozumler/nakliyat">Nakliyat Sektörü</Link></li>
+                <li><Link to="/sektorel-cozumler/hizmet">Hizmet Sektörü</Link></li>
+                <li><Link to="/sektorel-cozumler/insaat-dekorasyon">İnşaat ve Dekorasyon</Link></li>
+                <li><Link to="/sektorel-cozumler/guzellik">Güzellik</Link></li>
+                <li><Link to="/sektorel-cozumler/hukuk">Hukuk</Link></li>
+                <li><Link to="/sektorel-cozumler/egitim">Eğitim</Link></li>
+                <li><Link to="/sektorel-cozumler/yiyecek">Yiyecek & İçecek</Link></li>
+                <li><Link to="/sektorel-cozumler">Tüm Sektörler</Link></li>
               </ul>
             </div>
 

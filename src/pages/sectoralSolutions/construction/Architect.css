@@ -5,13 +5,26 @@
   padding-top: 70px;
 }
 
-/* Vurgu Stilleri */
+/* Vurgu Stilleri - Mimarlık Sayfası Özel */
 .architect-page .sectoral-highlight {
-  background: linear-gradient(45deg, #2C3E50, #4D6883);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
+  color: #2C3E50 !important;
+  font-weight: 600 !important;
+  background: none !important;
+  text-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  display: inline !important;
+}
+
+/* CTA Bölümü için özel vurgu */
+.architect-cta .sectoral-highlight {
+  color: #2C3E50 !important;
+  font-weight: 600 !important;
+  background: none !important;
+  text-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  display: inline !important;
 }
 
 /* Hero Bölümü */
@@ -608,10 +621,7 @@
 }
 
 .architect-cta-title .sectoral-highlight {
-  background: linear-gradient(45deg, #ffffff, #E5E9F0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #2C3E50;
   font-weight: 700;
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import '../SectoralSolutions.css';
@@ -58,6 +58,14 @@ const HairTransplantClinic = () => {
       "url": "https://www.etki360.com"
     }
   };
+
+  // Body'ye sayfa sınıfını ekle
+  useEffect(() => {
+    document.body.classList.add('hair-transplant-page');
+    return () => {
+      document.body.classList.remove('hair-transplant-page');
+    };
+  }, []);
 
   return (
     <div className="sectoral-page hair-transplant-page">

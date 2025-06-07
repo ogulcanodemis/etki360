@@ -324,77 +324,77 @@ const ClinicWebsite = () => {
             </p>
           </div>
 
-          <div className="packages-grid">
-            <div className="package-card">
-              <div className="package-header">
-                <h3 className="package-title">Başlangıç Paketi</h3>
-                <div className="package-price">9.500 ₺</div>
+          <div className="clinic-pricing-grid">
+            {/* Başlangıç Paketi */}
+            <div className="clinic-pricing-card">
+              <div className="clinic-pricing-header">
+                <h3 className="clinic-pricing-title">Başlangıç Paketi</h3>
+                <div className="clinic-pricing-price">
+                  <span className="clinic-price-amount">9.500</span>
+                  <span className="clinic-price-currency">₺</span>
+                </div>
+                <p className="clinic-pricing-subtitle">Küçük klinikler için ideal</p>
               </div>
-              <ul className="package-features">
-                <li>5 Sayfalık Web Sitesi</li>
-                <li>Mobil Uyumlu Tasarım</li>
-                <li>Temel SEO Optimizasyonu</li>
-                <li>İletişim Formu</li>
-                <li>Google Harita Entegrasyonu</li>
-                <li>Sosyal Medya Entegrasyonu</li>
-                <li>3 Günde Teslim</li>
-                <li>1 Ay Ücretsiz Destek</li>
-              </ul>
-              <Link to="/iletisim" className="package-button">
-                Hemen Başlayın
-              </Link>
+              <div className="clinic-pricing-content">
+                <ul className="clinic-pricing-features">
+                  <li>5 Sayfalık Web Sitesi</li>
+                  <li>Mobil Uyumlu Tasarım</li>
+                  <li>Temel SEO Optimizasyonu</li>
+                  <li>İletişim Formu</li>
+                  <li>3 Günde Teslim</li>
+                </ul>
+                <Link to="/iletisim" className="clinic-pricing-btn clinic-btn-basic">
+                  Teklif Al
+                </Link>
+              </div>
             </div>
 
-            <div className="package-card featured">
-              <div className="package-badge">En Çok Tercih Edilen</div>
-              <div className="package-header">
-                <h3 className="package-title">Profesyonel Paket</h3>
-                <div className="package-price">14.500 ₺</div>
+            {/* Profesyonel Paket */}
+            <div className="clinic-pricing-card clinic-featured">
+              <div className="clinic-pricing-header">
+                <h3 className="clinic-pricing-title">Profesyonel Paket</h3>
+                <div className="clinic-pricing-price">
+                  <span className="clinic-price-amount">14.500</span>
+                  <span className="clinic-price-currency">₺</span>
+                </div>
+                <p className="clinic-pricing-subtitle">Orta ölçekli klinikler için</p>
               </div>
-              <ul className="package-features">
-                <li>10+ Sayfalık Web Sitesi</li>
-                <li>Mobil Uyumlu Tasarım</li>
-                <li>Gelişmiş SEO Optimizasyonu</li>
-                <li>Online Randevu Sistemi</li>
-                <li>Doktor Profilleri</li>
-                <li>Hizmet Sayfaları</li>
-                <li>Blog Sistemi</li>
-                <li>İletişim Formu</li>
-                <li>Google Harita Entegrasyonu</li>
-                <li>Sosyal Medya Entegrasyonu</li>
-                <li>WhatsApp Entegrasyonu</li>
-                <li>3 Günde Teslim</li>
-                <li>3 Ay Ücretsiz Destek</li>
-              </ul>
-              <Link to="/iletisim" className="package-button">
-                Hemen Başlayın
-              </Link>
+              <div className="clinic-pricing-content">
+                <ul className="clinic-pricing-features">
+                  <li>10+ Sayfalık Web Sitesi</li>
+                  <li>Online Randevu Sistemi</li>
+                  <li>Doktor Profilleri</li>
+                  <li>Gelişmiş SEO</li>
+                  <li>3 Ay Ücretsiz Destek</li>
+                </ul>
+                <Link to="/iletisim" className="clinic-pricing-btn clinic-btn-featured">
+                  Hemen Başla
+                </Link>
+              </div>
             </div>
 
-            <div className="package-card">
-              <div className="package-header">
-                <h3 className="package-title">Kurumsal Paket</h3>
-                <div className="package-price">24.500 ₺</div>
+            {/* Kurumsal Paket */}
+            <div className="clinic-pricing-card">
+              <div className="clinic-pricing-header">
+                <h3 className="clinic-pricing-title">Kurumsal Paket</h3>
+                <div className="clinic-pricing-price">
+                  <span className="clinic-price-amount">24.500</span>
+                  <span className="clinic-price-currency">₺</span>
+                </div>
+                <p className="clinic-pricing-subtitle">Büyük klinikler için</p>
               </div>
-              <ul className="package-features">
-                <li>Sınırsız Sayfa</li>
-                <li>Özel Tasarım</li>
-                <li>Premium SEO Optimizasyonu</li>
-                <li>Gelişmiş Randevu Sistemi</li>
-                <li>Online Ödeme Sistemi</li>
-                <li>Detaylı Doktor Profilleri</li>
-                <li>Kapsamlı Hizmet Sayfaları</li>
-                <li>Blog ve İçerik Yönetimi</li>
-                <li>Hasta Yorumları Sistemi</li>
-                <li>Çok Dilli Yapı</li>
-                <li>E-Bülten Sistemi</li>
-                <li>Google Analytics Entegrasyonu</li>
-                <li>3-5 Günde Teslim</li>
-                <li>6 Ay Ücretsiz Destek</li>
-              </ul>
-              <Link to="/iletisim" className="package-button">
-                Hemen Başlayın
-              </Link>
+              <div className="clinic-pricing-content">
+                <ul className="clinic-pricing-features">
+                  <li>Sınırsız Sayfa</li>
+                  <li>Özel Tasarım</li>
+                  <li>Online Ödeme Sistemi</li>
+                  <li>Premium SEO</li>
+                  <li>6 Ay Ücretsiz Destek</li>
+                </ul>
+                <Link to="/iletisim" className="clinic-pricing-btn clinic-btn-premium">
+                  İletişime Geç
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,766 @@
+/* İnşaat Firması Web Sitesi Stilleri */
+
+/* Genel Sayfa Stilleri */
+.construction-company-page {
+  padding-top: 70px;
+  font-family: 'Inter', sans-serif;
+  background-color: #fafafa;
+}
+
+/* Vurgu Stilleri */
+.construction-company-page .sectoral-highlight {
+  background: linear-gradient(45deg, #f39c12, #e67e22);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Hero Bölümü */
+.construction-hero {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  padding: 70px 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.construction-breadcrumb {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.construction-breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.construction-breadcrumb a:hover {
+  color: #ffd180;
+}
+
+.construction-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.construction-hero-text {
+  padding-right: 20px;
+}
+
+.construction-hero .sectoral-hero-title {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.construction-hero .sectoral-hero-description {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.construction-hero .sectoral-hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Mockup Stilleri */
+.construction-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.construction-mockup {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.mockup-content {
+  padding: 20px;
+}
+
+.mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-hero-img {
+  height: 120px;
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mockup-project {
+  height: 80px;
+  background: #FEF9E7;
+  border-radius: 6px;
+}
+
+.mockup-about {
+  height: 60px;
+  background: #FEF9E7;
+  border-radius: 6px;
+}
+
+/* Genel Bakış Bölümü */
+.sectoral-features {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.sectoral-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sectoral-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.sectoral-section-subtitle {
+  font-size: 18px;
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.sectoral-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.sectoral-feature-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-bottom: 3px solid #f39c12;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.sectoral-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sectoral-feature-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(243, 156, 18, 0.1);
+  color: #f39c12;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.sectoral-feature-content {
+  flex: 1;
+}
+
+.sectoral-feature-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.sectoral-feature-text {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Benefits Bölümü */
+.sectoral-benefits {
+  padding: 80px 0;
+  background-color: #f5f5f5;
+}
+
+.sectoral-benefits-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.construction-benefits-mockup {
+  position: relative;
+}
+
+.benefits-mockup-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.benefits-mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.benefits-mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.benefits-mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.benefits-mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.benefits-mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.benefits-mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.benefits-mockup-content {
+  padding: 20px;
+}
+
+.benefits-mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-title {
+  height: 40px;
+  background: #FEF9E7;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-gallery {
+  margin-bottom: 20px;
+}
+
+.benefits-mockup-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.benefits-mockup-item {
+  height: 100px;
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  border-radius: 6px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.benefits-mockup-item:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.sectoral-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sectoral-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.sectoral-benefit-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f39c12;
+  flex-shrink: 0;
+}
+
+.sectoral-benefit-icon i {
+  font-size: 24px;
+}
+
+.sectoral-benefit-text h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.sectoral-benefit-text p {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Fiyatlandırma Bölümü */
+.construction-pricing {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.construction-pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.construction-pricing-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.construction-pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.construction-pricing-header {
+  padding: 30px;
+  background: linear-gradient(135deg, #FEF9E7 0%, #FCF3CF 100%);
+  text-align: center;
+  border-bottom: 2px solid #f39c12;
+}
+
+.construction-pricing-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.construction-pricing-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+}
+
+.construction-price-amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #f39c12;
+}
+
+.construction-price-period {
+  font-size: 16px;
+  color: #666666;
+}
+
+.construction-pricing-features {
+  padding: 30px;
+}
+
+.construction-pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.construction-pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #555555;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.construction-pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.construction-pricing-features li i {
+  color: #f39c12;
+  font-size: 18px;
+}
+
+.construction-pricing-footer {
+  padding: 0 30px 30px;
+  text-align: center;
+}
+
+.construction-pricing-button {
+  display: inline-block;
+  background: #f39c12;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.construction-pricing-button:hover {
+  background: #e67e22;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+/* FAQ Bölümü */
+.construction-faq {
+  padding: 80px 0;
+  background-color: #f5f5f5;
+}
+
+.construction-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.construction-faq-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #f39c12;
+}
+
+.construction-faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.construction-faq-question {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 15px;
+  position: relative;
+  padding-right: 30px;
+}
+
+.construction-faq-question::before {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 24px;
+  color: #f39c12;
+  transition: transform 0.3s ease;
+}
+
+.construction-faq-item:hover .construction-faq-question::before {
+  transform: rotate(45deg);
+}
+
+.construction-faq-answer {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* CTA Bölümü */
+.construction-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  color: #ffffff;
+}
+
+.construction-cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.construction-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.construction-cta-title .sectoral-highlight {
+  color: #34495E;
+  font-weight: 700;
+}
+
+.construction-cta-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.construction-cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.construction-cta .primary-button {
+  display: inline-block;
+  background: #ffffff;
+  color: #f39c12;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #ffffff;
+}
+
+.construction-cta .primary-button:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+.construction-cta .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.construction-cta .secondary-button i {
+  transition: transform 0.3s ease;
+}
+
+.construction-cta .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.construction-cta .secondary-button:hover i {
+  transform: translateX(5px);
+}
+
+.construction-hero .primary-button {
+  display: inline-block;
+  background: #ffffff;
+  color: #f39c12;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #ffffff;
+}
+
+.construction-hero .primary-button:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+.construction-hero .secondary-button {
+  display: inline-block;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.construction-hero .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 1024px) {
+  .construction-hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .construction-hero-visual {
+    order: -1;
+  }
+
+  .construction-hero-text {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .construction-hero .sectoral-hero-actions {
+    justify-content: center;
+  }
+
+  .sectoral-benefits-content {
+    grid-template-columns: 1fr;
+  }
+
+  .construction-benefits-mockup {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .construction-hero {
+    padding: 60px 0;
+  }
+
+  .construction-hero .sectoral-hero-title {
+    font-size: 32px;
+  }
+
+  .construction-hero .sectoral-hero-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .benefits-mockup-container {
+    max-width: 400px;
+  }
+
+  .benefits-mockup-item {
+    height: 80px;
+  }
+
+  .construction-pricing-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .construction-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectoral-section-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .construction-hero .sectoral-hero-title {
+    font-size: 28px;
+  }
+
+  .construction-hero .sectoral-hero-description,
+  .sectoral-section-subtitle {
+    font-size: 16px;
+  }
+
+  .sectoral-feature-card {
+    padding: 20px;
+  }
+
+  .sectoral-feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sectoral-features-grid {
+    gap: 20px;
+  }
+
+  .construction-pricing-card {
+    max-width: 100%;
+  }
+
+  .construction-price-amount {
+    font-size: 30px;
+  }
+
+  .benefits-mockup-container {
+    max-width: 100%;
+  }
+
+  .benefits-mockup-item {
+    height: 70px;
+  }
+
+  .construction-cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+} 

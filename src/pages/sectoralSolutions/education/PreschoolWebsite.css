@@ -1,0 +1,42 @@
+/* Kreş ve Anaokulu Web Sitesi Stilleri */
+
+.preschool-website-page {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff9f9;
+}
+
+.preschool-hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, #ffc0cb 0%, #b3e0ff 100%); /* Pastel pembe ve bebek mavisi */
+  color: #5c5c5c; /* Koyu gri metin */
+  text-align: center;
+}
+
+.preschool-hero .highlight {
+  color: #ff69b4; /* Canlı pembe */
+}
+
+.preschool-hero .section-title,
+.preschool-hero .section-description {
+  color: #4a4a4a;
+}
+
+/* Diğer bölümler */
+.preschool-features,
+.preschool-benefits,
+.preschool-pricing,
+.preschool-faq {
+  padding: 80px 0;
+}
+
+.preschool-benefits,
+.preschool-faq {
+  background-color: #ffffff;
+}
+
+.preschool-cta {
+  padding: 80px 0;
+  background-color: #ffc0cb; /* Pastel pembe CTA */
+  color: #4a4a4a;
+  text-align: center;
+} 

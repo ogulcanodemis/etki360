@@ -7,10 +7,7 @@
 
 /* Vurgu Stilleri */
 .hair-transplant-page .sectoral-highlight {
-  background: linear-gradient(45deg, #0d474b, #5B86E5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #36D1DC !important;
   font-weight: 700;
 }
 
@@ -879,13 +876,11 @@
 }
 
 .hair-transplant-cta-title .sectoral-highlight {
-  background: rgba(255, 255, 255, 0.15);
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
-  background-clip: initial;
-  color: white;
+  color: white !important;
+  font-weight: 700;
   padding: 0 10px;
   border-radius: 4px;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .hair-transplant-cta-text {

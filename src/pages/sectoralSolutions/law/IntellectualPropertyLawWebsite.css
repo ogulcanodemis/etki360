@@ -1,0 +1,138 @@
+/* Fikri Mülkiyet Hukuku Web Sitesi Stilleri */
+
+.intellectual-property-law-website-page {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f7f6;
+}
+
+.intellectual-property-hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%); /* Canlı mor gradient */
+  color: #ffffff;
+  text-align: center;
+}
+
+.intellectual-property-hero .highlight {
+  color: #00e0c6; /* Parlak turkuaz */
+}
+
+.intellectual-property-hero .section-title,
+.intellectual-property-hero .section-description {
+  color: #ffffff;
+}
+
+/* Diğer bölümler */
+.intellectual-property-features,
+.intellectual-property-benefits,
+.intellectual-property-pricing,
+.intellectual-property-faq {
+  padding: 80px 0;
+}
+
+.intellectual-property-benefits,
+.intellectual-property-faq {
+  background-color: #ffffff;
+}
+
+.intellectual-property-cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%); /* Canlı mor gradient */
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.intellectual-property-cta::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+}
+
+.intellectual-property-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+}
+
+.intellectual-property-cta .beauty-salon-cta-title,
+.intellectual-property-cta .beauty-salon-cta-description {
+  position: relative;
+  z-index: 2;
+}
+
+.intellectual-property-cta .beauty-salon-cta-title {
+  font-size: 3.2rem;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  color: #fff;
+}
+
+.intellectual-property-cta .beauty-salon-cta-description {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  opacity: 0.95;
+  color: #fff;
+}
+
+.intellectual-property-cta .beauty-salon-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.intellectual-property-cta .btn-primary {
+  background-color: #fff;
+  color: #4a00e0;
+  font-weight: bold;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.intellectual-property-cta .btn-primary:hover {
+  background-color: #f8f8f8;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.intellectual-property-cta .btn-outline {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.intellectual-property-cta .btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+} 

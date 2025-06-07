@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import '../SectoralSolutions.css';
 import './TransportCompany.css';
 
 const TransportCompany = () => {
+  useEffect(() => {
+    document.body.classList.add('transport-company-page');
+    return () => {
+      document.body.classList.remove('transport-company-page');
+    };
+  }, []);
   // SEO için Schema Markup
   const transportWebsiteSchema = {
     "@context": "https://schema.org",
@@ -170,12 +176,19 @@ const TransportCompany = () => {
         </script>
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="transport-hero">
+      {/* Breadcrumb Bölümü */}
+      <section className="transport-breadcrumb-section">
         <div className="container">
           <div className="transport-breadcrumb">
             <Link to="/">Ana Sayfa</Link> / <Link to="/sektorel-cozumler">Sektörel Çözümler</Link> / <Link to="/sektorel-cozumler/nakliyat">Nakliyat</Link> / <span>Nakliyat Firması Web Sitesi</span>
           </div>
+        </div>
+      </section>
+
+      {/* Hero Section */}
+      
+      <section className="transport-hero">
+        <div className="container">
           <div className="transport-hero-content">
             <div className="transport-hero-text">
               <h1 className="sectoral-hero-title">

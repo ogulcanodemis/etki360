@@ -405,7 +405,7 @@ HTML;
                             </p>
                             <div class="contact-info" style="margin-top: 15px; font-size: 12px; color: #888888;">
                                 <p style="margin: 0;">Adres: Zeytinburnu, İstanbul</p>
-                                <p style="margin: 0;">Telefon: +90 544 488 23 03</p>
+                                <p style="margin: 0;">Telefon: +90 (544) 488 23 03</p>
                                 <p style="margin: 0;">E-posta: <a href="mailto:info@etki360.com" style="color: #10B981;">info@etki360.com</a></p>
                             </div>
                             <div class="social-icons" style="margin-top: 15px;">

@@ -1,0 +1,42 @@
+/* Finansal Danışmanlık Web Sitesi Stilleri */
+
+.financial-consulting-website-page {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.financial-consulting-hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, #1d3557 0%, #3a6ea5 100%); /* Koyu mavi ve daha açık mavi tonları */
+  color: #ffffff;
+  text-align: center;
+}
+
+.financial-consulting-hero .highlight {
+  color: #d4af37; /* Vurgu için altın/bronz rengi */
+}
+
+.financial-consulting-hero .section-title,
+.financial-consulting-hero .section-description {
+  color: #ffffff;
+}
+
+/* Diğer bölümler */
+.financial-consulting-features,
+.financial-consulting-benefits,
+.financial-consulting-pricing,
+.financial-consulting-faq {
+  padding: 80px 0;
+}
+
+.financial-consulting-benefits,
+.financial-consulting-faq {
+  background-color: #ffffff;
+}
+
+.financial-consulting-cta {
+  padding: 80px 0;
+  background-color: #1d3557; /* Koyu mavi CTA */
+  color: #fff;
+  text-align: center;
+} 

@@ -72,15 +72,21 @@ const SiteMap = () => {
               <li className="sitemap-page__list-item">
                 <Link to="/hizmetlerimiz/bakim-destek" className="sitemap-page__link">Bakım & Destek</Link>
               </li>
+              <li className="sitemap-page__list-item">
+                <Link to="/hizmetlerimiz/kurumsal-web-tasarim" className="sitemap-page__link">Kurumsal Web Tasarım</Link>
+              </li>
+              <li className="sitemap-page__list-item">
+                <Link to="/hizmetlerimiz/landing-page" className="sitemap-page__link">Landing Page</Link>
+              </li>
             </ul>
           </div>
           
           {/* Sektörel Çözümler */}
           <div className="sitemap-page__section">
-            <h2 className="sitemap-page__section-title">Sektörel Çözümler</h2>
+            <h2 className="sitemap-page__section-title">Sektörler</h2>
             <ul className="sitemap-page__list">
               <li className="sitemap-page__list-item">
-                <Link to="/sektorel-cozumler" className="sitemap-page__link">Tüm Sektörel Çözümler</Link>
+                <Link to="/sektorel-cozumler" className="sitemap-page__link">Tüm Sektörler</Link>
               </li>
               <li className="sitemap-page__list-item">
                 <strong className="sitemap-page__subsection-title">Sağlık</strong>
@@ -90,6 +96,15 @@ const SiteMap = () => {
                   </li>
                   <li className="sitemap-page__sublist-item">
                     <Link to="/sektorel-cozumler/saglik/sac-ekim-klinigi" className="sitemap-page__link">Saç Ekim Kliniği</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/saglik/hastane-web-sitesi" className="sitemap-page__link">Hastane Web Sitesi</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/saglik/dis-klinigi-web-sitesi" className="sitemap-page__link">Diş Kliniği Web Sitesi</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/saglik/psikolog-web-sitesi" className="sitemap-page__link">Psikolog Web Sitesi</Link>
                   </li>
                 </ul>
               </li>
@@ -101,6 +116,12 @@ const SiteMap = () => {
                   </li>
                   <li className="sitemap-page__sublist-item">
                     <Link to="/sektorel-cozumler/nakliyat/kargo-firmasi" className="sitemap-page__link">Kargo Firması</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/nakliyat/evden-eve-nakliyat" className="sitemap-page__link">Evden Eve Nakliyat</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/nakliyat/lojistik-firmasi" className="sitemap-page__link">Lojistik Firması</Link>
                   </li>
                 </ul>
               </li>
@@ -116,6 +137,9 @@ const SiteMap = () => {
                   <li className="sitemap-page__sublist-item">
                     <Link to="/sektorel-cozumler/insaat-dekorasyon/dekorasyon" className="sitemap-page__link">Dekorasyon</Link>
                   </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/insaat-dekorasyon/insaat-firmasi" className="sitemap-page__link">İnşaat Firması</Link>
+                  </li>
                 </ul>
               </li>
               <li className="sitemap-page__list-item">
@@ -129,6 +153,77 @@ const SiteMap = () => {
                   </li>
                   <li className="sitemap-page__sublist-item">
                     <Link to="/sektorel-cozumler/hizmet/tamir-servisi" className="sitemap-page__link">Tamir Servisi</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/hizmet/temizlik-sirketi" className="sitemap-page__link">Temizlik Şirketi</Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="sitemap-page__list-item">
+                <strong className="sitemap-page__subsection-title">Güzellik</strong>
+                <ul className="sitemap-page__sublist">
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/guzellik/guzellik-salonu-web-sitesi" className="sitemap-page__link">Güzellik Salonu</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/guzellik/kuafor-salonu-web-sitesi" className="sitemap-page__link">Kuaför Salonu</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/guzellik/protez-tirnak-web-sitesi" className="sitemap-page__link">Protez Tırnak</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/guzellik/epilasyon-merkezi-web-sitesi" className="sitemap-page__link">Epilasyon Merkezi</Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="sitemap-page__list-item">
+                <strong className="sitemap-page__subsection-title">Hukuk</strong>
+                <ul className="sitemap-page__sublist">
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/hukuk/avukat-web-sitesi" className="sitemap-page__link">Avukat Web Sitesi</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/hukuk/kurumsal-hukuk-danismanligi" className="sitemap-page__link">Kurumsal Hukuk</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/hukuk/is-hukuku-danismanligi" className="sitemap-page__link">İş Hukuku</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/hukuk/ceza-hukuku-web-sitesi" className="sitemap-page__link">Ceza Hukuku</Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="sitemap-page__list-item">
+                <strong className="sitemap-page__subsection-title">Eğitim</strong>
+                <ul className="sitemap-page__sublist">
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/egitim/ozel-okul-web-sitesi" className="sitemap-page__link">Özel Okul</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/egitim/kurs-merkezi-web-sitesi" className="sitemap-page__link">Kurs Merkezi</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/egitim/dil-okulu-web-sitesi" className="sitemap-page__link">Dil Okulu</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/egitim/kres-anaokulu-web-sitesi" className="sitemap-page__link">Kreş & Anaokulu</Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="sitemap-page__list-item">
+                <strong className="sitemap-page__subsection-title">Yiyecek & İçecek</strong>
+                <ul className="sitemap-page__sublist">
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/yiyecek/restoran-web-sitesi" className="sitemap-page__link">Restoran</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/yiyecek/kafe-ve-pastane-web-sitesi" className="sitemap-page__link">Kafe & Pastane</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/yiyecek/catering-web-sitesi" className="sitemap-page__link">Catering</Link>
+                  </li>
+                  <li className="sitemap-page__sublist-item">
+                    <Link to="/sektorel-cozumler/yiyecek/online-yemek-siparisi-web-sitesi" className="sitemap-page__link">Online Yemek Siparişi</Link>
                   </li>
                 </ul>
               </li>

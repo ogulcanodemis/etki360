@@ -1,0 +1,1116 @@
+/* Hastane Web Sitesi Stilleri */
+
+.hospital-page {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Hero Bölümü */
+.hospital-hero {
+  padding: 80px 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.hospital-breadcrumb {
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.hospital-breadcrumb a {
+  color: #D2691E;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.hospital-breadcrumb a:hover {
+  color: #b35c1b;
+}
+
+.hospital-breadcrumb span {
+  color: #333;
+  margin-left: 5px;
+}
+
+.hospital-hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hospital-hero-text {
+  flex: 1;
+}
+
+.hospital-hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hospital-mockup {
+  position: relative;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.mockup-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;
+  max-height: 450px;
+  background-color: #fff;
+}
+
+.mockup-overlay {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: rgba(210, 105, 30, 0.9);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transform: rotate(5deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.overlay-highlight {
+  font-size: 24px;
+  font-weight: 700;
+  display: block;
+}
+
+/* Eski stil - artık kullanılmıyor */
+.hospital-hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+  max-height: 450px;
+  background-color: #fff;
+}
+
+.sectoral-hero-title {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.sectoral-highlight {
+  color: #D2691E !important;
+  font-weight: 600 !important;
+  background: none !important;
+  text-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  display: inline !important;
+}
+
+.sectoral-hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.sectoral-hero-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-button, .secondary-button {
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary-button {
+  background-color: #D2691E;
+  color: #fff;
+  border: 2px solid #D2691E;
+}
+
+.primary-button:hover {
+  background-color: #b35c1b;
+  border-color: #b35c1b;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #D2691E;
+  border: 2px solid #D2691E;
+}
+
+.secondary-button:hover {
+  background-color: rgba(210, 105, 30, 0.1);
+}
+
+/* Özellikler Bölümü */
+.hospital-features {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  color: #7f8c8d;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #D2691E;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.feature-card p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* Avantajlar Bölümü */
+.hospital-benefits {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.benefits-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.benefits-text, .benefits-image {
+  flex: 1;
+}
+
+.benefits-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+  max-height: 400px;
+  background-color: #fff;
+}
+
+.benefit-item {
+  margin-bottom: 25px;
+}
+
+.benefit-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.benefit-item h3 i {
+  color: #D2691E;
+  margin-right: 10px;
+}
+
+.benefit-item p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* Fiyatlandırma Bölümü */
+.hospital-pricing {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.hospital-pricing .section-subtitle {
+  margin-bottom: 70px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 40px 30px 90px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  margin-top: 30px;
+  position: relative;
+  height: 500px;
+}
+
+.pricing-card.featured {
+  transform: scale(1.05);
+  border: 2px solid #D2691E;
+  z-index: 2;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-card.featured:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pricing-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.pricing-card.featured .pricing-header h3 {
+  color: #D2691E;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.pricing-card.featured .price {
+  color: #D2691E;
+}
+
+.pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.pricing-features li {
+  padding: 12px 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-features li span {
+  display: inline-block;
+  padding-left: 5px;
+  vertical-align: middle;
+}
+
+.pricing-features {
+  margin-bottom: 40px;
+}
+
+.pricing-card.featured .pricing-features li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.pricing-features i {
+  margin-right: 15px;
+  font-size: 18px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.fas.fa-check {
+  color: #2ecc71;
+}
+
+.pricing-card.featured .fas.fa-check {
+  color: #D2691E;
+}
+
+.fas.fa-times {
+  color: #e74c3c;
+}
+
+.pricing-card.featured .fas.fa-times {
+  color: #e74c3c;
+}
+
+.pricing-button {
+  display: block;
+  text-align: center;
+  background-color: #D2691E;
+  color: #fff;
+  padding: 12px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+}
+
+.pricing-button:hover {
+  background-color: #b35c1b;
+}
+
+.pricing-card.featured .pricing-button {
+  background-color: #D2691E;
+  color: #fff;
+  border-color: #D2691E;
+}
+
+.pricing-card.featured .pricing-button:hover {
+  background-color: #b35c1b;
+  border-color: #b35c1b;
+}
+
+.pricing-action {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+}
+
+/* CTA Bölümü */
+.hospital-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #D2691E 0%, #8B4513 100%);
+  color: #fff;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #D2691E;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.cta-button:hover {
+  background-color: #b35c1b;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .hospital-hero-content {
+    flex-direction: column;
+  }
+  
+  .hospital-hero-text, .hospital-hero-image {
+    width: 100%;
+  }
+  
+  .benefits-content {
+    flex-direction: column;
+  }
+  
+  .benefits-image {
+    order: -1;
+    margin-bottom: 30px;
+  }
+  
+  .sectoral-hero-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing-card {
+    max-width: 100%;
+  }
+  
+  .pricing-card.featured {
+    transform: none;
+  }
+  
+  .pricing-card.featured:hover {
+    transform: translateY(-10px);
+  }
+  
+  .sectoral-hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Hospital Website Page Styles */
+.hospital-website-page {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Typography General */
+.hospital-website-page h1, 
+.hospital-website-page h2, 
+.hospital-website-page h3, 
+.hospital-website-page h4 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hospital-website-page p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Özel CSS kuralları - CSS çakışmasını önlemek için */
+.hospital-page .sectoral-highlight {
+  color: #D2691E !important;
+  background: none !important;
+  font-weight: 600 !important;
+  display: inline !important;
+  text-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.hospital-cta .sectoral-highlight {
+  color: #D2691E !important;
+  background: none !important;
+  font-weight: 600 !important;
+  display: inline !important;
+  text-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.highlight {
+  color: #D2691E;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Breadcrumb */
+.hospital-breadcrumb {
+  padding: 20px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.hospital-breadcrumb a {
+  color: #D2691E;
+  text-decoration: none;
+}
+
+.hospital-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn-primary, .btn-outline {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #D2691E;
+  color: white;
+  border: 2px solid #D2691E;
+}
+
+.btn-primary:hover {
+  background: #B8860B;
+  border-color: #B8860B;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #D2691E;
+  border: 2px solid #D2691E;
+}
+
+.btn-outline:hover {
+  background: rgba(210, 105, 30, 0.1);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* Hero Section */
+.hospital-hero {
+  padding: 80px 0;
+  background: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.hospital-hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hospital-hero-text {
+  flex: 1;
+  max-width: 600px;
+  padding-right: 30px;
+}
+
+.hospital-hero-title {
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hospital-hero-description {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.hospital-hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.hospital-hero-visual {
+  flex: 1;
+  position: relative;
+}
+
+.hospital-mockup {
+  position: relative;
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockup-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;
+  max-height: 500px;
+}
+
+.mockup-overlay {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: rgba(210, 105, 30, 0.9);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transform: rotate(5deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.overlay-highlight {
+  font-size: 24px;
+  font-weight: 700;
+  display: block;
+}
+
+/* Features Section */
+.hospital-features {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(210, 105, 30, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.feature-icon svg {
+  fill: #D2691E;
+}
+
+.feature-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.feature-description {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Departments Section */
+.hospital-departments {
+  padding: 80px 0;
+  background: #f8fbff;
+}
+
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.department-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.department-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(210, 105, 30, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.department-icon svg {
+  fill: #D2691E;
+}
+
+.department-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.department-description {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Benefits Section */
+.hospital-benefits {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.benefit-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.benefit-description {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Call to Action Section */
+.hospital-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta-title .highlight {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-description {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hospital-cta .btn-primary {
+  background: white;
+  color: #2C3E50;
+  border-color: white;
+}
+
+.hospital-cta .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #2C3E50;
+}
+
+.hospital-cta .btn-outline {
+  color: white;
+  border-color: white;
+}
+
+.hospital-cta .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* FAQ Section */
+.hospital-faq {
+  padding: 80px 0;
+  background: #f8fbff;
+}
+
+.faq-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.faq-answer {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.hospital-contact {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.contact-info {
+  padding-right: 30px;
+}
+
+.contact-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.method-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(44, 62, 80, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.method-icon svg {
+  fill: #2C3E50;
+}
+
+.method-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.method-value {
+  color: #666;
+  font-size: 14px;
+}
+
+.contact-form-container {
+  background: #f8fbff;
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #2C3E50;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hospital-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hospital-hero-text {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .hospital-hero-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hospital-hero {
+    padding: 60px 0;
+  }
+
+  .hospital-features,
+  .hospital-departments,
+  .hospital-benefits,
+  .hospital-cta,
+  .hospital-faq,
+  .hospital-contact {
+    padding: 60px 0;
+  }
+
+  .hospital-hero-buttons,
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-card,
+  .department-card,
+  .benefit-card {
+    padding: 20px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+} 

@@ -1,0 +1,460 @@
+/* Psikolog Web Sitesi Sayfası Stilleri */
+
+/* Hero Section */
+.psychologist-website-page {
+  font-family: 'Inter', sans-serif;
+}
+
+.psychologist-hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, #f8f5ff 0%, #ede5ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.psychologist-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(149, 117, 205, 0.1) 0%, rgba(149, 117, 205, 0) 70%);
+  z-index: 1;
+}
+
+.psychologist-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(149, 117, 205, 0.1) 0%, rgba(149, 117, 205, 0) 70%);
+  z-index: 1;
+}
+
+.psychologist-hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.psychologist-hero-text {
+  flex: 1;
+  max-width: 600px;
+  margin-right: 40px;
+}
+
+.psychologist-hero-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #2d3748;
+}
+
+.psychologist-hero-title .highlight {
+  color: #805ad5;
+}
+
+.psychologist-hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  color: #4a5568;
+}
+
+.psychologist-hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.psychologist-hero-visual {
+  flex: 1;
+  max-width: 500px;
+}
+
+.psychologist-mockup {
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.mockup-header {
+  background: #f8fafc;
+  padding: 12px;
+  border-bottom: 1px solid #edf2f7;
+  display: flex;
+  align-items: center;
+}
+
+.mockup-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e2e8f0;
+}
+
+.mockup-dots span:first-child {
+  background: #fc8181;
+}
+
+.mockup-dots span:nth-child(2) {
+  background: #f6e05e;
+}
+
+.mockup-dots span:nth-child(3) {
+  background: #68d391;
+}
+
+.mockup-content {
+  padding: 16px;
+}
+
+.mockup-nav {
+  height: 40px;
+  background: #f7fafc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.mockup-hero-img {
+  height: 180px;
+  background: linear-gradient(135deg, #e9d8fd 0%, #d6bcfa 100%);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.mockup-appointment {
+  height: 100px;
+  background: #f0fff4;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #c6f6d5;
+}
+
+.mockup-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mockup-service {
+  flex: 1;
+  min-width: calc(50% - 6px);
+  height: 60px;
+  background: #f7fafc;
+  border-radius: 4px;
+}
+
+/* Features Section */
+.psychologist-features {
+  padding: 80px 0;
+}
+
+.psychologist-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.psychologist-feature-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.psychologist-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.psychologist-feature-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(159, 122, 234, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.psychologist-feature-icon svg {
+  width: 30px;
+  height: 30px;
+  color: #805ad5;
+}
+
+.psychologist-feature-title {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #2d3748;
+}
+
+.psychologist-feature-description {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Benefits Section */
+.psychologist-benefits {
+  padding: 80px 0;
+  background-color: #f7fafc;
+}
+
+.psychologist-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.psychologist-benefit-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.psychologist-benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.psychologist-benefit-title {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #2d3748;
+}
+
+.psychologist-benefit-description {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Pricing Section */
+.psychologist-pricing {
+  padding: 80px 0;
+}
+
+.psychologist-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.psychologist-pricing-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.psychologist-pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.psychologist-pricing-header {
+  padding: 30px;
+  background: #f7fafc;
+  text-align: center;
+}
+
+.psychologist-pricing-title {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #2d3748;
+}
+
+.psychologist-pricing-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #805ad5;
+}
+
+.psychologist-pricing-price span {
+  font-size: 1rem;
+  color: #718096;
+  font-weight: 400;
+}
+
+.psychologist-pricing-features {
+  padding: 30px;
+}
+
+.psychologist-pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.psychologist-pricing-features li {
+  padding: 8px 0;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+}
+
+.psychologist-pricing-features li::before {
+  content: "✓";
+  margin-right: 8px;
+  color: #805ad5;
+  font-weight: bold;
+}
+
+.psychologist-pricing-button {
+  display: block;
+  text-align: center;
+  background: #805ad5;
+  color: #fff;
+  padding: 12px;
+  margin: 20px 30px 30px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.psychologist-pricing-button:hover {
+  background: #6b46c1;
+}
+
+/* FAQ Section */
+.psychologist-faq {
+  padding: 80px 0;
+  background-color: #f7fafc;
+}
+
+.psychologist-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.psychologist-faq-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.psychologist-faq-question {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #2d3748;
+}
+
+.psychologist-faq-answer {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.psychologist-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.psychologist-cta-title {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+}
+
+.psychologist-cta-description {
+  font-size: 1.25rem;
+  margin-bottom: 32px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.psychologist-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .psychologist-hero-content {
+    flex-direction: column;
+  }
+  
+  .psychologist-hero-text {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  
+  .psychologist-hero-visual {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .psychologist-hero {
+    padding: 60px 0;
+  }
+  
+  .psychologist-hero-title {
+    font-size: 2rem;
+  }
+  
+  .psychologist-features-grid,
+  .psychologist-benefits-grid,
+  .psychologist-pricing-grid,
+  .psychologist-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: #805ad5;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #6b46c1;
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: #805ad5;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid #805ad5;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(128, 90, 213, 0.1);
+} 

@@ -1,0 +1,1099 @@
+/* Temizlik Şirketi Web Sitesi Stilleri */
+
+.cleaning-company-page {
+  font-family: 'Inter', sans-serif;
+  background-color: #fafafa;
+  padding-top: 70px;
+}
+
+.cleaning-hero {
+  padding: 70px 0;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #333333;
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.cleaning-hero .highlight {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.cleaning-hero .section-title,
+.cleaning-hero .section-description {
+  color: #ffffff;
+}
+
+.cleaning-breadcrumb {
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.cleaning-breadcrumb a {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.cleaning-breadcrumb a:hover {
+  color: #3498db;
+}
+
+.cleaning-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.cleaning-hero-text {
+  padding-right: 20px;
+}
+
+.cleaning-hero .sectoral-hero-title {
+  color: #333333;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.cleaning-hero .sectoral-hero-description {
+  color: #666666;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.cleaning-hero .sectoral-hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Mockup Stilleri */
+.cleaning-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cleaning-mockup {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.mockup-content {
+  padding: 20px;
+}
+
+.mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-hero-img {
+  height: 120px;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-booking {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mockup-calendar {
+  height: 50px;
+  flex: 2;
+  background: #3498db;
+  border-radius: 6px;
+}
+
+.mockup-form {
+  height: 50px;
+  flex: 1;
+  background: #F9FAFB;
+  border-radius: 6px;
+}
+
+.mockup-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.mockup-service {
+  height: 80px;
+  background: #F9FAFB;
+  border-radius: 6px;
+}
+
+/* Fiyatlandırma Bölümü */
+.cleaning-pricing {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.cleaning-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cleaning-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.cleaning-section-subtitle {
+  font-size: 18px;
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cleaning-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cleaning-pricing-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #E5E7EB;
+}
+
+.cleaning-pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.cleaning-pricing-header {
+  padding: 30px;
+  background: rgba(52, 152, 219, 0.1);
+  text-align: center;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.cleaning-pricing-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.cleaning-pricing-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cleaning-price-amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #3498db;
+  margin-bottom: 5px;
+}
+
+.cleaning-price-period {
+  font-size: 14px;
+  color: #666666;
+}
+
+.cleaning-pricing-features {
+  padding: 30px;
+}
+
+.cleaning-pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cleaning-pricing-features li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #E5E7EB;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+.cleaning-pricing-features li i {
+  margin-right: 10px;
+  color: #3498db;
+}
+
+.cleaning-pricing-disabled {
+  color: #999999 !important;
+}
+
+.cleaning-pricing-disabled i {
+  color: #999999 !important;
+}
+
+.cleaning-pricing-footer {
+  padding: 20px 30px 30px;
+  text-align: center;
+}
+
+.cleaning-pricing-button {
+  display: inline-block;
+  background: #3498db;
+  color: #FFFFFF;
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.cleaning-pricing-button:hover {
+  background: #2980b9;
+}
+
+/* SSS Bölümü */
+.cleaning-faq {
+  padding: 80px 0;
+  background-color: #F9FAFB;
+}
+
+.cleaning-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 30px;
+}
+
+.cleaning-faq-item {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.cleaning-faq-item:hover {
+  transform: translateY(-5px);
+}
+
+.cleaning-faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 12px;
+  position: relative;
+  padding-right: 30px;
+}
+
+.cleaning-faq-question::before {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22px;
+  color: #3498db;
+  transition: transform 0.3s ease;
+}
+
+.cleaning-faq-item:hover .cleaning-faq-question::before {
+  transform: rotate(45deg);
+}
+
+.cleaning-faq-answer {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* CTA Bölümü */
+.cleaning-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: #FFFFFF;
+}
+
+.cleaning-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cleaning-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.cleaning-cta-title .sectoral-highlight {
+  color: #16A085;
+  font-weight: 700;
+}
+
+.cleaning-cta-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cleaning-cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cleaning-cta .primary-button {
+  background: #FFFFFF;
+  color: #3498db;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #FFFFFF;
+}
+
+.cleaning-cta .primary-button:hover {
+  background: transparent;
+  color: #FFFFFF;
+}
+
+.cleaning-cta .secondary-button {
+  background: transparent;
+  color: #FFFFFF;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cleaning-cta .secondary-button i {
+  font-size: 16px;
+}
+
+.cleaning-cta .secondary-button:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cleaning-hero .primary-button {
+  background: #3498db;
+  color: #FFFFFF;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #3498db;
+}
+
+.cleaning-hero .primary-button:hover {
+  background: #2980b9;
+  border-color: #2980b9;
+}
+
+.cleaning-hero .secondary-button {
+  background: transparent;
+  color: #333333;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #E5E7EB;
+}
+
+.cleaning-hero .secondary-button:hover {
+  background: #F9FAFB;
+  border-color: #D1D5DB;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 1024px) {
+  .cleaning-hero-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .cleaning-hero-visual {
+    order: -1;
+  }
+  
+  .cleaning-hero-text {
+    padding-right: 0;
+  }
+  
+  .cleaning-hero .sectoral-hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .cleaning-hero {
+    padding: 50px 0;
+  }
+  
+  .cleaning-hero .sectoral-hero-title {
+    font-size: 32px;
+  }
+  
+  .cleaning-hero .sectoral-hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cleaning-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cleaning-section-title {
+    font-size: 30px;
+  }
+  
+  .cleaning-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cleaning-hero .sectoral-hero-title {
+    font-size: 28px;
+  }
+  
+  .cleaning-section-title,
+  .cleaning-cta-title {
+    font-size: 26px;
+  }
+  
+  .cleaning-pricing-card {
+    padding: 20px;
+  }
+  
+  .cleaning-price-amount {
+    font-size: 30px;
+  }
+  
+  .cleaning-cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cleaning-faq-item {
+    padding: 20px;
+  }
+  
+  .cleaning-faq-question {
+    font-size: 16px;
+  }
+  
+  .cleaning-faq-answer {
+    font-size: 14px;
+  }
+}
+
+/* Temizlik Şirketi Sayfası için Özel Stiller */
+
+/* Genel Sayfa Stilleri */
+.cleaning-company-page {
+  padding-top: 70px;
+  font-family: 'Inter', sans-serif;
+  background-color: #fafafa;
+}
+
+/* Vurgu Stilleri */
+.sectoral-highlight {
+  color: #16A085;
+  font-weight: 700;
+}
+
+/* Hero Bölümü */
+.cleaning-hero {
+  padding: 70px 0;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #333333;
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.cleaning-hero .highlight {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.cleaning-hero .section-title,
+.cleaning-hero .section-description {
+  color: #ffffff;
+}
+
+.cleaning-breadcrumb {
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.cleaning-breadcrumb a {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.cleaning-breadcrumb a:hover {
+  color: #3498db;
+}
+
+.cleaning-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.cleaning-hero-text {
+  padding-right: 20px;
+}
+
+.cleaning-hero .sectoral-hero-title {
+  color: #333333;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.cleaning-hero .sectoral-hero-description {
+  color: #666666;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.cleaning-hero .sectoral-hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Mockup Stilleri */
+.cleaning-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cleaning-mockup {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mockup-header {
+  background: #F9FAFB;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.mockup-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5E7EB;
+}
+
+.mockup-dots span:first-child {
+  background: #EF4444;
+}
+
+.mockup-dots span:nth-child(2) {
+  background: #F59E0B;
+}
+
+.mockup-dots span:nth-child(3) {
+  background: #10B981;
+}
+
+.mockup-content {
+  padding: 20px;
+}
+
+.mockup-nav {
+  height: 30px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-hero-img {
+  height: 120px;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mockup-booking {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mockup-calendar {
+  height: 50px;
+  flex: 2;
+  background: #3498db;
+  border-radius: 6px;
+}
+
+.mockup-form {
+  height: 50px;
+  flex: 1;
+  background: #F9FAFB;
+  border-radius: 6px;
+}
+
+.mockup-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.mockup-service {
+  height: 80px;
+  background: #F9FAFB;
+  border-radius: 6px;
+}
+
+/* Fiyatlandırma Bölümü */
+.cleaning-pricing {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.cleaning-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cleaning-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.cleaning-section-subtitle {
+  font-size: 18px;
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cleaning-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cleaning-pricing-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #E5E7EB;
+}
+
+.cleaning-pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.cleaning-pricing-header {
+  padding: 30px;
+  background: rgba(52, 152, 219, 0.1);
+  text-align: center;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.cleaning-pricing-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.cleaning-pricing-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cleaning-price-amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #3498db;
+  margin-bottom: 5px;
+}
+
+.cleaning-price-period {
+  font-size: 14px;
+  color: #666666;
+}
+
+.cleaning-pricing-features {
+  padding: 30px;
+}
+
+.cleaning-pricing-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cleaning-pricing-features li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #E5E7EB;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+.cleaning-pricing-features li i {
+  margin-right: 10px;
+  color: #3498db;
+}
+
+.cleaning-pricing-disabled {
+  color: #999999 !important;
+}
+
+.cleaning-pricing-disabled i {
+  color: #999999 !important;
+}
+
+.cleaning-pricing-footer {
+  padding: 20px 30px 30px;
+  text-align: center;
+}
+
+.cleaning-pricing-button {
+  display: inline-block;
+  background: #3498db;
+  color: #FFFFFF;
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.cleaning-pricing-button:hover {
+  background: #2980b9;
+}
+
+/* SSS Bölümü */
+.cleaning-faq {
+  padding: 80px 0;
+  background-color: #F9FAFB;
+}
+
+.cleaning-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 30px;
+}
+
+.cleaning-faq-item {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.cleaning-faq-item:hover {
+  transform: translateY(-5px);
+}
+
+.cleaning-faq-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 12px;
+  position: relative;
+  padding-right: 30px;
+}
+
+.cleaning-faq-question::before {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22px;
+  color: #3498db;
+  transition: transform 0.3s ease;
+}
+
+.cleaning-faq-item:hover .cleaning-faq-question::before {
+  transform: rotate(45deg);
+}
+
+.cleaning-faq-answer {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* CTA Bölümü */
+.cleaning-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: #FFFFFF;
+}
+
+.cleaning-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cleaning-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.cleaning-cta-title .sectoral-highlight {
+  color: #16A085;
+  font-weight: 700;
+}
+
+.cleaning-cta-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cleaning-cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cleaning-cta .primary-button {
+  background: #FFFFFF;
+  color: #3498db;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #FFFFFF;
+}
+
+.cleaning-cta .primary-button:hover {
+  background: transparent;
+  color: #FFFFFF;
+}
+
+.cleaning-cta .secondary-button {
+  background: transparent;
+  color: #FFFFFF;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cleaning-cta .secondary-button i {
+  font-size: 16px;
+}
+
+.cleaning-cta .secondary-button:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cleaning-hero .primary-button {
+  background: #3498db;
+  color: #FFFFFF;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #3498db;
+}
+
+.cleaning-hero .primary-button:hover {
+  background: #2980b9;
+  border-color: #2980b9;
+}
+
+.cleaning-hero .secondary-button {
+  background: transparent;
+  color: #333333;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #E5E7EB;
+}
+
+.cleaning-hero .secondary-button:hover {
+  background: #F9FAFB;
+  border-color: #D1D5DB;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 1024px) {
+  .cleaning-hero-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .cleaning-hero-visual {
+    order: -1;
+  }
+  
+  .cleaning-hero-text {
+    padding-right: 0;
+  }
+  
+  .cleaning-hero .sectoral-hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .cleaning-hero {
+    padding: 50px 0;
+  }
+  
+  .cleaning-hero .sectoral-hero-title {
+    font-size: 32px;
+  }
+  
+  .cleaning-hero .sectoral-hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cleaning-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cleaning-section-title {
+    font-size: 30px;
+  }
+  
+  .cleaning-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cleaning-hero .sectoral-hero-title {
+    font-size: 28px;
+  }
+  
+  .cleaning-section-title,
+  .cleaning-cta-title {
+    font-size: 26px;
+  }
+  
+  .cleaning-pricing-card {
+    padding: 20px;
+  }
+  
+  .cleaning-price-amount {
+    font-size: 30px;
+  }
+  
+  .cleaning-cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cleaning-faq-item {
+    padding: 20px;
+  }
+  
+  .cleaning-faq-question {
+    font-size: 16px;
+  }
+  
+  .cleaning-faq-answer {
+    font-size: 14px;
+  }
+} 

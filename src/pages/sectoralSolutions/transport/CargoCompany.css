@@ -2,16 +2,46 @@
 
 /* Genel Sayfa Stilleri */
 .cargo-page {
-  padding-top: 70px;
+  /* padding-top kaldırıldı */
 }
 
-/* Vurgu Stilleri */
+/* Vurgu Stilleri - Kargo Sayfası Özel - BASİT VE NET */
 .cargo-page .sectoral-highlight {
-  background: linear-gradient(45deg, #0057B8, #4A90E2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
+  color: #0057B8;
+  font-weight: 600;
+}
+
+/* CTA Bölümü için özel vurgu - BASİT VE NET */
+.cargo-cta .sectoral-highlight {
+  color: #0057B8;
+  font-weight: 600;
+}
+
+/* Breadcrumb Bölümü */
+.cargo-breadcrumb-section {
+  background: #ffffff;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cargo-breadcrumb {
+  color: #666666;
+  font-size: 14px;
+}
+
+.cargo-breadcrumb a {
+  color: #0057B8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.cargo-breadcrumb a:hover {
+  color: #003d82;
+}
+
+.cargo-breadcrumb span {
+  color: #333333;
+  font-weight: 500;
 }
 
 /* Hero Bölümü */
@@ -24,19 +54,31 @@
   color: #333333;
 }
 
+/* Breadcrumb Bölümü */
+.cargo-breadcrumb-section {
+  background: #ffffff;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
 .cargo-breadcrumb {
   color: #666666;
-  margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .cargo-breadcrumb a {
-  color: #666666;
+  color: #0057B8;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .cargo-breadcrumb a:hover {
-  color: #0057B8;
+  color: #003d82;
+}
+
+.cargo-breadcrumb span {
+  color: #333333;
+  font-weight: 500;
 }
 
 .cargo-hero-content {
@@ -500,108 +542,132 @@
 
 .cargo-pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cargo-pricing-card {
-  background: #FFFFFF;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
   position: relative;
+  border: 2px solid transparent;
 }
 
 .cargo-pricing-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 87, 184, 0.15);
+  border-color: #0057B8;
 }
 
 .cargo-pricing-card.featured {
-  border: 2px solid #0057B8;
-  padding-top: 50px;
+  border: 3px solid #0057B8;
+  background: #ffffff;
+  box-shadow: 0 15px 50px rgba(0, 87, 184, 0.2);
 }
 
 .cargo-pricing-badge {
   position: absolute;
-  top: -12px;
+  top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background: #0057B8;
+  background: linear-gradient(135deg, #0057B8 0%, #4A90E2 100%);
   color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
+  padding: 8px 20px;
+  border-radius: 25px;
   font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0, 87, 184, 0.3);
 }
 
 .cargo-pricing-header {
   text-align: center;
-  margin-bottom: 25px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #F0F0F0;
-}
-
-.cargo-pricing-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: #333333;
-  margin-bottom: 15px;
-}
-
-.cargo-pricing-price {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cargo-price-amount {
-  font-size: 32px;
-  font-weight: 700;
-  color: #333333;
-  line-height: 1;
-}
-
-.cargo-price-period {
-  font-size: 14px;
-  color: #666666;
-  margin-top: 5px;
-}
-
-.cargo-pricing-features {
   margin-bottom: 30px;
 }
 
-.cargo-pricing-features ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.cargo-pricing-features li {
+.cargo-pricing-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #0057B8 0%, #4A90E2 100%);
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  padding: 10px 0;
-  font-size: 15px;
-  color: #666666;
-  border-bottom: 1px solid #F0F0F0;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 25px rgba(0, 87, 184, 0.2);
 }
 
-.cargo-pricing-features li i {
-  margin-right: 10px;
+.cargo-pricing-icon i {
+  font-size: 32px;
+  color: white;
+}
+
+.cargo-pricing-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cargo-pricing-price {
+  margin-bottom: 15px;
+}
+
+.cargo-price-amount {
+  font-size: 42px;
+  font-weight: 900;
   color: #0057B8;
-  font-size: 14px;
+  line-height: 1;
+  display: block;
 }
 
-.cargo-pricing-disabled {
-  color: #AAAAAA !important;
+.cargo-price-period {
+  font-size: 16px;
+  color: #4a4a4a;
+  font-weight: 600;
 }
 
-.cargo-pricing-disabled i {
-  color: #CCCCCC !important;
+.cargo-pricing-description {
+  color: #4a4a4a;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 500;
+}
+
+.cargo-pricing-features {
+  margin-bottom: 35px;
+}
+
+.cargo-feature-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cargo-feature-item:last-child {
+  border-bottom: none;
+}
+
+.cargo-feature-item i {
+  color: #0057B8;
+  font-size: 18px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.cargo-feature-item span {
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .cargo-pricing-footer {
@@ -610,21 +676,24 @@
 
 .cargo-pricing-button {
   display: inline-block;
-  background: #0057B8;
-  color: white;
+  background: linear-gradient(135deg, #0057B8 0%, #4A90E2 100%);
+  color: white !important;
   text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 6px;
-  font-weight: 600;
+  padding: 18px 35px;
+  border-radius: 50px;
+  font-weight: 700;
   font-size: 16px;
   transition: all 0.3s ease;
-  border: 2px solid #0057B8;
+  border: none;
+  box-shadow: 0 6px 20px rgba(0, 87, 184, 0.3);
+  width: 100%;
+  text-align: center;
 }
 
 .cargo-pricing-button:hover {
-  background: white;
-  color: #0057B8;
-  border-color: #0057B8;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 87, 184, 0.4);
+  background: linear-gradient(135deg, #003d82 0%, #0057B8 100%);
 }
 
 /* Sık Sorulan Sorular Bölümü */
@@ -651,7 +720,7 @@
 
 .cargo-faq-item:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
+  /* transform kaldırıldı - sayfanın dışına çıkmasın */
 }
 
 .cargo-faq-question {
@@ -660,24 +729,21 @@
   color: #333333;
   margin-bottom: 15px;
   position: relative;
-  padding-right: 30px;
+  padding-left: 40px;
   line-height: 1.4;
 }
 
 .cargo-faq-question::before {
-  content: "+";
+  content: "Q:";
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
-  font-size: 22px;
+  font-size: 18px;
   color: #0057B8;
-  transition: all 0.3s ease;
+  font-weight: 700;
 }
 
-.cargo-faq-item:hover .cargo-faq-question::before {
-  transform: rotate(45deg);
-  color: #333333;
-}
+/* Hover efekti kaldırıldı */
 
 .cargo-faq-answer {
   font-size: 15px;
@@ -687,85 +753,83 @@
 }
 
 /* CTA Bölümü */
-.cargo-cta {
-  background: linear-gradient(135deg, #0057B8 0%, #4A90E2 100%);
-  padding: 80px 0;
-  color: white;
+.cargo-page .cargo-cta {
+  background: linear-gradient(135deg, #0057B8 0%, #4A90E2 100%) !important;
+  padding: 80px 0 !important;
+  color: white !important;
 }
 
-.cargo-cta-content {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+.cargo-page .cargo-cta-content {
+  text-align: center !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
 }
 
-.cargo-cta-title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.3;
+.cargo-page .cargo-cta-title {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  margin-bottom: 20px !important;
+  line-height: 1.3 !important;
+  color: white !important;
 }
 
-.cargo-cta-title .sectoral-highlight {
-  background: linear-gradient(45deg, #ffffff, #F0F8FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
+.cargo-page .cargo-cta-title .sectoral-highlight {
+  color: #FFD700 !important;
+  font-weight: 700 !important;
 }
 
-.cargo-cta-text {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
+.cargo-page .cargo-cta-text {
+  font-size: 18px !important;
+  margin-bottom: 30px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  line-height: 1.6 !important;
 }
 
-.cargo-cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+.cargo-page .cargo-cta-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 15px !important;
 }
 
-.cargo-cta .primary-button {
-  display: inline-block;
-  background: white;
-  color: #0057B8;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  border: 2px solid white;
+.cargo-page .cargo-cta .primary-button {
+  display: inline-block !important;
+  background: white !important;
+  color: #0057B8 !important;
+  text-decoration: none !important;
+  padding: 14px 28px !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid white !important;
 }
 
-.cargo-cta .primary-button:hover {
-  background: transparent;
-  color: white;
+.cargo-page .cargo-cta .primary-button:hover {
+  background: transparent !important;
+  color: white !important;
 }
 
-.cargo-cta .secondary-button {
-  display: inline-flex;
-  align-items: center;
-  background: transparent;
-  color: white;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+.cargo-page .cargo-cta .secondary-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: transparent !important;
+  color: white !important;
+  text-decoration: none !important;
+  padding: 14px 28px !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
 }
 
-.cargo-cta .secondary-button i {
-  margin-right: 8px;
+.cargo-page .cargo-cta .secondary-button i {
+  margin-right: 8px !important;
 }
 
-.cargo-cta .secondary-button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: white;
+.cargo-page .cargo-cta .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: white !important;
 }
 
 /* Hero Butonları */
@@ -918,4 +982,183 @@
   .cargo-faq-answer {
     font-size: 14px;
   }
+}
+
+/* Kargo Sayfası Özel CSS - Çakışma Önleme */
+.cargo-page .cargo-pricing-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 40px !important;
+  margin-top: 50px !important;
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.cargo-page .cargo-pricing-card {
+  background: #ffffff !important;
+  border-radius: 20px !important;
+  padding: 40px 30px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  border: 2px solid transparent !important;
+}
+
+.cargo-page .cargo-pricing-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 60px rgba(0, 87, 184, 0.15) !important;
+  border-color: #0057B8 !important;
+}
+
+.cargo-page .cargo-pricing-card.featured {
+  border: 3px solid #0057B8 !important;
+  background: #ffffff !important;
+  box-shadow: 0 15px 50px rgba(0, 87, 184, 0.2) !important;
+}
+
+.cargo-page .cargo-pricing-badge {
+  position: absolute !important;
+  top: -15px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: linear-gradient(135deg, #0057B8 0%, #4A90E2 100%) !important;
+  color: white !important;
+  padding: 8px 20px !important;
+  border-radius: 25px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 15px rgba(0, 87, 184, 0.3) !important;
+}
+
+.cargo-page .cargo-pricing-header {
+  text-align: center !important;
+  margin-bottom: 30px !important;
+}
+
+.cargo-page .cargo-pricing-icon {
+  width: 80px !important;
+  height: 80px !important;
+  background: linear-gradient(135deg, #0057B8 0%, #4A90E2 100%) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto 20px !important;
+  box-shadow: 0 8px 25px rgba(0, 87, 184, 0.2) !important;
+}
+
+.cargo-page .cargo-pricing-icon i {
+  font-size: 32px !important;
+  color: white !important;
+}
+
+.cargo-page .cargo-pricing-title {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #1a1a1a !important;
+  margin-bottom: 15px !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.cargo-page .cargo-pricing-price {
+  margin-bottom: 15px !important;
+}
+
+.cargo-page .cargo-price-amount {
+  font-size: 42px !important;
+  font-weight: 900 !important;
+  color: #0057B8 !important;
+  line-height: 1 !important;
+  display: block !important;
+}
+
+.cargo-page .cargo-price-period {
+  font-size: 16px !important;
+  color: #4a4a4a !important;
+  font-weight: 600 !important;
+}
+
+.cargo-page .cargo-pricing-description {
+  color: #4a4a4a !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  font-weight: 500 !important;
+}
+
+.cargo-page .cargo-pricing-features {
+  margin-bottom: 35px !important;
+}
+
+.cargo-page .cargo-feature-item {
+  display: flex !important;
+  align-items: center !important;
+  padding: 12px 0 !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.cargo-page .cargo-feature-item:last-child {
+  border-bottom: none !important;
+}
+
+.cargo-page .cargo-feature-item i {
+  color: #0057B8 !important;
+  font-size: 18px !important;
+  margin-right: 15px !important;
+  flex-shrink: 0 !important;
+}
+
+.cargo-page .cargo-feature-item span {
+  color: #1a1a1a !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.cargo-page .cargo-pricing-footer {
+  text-align: center !important;
+}
+
+.cargo-page .cargo-pricing-button {
+  display: inline-block !important;
+  background: linear-gradient(135deg, #0057B8 0%, #4A90E2 100%) !important;
+  color: white !important;
+  text-decoration: none !important;
+  padding: 18px 35px !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  box-shadow: 0 6px 20px rgba(0, 87, 184, 0.3) !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.cargo-page .cargo-pricing-button:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 30px rgba(0, 87, 184, 0.4) !important;
+  background: linear-gradient(135deg, #003d82 0%, #0057B8 100%) !important;
+  color: white !important;
+}
+
+/* FAQ Q Harfi Düzeltmesi - Çakışma Önleme */
+.cargo-page .cargo-faq-question {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #333333 !important;
+  margin-bottom: 15px !important;
+  position: relative !important;
+  padding-left: 40px !important;
+  line-height: 1.4 !important;
+}
+
+.cargo-page .cargo-faq-question::before {
+  content: "Q:" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  font-size: 18px !important;
+  color: #0057B8 !important;
+  font-weight: 700 !important;
 } 

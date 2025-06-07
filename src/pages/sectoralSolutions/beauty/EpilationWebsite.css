@@ -1,0 +1,242 @@
+/* Epilasyon Merkezi Web Sitesi Sayfası Stilleri */
+
+/* Breadcrumb Navigation */
+.epilation-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding: 12px 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-size: 0.9rem;
+  max-width: fit-content;
+  margin: 0 auto 30px;
+}
+
+.epilation-breadcrumb a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.epilation-breadcrumb a:hover {
+  color: #8e44ad;
+}
+
+.epilation-breadcrumb .breadcrumb-separator {
+  margin: 0 10px;
+  color: #8e44ad;
+  font-size: 16px;
+}
+
+.epilation-breadcrumb .breadcrumb-icon {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.epilation-breadcrumb span.current {
+  color: #8e44ad;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .epilation-breadcrumb {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+  }
+  
+  .epilation-breadcrumb .breadcrumb-separator {
+    margin: 0 6px;
+  }
+}
+
+.epilation-website-page {
+  font-family: 'Inter', sans-serif;
+  background-color: #fdfcff; /* Hafif lavanta tonu */
+}
+
+.epilation-hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d8ff 100%); /* Lavanta-mor gradient */
+  text-align: center;
+}
+
+.epilation-hero .highlight {
+  color: #8a2be2; /* Mavi-Menekşe rengi */
+}
+
+/* Genel Başlık ve Açıklama Stilleri */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-title {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.section-description {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Diğer bölümler için genel stiller */
+.epilation-features,
+.epilation-benefits,
+.epilation-pricing,
+.epilation-faq {
+  padding: 80px 0;
+}
+
+.epilation-benefits,
+.epilation-faq {
+  background-color: #f9f4ff; /* Çok açık lavanta */
+}
+
+/* CTA Section */
+.epilation-cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); /* Mor gradient */
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+
+.epilation-cta::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+}
+
+.epilation-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+}
+
+.epilation-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.epilation-cta-title {
+  font-size: 3.2rem;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+}
+
+.epilation-cta-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  opacity: 0.95;
+}
+
+.epilation-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.epilation-cta-buttons .btn-primary {
+  background-color: #fff !important;
+  color: #8e44ad !important;
+  font-weight: bold;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: none !important;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.epilation-cta-buttons .btn-primary:hover {
+  background-color: #f8f8f8 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.epilation-cta-buttons .btn-outline {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.epilation-cta-buttons .btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-3px);
+}
+
+.epilation-cta-note {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #fff;
+  font-style: italic;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .epilation-cta {
+    padding: 70px 0;
+  }
+  
+  .epilation-cta-title {
+    font-size: 2rem;
+  }
+  
+  .epilation-cta-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .epilation-cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .epilation-cta-note {
+    font-size: 0.9rem;
+    margin-top: 25px;
+  }
+} 

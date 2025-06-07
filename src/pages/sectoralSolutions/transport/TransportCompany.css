@@ -2,16 +2,40 @@
 
 /* Genel Sayfa Stilleri */
 .transport-company-page {
-  padding-top: 70px;
+  /* padding-top kaldırıldı */
 }
 
 /* Vurgu Stilleri */
 .transport-company-page .sectoral-highlight {
-  background: linear-gradient(45deg, #FF7A00, #FF9E2D);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #E67E22;
   font-weight: 700;
+}
+
+/* Breadcrumb Bölümü */
+.transport-breadcrumb-section {
+  background: #ffffff;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.transport-breadcrumb {
+  color: #666666;
+  font-size: 14px;
+}
+
+.transport-breadcrumb a {
+  color: #E67E22;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.transport-breadcrumb a:hover {
+  color: #d35400;
+}
+
+.transport-breadcrumb span {
+  color: #333333;
+  font-weight: 500;
 }
 
 /* Hero Bölümü */
@@ -21,21 +45,6 @@
   min-height: 50vh;
   display: flex;
   align-items: center;
-  color: #ffffff;
-}
-
-.transport-breadcrumb {
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 20px;
-}
-
-.transport-breadcrumb a {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.transport-breadcrumb a:hover {
   color: #ffffff;
 }
 

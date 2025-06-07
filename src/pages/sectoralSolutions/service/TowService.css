@@ -5,13 +5,26 @@
   padding-top: 70px;
 }
 
-/* Vurgu Stilleri */
+/* Vurgu Stilleri - Çekici Servisi Sayfası Özel */
 .tow-page .sectoral-highlight {
-  background: linear-gradient(45deg, #FF5E14, #FF8C00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
+  color: #FF5E14 !important;
+  font-weight: 600 !important;
+  background: none !important;
+  text-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  display: inline !important;
+}
+
+/* CTA Bölümü için özel vurgu */
+.tow-cta .sectoral-highlight {
+  color: #FF5E14 !important;
+  font-weight: 600 !important;
+  background: none !important;
+  text-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  display: inline !important;
 }
 
 /* Hero Bölümü */
@@ -692,10 +705,7 @@
 }
 
 .tow-cta-title .sectoral-highlight {
-  background: linear-gradient(45deg, #ffffff, #FFF5EE);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #FF5E14;
   font-weight: 700;
 }
 

@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import '../SectoralSolutions.css';
 import './CargoCompany.css';
 
 const CargoCompany = () => {
+  useEffect(() => {
+    document.body.classList.add('cargo-page');
+    return () => {
+      document.body.classList.remove('cargo-page');
+    };
+  }, []);
   // SEO için Schema Markup - Service Schema
   const cargoServiceSchema = {
     "@context": "https://schema.org",
@@ -169,11 +175,17 @@ const CargoCompany = () => {
         </script>
       </Helmet>
 
-      <section className="cargo-hero">
+      {/* Breadcrumb Bölümü */}
+      <section className="cargo-breadcrumb-section">
         <div className="container">
           <div className="cargo-breadcrumb">
             <Link to="/">Ana Sayfa</Link> / <Link to="/sektorel-cozumler">Sektörel Çözümler</Link> / <Link to="/sektorel-cozumler/nakliyat">Nakliyat</Link> / <span>Kargo Firması Web Sitesi</span>
           </div>
+        </div>
+      </section>
+
+      <section className="cargo-hero">
+        <div className="container">
           <div className="cargo-hero-content">
             <div className="cargo-hero-text">
               <h1 className="sectoral-hero-title">
@@ -472,96 +484,91 @@ const CargoCompany = () => {
           <div className="cargo-section-header">
             <h2 className="cargo-section-title"><strong>Kargo Firması Web Sitesi</strong> Paketleri ve Fiyatları</h2>
             <p className="cargo-section-subtitle">
-              <strong>Kargo ve kurye firmanız</strong> için <em>ihtiyaçlarınıza</em> ve <em>bütçenize</em> uygun <strong>kargo takip sistemli web sitesi</strong> çözümleri. <strong>8.900₺</strong>'den başlayan fiyatlarla.
+              <strong>Kargo ve kurye firmanız</strong> için <em>ihtiyaçlarınıza</em> uygun <strong>kargo takip sistemli web sitesi</strong> çözümleri. <strong>12.900₺</strong>'den başlayan fiyatlarla.
             </p>
           </div>
 
           <div className="cargo-pricing-grid">
             <div className="cargo-pricing-card">
               <div className="cargo-pricing-header">
-                <h3 className="cargo-pricing-title">Başlangıç Paketi</h3>
-                <div className="cargo-pricing-price">
-                  <span className="cargo-price-amount">8.900 ₺</span>
-                  <span className="cargo-price-period">Tek Seferlik</span>
+                <div className="cargo-pricing-icon">
+                  <i className="fas fa-rocket"></i>
                 </div>
+                <h3 className="cargo-pricing-title">Temel Paket</h3>
+                <div className="cargo-pricing-price">
+                  <span className="cargo-price-amount">12.900 ₺</span>
+                  <span className="cargo-price-period">Tek Seferlik Ödeme</span>
+                </div>
+                <p className="cargo-pricing-description">Küçük kargo firmaları için ideal başlangıç paketi</p>
               </div>
               <div className="cargo-pricing-features">
-                <ul>
-                  <li><i className="fas fa-check"></i> Responsive Tasarım</li>
-                  <li><i className="fas fa-check"></i> 7 Adet Sayfa</li>
-                  <li><i className="fas fa-check"></i> Temel Kargo Takip Sistemi</li>
-                  <li><i className="fas fa-check"></i> Şube Bulucu</li>
-                  <li><i className="fas fa-check"></i> Fiyat Hesaplama Aracı</li>
-                  <li><i className="fas fa-check"></i> İletişim Formu</li>
-                  <li><i className="fas fa-check"></i> Mobil Uyumlu Tasarım</li>
-                  <li><i className="fas fa-check"></i> SEO Temel Optimizasyon</li>
-                  <li><i className="fas fa-check"></i> 1 Yıl Ücretsiz Destek</li>
-                  <li className="cargo-pricing-disabled"><i className="fas fa-times"></i> Online Sipariş Sistemi</li>
-                  <li className="cargo-pricing-disabled"><i className="fas fa-times"></i> SMS/E-posta Bildirim</li>
-                  <li className="cargo-pricing-disabled"><i className="fas fa-times"></i> E-ticaret Entegrasyonu</li>
-                </ul>
+                <div className="cargo-feature-item">
+                  <i className="fas fa-check-circle"></i>
+                  <span>Kargo Takip Sistemi</span>
+                </div>
+                <div className="cargo-feature-item">
+                  <i className="fas fa-check-circle"></i>
+                  <span>Responsive Tasarım</span>
+                </div>
+                <div className="cargo-feature-item">
+                  <i className="fas fa-check-circle"></i>
+                  <span>5 Sayfa Web Sitesi</span>
+                </div>
+                <div className="cargo-feature-item">
+                  <i className="fas fa-check-circle"></i>
+                  <span>SEO Optimizasyonu</span>
+                </div>
+                <div className="cargo-feature-item">
+                  <i className="fas fa-check-circle"></i>
+                  <span>1 Yıl Destek</span>
+                </div>
               </div>
               <div className="cargo-pricing-footer">
-                <Link to="/iletisim" className="cargo-pricing-button">Hemen Başlayalım</Link>
+                <Link to="/iletisim" className="cargo-pricing-button">Paketi Seç</Link>
               </div>
             </div>
 
             <div className="cargo-pricing-card featured">
-              <div className="cargo-pricing-badge">Popüler</div>
+              <div className="cargo-pricing-badge">En Popüler</div>
               <div className="cargo-pricing-header">
-                <h3 className="cargo-pricing-title">Premium Paket</h3>
-                <div className="cargo-pricing-price">
-                  <span className="cargo-price-amount">17.900 ₺</span>
-                  <span className="cargo-price-period">Tek Seferlik</span>
+                <div className="cargo-pricing-icon">
+                  <i className="fas fa-crown"></i>
                 </div>
+                <h3 className="cargo-pricing-title">Profesyonel Paket</h3>
+                <div className="cargo-pricing-price">
+                  <span className="cargo-price-amount">24.900 ₺</span>
+                  <span className="cargo-price-period">Tek Seferlik Ödeme</span>
+                </div>
+                <p className="cargo-pricing-description">Büyüyen kargo firmaları için kapsamlı çözüm</p>
               </div>
               <div className="cargo-pricing-features">
-                <ul>
-                  <li><i className="fas fa-check"></i> Responsive Tasarım</li>
-                  <li><i className="fas fa-check"></i> 15 Adet Sayfa</li>
-                  <li><i className="fas fa-check"></i> Gelişmiş Kargo Takip Sistemi</li>
-                  <li><i className="fas fa-check"></i> Harita Entegrasyonlu Şube Bulucu</li>
-                  <li><i className="fas fa-check"></i> Detaylı Fiyat Hesaplama</li>
-                  <li><i className="fas fa-check"></i> Online Sipariş Sistemi</li>
-                  <li><i className="fas fa-check"></i> Müşteri Paneli</li>
-                  <li><i className="fas fa-check"></i> E-posta Bildirim Sistemi</li>
-                  <li><i className="fas fa-check"></i> WhatsApp Entegrasyonu</li>
-                  <li><i className="fas fa-check"></i> Kapsamlı SEO Optimizasyonu</li>
-                  <li><i className="fas fa-check"></i> 2 Yıl Ücretsiz Destek</li>
-                  <li className="cargo-pricing-disabled"><i className="fas fa-times"></i> E-ticaret Entegrasyonu</li>
-                </ul>
-              </div>
-              <div className="cargo-pricing-footer">
-                <Link to="/iletisim" className="cargo-pricing-button">Hemen Başlayalım</Link>
-              </div>
-            </div>
-
-            <div className="cargo-pricing-card">
-              <div className="cargo-pricing-header">
-                <h3 className="cargo-pricing-title">Kurumsal Paket</h3>
-                <div className="cargo-pricing-price">
-                  <span className="cargo-price-amount">29.900 ₺</span>
-                  <span className="cargo-price-period">Tek Seferlik</span>
+                <div className="cargo-feature-item">
+                  <i className="fas fa-check-circle"></i>
+                  <span>Gelişmiş Kargo Takip</span>
+                </div>
+                <div className="cargo-feature-item">
+                  <i className="fas fa-check-circle"></i>
+                  <span>Online Sipariş Sistemi</span>
+                </div>
+                <div className="cargo-feature-item">
+                  <i className="fas fa-check-circle"></i>
+                  <span>Müşteri Paneli</span>
+                </div>
+                <div className="cargo-feature-item">
+                  <i className="fas fa-check-circle"></i>
+                  <span>SMS/E-posta Bildirim</span>
+                </div>
+                <div className="cargo-feature-item">
+                  <i className="fas fa-check-circle"></i>
+                  <span>API Entegrasyonu</span>
+                </div>
+                <div className="cargo-feature-item">
+                  <i className="fas fa-check-circle"></i>
+                  <span>2 Yıl Destek</span>
                 </div>
               </div>
-              <div className="cargo-pricing-features">
-                <ul>
-                  <li><i className="fas fa-check"></i> Özel Tasarım</li>
-                  <li><i className="fas fa-check"></i> Sınırsız Sayfa</li>
-                  <li><i className="fas fa-check"></i> İleri Düzey Kargo Takip Sistemi</li>
-                  <li><i className="fas fa-check"></i> Tam Entegre Sipariş Yönetimi</li>
-                  <li><i className="fas fa-check"></i> SMS ve E-posta Bildirim Sistemi</li>
-                  <li><i className="fas fa-check"></i> Çoklu Dil Desteği (4 Dil)</li>
-                  <li><i className="fas fa-check"></i> E-ticaret Platformları Entegrasyonu</li>
-                  <li><i className="fas fa-check"></i> API Desteği</li>
-                  <li><i className="fas fa-check"></i> İleri Düzey Kurumsal Panel</li>
-                  <li><i className="fas fa-check"></i> Ödeme Sistemi Entegrasyonu</li>
-                  <li><i className="fas fa-check"></i> Mobil Uygulama Entegrasyonu</li>
-                  <li><i className="fas fa-check"></i> 3 Yıl Ücretsiz Destek</li>
-                </ul>
-              </div>
               <div className="cargo-pricing-footer">
-                <Link to="/iletisim" className="cargo-pricing-button">Hemen Başlayalım</Link>
+                <Link to="/iletisim" className="cargo-pricing-button">Paketi Seç</Link>
               </div>
             </div>
           </div>
@@ -627,10 +634,10 @@ const CargoCompany = () => {
         <div className="container">
           <div className="cargo-cta-content">
             <h2 className="cargo-cta-title">
-              <strong>Kargo Firmanız</strong> İçin <span className="sectoral-highlight">Müşteri Memnuniyetini Artıran</span> Web Sitesi Oluşturalım
+              <strong>Kargo Firmanız</strong> İçin <span className="sectoral-highlight">Profesyonel Web Sitesi</span> Oluşturalım
             </h2>
             <p className="cargo-cta-text">
-              <strong>8.900₺</strong>'den başlayan fiyatlarla <strong>kargo takip sistemli</strong>, <em>online sipariş formlu</em> ve <strong>e-ticaret entegrasyonlu</strong> <strong>kargo web sitesi</strong> için hemen iletişime geçin.
+              <strong>12.900₺</strong>'den başlayan fiyatlarla <strong>kargo takip sistemli</strong>, <em>online sipariş formlu</em> ve <strong>e-ticaret entegrasyonlu</strong> <strong>kargo web sitesi</strong> için hemen iletişime geçin.
             </p>
             <div className="cargo-cta-buttons">
               <Link to="/iletisim" className="primary-button">Ücretsiz Keşif Toplantısı</Link>

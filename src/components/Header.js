@@ -153,27 +153,36 @@ const Header = () => {
                   className={location.pathname.includes('/sektorel-cozumler') ? 'active' : ''}
                   onClick={toggleSectoralDropdown}
                 >
-                  Sektörel Çözümler <i className="dropdown-icon"></i>
+                  Sektörler <i className="dropdown-icon"></i>
                 </a>
                 <ul className={`dropdown-menu ${sectoralDropdownOpen ? 'open' : ''}`}>
                   <li>
-                    <Link to="/sektorel-cozumler/saglik/klinik-web-sitesi" style={{"--item-index": 0}}>Klinik Web Sitesi</Link>
+                    <Link to="/sektorel-cozumler/saglik" style={{"--item-index": 0}}>Sağlık Sektörü</Link>
                   </li>
                   <li>
-                    <Link to="/sektorel-cozumler/saglik/sac-ekim-klinigi" style={{"--item-index": 1}}>Saç Ekim Kliniği</Link>
+                    <Link to="/sektorel-cozumler/nakliyat" style={{"--item-index": 1}}>Nakliyat Sektörü</Link>
                   </li>
                   <li>
-                    <Link to="/sektorel-cozumler/nakliyat/nakliye-firmasi" style={{"--item-index": 2}}>Nakliyat Firması</Link>
+                    <Link to="/sektorel-cozumler/hizmet" style={{"--item-index": 2}}>Hizmet Sektörü</Link>
                   </li>
                   <li>
-                    <Link to="/sektorel-cozumler/hizmet/cilingir" style={{"--item-index": 3}}>Çilingir</Link>
+                    <Link to="/sektorel-cozumler/insaat-dekorasyon" style={{"--item-index": 3}}>İnşaat ve Dekorasyon</Link>
                   </li>
                   <li>
-                    <Link to="/sektorel-cozumler/insaat-dekorasyon/mimar" style={{"--item-index": 4}}>Mimar</Link>
+                    <Link to="/sektorel-cozumler/guzellik" style={{"--item-index": 4}}>Güzellik</Link>
+                  </li>
+                  <li>
+                    <Link to="/sektorel-cozumler/hukuk" style={{"--item-index": 5}}>Hukuk</Link>
+                  </li>
+                  <li>
+                    <Link to="/sektorel-cozumler/egitim" style={{"--item-index": 6}}>Eğitim</Link>
+                  </li>
+                  <li>
+                    <Link to="/sektorel-cozumler/yiyecek" style={{"--item-index": 7}}>Yiyecek & İçecek</Link>
                   </li>
                   <li className="dropdown-divider"></li>
                   <li>
-                    <Link to="/sektorel-cozumler" style={{"--item-index": 5}}>Tüm Sektörel Çözümler</Link>
+                    <Link to="/sektorel-cozumler" style={{"--item-index": 8}}>Tüm Sektörler</Link>
                   </li>
                 </ul>
               </li>

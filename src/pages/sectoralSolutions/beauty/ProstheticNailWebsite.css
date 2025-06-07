@@ -1,0 +1,252 @@
+/* Protez Tırnak Web Sitesi Sayfası Stilleri */
+
+/* Breadcrumb Navigation */
+.prosthetic-nail-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding: 12px 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-size: 0.9rem;
+  max-width: fit-content;
+  margin: 0 auto 30px;
+}
+
+.prosthetic-nail-breadcrumb a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.prosthetic-nail-breadcrumb a:hover {
+  color: #e83e8c;
+}
+
+.prosthetic-nail-breadcrumb .breadcrumb-separator {
+  margin: 0 10px;
+  color: #e83e8c;
+  font-size: 16px;
+}
+
+.prosthetic-nail-breadcrumb .breadcrumb-icon {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.prosthetic-nail-breadcrumb span.current {
+  color: #e83e8c;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .prosthetic-nail-breadcrumb {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+  }
+  
+  .prosthetic-nail-breadcrumb .breadcrumb-separator {
+    margin: 0 6px;
+  }
+}
+
+.prosthetic-nail-website-page {
+  font-family: 'Inter', sans-serif;
+}
+
+.prosthetic-nail-hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, #fff0f7 0%, #ffebf1 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.prosthetic-nail-hero .highlight {
+  color: #ff69b4;
+}
+
+/* Diğer stiller BeautySalonWebsite.css ile büyük ölçüde benzer olabilir,
+   ancak daha spesifik özelleştirmeler için buraya eklenebilir.
+   Örneğin, ikon renkleri, başlık fontları vb.
+   Şimdilik genel yapıyı koruyoruz.
+*/
+.prosthetic-nail-features {
+  padding: 80px 0;
+}
+
+.prosthetic-nail-benefits {
+  padding: 80px 0;
+  background-color: #fff0f7;
+}
+
+.prosthetic-nail-pricing {
+  padding: 80px 0;
+}
+
+.prosthetic-nail-faq {
+  padding: 80px 0;
+  background-color: #fff0f7;
+}
+
+/* CTA Section */
+.prosthetic-nail-cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #ff69b4 0%, #e83e8c 100%);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+
+.prosthetic-nail-cta::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+}
+
+.prosthetic-nail-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+}
+
+.prosthetic-nail-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.prosthetic-nail-cta-title {
+  font-size: 3.2rem;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+}
+
+.prosthetic-nail-cta-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  opacity: 0.95;
+}
+
+.prosthetic-nail-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.prosthetic-nail-cta-buttons .btn-primary {
+  background-color: #fff !important;
+  color: #e83e8c !important;
+  font-weight: bold;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: none !important;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prosthetic-nail-cta-buttons .btn-primary:hover {
+  background-color: #f8f8f8 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.prosthetic-nail-cta-buttons .btn-outline {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.prosthetic-nail-cta-buttons .btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-3px);
+}
+
+.prosthetic-nail-cta-note {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #fff;
+  font-style: italic;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .prosthetic-nail-cta {
+    padding: 70px 0;
+  }
+  
+  .prosthetic-nail-cta-title {
+    font-size: 2rem;
+  }
+  
+  .prosthetic-nail-cta-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .prosthetic-nail-cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .prosthetic-nail-cta-note {
+    font-size: 0.9rem;
+    margin-top: 25px;
+  }
+}
+
+/* Genel Kart ve Başlık Stilleri (BeautySalon'dan miras alınabilir veya burada özelleştirilebilir) */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.section-description {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+} 

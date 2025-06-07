@@ -5,13 +5,26 @@
   padding-top: 70px;
 }
 
-/* Vurgu Stilleri */
+/* Vurgu Stilleri - Tamir Servisi Sayfası Özel */
 .repair-page .sectoral-highlight {
-  background: linear-gradient(45deg, #3498DB, #2980B9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
+  color: #3498DB !important;
+  font-weight: 600 !important;
+  background: none !important;
+  text-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  display: inline !important;
+}
+
+/* CTA Bölümü için özel vurgu */
+.repair-cta .sectoral-highlight {
+  color: #3498DB !important;
+  font-weight: 600 !important;
+  background: none !important;
+  text-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  display: inline !important;
 }
 
 /* Hero Bölümü */
@@ -694,10 +707,7 @@
 }
 
 .repair-cta-title .sectoral-highlight {
-  background: linear-gradient(45deg, #ffffff, #ECF0F1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #3498DB;
   font-weight: 700;
 }
 

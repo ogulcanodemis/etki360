@@ -1,0 +1,42 @@
+/* Araç Takip ve Yönetim Sistemi Sayfası Stilleri */
+
+.vehicle-tracking-system-page {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f7f9; /* Açık mavi-gri arka plan */
+}
+
+.vehicle-tracking-hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); /* Koyu teknolojik gradient */
+  color: #ffffff;
+  text-align: center;
+}
+
+.vehicle-tracking-hero .highlight {
+  color: #ff6f61; /* Vurgu için canlı turuncu/mercan */
+}
+
+.vehicle-tracking-hero .section-title,
+.vehicle-tracking-hero .section-description {
+  color: #ffffff;
+}
+
+/* Diğer bölümler */
+.vehicle-tracking-features,
+.vehicle-tracking-benefits,
+.vehicle-tracking-pricing,
+.vehicle-tracking-faq {
+  padding: 80px 0;
+}
+
+.vehicle-tracking-benefits,
+.vehicle-tracking-faq {
+  background-color: #ffffff;
+}
+
+.vehicle-tracking-cta {
+  padding: 80px 0;
+  background-color: #0f2027; /* Koyu renk CTA */
+  color: #fff;
+  text-align: center;
+} 

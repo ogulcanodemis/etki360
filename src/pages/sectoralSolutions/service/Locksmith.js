@@ -214,7 +214,7 @@ const Locksmith = () => {
         <div className="container">
           <div className="locksmith-cta-content">
             <h2 className="locksmith-cta-title">
-              Çilingir Firmanız İçin <span className="sectoral-highlight">Acil Çağrı Odaklı</span> Web Sitesi Oluşturalım
+              Çilingir Firmanız İçin <span className="sectoral-highlight">Acil Hizmet Odaklı</span> Web Sitesi Oluşturalım
             </h2>
             <p className="locksmith-cta-text">
               <strong>7/24 hizmet veren çilingir firmanız</strong> için acil durumlarda müşterilerinizin sizi hemen bulabileceği, <em>konum bazlı ve SEO dostu</em> bir <strong>çilingir web sitesi</strong> için hemen iletişime geçin.

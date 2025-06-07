@@ -1,0 +1,42 @@
+/* Kurs Merkezi Web Sitesi Stilleri */
+
+.course-center-website-page {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.course-center-hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%); /* Canlı, enerjik yeşil */
+  color: #ffffff;
+  text-align: center;
+}
+
+.course-center-hero .highlight {
+  color: #fdd835; /* Dikkat çekici sarı */
+}
+
+.course-center-hero .section-title,
+.course-center-hero .section-description {
+  color: #ffffff;
+}
+
+/* Diğer bölümler */
+.course-center-features,
+.course-center-benefits,
+.course-center-pricing,
+.course-center-faq {
+  padding: 80px 0;
+}
+
+.course-center-benefits,
+.course-center-faq {
+  background-color: #ffffff;
+}
+
+.course-center-cta {
+  padding: 80px 0;
+  background-color: #2e7d32; /* Canlı yeşil CTA */
+  color: #fff;
+  text-align: center;
+} 
